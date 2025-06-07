@@ -24,3 +24,25 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.underline-transition {
+  position: relative;
+  display: inline-block; /* Or block, depending on desired layout */
+}
+
+.underline-transition::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 3px; /* Adjust thickness of the underline */
+  bottom: 0; /* Position the underline */
+  left: 0;
+  background-color: #7c3aed; /* Purple-700 */
+  transform-origin: bottom left;
+  transition: transform 0.3s ease-out; /* Adjust transition speed and easing */
+}
+
+.underline-transition:hover::after {
+  transform: scaleX(1);
+}

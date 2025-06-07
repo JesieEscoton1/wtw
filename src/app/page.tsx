@@ -1,16 +1,24 @@
 'use client';
 
 import { Button, Container, Typography } from '@mui/material';
+import Header from '../components/Header';
+import HeroSection from '../components/HeroSection';
+import ReportsCampaignsSection from '../components/ReportsCampaignsSection';
+import ArticlesSection from '../components/ArticlesSection';
+import FeaturedVideoSection from '../components/FeaturedVideoSection';
+import CampaignSection from '../components/CampaignSection';
+import Footer from '../components/Footer';
 
 export default function Home() {
   return (
-    <Container>
-      <Typography variant="h3" gutterBottom>
-        MUI + Tailwind + Next.js App Router
-      </Typography>
-      <Button variant="contained" color="primary">
-        Hello World
-      </Button>
-    </Container>
+    <>
+      <Header />
+      <HeroSection />
+      <ReportsCampaignsSection />
+      <CampaignSection />
+      <ArticlesSection />
+      <FeaturedVideoSection />
+      <Footer />
+    </>
   );
 }
