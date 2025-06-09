@@ -1,0 +1,319 @@
+"use client";
+
+import { Box, Typography, Button, IconButton, Link, Paper, Divider } from '@mui/material';
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+import ShareIcon from '@mui/icons-material/Share';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import Image from 'next/image';
+import { useState, useRef } from 'react';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+
+export default function OverviewPage() {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const handlePlayClick = () => {
+    setIsPlaying(true);
+    setTimeout(() => {
+      if (videoRef.current) {
+        videoRef.current.play().catch(() => {});
+      }
+    }, 100);
+  };
+
+  return (
+    <Box className="w-full min-h-screen bg-white">
+      <Header />
+      
+      {/* Hero Section */}
+      <Box className="bg-[#5409DA] py-5.5 px-4 md:px-0">
+        <Box className="container mx-auto max-w-7xl flex flex-col md:flex-row items-center gap-8 min-h-[440px]">
+          {/* Left: Text */}
+          <Box className="flex-1 text-white space-y-6 md:pr-8">
+            <Typography variant="overline" className="text-white tracking-widest font-bold !text-base" style={{ letterSpacing: '0.15em', fontWeight: 'bold'}}>
+              ABOUT US
+            </Typography>
+            <Typography
+              variant="h1"
+              className="font-serif font-extrabold !text-6xl md:!text-7xl leading-tight mb-4"
+              style={{ fontFamily: 'serif', fontWeight: 800, marginTop: '15px'}}
+            >
+              Overview
+            </Typography>
+            <Typography variant="h5" className="opacity-90 mb-6 !text-xl md:!text-1xl font-normal">
+              Managing people, risk and capital to propel the world's leading businesses forward. This is perspective that moves you.
+            </Typography>
+            <Button
+              variant="contained"
+              className="bg-[#E04A9B] hover:bg-pink-600 normal-case font-bold rounded-full px-8 py-3 text-lg shadow-none"
+              style={{ background: '#4E71FF', borderRadius: '9999px', fontWeight: 700, marginTop: 20, color: 'white', fontSize: '18px' }}
+              endIcon={<ArrowForwardIcon />}
+            >
+              Contact Us
+            </Button>
+          </Box>
+          {/* Right: Image with magenta accent bar */}
+          <Box className="flex-1 relative w-full h-72 md:h-96 flex items-center justify-center">
+            {/* Magenta Accent Bar */}
+            
+            {/* Main Image */}
+            <Box className="relative w-full h-2 md:h-96 z-10">
+              <Image
+                src="/images/About-Us-Overview.jpg"
+                alt="Hero Overview"
+                layout="fill"
+                objectFit="cover"
+                className="rounded-lg shadow-lg"
+                priority
+              />
+              <img
+              src="/images/WTWCO_Motifs_Large_FiCo_BR_1.svg"
+              alt=""
+              style={{
+                position: 'absolute',
+                right: '-182px',
+                bottom: '-50px',
+                width: '100%',
+                height: '90%',
+                zIndex: 0,
+                pointerEvents: 'none',
+                userSelect: 'none',
+                display: 'block'
+              }}
+            />
+            </Box>
+          </Box>
+        </Box>
+      </Box>
+
+      {/* Main Content */}
+      <Box className="container mx-auto max-w-7xl py-10 px-4 md:px-0 grid grid-cols-1 md:grid-cols-3 gap-16">
+        {/* Left/Main Text */}
+        <Box className="md:col-span-2 space-y-8">
+          <Box>
+            <Typography variant="h5" className="font-bold mb-0 text-gray-900" sx={{ fontWeight: 'bold'}}>
+              How do you move from complexity to clarity?
+            </Typography>
+            <Typography variant="h6" className="font-bold mb-0 text-gray-900" sx={{ fontWeight: 'bold', mt:1}}>
+              From the unknown to the untapped?
+            </Typography>
+            <Typography variant="body1" className="mb-2 text-gray-800" sx={{ fontSize: '18px'}}>
+              At WTW, we provide data-driven, insight-led solutions in the areas of people, risk and capital that make your organization more resilient, motivate your workforce, and maximize performance.
+            </Typography>
+            <Typography variant="body1" className="mb-2 text-gray-800" sx={{ fontSize: '18px'}}>
+              We work shoulder to shoulder with you, bringing diverse points of view and a deep commitment to your success.
+            </Typography>
+            <Typography variant="body1" className="mb-2 text-gray-800" sx={{ fontSize: '18px'}}>
+              By challenging one another, we achieve breakthroughs because only the best ideas survive. The result? Innovative solutions that meet your needs—informed by the global view and the local understanding of our colleagues around the world.
+            </Typography>
+            <Typography variant="body1" className="mb-2 text-gray-800" sx={{ fontSize: '18px'}}>
+              Together, we broaden your horizon and sharpen your focus.
+            </Typography>
+            <Typography variant="body1" className="mb-2 text-gray-800" sx={{ fontSize: '18px'}}>
+              Transform your toughest challenges into actionable opportunities.
+            </Typography>
+            <Typography variant="body1" className="mb-2 text-gray-800" sx={{ fontSize: '18px'}}>
+              And set your path for sustainable success.
+            </Typography>
+            <Typography variant="subtitle1" className="font-bold mt-4 text-gray-900" sx={{ marginTop: '15px' , fontSize: '25px', fontWeight: 'bold'}}>
+              This is perspective that moves you.
+            </Typography>
+          </Box>
+
+          {/* Featured Video Section */}
+          <Box className="w-full">
+            <Box className="relative w-full h-0 pb-[56.25%] bg-black rounded-lg overflow-hidden cursor-pointer">
+              {!isPlaying && (
+                <Box
+                className="absolute inset-0"
+                onClick={handlePlayClick}
+              >
+                {/* Background Image */}
+                <Image
+                  src="https://cf-images.us-east-1.prod.boltdns.net/v1/static/5728959027001/071a239c-7816-48a0-ac31-f833778ca178/c3231194-1c84-4063-8a19-ce86885f6b2a/1280x720/match/image.jpg"
+                  alt="Video Thumbnail"
+                  layout="fill"
+                  objectFit="cover"
+                  className="transition-transform duration-300 group-hover:scale-105"
+                />
+
+                {/* Overlay with gradient and content */}
+                <Box className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent p-6 flex flex-col justify-between">
+                  {/* Top Row: Title and Share Icon */}
+                  <Box className="flex justify-between items-start">
+                    {/* Title and Subtitle */}
+                    <Box className="flex flex-col">
+                      <Typography variant="h4" component="h3" className="text-white font-serif">
+                        Perspective that moves you
+                      </Typography>
+                       {/* Adding the smaller text based on the image */}
+                      <Typography variant="body2" className="text-white opacity-90">
+                        At WTW, we celebrate perspective. Because it allows you t...
+                      </Typography>
+                    </Box>
+                    {/* Share Icon */}
+                    <IconButton aria-label="share" size="large" className="text-white opacity-80 hover:opacity-100 transition-opacity">
+                      <ShareIcon sx={{ color: 'white' }}/>
+                    </IconButton>
+                  </Box>
+
+                  {/* Bottom Row: Play Button (positioned bottom left) */}
+                   <Box className="flex justify-start items-end">
+                     {/* Play Button - Purple Circle with White Triangle */}
+                     <Box className="w-18 h-18 rounded-full bg-[#4E71FF] flex items-center justify-center opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+                       <PlayArrowIcon style={{ fontSize: '60px', color: 'white' }} />
+                     </Box>
+                   </Box>
+                </Box>
+              </Box>
+              )}
+              {isPlaying && (
+                <video
+                  ref={videoRef}
+                  controls
+                  autoPlay
+                  className="absolute inset-0 w-full h-full object-cover"
+                  onEnded={() => setIsPlaying(false)}
+                >
+                  <source src="/videos/WTW-Perspective.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              )}
+            </Box>
+            <Box className="p-4">
+                <Typography variant="caption" className="block mt-2 text-gray-700" sx={{ fontWeight: 'bold', fontSize: '15px'}}>
+                    Perspective that moves you
+                </Typography>
+                <Typography variant="caption" className="block mt-2 text-gray-700" sx={{ fontSize: '14px', marginTop: '5px'}}>
+                    At WTW
+                </Typography>
+                <Typography variant="caption" className="block mt-2 text-gray-700" sx={{ fontSize: '14px'}}>
+                    we celebrate perspective. Because it allows you to embrace diverse ideas and experiences to build something better.
+                </Typography>
+            </Box>
+          </Box>
+
+          {/* Purpose and Values */}
+          <Divider
+            sx={{
+              my: -2,
+              borderColor: '#e5e1ea',
+              borderBottomWidth: 3,
+              opacity: 1,
+              width: '100%',
+            }}
+          />
+          <Box className="mt-12">
+            <Typography variant="h5" className="font-bold mb-4 text-gray-900" sx={{ fontSize: '25px', fontWeight: 'bold'}}>
+              Our purpose and values
+            </Typography>
+            <Typography variant="body1" className="mb-4 text-gray-800" sx={{ fontSize: '18px', marginTop: '10px' }}>
+              Our purpose is why our company exists. At WTW, we transform tomorrows.
+            </Typography>
+            <Typography variant="body1" className="mb-4 text-gray-800" sx={{ fontSize: '18px',  marginTop: '10px'}}>
+            And our values are more than words. A strong client focus, an emphasis on teamwork, unwavering integrity,
+            mutual respect and a constant striving for excellence are at the core of WTW's rich history.
+            </Typography>
+            <Box className="space-y-4">
+              <Box>
+                <Typography variant="subtitle1" className="font-bold text-gray-900" sx={{ fontSize: '25px', fontWeight: 'bold',  marginTop: '20px'}}>Client focus</Typography>
+                <Typography variant="body2" className="text-gray-800" sx={{ fontSize: '18px'}}>We are driven to help our clients succeed. In every interaction and with every solution, we act in our clients' best interests – striving to understand their needs, respecting their perspectives and exceeding their expectations.</Typography>
+              </Box> 
+              <Box>
+                <Typography variant="subtitle1" className="font-bold text-gray-900" sx={{ fontSize: '25px', fontWeight: 'bold', marginTop: '20px'}}>Teamwork</Typography>
+                <Typography variant="body2" className="text-gray-800" sx={{ fontSize: '18px'}}>When you get one of us, you get all of us. We bring innovative solutions and world-class advice to our clients by working across boundaries of business, geography and function. We help each other succeed and create more value by working together.</Typography>
+              </Box>
+              <Box>
+                <Typography variant="subtitle1" className="font-bold text-gray-900" sx={{ fontSize: '25px', fontWeight: 'bold', marginTop: '20px'}}>Integrity</Typography>
+                <Typography variant="body2" className="text-gray-800" sx={{ fontSize: '18px'}}>Our clients invest more than their time and money with us; they also invest their trust. We seek to earn that trust every day through professionalism, doing what is right and telling the truth. We are accountable to the organizations and people with which we interact – including clients, shareholders, regulators and each other for our actions and results.</Typography>
+              </Box>
+              <Box>
+                <Typography variant="subtitle1" className="font-bold text-gray-900" sx={{ fontSize: '25px', fontWeight: 'bold', marginTop: '20px'}}>Respect</Typography>
+                <Typography variant="body2" className="text-gray-800" sx={{ fontSize: '18px'}}>We listen to and learn from each other. We support and celebrate differences, foster an inclusive culture and operate with openness, honesty and benefit of the doubt. We manage our relationships, inside the company and out, with fairness, decency and good citizenship.</Typography>
+              </Box>
+              <Box>
+                <Typography variant="subtitle1" className="font-bold text-gray-900" sx={{ fontSize: '25px', fontWeight: 'bold', marginTop: '20px'}}>Excellence</Typography>
+                <Typography variant="body2" className="text-gray-800" sx={{ fontSize: '18px'}}>We strive to lead and sustain excellence. Most importantly, this means an unwavering commitment to professional development and personal growth for our people. Our colleagues have the responsibility to develop their expertise, competencies and professional stature, while the company invests in the tools and opportunities that allow for continual development. In business, we place an unrelenting focus on innovation, quality and risk management.</Typography>
+              </Box>
+            </Box>
+          </Box>
+        </Box>
+
+        {/* Right Column: Quote and Secondary Video */}
+        <Box className="space-y-8">
+          {/* Quote Box */}
+          <Box
+            component="blockquote"
+            className="quote sr-reveal relative bg-white rounded-lg p-8 my-6 border-l-5"
+            sx={{
+              borderLeftColor: '#5409DA',
+              borderRightColor: '#5409DA',
+              boxShadow: '0 5px 0 0 #5409DA, 0 8px 24px 0 rgba(44, 62, 80, 0.08)',
+              overflow: 'visible',
+            }}
+          >
+            <span
+              className="heading-4 quote__icon absolute -left-8 top-2 text-5xl"
+              style={{
+                marginTop: 10,
+                marginBottom: 0,
+                marginLeft: 65,
+                letterSpacing: '-0.4px',
+                color: '#212529',
+                fontSize: '3.5rem',
+                lineHeight: 1,
+                fontFamily: 'serif',
+              }}
+            >
+              “
+            </span>
+            <Typography variant="h5" component="p" className="heading-4 mb-4" sx={{ fontStyle: 'italic', color: '#212529', marginTop: '30px' }}>
+              We are now WTW. Our name and brand reflect the clarity and actionable solutions we bring to today's challenges.
+            </Typography>
+            <Box component="cite" className="font-mono-small font-semibold not-italic block text-gray-700 mt-4">
+              Carl Hess
+              <br />
+              <span className="font-bold">CEO, WTW</span>
+            </Box>
+            <span className="quote__block" />
+          </Box>
+
+          {/* Secondary Video */}
+          <Box className="w-full" sx={{ marginTop: '168%' }}>
+            <Box className="relative w-full h-0 pt-[56.25%] bg-black rounded-lg overflow-hidden">
+              <Image
+                src="/images/centuries.jpg"
+                alt="What will your tomorrow look like?"
+                layout="fill"
+                objectFit="cover"
+              />
+              <Box className="absolute inset-0 flex items-center justify-center">
+                <Box className="w-14 h-14 rounded-full bg-[#4E71FF] flex items-center justify-center opacity-90">
+                  <PlayArrowIcon style={{ fontSize: '40px', color: 'white' }} />
+                </Box>
+              </Box>
+            </Box>
+            <Typography variant="caption" className="block mt-2 text-gray-700" sx={{ fontWeight: 'bold', fontSize: '15px', marginTop: '10px'}}>
+            What will your tomorrow look like?
+            </Typography>
+            <Typography variant="caption" className="block mt-2 text-gray-700" sx={{ fontSize: '14px', marginTop: '5px'}}>
+              For almost two centuries, WTW has helped smart people transform tomorrow and solve their people, risk and capital challenges.
+            </Typography>
+            <Divider
+                sx={{
+                my: 2,
+                borderColor: '#e5e1ea',
+                borderBottomWidth: 3,
+                opacity: 1,
+                width: '100%',
+                }}
+            />
+          </Box>
+        </Box>
+      </Box>
+
+      <Footer />
+    </Box>
+  );
+} 

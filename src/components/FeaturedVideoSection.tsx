@@ -104,7 +104,7 @@ const FeaturedVideoSection = () => {
             <Button
               variant="text"
               color="primary"
-              href="#"
+              onClick={() => window.location.href = '/overview'}
               endIcon={<ArrowForwardIcon style={{ fontSize: '1.5rem' }} />}
               className="normal-case p-0 ml-0 justify-start text-lg font-bold text-blue-700 hover:text-blue-900 transition-colors duration-300"
               style={{ textDecoration: 'none', color: '#1449e6', fontSize: '20px', fontWeight: 'bold', marginTop: '40px' }}
