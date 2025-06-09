@@ -38,7 +38,7 @@ body {
   height: 3px; /* Adjust thickness of the underline */
   bottom: 0; /* Position the underline */
   left: 0;
-  background-color: #7c3aed; /* Purple-700 */
+  background-color: #4E71FF; /* Purple-700 */
   transform-origin: bottom left;
   transition: transform 0.3s ease-out; /* Adjust transition speed and easing */
 }

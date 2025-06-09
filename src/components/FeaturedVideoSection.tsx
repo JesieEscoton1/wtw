@@ -62,14 +62,14 @@ const FeaturedVideoSection = () => {
                     </Box>
                     {/* Share Icon */}
                     <IconButton aria-label="share" size="large" className="text-white opacity-80 hover:opacity-100 transition-opacity">
-                      <ShareIcon />
+                      <ShareIcon sx={{ color: 'white' }}/>
                     </IconButton>
                   </Box>
 
                   {/* Bottom Row: Play Button (positioned bottom left) */}
                    <Box className="flex justify-start items-end">
                      {/* Play Button - Purple Circle with White Triangle */}
-                     <Box className="w-18 h-18 rounded-full bg-[#cf23b5] flex items-center justify-center opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+                     <Box className="w-18 h-18 rounded-full bg-[#4E71FF] flex items-center justify-center opacity-90 group-hover:opacity-100 transition-opacity duration-300">
                        <PlayArrowIcon style={{ fontSize: '60px', color: 'white' }} />
                      </Box>
                    </Box>
@@ -106,8 +106,8 @@ const FeaturedVideoSection = () => {
               color="primary"
               href="#"
               endIcon={<ArrowForwardIcon style={{ fontSize: '1.5rem' }} />}
-              className="normal-case p-0 ml-0 justify-start text-lg font-bold hover:text-purple-900 transition-colors duration-300"
-              style={{ textDecoration: 'none', color: '#7F35B2', fontSize: '20px', fontWeight: 'bold', marginTop: '40px' }}
+              className="normal-case p-0 ml-0 justify-start text-lg font-bold text-blue-700 hover:text-blue-900 transition-colors duration-300"
+              style={{ textDecoration: 'none', color: '#1449e6', fontSize: '20px', fontWeight: 'bold', marginTop: '40px' }}
             >
               Learn more about our story
             </Button>

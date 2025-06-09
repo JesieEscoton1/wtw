@@ -16,16 +16,7 @@ const Footer = () => {
         <Box className="flex flex-wrap -mx-4 justify-between">
           {/* Logo and Social Icons Column */}
           <Box className="w-full md:w-3/12 lg:w-2/12 px-4 mb-8 md:mb-0 flex flex-col">
-            <Link href="#" className="d-block site-footer__logo mb-6" underline="none">
-              <Image
-                src="https://media.wtwco.com/-/media/WTW/Logo/Footer-Willis-Towers-Watson_Text.svg?modified=20220110040900&amp;imgeng=meta_true&amp;la=en-PH&amp;hash=88937A3511E4345AF772FF97942936E9"
-                loading="lazy"
-                alt="Willis Towers Watson logo"
-                width={120}
-                height={48}
-                className="hover:opacity-90 transition-opacity duration-300"
-              />
-            </Link>
+         
             {/* Social Media Links */}
             <Box className="site-footer__social-container flex space-x-4 mt-70">
               <IconButton 
@@ -107,7 +98,7 @@ const Footer = () => {
                   { text: 'Code of Conduct', href: '#', external: true },
                   { text: 'Philippines Privacy Notice', href: '#' },
                   { text: 'Philippines Complaints Handling', href: '#' },
-                  { text: 'WTW Trademarks', href: '#' }
+                  { text: 'Trademarks', href: '#' }
                 ].map((link, index) => (
                   <li key={index} className="mb-3">
                     <Link 
@@ -132,13 +123,8 @@ const Footer = () => {
           {/* Copyright */}
           <Box className="w-full md:w-auto px-4 mb-4 md:mb-0">
             <Typography variant="body2" color="inherit" className="font-p-xsmall m-0 site-footer__copyright text-sm opacity-75">
-              Copyright © {new Date().getFullYear()} WTW. All rights reserved.
+              Copyright © {new Date().getFullYear()} Company Name. All rights reserved.
             </Typography>
-          </Box>
-
-          {/* Circular Mail Icon */}
-          <Box className="absolute bottom-6 right-6 bg-purple-700 p-3 rounded-full cursor-pointer flex items-center justify-center hover:bg-purple-600 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
-            <MailIcon style={{ fontSize: '24px' }} />
           </Box>
         </Box>
       </Box>

@@ -86,19 +86,19 @@ const HeroSection = () => {
               </h1>
               <span className="heading-3 p-0 mt-3 mb-2 text-black font-serif font-bold text-2xl md:text-3xl">Bolder.</span><br/>
                <span className="arrow-link arrow-link--inbody p-0 heading-6 m-0 mt-3 inline-block"> 
-                <a href="https://www.wtwco.com/en-ph/insights/campaigns/transforming-tomorrows" aria-label="Link, Click to visit our Transforming Tomorrows page on wtwco.com" className="text-purple-700 normal-case p-0 justify-start text-base font-bold hover:text-purple-900 transition-colors duration-300" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', fontWeight: 'bold', fontSize: '23px' }}>See how
+                <a href="https://www.wtwco.com/en-ph/insights/campaigns/transforming-tomorrows" aria-label="Link, Click to visit our Transforming Tomorrows page on wtwco.com" className="text-blue-700 normal-case p-0 justify-start text-base font-bold hover:text-blue-900 transition-colors duration-300" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', fontWeight: 'bold', fontSize: '23px' }}>See how
                   <FontAwesomeIcon icon={faArrowRight} style={{ fontSize: '22px', marginLeft: '10px', marginTop: '3px' }} />
                 </a>
               </span>
             </Box>
           </Box>
 
-          <Box className="w-3/12 bg-[#48086f] text-white flex items-center py-16 md:py-0">
+          <Box className="w-3/12 bg-[#5409DA] text-white flex items-center py-16 md:py-0">
             <Box className="w-full py-8 px-8 flex flex-col justify-center">
               <Typography variant="h5" component="div" className="font-bold mb-6 text-xl md:text-2xl" sx={{ fontWeight: 'bold', fontSize: '25px', }}>
-                Discover WTW
+                Discover More
               </Typography> 
-              <Box className="accordion space-y-1 pt-4" id="homepage-nav-accordion">
+              <Box className="accordion space-y-0 pt-4" id="homepage-nav-accordion">
                 {(['People', 'Risk', 'Capital'] as Section[]).map((section) => (
                   <Box 
                     key={section}
@@ -115,9 +115,9 @@ const HeroSection = () => {
                         width: '100%',
                         textTransform: 'none',
                         color: 'white',
-                        backgroundColor: activeSection === section ? '#C026D3' : '#48086f',
+                        backgroundColor: activeSection === section ? '#4E71FF' : '#5409DA',
                         '&:hover': {
-                          backgroundColor: '#C026D3',
+                          backgroundColor: '#4E71FF',
                         },
                         transition: 'background-color 300ms ease-in-out',
                       }}

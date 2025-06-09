@@ -42,7 +42,7 @@ const ContentItem: React.FC<ContentItemProps> = ({ type, title, imageSrc, imageA
               {title}
             </Typography>
           </Box>
-          <Typography className="text-purple-700 normal-case p-0 justify-start text-sm font-bold hover:text-purple-900 transition-colors duration-300" sx={{ fontWeight: 'bold', display: 'flex', alignItems: 'center', fontSize: '23px' }}>
+          <Typography className="text-blue-700 normal-case p-0 justify-start text-sm font-bold hover:text-blue-900 transition-colors duration-300" sx={{ fontWeight: 'bold', display: 'flex', alignItems: 'center', fontSize: '23px' }}>
             Read more <FontAwesomeIcon icon={faArrowRight} style={{ fontSize: '22px', marginLeft: '6px', marginTop: '4px' }} />
           </Typography>
         </CardContent>

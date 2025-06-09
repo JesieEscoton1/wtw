@@ -65,17 +65,17 @@ const Header = () => {
         <Box component="nav" aria-label="Featured Links">
           <ul className="flex space-x-6 list-none p-0 m-0">
             <li>
-              <Button color="inherit" href="#" className="normal-case hover:text-purple-700" target="_blank" rel="noopener noreferrer">
+              <Button color="inherit" href="#" className="normal-case hover:text-blue-600" target="_blank" rel="noopener noreferrer">
                 News
               </Button>
             </li>
             <li>
-              <Button color="inherit" href="#" className="normal-case hover:text-purple-700" target="_blank" rel="noopener noreferrer">
+              <Button color="inherit" href="#" className="normal-case hover:text-blue-600" target="_blank" rel="noopener noreferrer">
                 Investor Relations
               </Button>
             </li>
             <li>
-              <Button color="inherit" href="#" className="normal-case hover:text-purple-700" target="_blank" rel="noopener noreferrer">
+              <Button color="inherit" href="#" className="normal-case hover:text-blue-600" target="_blank" rel="noopener noreferrer">
                 Careers
               </Button>
             </li>
@@ -87,32 +87,21 @@ const Header = () => {
       <Toolbar className="flex justify-between items-center px-4 py-3">
         {/* Left section: Menu */}
         <Box className="flex items-center border-r border-r-[1px] border-gray-300 pr-10 pl-4 h-[80px] -mt-3 -mb-3">
-          <IconButton
-            size="large"
-            edge="start"
+          <Button
             color="inherit"
-            aria-label="menu"
-            sx={{ mr: 1 }}
-            className="hover:text-purple-700"
+            className="flex items-center normal-case hover:text-blue-600"
             onClick={toggleDrawer(true)}
+            sx={{ p: 0, minWidth: 0 }}
           >
-            {openDrawer ? <CloseIcon /> : <MenuIcon />}
-          </IconButton>
-          <Typography variant="body1" component="div" className="text-gray-700">
-            Menu
-          </Typography>
+            {openDrawer ? <CloseIcon sx={{ mr: 1 }} /> : <MenuIcon sx={{ mr: 1, color: '#4E71FF', }} />}
+            <Typography variant="body1" component="div" className="text-blue-700" sx={{ fontWeight: 'bold' }}>
+              Menu
+            </Typography>
+          </Button>
         </Box>
 
-        {/* Center section: Logo */}
-        <Box className="flex-1 flex justify-center">
-          <Image
-            src="/images/Logo_Desktop.svg"
-            alt="WTW Logo"
-            width={150}
-            height={70}
-            className="cursor-pointer"
-          />
-        </Box>
+        {/* Center section: Empty space */}
+        <Box className="flex-1" />
 
         {/* Right section: Search */}
         <Box className="flex items-center border-l border-l-[1px] border-gray-300 pl-10 pr-4 h-[80px] -mt-3 -mb-3">
@@ -124,7 +113,7 @@ const Header = () => {
             edge="end"
             color="inherit"
             aria-label="search"
-            className="hover:text-purple-700"
+            className="hover:text-blue-600"
           >
             <SearchIcon />
           </IconButton>
@@ -142,14 +131,14 @@ const Header = () => {
           onClick={toggleDrawer(false)}
           onKeyDown={toggleDrawer(false)}
         >
-          <Box className="flex items-center border-b border-gray-300 h-[80px] px-4 py-3">
+          <Box className="flex items-center border-b border-gray-300 h-[80px] px-4 py-3 bg-blue-700">
             <Button
               color="inherit"
-              className="normal-case hover:bg-gray-100 text-purple-700"
+              className="normal-case text-white"
               onClick={toggleDrawer(false)}
             >
-              <CloseIcon sx={{ mr: 1 }} />
-              <Typography variant="body1" component="div" className="font-bold">
+              <CloseIcon sx={{ mr: 1, color: 'white', fontSize: '30px', fontWeight: 'bold' }} />
+              <Typography variant="body1" component="div" className="font-bold text-white" sx={{ fontSize: '20px', fontWeight: 'bold' }}>
                 Menu
               </Typography>
             </Button>
@@ -164,13 +153,13 @@ const Header = () => {
                   fontSize: '32px',
                   color: 'black',
                   '&:hover': {
-                    color: '#7c3aed', // Purple-700
+                    color: '#4E71FF', // Primary blue
                   },
                 }}
               >
                 About Us
               </Typography>
-              <ChevronRightIcon className="text-gray-700 opacity-0 group-hover:opacity-100 group-hover:text-purple-700 transition-opacity duration-200 mr-4" sx={{ fontSize: '2.5rem', mt: '2.5px', ml: '-3px' }} />
+              <ChevronRightIcon className="text-gray-700 opacity-0 group-hover:opacity-100 group-hover:text-blue-700 transition-opacity duration-200 mr-4" sx={{ fontSize: '2.5rem', mt: '2.5px', ml: '-3px' }} />
             </ListItem>
             <ListItem onClick={toggleDrawer(false)} className="flex justify-between items-center group">
               <Typography 
@@ -181,13 +170,13 @@ const Header = () => {
                   fontSize: '32px',
                   color: 'black',
                   '&:hover': {
-                    color: '#7c3aed', // Purple-700
+                    color: '#4E71FF', // Primary blue
                   },
                 }}
               >
                 Solutions
               </Typography>
-              <ChevronRightIcon className="text-gray-700 opacity-0 group-hover:opacity-100 group-hover:text-purple-700 transition-opacity duration-200 mr-4" sx={{ fontSize: '2.5rem', mt: '2.5px', ml: '-3px' }} />
+              <ChevronRightIcon className="text-gray-700 opacity-0 group-hover:opacity-100 group-hover:text-blue-700 transition-opacity duration-200 mr-4" sx={{ fontSize: '2.5rem', mt: '2.5px', ml: '-3px' }} />
             </ListItem>
             <ListItem onClick={toggleDrawer(false)} className="flex justify-between items-center group">
               <Typography 
@@ -198,13 +187,13 @@ const Header = () => {
                   fontSize: '32px',
                   color: 'black',
                   '&:hover': {
-                    color: '#7c3aed',
+                    color: '#4E71FF',
                   },
                 }}
               >
                 Insights
               </Typography>
-              <ChevronRightIcon className="text-gray-700 opacity-0 group-hover:opacity-100 group-hover:text-purple-700 transition-opacity duration-200 mr-4" sx={{ fontSize: '2.5rem', mt: '2.5px', ml: '-3px' }} />
+              <ChevronRightIcon className="text-gray-700 opacity-0 group-hover:opacity-100 group-hover:text-blue-700 transition-opacity duration-200 mr-4" sx={{ fontSize: '2.5rem', mt: '2.5px', ml: '-3px' }} />
             </ListItem>
           </List>
         </Box>
