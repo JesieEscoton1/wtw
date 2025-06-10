@@ -57,7 +57,7 @@ const FeaturedVideoSection = () => {
                       </Typography>
                        {/* Adding the smaller text based on the image */}
                       <Typography variant="body2" className="text-white opacity-90">
-                        At WTW, we celebrate perspective. Because it allows you t...
+                        We celebrate perspective. Because it allows you t...
                       </Typography>
                     </Box>
                     {/* Share Icon */}
@@ -95,19 +95,19 @@ const FeaturedVideoSection = () => {
 
           {/* Video Text Content (Right Side) */}
           <Box className="flex flex-col justify-start items-start" >
-            <Typography variant="overline" color="black" className="block mb-1" sx={{ fontWeight: 'bold', fontSize: '15px' }}>
+            <Typography variant="overline" color="black" className="block mb-1" sx={{ fontWeight: 'bold', fontSize: '25px' }}>
               FEATURED VIDEO
             </Typography>
-            <Typography variant="h5" component="h5" className="mb-4 font-bold leading-tight text-gray-900" sx={{ fontWeight: 'bold', fontSize: '35px' }}>
+            {/* <Typography variant="h5" component="h5" className="mb-4 font-bold leading-tight text-gray-900" sx={{ fontWeight: 'bold', fontSize: '35px' }}>
               Why WTW
-            </Typography>
+            </Typography> */}
             <Button
               variant="text"
               color="primary"
               onClick={() => window.location.href = '/overview'}
               endIcon={<ArrowForwardIcon style={{ fontSize: '1.5rem' }} />}
               className="normal-case p-0 ml-0 justify-start text-lg font-bold text-blue-700 hover:text-blue-900 transition-colors duration-300"
-              style={{ textDecoration: 'none', color: '#1449e6', fontSize: '20px', fontWeight: 'bold', marginTop: '40px' }}
+              style={{ textDecoration: 'none', color: '#1449e6', fontSize: '20px', fontWeight: 'bold', marginTop: '0px' }}
             >
               Learn more about our story
             </Button>

@@ -56,14 +56,14 @@ const ArticlesSection = () => {
     {
       type: 'ARTICLE',
       title: '2025 employee pay trends for digital talent',
-      imageSrc: '/images/GettyImages-7.jpg', // Updated to local path
+      imageSrc: '/images/job-fair.jpg', // Updated to local path
       imageAlt: 'Employee Pay Trends',
       linkHref: '#'
     },
     {
       type: 'ARTICLE',
       title: 'Navigating a complex world with endless possibilities',
-      imageSrc: '/images/GettyImages-1.jpg', // Updated to local path
+      imageSrc: '/images/world-endless.jfif', // Updated to local path
       imageAlt: 'Complex World',
       linkHref: '#'
     },

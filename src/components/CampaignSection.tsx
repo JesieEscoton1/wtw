@@ -63,7 +63,7 @@ const CampaignSection = () => {
       linkHref: '#',
     },
     {
-      imageSrc: '/images/GettyImages-3.jpg',
+      imageSrc: '/images/cyber.jpg',
       imageAlt: 'Cyber Risks in Asia',
       linkHref: '#',
       isImage: true,

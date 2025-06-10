@@ -16,11 +16,11 @@ const HeroSection = () => {
   const getBackgroundImage = (section: Section | null) => {
     switch (section) {
       case 'People':
-        return '/images/People_GettyImages-1362893420-1610.jpg';
+        return '/images/people.jpg';
       case 'Risk':
-        return '/images/GettyImages-5.jpg';
+        return '/images/at-the-summit.jpg';
       case 'Capital':
-        return '/images/Capital_GettyImages-672153969-1610_2.jpg';
+        return '/images/build.jpg';
       default:
         return '/images/GettyImages-2.jpg';
     }
