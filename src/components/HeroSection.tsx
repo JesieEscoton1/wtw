@@ -86,9 +86,15 @@ const HeroSection = () => {
               </h1>
               <span className="heading-3 p-0 mt-3 mb-2 text-black font-serif font-bold text-2xl md:text-3xl">Bolder.</span><br/>
                <span className="arrow-link arrow-link--inbody p-0 heading-6 m-0 mt-3 inline-block"> 
-                <a href="https://www.wtwco.com/en-ph/insights/campaigns/transforming-tomorrows" aria-label="Link, Click to visit our Transforming Tomorrows page on wtwco.com" className="text-blue-700 normal-case p-0 justify-start text-base font-bold hover:text-blue-900 transition-colors duration-300" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', fontWeight: 'bold', fontSize: '23px' }}>See how
+                <button
+                  onClick={() => window.location.href = '/transforming-tomorrows'}
+                  aria-label="Link, Click to visit our Transforming Tomorrows page"
+                  className="text-blue-700 normal-case p-0 justify-start text-base font-bold hover:text-blue-900 transition-colors duration-300 bg-transparent border-none cursor-pointer"
+                  style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', fontWeight: 'bold', fontSize: '23px' }}
+                >
+                  See how
                   <FontAwesomeIcon icon={faArrowRight} style={{ fontSize: '22px', marginLeft: '10px', marginTop: '3px' }} />
-                </a>
+                </button>
               </span>
             </Box>
           </Box>

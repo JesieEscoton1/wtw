@@ -11,13 +11,24 @@ import Footer from '@/components/Footer';
 
 export default function OverviewPage() {
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isSecondaryPlaying, setIsSecondaryPlaying] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const secondaryVideoRef = useRef<HTMLVideoElement>(null);
 
   const handlePlayClick = () => {
     setIsPlaying(true);
     setTimeout(() => {
       if (videoRef.current) {
         videoRef.current.play().catch(() => {});
+      }
+    }, 100);
+  };
+
+  const handleSecondaryPlayClick = () => {
+    setIsSecondaryPlaying(true);
+    setTimeout(() => {
+      if (secondaryVideoRef.current) {
+        secondaryVideoRef.current.play().catch(() => {});
       }
     }, 100);
   };
@@ -278,18 +289,34 @@ export default function OverviewPage() {
 
           {/* Secondary Video */}
           <Box className="w-full" sx={{ marginTop: '180%' }}>
-            <Box className="relative w-full h-0 pt-[56.25%] bg-black rounded-lg overflow-hidden">
-              <Image
-                src="/images/centuries.jpg"
-                alt="What will your tomorrow look like?"
-                layout="fill"
-                objectFit="cover"
-              />
-              <Box className="absolute inset-0 flex items-center justify-center">
-                <Box className="w-14 h-14 rounded-full bg-[#4E71FF] flex items-center justify-center opacity-90">
-                  <PlayArrowIcon style={{ fontSize: '40px', color: 'white' }} />
-                </Box>
-              </Box>
+            <Box className="relative w-full h-0 pt-[56.25%] bg-black rounded-lg overflow-hidden cursor-pointer">
+              {!isSecondaryPlaying && (
+                <>
+                  <Image
+                    src="/images/centuries.jpg"
+                    alt="What will your tomorrow look like?"
+                    layout="fill"
+                    objectFit="cover"
+                  />
+                  <Box className="absolute inset-0 flex items-center justify-center" onClick={handleSecondaryPlayClick}>
+                    <Box className="w-14 h-14 rounded-full bg-[#4E71FF] flex items-center justify-center opacity-90 hover:opacity-100 transition-opacity">
+                      <PlayArrowIcon style={{ fontSize: '40px', color: 'white' }} />
+                    </Box>
+                  </Box>
+                </>
+              )}
+              {isSecondaryPlaying && (
+                <video
+                  ref={secondaryVideoRef}
+                  controls
+                  autoPlay
+                  className="absolute inset-0 w-full h-full object-cover"
+                  onEnded={() => setIsSecondaryPlaying(false)}
+                >
+                  <source src="/videos/Transforming Tomorrows - WTW.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              )}
             </Box>
             <Typography variant="caption" className="block mt-2 text-gray-700" sx={{ fontWeight: 'bold', fontSize: '15px', marginTop: '10px'}}>
             What will your tomorrow look like?
