@@ -76,7 +76,7 @@ export default function TransformingTomorrows() {
                 className="rounded-lg shadow-lg"
                 priority
               />
-              <img
+              {/* <img
               src="/images/WTWCO_Motifs_Large_FiCo_BR_1.svg"
               alt=""
               style={{
@@ -90,7 +90,7 @@ export default function TransformingTomorrows() {
                 userSelect: 'none',
                 display: 'block'
               }}
-            />
+            /> */}
             </Box>
           </Box>
         </Box>

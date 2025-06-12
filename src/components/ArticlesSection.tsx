@@ -54,15 +54,15 @@ const ArticleItem: React.FC<ArticleItemProps> = ({ type, title, imageSrc, imageA
 const ArticlesSection = () => {
   const articleItems = [
     {
-      type: 'ARTICLE',
-      title: '2025 employee pay trends for digital talent',
+      type: '',
+      title: 'Job Evaluation',
       imageSrc: '/images/job-fair.jpg', // Updated to local path
       imageAlt: 'Employee Pay Trends',
       linkHref: '#'
     },
     {
-      type: 'ARTICLE',
-      title: 'Navigating a complex world with endless possibilities',
+      type: '',
+      title: 'People Software',
       imageSrc: '/images/world-endless.jfif', // Updated to local path
       imageAlt: 'Complex World',
       linkHref: '#'

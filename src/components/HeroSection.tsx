@@ -82,9 +82,9 @@ const HeroSection = () => {
             />
             <Box className="hero-homepage__title-block bg-white p-10 md:p-12 shadow-xl max-w-xl transform transition-all duration-300 hover:shadow-2xl absolute z-10 top-[8.5%] left-[4%]">
               <h1 className="heading-1 m-0 mb-3 text-gray-900 font-serif leading-tight text-4xl md:text-5xl" style={{ textWrap: 'balance', fontWeight: 'bold' }}>
-                What will your tomorrow look like?
+                Empowering Organizations for Resilience
               </h1>
-              <span className="heading-3 p-0 mt-3 mb-2 text-black font-serif font-bold text-2xl md:text-3xl">Bolder.</span><br/>
+              <span className="heading-3 p-0 mt-3 mb-2 text-black font-serif font-bold text-2xl md:text-md">Unlock your company's potential with our consulting services</span><br/>
                <span className="arrow-link arrow-link--inbody p-0 heading-6 m-0 mt-3 inline-block"> 
                 <button
                   onClick={() => window.location.href = '/transforming-tomorrows'}
@@ -92,7 +92,7 @@ const HeroSection = () => {
                   className="text-blue-700 normal-case p-0 justify-start text-base font-bold hover:text-blue-900 transition-colors duration-300 bg-transparent border-none cursor-pointer"
                   style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', fontWeight: 'bold', fontSize: '23px' }}
                 >
-                  See how
+                  Get Started
                   <FontAwesomeIcon icon={faArrowRight} style={{ fontSize: '22px', marginLeft: '10px', marginTop: '3px' }} />
                 </button>
               </span>
