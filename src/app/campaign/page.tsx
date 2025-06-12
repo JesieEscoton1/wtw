@@ -10,6 +10,8 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 export default function TransformingTomorrows() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -33,7 +35,7 @@ export default function TransformingTomorrows() {
         <Box className="container mx-auto max-w-7xl flex flex-col md:flex-row items-center gap-8 min-h-[440px]">
           {/* Left: Text */}
           <Box className="flex-1 text-white space-y-6 md:pr-8">
-            <Typography variant="overline" className="text-white tracking-widest font-bold !text-base" style={{ letterSpacing: '0.15em', fontWeight: 'bold'}}>
+            <Typography variant="overline" className="text-blue-500 tracking-widest font-bold !text-base" style={{ letterSpacing: '0.15em', fontWeight: 'bold'}}>
               Total Reward
             </Typography>
             <Typography
@@ -125,6 +127,61 @@ export default function TransformingTomorrows() {
 
             
           </Box>
+
+
+                                <Box className="flex flex-col  gap-2">
+                                  <Box className="w-24 h-24 bg-teal-50 p-4 rounded-lg flex-shrink-0 flex ">
+                                    <Image
+                                      src="/images/icons/1.svg"
+                                      alt="Scorecard icon"
+                                      width={64}
+                                      height={64}
+                                    />
+                                  </Box>
+                                  <Typography variant="h6" className="font-bold ">
+                                    Base salary or hourly wages
+                                  </Typography>
+                                  <Typography className="text-blue-700 normal-case p-0 justify-start text-sm font-bold hover:text-blue-900 transition-colors duration-300" sx={{ fontWeight: 'bold', display: 'flex', alignItems: 'center', fontSize: '20px' }}>
+                                              Read more <FontAwesomeIcon icon={faArrowRight} style={{ fontSize: '20px', marginLeft: '6px', marginTop: '4px' }} />
+                                            </Typography>
+                                </Box>
+
+                                                <Box className="flex flex-col gap-2">
+                                  <Box className="w-24 h-24 bg-blue-50 p-4 rounded-lg flex-shrink-0 flex">
+                                    <Image
+                                      src="/images/icons/2.svg"
+                                      alt="Insights icon"
+                                      width={64}
+                                      height={64}
+                                    />
+                                  </Box>
+                                  <Typography variant="h6" className="font-bold">
+                                    Bonuses
+                                  </Typography>
+                                    <Typography className="text-blue-700 normal-case p-0 justify-start text-sm font-bold hover:text-blue-900 transition-colors duration-300" sx={{ fontWeight: 'bold', display: 'flex', alignItems: 'center', fontSize: '20px' }}>
+                                              Read more <FontAwesomeIcon icon={faArrowRight} style={{ fontSize: '20px', marginLeft: '6px', marginTop: '4px' }} />
+                                            </Typography>
+                                </Box>
+
+                                <Box className="flex flex-col gap-2 ">
+                                <Box className="w-24 h-24 bg-teal-50 p-4 rounded-lg flex-shrink-0 ">
+                                <Image
+                                   src="/images/icons/3.svg"
+                                          alt="Assessment icon"
+                                              width={64}
+                                                      height={64}
+                                                    />
+                                                  </Box>
+                                                  <Box>
+                                                    <Typography variant="h6" className="font-bold ">
+                                                     Commission
+                                                    </Typography> 
+                                                  </Box>
+                                                  <Typography className="text-blue-700 normal-case p-0 justify-start text-sm font-bold hover:text-blue-900 transition-colors duration-300" sx={{ fontWeight: 'bold', display: 'flex', alignItems: 'center', fontSize: '20px' }}>
+                                                Read more <FontAwesomeIcon icon={faArrowRight} style={{ fontSize: '20px', marginLeft: '6px', marginTop: '4px' }} />
+                                              </Typography>
+                                                </Box>
+
 
           {/* Featured Video Section */}
           <Box className="w-full">
@@ -225,96 +282,187 @@ export default function TransformingTomorrows() {
               overflow: 'visible',
             }}
           >
-            <span
-              className="heading-4 quote__icon absolute -left-8 top-2 text-5xl"
-              style={{
-                marginTop: 10,
-                marginBottom: 0,
-                marginLeft: 65,
-                letterSpacing: '-0.4px',
-                color: '#212529',
-                fontSize: '3.5rem',
-                lineHeight: 1,
-                fontFamily: 'serif',
-              }}
-            >
-              “
-            </span>
+            
             <Typography variant="h5" component="p" className="heading-4 mb-4" sx={{ fontStyle: 'italic', color: '#212529', marginTop: '30px' }}>
-            Our purpose is clear: We transform tomorrows. We help our clients navigate people, capital and risk challenges today to make
-            their vision of tomorrow a reality.”
+            Taking a Total Reward perspective and approach, we develop various forms of reward programs aligned with the organization's business and people strategies, its culture and appropriate to the various employee groups.
             </Typography>
-            <Box component="cite" className="font-mono-small font-semibold not-italic block text-gray-700 mt-4">
-              Carl Hess
-              <br />
-              <span className="font-bold">CEO</span>
-            </Box>
+           
             <span className="quote__block" />
           </Box>
 
-          {/* How we help: Section */}
-          <Box className="border border-[lightblue] p-8 rounded-sm space-y-4 mt-8">
-            <Typography variant="h5" className="font-bold text-gray-900" sx={{ fontWeight: 'bold', marginBottom: '10px' }}>
-              How we help:
-            </Typography>
-            <Link href="#" color="inherit" underline="none" className="group flex items-center text-[#5409DA] hover:text-[#4E71FF] transition-colors">
-              <Box className="relative">
-                <Typography variant="body1" className="font-semibold text-blue-700 mr-2" sx={{ fontWeight: 'bold' }}>
-                  People solutions
-                </Typography>
-                <Box className="absolute bottom-0 left-0 h-[2px] w-0 bg-[#0e2aff] group-hover:w-full transition-all duration-300"></Box>
-              </Box>
-              <ArrowForwardIcon sx={{ fontSize: '1.25rem', ml:.5, color: '#0e2aff' }} />
-            </Link>
-            <Link href="#" color="inherit" underline="none" className="group flex items-center text-[#5409DA] hover:text-[#4E71FF] transition-colors">
-              <Box className="relative mt-1">
-                <Typography variant="body1" className="font-semibold text-blue-700 mr-2" sx={{ fontWeight: 'bold' }}>
-                  Risk solutions
-                </Typography>
-                <Box className="absolute bottom-0 left-0 h-[2px] w-0 bg-[#0e2aff] group-hover:w-full transition-all duration-300"></Box>
-              </Box>
-              <ArrowForwardIcon sx={{ fontSize: '1.25rem', ml:.5, color: '#0e2aff' }} />
-            </Link>
-            <Link href="#" color="inherit" underline="none" className="group flex items-center text-[#5409DA] hover:text-[#4E71FF] transition-colors">
-              <Box className="relative mt-1">
-                <Typography variant="body1" className="font-semibold text-blue-700 mr-2" sx={{ fontWeight: 'bold' }}>
-                  Capital solutions
-                </Typography>
-                <Box className="absolute bottom-0 left-0 h-[2px] w-0 bg-[#0e2aff] group-hover:w-full transition-all duration-300"></Box>
-              </Box>
-              <ArrowForwardIcon sx={{ fontSize: '1.25rem', ml:.5, color: '#0e2aff' }} />
-            </Link>
-          </Box>
+           {/* Sidebar */}
+              <div className="col-span-4">
+                <Box className="bg-gray-50 p-6 rounded-lg sticky top-6">
+                  <Typography variant="h5" className="text-2xl font-bold mb-6">
+                    Complete our form to get a link to download the report and recording
+                  </Typography>
+                  
+                  <form className="space-y-4">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                        First Name:<span className="text-red-500">*</span>
+                      </label>
+                      <input
+                        type="text"
+                        placeholder="First Name"
+                        className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      />
+                    </div>
 
-          {/* Featured Section */}
-          <Paper elevation={3} className="rounded-lg overflow-hidden mt-8">
-            <Box className="relative w-full h-56">
-              <Image
-                src="/images/nature.jpg" // Reusing an existing image for now
-                alt="Featured Image"
-                layout="fill"
-                objectFit="cover"
-              />
-            </Box>
-            <Box className="p-4">
-              <Typography variant="overline" className="text-gray-600 tracking-widest font-bold !text-sm" sx={{ letterSpacing: '0.1em' }}>
-                FEATURED
-              </Typography>
-              <Typography variant="h6" className="font-bold mt-1 text-gray-900">
-                A smarter way to risk
-              </Typography>
-            </Box>
-          </Paper>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                        Last Name:<span className="text-red-500">*</span>
+                      </label>
+                      <input
+                        type="text"
+                        placeholder="Last Name"
+                        className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                        Business Email:<span className="text-red-500">*</span>
+                      </label>
+                      <input
+                        type="email"
+                        placeholder="Business Email"
+                        className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                        Company Name:<span className="text-red-500">*</span>
+                      </label>
+                      <input
+                        type="text"
+                        placeholder="Company Name"
+                        className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                        Job Title:<span className="text-red-500">*</span>
+                      </label>
+                      <input
+                        type="text"
+                        placeholder="Job Title"
+                        className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      />
+                    </div>
+
+                    <div className="flex items-start gap-2">
+                      <input
+                        type="checkbox"
+                        className="mt-1"
+                      />
+                      <label className="text-sm text-gray-600">
+                        Yes, I'd also like to receive additional information about WTW offerings.
+                      </label>
+                    </div>
+
+                    <Typography variant="body2" className="text-sm text-gray-600">
+                      For more information on how we handle your personal information, please see our global{' '}
+                      <Link href="#" className="text-blue-600 hover:underline">
+                        Privacy Policy
+                      </Link>
+                      .
+                    </Typography>
+
+                    <button
+                      type="submit"
+                      className="w-full bg-blue-600 text-white py-3 px-6 rounded-full hover:bg-blue-700 transition-colors"
+                    >
+                      Submit →
+                    </button>
+                    {/* Global Research Card */}
+                <Box className="bg-white rounded-lg border-l-4 border-blue-300 border-t border-r border-b p-6 mb-12">
+                  <Typography variant="overline" className="text-gray-600 block mb-4">
+                    TOTAL REWARD
+                  </Typography>
+                  <Typography variant="h3" className="text-3xl font-bold mb-4">
+                    Reward Alignment
+                  </Typography>
+                  <Typography variant="body1" className="mb-6">
+                    Taking a Total Reward perspective and approach.
+                  </Typography>
+                  <Button
+                    className="text-purple-600 hover:text-purple-700 p-0 normal-case font-bold"
+                    endIcon={<span className="ml-2">→</span>}
+                  >
+                    Participate now
+                  </Button>
+                  
+                </Box>
+            
+                  </form>
+                </Box>
+              </div>
+
+         
         </Box>
         
       </Box>
+
+<Box className="max-w-7xl mx-auto px-4">
+  <Typography variant="h2" className="text-3xl font-bold mb-6">
+    Related Contents
+  </Typography>
+
+  <Box className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {/*  Base Pay and Incentives */}
+    <Box className="bg-white rounded-lg shadow-sm p-4 relative hover:shadow-md transition-shadow h-72 w-full">
+      <Typography variant="h5" className="text-lg font-bold mb-3">
+        Base Pay and Incentives
+      </Typography>
+      <Typography variant="body1" className="text-gray-600 mb-8 text-sm">
+        Employees receive fixed salaries and performance-based bonuses that reflect their contributions and market value.
+      </Typography>
+      <Box className="absolute bottom-4 right-4">
+        <span className="text-blue-600 text-xl">→</span>
+      </Box>
+    </Box>
+
+    {/* Benefits and Perks */}
+    <Box className="bg-white rounded-lg shadow-sm p-4 relative hover:shadow-md transition-shadow h-72 w-full">
+      <Typography variant="h5" className="text-lg font-bold mb-3">
+        Benefits and Perks
+      </Typography>
+      <Typography variant="body1" className="text-gray-600 mb-8 text-sm">
+        Includes healthcare, retirement plans, paid time off, and other support programs that enhance employee well-being.
+      </Typography>
+      <Box className="absolute bottom-4 right-4">
+        <span className="text-blue-600 text-xl">→</span>
+      </Box>
+    </Box>
+
+    {/* Career Growth and Recognition */}
+    <Box className="bg-white rounded-lg shadow-sm p-4 relative hover:shadow-md transition-shadow h-72 w-full">
+      <Typography variant="h5" className="text-lg font-bold mb-3">
+        Career Growth and Recognition
+      </Typography>
+      <Typography variant="body1" className="text-gray-600 mb-8 text-sm">
+        Organizations offer training, promotion opportunities, and recognition programs to reward and retain top talent.
+      </Typography>
+      <Box className="absolute bottom-4 right-4">
+        <span className="text-blue-600 text-xl">→</span>
+      </Box>
+    </Box>
+  </Box>
+</Box>
+
+
+
+
 
       {/* Client Success Stories Section */}
       <Box className="w-full bg-gray-100 py-10 px-4 md:px-0">
         <Box className="container mx-auto max-w-7xl">
           <Typography variant="h4" className="font-bold mb-4 text-gray-900" sx={{ fontSize: '35px', fontWeight: 'bold' }}>
             Success stories
-          </Typography>
+          </Typography> 
           <Typography variant="body1" className="mb-10 text-gray-800" sx={{ fontSize: '18px', mt:2 }}>
             Working shoulder to shoulder with clients we reveal opportunities
           </Typography> 
@@ -376,14 +524,14 @@ export default function TransformingTomorrows() {
       <Box className="w-full bg-[lightblue] py-10 px-4 md:px-0 relative">
         <Box className="container mx-auto max-w-7xl">
           <Box className="flex justify-between items-center mb-8">
-            <Typography variant="h4" className="font-bold text-white" sx={{ fontSize: '35px' }}>
+            <Typography variant="h4" className="font-bold text-black" sx={{ fontSize: '35px' }}>
              Industry insights
             </Typography>
             <Link href="#" color="inherit" underline="none" className="flex items-center text-white hover:text-gray-300 transition-colors">
-              <Typography variant="body1" className="text-white font-semibold mr-2" sx={{ fontWeight: 'bold' }}>
+              <Typography variant="body1" className="text-blue-700 font-semibold mr-2" sx={{ fontWeight: 'bold' }}>
                 See all insights
               </Typography>
-              <ArrowForwardIcon sx={{ fontSize: '1.25rem', ml: '2px', color: 'white', fontWeight: 'bold' }} />
+              <ArrowForwardIcon sx={{ fontSize: '1.25rem', ml: '2px', color: 'blue', fontWeight: 'bold' }} />
             </Link>
           </Box>
 
