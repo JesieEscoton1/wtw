@@ -1,0 +1,459 @@
+"use client";
+
+import { Box, Typography, Button, IconButton, Link, Paper, Divider } from '@mui/material';
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+import ShareIcon from '@mui/icons-material/Share';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import Image from 'next/image';
+import { useState, useRef } from 'react';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
+
+export default function TransformingTomorrows() {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const handlePlayClick = () => {
+    setIsPlaying(true);
+    setTimeout(() => {
+      if (videoRef.current) {
+        videoRef.current.play().catch(() => {});
+      }
+    }, 100);
+  };
+
+  return (
+    <Box className="w-full min-h-screen bg-white">
+      <Header />
+      
+      {/* Hero Section */}
+      <Box className="bg-[lightblue] py-5.5 px-4 md:px-0">
+        <Box className="container mx-auto max-w-7xl flex flex-col md:flex-row items-center gap-8 min-h-[440px]">
+          {/* Left: Text */}
+          <Box className="flex-1 text-white space-y-6 md:pr-8">
+            <Typography variant="overline" className="text-white tracking-widest font-bold !text-base" style={{ letterSpacing: '0.15em', fontWeight: 'bold'}}>
+              Total Reward
+            </Typography>
+            <Typography
+              variant="h1"
+              className="font-serif font-extrabold !text-6xl md:!text-6xl leading-tight mb-4"
+              style={{ fontFamily: 'serif', fontWeight: 800, marginTop: '15px'}}
+            >
+              Reward Strategy
+            </Typography>
+            <Typography
+              variant="h1"
+              className="font-serif font-extrabold !text-6xl md:!text-6xl leading-tight mb-4"
+              style={{ fontFamily: 'serif', fontWeight: 800, marginTop: '-15px'}}
+            >
+             Reward Alignment
+            </Typography>
+            <Typography variant="h5" className="opacity-90 mb-6 !text-xl md:!text-1xl font-normal">
+            Taking a Total Reward perspective and approach.
+            </Typography>
+            <Button
+              variant="contained"
+              className="bg-[#E04A9B] hover:bg-pink-600 normal-case font-bold rounded-full px-8 py-3 text-lg shadow-none"
+              style={{ background: '#4E71FF', borderRadius: '9999px', fontWeight: 700, marginTop: 20, color: 'white', fontSize: '18px' }}
+              endIcon={<ArrowForwardIcon />}
+            >
+              Contact Us
+            </Button>
+          </Box>
+          {/* Right: Image with magenta accent bar */}
+          <Box className="flex-1 relative w-full h-72 md:h-96 flex items-center justify-center">
+            {/* Magenta Accent Bar */}
+            
+            {/* Main Image */}
+            <Box className="relative w-full h-2 md:h-96 z-10">
+              <Image
+                src="/images/reward.jpg"
+                alt="Hero Overview"
+                layout="fill"
+                objectFit="cover"
+                className="rounded-lg shadow-lg"
+                priority
+              />
+             
+            </Box>
+          </Box>
+        </Box>
+      </Box>
+
+      {/* Main Content */}
+      <Box className="container mx-auto max-w-7xl py-10 px-4 md:px-0 grid grid-cols-1 md:grid-cols-3 gap-16">
+        {/* Left/Main Text */}
+        <Box className="md:col-span-2 space-y-8">
+          <Box>
+            <Typography variant="h6" className="font-bold mb-0 text-gray-900" sx={{ fontWeight: 'bold'}}>
+            How Do We Design Reward Programs That Truly Support Our Business and People?
+            </Typography>
+            <Typography variant="body1" className="mb-2 text-gray-800" sx={{ fontSize: '18px', mt:1}}>
+            By adopting a Total Rewards approach, we go beyond traditional compensation models to develop a
+            </Typography>
+            <Typography variant="body1" className="mb-2 text-gray-800" sx={{ fontSize: '18px'}}>
+            comprehensive system that encompasses all aspects of employee value. This includes not just pay and
+            </Typography>
+            <Typography variant="body1" className="mb-2 text-gray-800" sx={{ fontSize: '18px'}}>
+            benefits, but also recognition, development opportunities, work-life balance, and a positive workplace
+            </Typography>
+            <Typography variant="body1" className="mb-2 text-gray-800" sx={{ fontSize: '18px'}}>
+            experience. Our goal is to ensure that every element of our reward strategy contributes meaningfully to
+            </Typography>
+            <Typography variant="body1" className="mb-2 text-gray-800" sx={{ fontSize: '18px'}}>
+            employee engagement, motivation, and retention.
+            </Typography>
+
+            <Typography variant="body1" className="mb-2 text-gray-800" sx={{ fontSize: '18px', mt:1}}>
+            Our reward initiatives are carefully crafted to align with the overall business strategy and human capital
+            </Typography>
+            <Typography variant="body1" className="mb-2 text-gray-800" sx={{ fontSize: '18px'}}>
+            priorities of the organization. Whether it's driving high performance, attracting top talent, or supporting
+            </Typography>
+            <Typography variant="body1" className="mb-2 text-gray-800" sx={{ fontSize: '18px'}}>
+            workforce transformation, our approach ensures that reward programs reinforce organizational objectives.
+            </Typography>
+            <Typography variant="body1" className="mb-2 text-gray-800" sx={{ fontSize: '18px'}}>
+            We also take into account the company's unique culture and values, making sure that our reward systems
+            </Typography>
+            <Typography variant="body1" className="mb-2 text-gray-800" sx={{ fontSize: '18px'}}>
+            reinforce the behaviors and outcomes that matter most to our success.
+            </Typography>
+            
+
+            
+          </Box>
+
+          {/* Featured Video Section */}
+          <Box className="w-full">
+            <Typography variant="h6" className="font-bold mt-4 text-gray-900" sx={{ marginBottom: '15px' , fontWeight: 'bold'}}>
+                Together we transform tomorrows.
+            </Typography>
+            <Box className="relative w-full h-0 pb-[56.25%] bg-black rounded-lg overflow-hidden cursor-pointer">
+              {!isPlaying && (
+                <Box
+                className="absolute inset-0"
+                onClick={handlePlayClick}
+              >
+                {/* Background Image */}
+                <Image
+                  src="/images/centuries.jpg"
+                  alt="Video Thumbnail"
+                  layout="fill"
+                  objectFit="cover"
+                  className="transition-transform duration-300 group-hover:scale-105"
+                />
+
+                {/* Overlay with gradient and content */}
+                <Box className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent p-6 flex flex-col justify-between">
+                  {/* Top Row: Title and Share Icon */}
+                  <Box className="flex justify-between items-start">
+                    {/* Title and Subtitle */}
+                    <Box className="flex flex-col">
+                      <Typography variant="h4" component="h3" className="text-white font-serif">
+                        What will your tomorrow look like?
+                      </Typography>
+                       {/* Adding the smaller text based on the image */}
+                      <Typography variant="body2" className="text-white opacity-90">
+                        For almost two centuries, Smart people transform tomorrows and solve their people, risk and capital challenges.
+                      </Typography>
+                    </Box>
+                    {/* Share Icon */}
+                    <IconButton aria-label="share" size="large" className="text-white opacity-80 hover:opacity-100 transition-opacity">
+                      <ShareIcon sx={{ color: 'white' }}/>
+                    </IconButton>
+                  </Box>
+
+                  {/* Bottom Row: Play Button (positioned bottom left) */}
+                   <Box className="flex justify-start items-end">
+                     {/* Play Button - Purple Circle with White Triangle */}
+                     <Box className="w-18 h-18 rounded-full bg-[#4E71FF] flex items-center justify-center opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+                       <PlayArrowIcon style={{ fontSize: '60px', color: 'white' }} />
+                     </Box>
+                   </Box>
+                </Box>
+              </Box>
+              )}
+              {isPlaying && (
+                <video
+                  ref={videoRef}
+                  controls
+                  autoPlay
+                  className="absolute inset-0 w-full h-full object-cover"
+                  onEnded={() => setIsPlaying(false)}
+                >
+                  <source src="/videos/Transforming Tomorrows - WTW.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              )}
+            </Box>
+            <Box className="p-4">
+                <Typography variant="caption" className="block mt-2 text-gray-700" sx={{ fontWeight: 'bold', fontSize: '15px'}}>
+                    What will your tomorrow look like?
+                </Typography>
+                <Typography variant="caption" className="block mt-2 text-gray-700" sx={{ fontSize: '14px'}}>
+                    For almost two centuries, Smart people transform tomorrows and solve their people, risk and capital challenges.
+                </Typography>
+            </Box>
+          </Box>
+
+          {/* Purpose and Values */}
+          <Divider
+            sx={{
+              my: -2,
+              borderColor: '#e5e1ea',
+              borderBottomWidth: 3,
+              opacity: 1,
+              width: '100%',
+            }}
+          />
+         
+        </Box>
+
+        {/* Right Column: Quote and Secondary Video */}
+        <Box className="space-y-8">
+          {/* Quote Box */}
+          <Box
+            component="blockquote"
+            className="quote sr-reveal relative bg-white rounded-lg p-8 my-6 border-l-5"
+            sx={{
+              borderLeftColor: 'lightblue',
+              borderRightColor: 'lightblue',
+              boxShadow: '0 5px 0 0 lightblue, 0 8px 24px 0 lightblue',
+              overflow: 'visible',
+            }}
+          >
+            <span
+              className="heading-4 quote__icon absolute -left-8 top-2 text-5xl"
+              style={{
+                marginTop: 10,
+                marginBottom: 0,
+                marginLeft: 65,
+                letterSpacing: '-0.4px',
+                color: '#212529',
+                fontSize: '3.5rem',
+                lineHeight: 1,
+                fontFamily: 'serif',
+              }}
+            >
+              “
+            </span>
+            <Typography variant="h5" component="p" className="heading-4 mb-4" sx={{ fontStyle: 'italic', color: '#212529', marginTop: '30px' }}>
+            Our purpose is clear: We transform tomorrows. We help our clients navigate people, capital and risk challenges today to make
+            their vision of tomorrow a reality.”
+            </Typography>
+            <Box component="cite" className="font-mono-small font-semibold not-italic block text-gray-700 mt-4">
+              Carl Hess
+              <br />
+              <span className="font-bold">CEO</span>
+            </Box>
+            <span className="quote__block" />
+          </Box>
+
+          {/* How we help: Section */}
+          <Box className="border border-[lightblue] p-8 rounded-sm space-y-4 mt-8">
+            <Typography variant="h5" className="font-bold text-gray-900" sx={{ fontWeight: 'bold', marginBottom: '10px' }}>
+              How we help:
+            </Typography>
+            <Link href="#" color="inherit" underline="none" className="group flex items-center text-[#5409DA] hover:text-[#4E71FF] transition-colors">
+              <Box className="relative">
+                <Typography variant="body1" className="font-semibold text-blue-700 mr-2" sx={{ fontWeight: 'bold' }}>
+                  People solutions
+                </Typography>
+                <Box className="absolute bottom-0 left-0 h-[2px] w-0 bg-[#0e2aff] group-hover:w-full transition-all duration-300"></Box>
+              </Box>
+              <ArrowForwardIcon sx={{ fontSize: '1.25rem', ml:.5, color: '#0e2aff' }} />
+            </Link>
+            <Link href="#" color="inherit" underline="none" className="group flex items-center text-[#5409DA] hover:text-[#4E71FF] transition-colors">
+              <Box className="relative mt-1">
+                <Typography variant="body1" className="font-semibold text-blue-700 mr-2" sx={{ fontWeight: 'bold' }}>
+                  Risk solutions
+                </Typography>
+                <Box className="absolute bottom-0 left-0 h-[2px] w-0 bg-[#0e2aff] group-hover:w-full transition-all duration-300"></Box>
+              </Box>
+              <ArrowForwardIcon sx={{ fontSize: '1.25rem', ml:.5, color: '#0e2aff' }} />
+            </Link>
+            <Link href="#" color="inherit" underline="none" className="group flex items-center text-[#5409DA] hover:text-[#4E71FF] transition-colors">
+              <Box className="relative mt-1">
+                <Typography variant="body1" className="font-semibold text-blue-700 mr-2" sx={{ fontWeight: 'bold' }}>
+                  Capital solutions
+                </Typography>
+                <Box className="absolute bottom-0 left-0 h-[2px] w-0 bg-[#0e2aff] group-hover:w-full transition-all duration-300"></Box>
+              </Box>
+              <ArrowForwardIcon sx={{ fontSize: '1.25rem', ml:.5, color: '#0e2aff' }} />
+            </Link>
+          </Box>
+
+          {/* Featured Section */}
+          <Paper elevation={3} className="rounded-lg overflow-hidden mt-8">
+            <Box className="relative w-full h-56">
+              <Image
+                src="/images/nature.jpg" // Reusing an existing image for now
+                alt="Featured Image"
+                layout="fill"
+                objectFit="cover"
+              />
+            </Box>
+            <Box className="p-4">
+              <Typography variant="overline" className="text-gray-600 tracking-widest font-bold !text-sm" sx={{ letterSpacing: '0.1em' }}>
+                FEATURED
+              </Typography>
+              <Typography variant="h6" className="font-bold mt-1 text-gray-900">
+                A smarter way to risk
+              </Typography>
+            </Box>
+          </Paper>
+        </Box>
+        
+      </Box>
+
+      {/* Client Success Stories Section */}
+      <Box className="w-full bg-gray-100 py-10 px-4 md:px-0">
+        <Box className="container mx-auto max-w-7xl">
+          <Typography variant="h4" className="font-bold mb-4 text-gray-900" sx={{ fontSize: '35px', fontWeight: 'bold' }}>
+            Success stories
+          </Typography>
+          <Typography variant="body1" className="mb-10 text-gray-800" sx={{ fontSize: '18px', mt:2 }}>
+            Working shoulder to shoulder with clients we reveal opportunities
+          </Typography> 
+          <Typography variant="body1" className="mb-10 text-gray-800" sx={{ fontSize: '18px' }}>
+            to explore, tackle complex challenges and transform tomorrows.
+          </Typography>
+
+          <Box className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-4">
+            {/* Card 1 */}
+            <Paper elevation={3} className="rounded-lg overflow-hidden flex flex-col">
+              <Box className="relative w-full h-64">
+                <Image
+                  src="/images/high-tech.jpg" // Placeholder image
+                  alt="Client Story 1"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </Box>
+              <Box className="p-6 flex flex-col justify-between flex-grow">
+                <Typography variant="h5" className="font-bold mb-4 text-gray-900" sx={{ fontSize: '24px', fontWeight: 'bold' }}>
+                HealthPlus Solutions
+                </Typography>
+                <Typography variant="body2" className="text-gray-700 mb-4" sx={{ fontSize: '16px', mt:1 }}>
+                40% increase in employee engagement scores after aligning their rewards strategy with company values and personalizing incentives across job roles.
+                </Typography>   
+                <Link href="#" color="inherit" underline="none" className="flex items-center text-[#5409DA] hover:text-[#4E71FF] transition-colors self-end">
+                  <ArrowForwardIcon sx={{ fontSize: '2rem', color: '#0e2aff' }} />
+                </Link>
+              </Box>
+            </Paper>
+
+            {/* Card 2 */}
+            <Paper elevation={3} className="rounded-lg overflow-hidden flex flex-col">
+              <Box className="relative w-full h-64">
+                <Image
+                  src="/images/empower.jpg" // Placeholder image
+                  alt="Client Story 2"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </Box>
+              <Box className="p-6 flex flex-col justify-between flex-grow">
+                <Typography variant="h5" className="font-bold mb-4 text-gray-900" sx={{ fontSize: '24px', fontWeight: 'bold' }}>
+                TechCorp
+                </Typography>
+                <Typography variant="body2" className="text-gray-700 mb-4" sx={{ fontSize: '16px', mt:1 }}>
+                boosted employee retention by 35% in one year after implementing a Total Rewards program that combined flexible benefits, career development, and performance bonuses.
+                </Typography>
+                <Link href="#" color="inherit" underline="none" className="flex items-center text-[#5409DA] hover:text-[#4E71FF] transition-colors self-end">
+                  <ArrowForwardIcon sx={{ fontSize: '2rem', color: '#0e2aff' }} />
+                </Link>
+              </Box>
+            </Paper>
+          </Box>
+        </Box>
+      </Box>
+
+      {/* WTW Insights Section */}
+      <Box className="w-full bg-[lightblue] py-10 px-4 md:px-0 relative">
+        <Box className="container mx-auto max-w-7xl">
+          <Box className="flex justify-between items-center mb-8">
+            <Typography variant="h4" className="font-bold text-white" sx={{ fontSize: '35px' }}>
+             Industry insights
+            </Typography>
+            <Link href="#" color="inherit" underline="none" className="flex items-center text-white hover:text-gray-300 transition-colors">
+              <Typography variant="body1" className="text-white font-semibold mr-2" sx={{ fontWeight: 'bold' }}>
+                See all insights
+              </Typography>
+              <ArrowForwardIcon sx={{ fontSize: '1.25rem', ml: '2px', color: 'white', fontWeight: 'bold' }} />
+            </Link>
+          </Box>
+
+          {/* Insights Carousel/Cards */}
+          <Box className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            {/* Insight Card 1 */}
+            <Paper elevation={3} className="rounded-lg overflow-hidden flex flex-col">
+              <Box className="relative w-full h-48">
+                <Image
+                  src="/images/ai-risk.jpg" // Placeholder image
+                  alt="AI risk and governance"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </Box>
+              <Box className="p-4 flex flex-col flex-grow">
+                <Typography variant="overline" className="text-gray-600 tracking-widest font-bold !text-sm" sx={{ letterSpacing: '0.1em' }}>
+                  ARTICLE 1
+                </Typography>
+                <Typography variant="h6" className="font-bold mt-1 text-gray-900" sx={{ fontSize: '20px' }}>
+                Adopting a Total Rewards perspective allows organizations to align reward programs with business goals and employee expectations
+                </Typography>
+              </Box>
+            </Paper>
+
+            {/* Insight Card 2 */}
+            <Paper elevation={3} className="rounded-lg overflow-hidden flex flex-col">
+              <Box className="relative w-full h-48">
+                <Image
+                  src="/images/transparency.jpg" // Placeholder image
+                  alt="Pay transparency"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </Box>
+              <Box className="p-4 flex flex-col flex-grow">
+                <Typography variant="overline" className="text-gray-600 tracking-widest font-bold !text-sm" sx={{ letterSpacing: '0.1em' }}>
+                  ARTICLE 2
+                </Typography>
+                <Typography variant="h6" className="font-bold mt-1 text-gray-900" sx={{ fontSize: '20px' }}>
+                Customized reward solutions address the diverse needs of various employee groups, enhancing engagement and retention.
+                </Typography>
+              </Box>
+            </Paper>
+
+            {/* Insight Card 3 */}
+            <Paper elevation={3} className="rounded-lg overflow-hidden flex flex-col">
+              <Box className="relative w-full h-48">
+                <Image
+                  src="/images/complex-landscapte.jpg" // Placeholder image
+                  alt="AI governance"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </Box>
+              <Box className="p-4 flex flex-col flex-grow">
+                <Typography variant="overline" className="text-gray-600 tracking-widest font-bold !text-sm" sx={{ letterSpacing: '0.1em' }}>
+                  ARTICLE 3
+                </Typography>
+                <Typography variant="h6" className="font-bold mt-1 text-gray-900" sx={{ fontSize: '20px' }}>
+                Reward strategies that reflect organizational culture help reinforce desired behaviors and strengthen company identity.
+                </Typography>
+              </Box>
+            </Paper>
+          </Box>
+    
+        </Box>
+      </Box>    
+
+      <Footer />
+    </Box>
+  );
+} 
