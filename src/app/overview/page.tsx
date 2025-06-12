@@ -109,35 +109,32 @@ export default function OverviewPage() {
             <Typography variant="h6" className="font-bold mb-0 text-gray-900" sx={{ fontWeight: 'bold', mt:1}}>
               From the unknown to the untapped?
             </Typography>
-            <Typography variant="body1" className="mb-2 text-gray-800" sx={{ fontSize: '18px'}}>
-              We provide data-driven, insight-led solutions in the areas of people, risk and capital that make your organization more resilient, motivate your workforce, and maximize performance.
+            <Typography variant="body1" className="mb-2 text-gray-800" sx={{ fontSize: '18px', mt:1}}>
+             At Alliance Atlantic, we deliver solutions driven by data and insights across people, risk, and capital helping organizations build resilience, inspire their people,
+             and enhance overall performance.
             </Typography>
-            <Typography variant="body1" className="mb-2 text-gray-800" sx={{ fontSize: '18px'}}>
-              We work shoulder to shoulder with you, bringing diverse points of view and a deep commitment to your success.
+            <Typography variant="body1" className="mb-2 text-gray-800" sx={{ fontSize: '18px', mt:1}}>
+             We work in true partnership with our clients, bringing together diverse expertise and a steadfast commitment to their success. Through open collaboration and critical
+             thinking, we challenge assumptions to uncover the most effective paths forward.
             </Typography>
-            <Typography variant="body1" className="mb-2 text-gray-800" sx={{ fontSize: '18px'}}>
-              By challenging one another, we achieve breakthroughs because only the best ideas survive. The result? Innovative solutions that meet your needs—informed by the global view and the local understanding of our colleagues around the world.
+            <Typography variant="body1" className="mb-2 text-gray-800" sx={{ fontSize: '18px', mt:1}}>
+             Our global experience, combined with local understanding, allows us to deliver tailored solutions that address your unique needs with precision.
             </Typography>
-            <Typography variant="body1" className="mb-2 text-gray-800" sx={{ fontSize: '18px'}}>
-              Together, we broaden your horizon and sharpen your focus.
-            </Typography>
-            <Typography variant="body1" className="mb-2 text-gray-800" sx={{ fontSize: '18px'}}>
-              Transform your toughest challenges into actionable opportunities.
-            </Typography>
-            <Typography variant="body1" className="mb-2 text-gray-800" sx={{ fontSize: '18px'}}>
-              And set your path for sustainable success.
-            </Typography>
-            <Typography variant="subtitle1" className="font-bold mt-4 text-gray-900" sx={{ marginTop: '15px' , fontSize: '25px', fontWeight: 'bold'}}>
-              This is perspective that moves you.
+            <Typography variant="body1" className="mb-2 text-gray-800" sx={{ fontSize: '18px', mt:1}}>
+             Together, we broaden perspectives, sharpen strategies, and transform your most complex issues into clear, actionable opportunities paving the way
+             for sustainable, long-term growth.
             </Typography>
           </Box>
 
           {/* Featured Video Section */}
-          <Box className="w-full">
+          <Box className="w-full">  
+            <Typography variant="subtitle1" className="font-bold mt-4 text-gray-900" sx={{ marginTop: '0px' , fontSize: '25px', fontWeight: 'bold', marginBottom: '15px'}}>
+              This is perspective that moves you.
+            </Typography>
             <Box className="relative w-full h-0 pb-[56.25%] bg-black rounded-lg overflow-hidden cursor-pointer">
               {!isPlaying && (
                 <Box
-                className="absolute inset-0"
+                className="absolute inset-0 mt-4"
                 onClick={handlePlayClick}
               >
                 {/* Background Image */}
@@ -217,32 +214,33 @@ export default function OverviewPage() {
               Our purpose and values
             </Typography>
             <Typography variant="body1" className="mb-4 text-gray-800" sx={{ fontSize: '18px', marginTop: '10px' }}>
-              Our purpose is why our company exists. We transform tomorrows.
+              At Alliance Atlantic, our purpose defines who we are and why we exist:
             </Typography>
             <Typography variant="body1" className="mb-4 text-gray-800" sx={{ fontSize: '18px',  marginTop: '10px'}}>
-            And our values are more than words. A strong client focus, an emphasis on teamwork, unwavering integrity,
-            mutual respect and a constant striving for excellence are at the core of our rich history.
+             Our values are not simply words they are principles that guide every decision, every relationship, and
+             every outcome. Grounded in a strong client focus, collaboration, integrity, respect, and a relentless 
+             pursuit of excellence, these values are the foundation of our enduring legacy.
             </Typography>
             <Box className="space-y-4">
               <Box>
                 <Typography variant="subtitle1" className="font-bold text-gray-900" sx={{ fontSize: '25px', fontWeight: 'bold',  marginTop: '20px'}}>Client focus</Typography>
-                <Typography variant="body2" className="text-gray-800" sx={{ fontSize: '18px'}}>We are driven to help our clients succeed. In every interaction and with every solution, we act in our clients' best interests – striving to understand their needs, respecting their perspectives and exceeding their expectations.</Typography>
+                <Typography variant="body2" className="text-gray-800" sx={{ fontSize: '18px'}}>Our clients’ success is our highest priority. In every engagement, we act in their best interests listening carefully, understanding their unique needs, honoring their perspectives, and consistently striving to exceed expectations.</Typography>
               </Box> 
               <Box>
                 <Typography variant="subtitle1" className="font-bold text-gray-900" sx={{ fontSize: '25px', fontWeight: 'bold', marginTop: '20px'}}>Teamwork</Typography>
-                <Typography variant="body2" className="text-gray-800" sx={{ fontSize: '18px'}}>When you get one of us, you get all of us. We bring innovative solutions and world-class advice to our clients by working across boundaries of business, geography and function. We help each other succeed and create more value by working together.</Typography>
+                <Typography variant="body2" className="text-gray-800" sx={{ fontSize: '18px'}}>When you partner with one of us, you benefit from the strength of all of us. We collaborate across disciplines, geographies, and functions to deliver innovative solutions and world-class advice. By supporting one another, we multiply our collective expertise and create greater value for our clients.</Typography>
               </Box>
               <Box>
                 <Typography variant="subtitle1" className="font-bold text-gray-900" sx={{ fontSize: '25px', fontWeight: 'bold', marginTop: '20px'}}>Integrity</Typography>
-                <Typography variant="body2" className="text-gray-800" sx={{ fontSize: '18px'}}>Our clients invest more than their time and money with us; they also invest their trust. We seek to earn that trust every day through professionalism, doing what is right and telling the truth. We are accountable to the organizations and people with which we interact – including clients, shareholders, regulators and each other for our actions and results.</Typography>
+                <Typography variant="body2" className="text-gray-800" sx={{ fontSize: '18px'}}>Trust is the cornerstone of our relationships. We earn that trust daily through professionalism, transparency, accountability, and a steadfast commitment to doing what is right. We hold ourselves accountable to our clients, shareholders, regulators, and each other for both our actions and our results.</Typography>
               </Box>
               <Box>
                 <Typography variant="subtitle1" className="font-bold text-gray-900" sx={{ fontSize: '25px', fontWeight: 'bold', marginTop: '20px'}}>Respect</Typography>
-                <Typography variant="body2" className="text-gray-800" sx={{ fontSize: '18px'}}>We listen to and learn from each other. We support and celebrate differences, foster an inclusive culture and operate with openness, honesty and benefit of the doubt. We manage our relationships, inside the company and out, with fairness, decency and good citizenship.</Typography>
+                <Typography variant="body2" className="text-gray-800" sx={{ fontSize: '18px'}}>We embrace diversity of thought, background, and experience. Through open dialogue and mutual understanding, we foster an inclusive culture built on fairness, honesty, and genuine care for one another. We manage all our relationships with colleagues, clients, and communities with dignity and responsibility.</Typography>
               </Box>
               <Box>
                 <Typography variant="subtitle1" className="font-bold text-gray-900" sx={{ fontSize: '25px', fontWeight: 'bold', marginTop: '20px'}}>Excellence</Typography>
-                <Typography variant="body2" className="text-gray-800" sx={{ fontSize: '18px'}}>We strive to lead and sustain excellence. Most importantly, this means an unwavering commitment to professional development and personal growth for our people. Our colleagues have the responsibility to develop their expertise, competencies and professional stature, while the company invests in the tools and opportunities that allow for continual development. In business, we place an unrelenting focus on innovation, quality and risk management.</Typography>
+                <Typography variant="body2" className="text-gray-800" sx={{ fontSize: '18px'}}>We are committed to leadership and continuous improvement. This means investing in the personal and professional growth of our people, ensuring they have the tools, resources, and opportunities to advance their expertise. In every aspect of our business, we maintain an uncompromising focus on innovation, quality, and risk management to consistently deliver superior outcomes.</Typography>
               </Box>
             </Box>
           </Box>

@@ -99,45 +99,46 @@ export default function TransformingTomorrows() {
       {/* Main Content */}
       <Box className="container mx-auto max-w-7xl py-10 px-4 md:px-0 grid grid-cols-1 md:grid-cols-3 gap-16">
         {/* Left/Main Text */}
-        <Box className="md:col-span-2 space-y-8">
+        <Box className="md:col-span-2 space-y-5">
           <Box>
             <Typography variant="h6" className="font-bold mb-0 text-gray-900" sx={{ fontWeight: 'bold'}}>
                 What will your tomorrow look like?
             </Typography>
             <Typography variant="body1" className="mb-2 text-gray-800" sx={{ fontSize: '18px', mt:1}}>
-                Will it be smarter? More flexible? Will it put you on the pathway to success? Will it allow
+             Will it be smarter? More agile? Will it set you firmly on the path to sustained success? Will
+          
             </Typography>
             <Typography variant="body1" className="mb-2 text-gray-800" sx={{ fontSize: '18px'}}>
-                your people to live the lives they want, now and in the future? Will you take more risks?
+             it empower your people to thrive today and for years to come? Will you embrace calculated
             </Typography>
             <Typography variant="body1" className="mb-2 text-gray-800" sx={{ fontSize: '18px'}}>
-                See more opportunities?
+             risks and seize new opportunities?
             </Typography>
 
             <Typography variant="body1" className="mb-2 text-gray-800" sx={{ fontSize: '18px', mt:1}}>
-                These are the questions that drive us. We've been helping smart people
+             These are the questions that inspire us every day. For nearly two centuries, we have 
             </Typography>
             <Typography variant="body1" className="mb-2 text-gray-800" sx={{ fontSize: '18px'}}>
-                creatively solve their people, risk and capital challenges for almost two centuries
+             partnered with organizations to help them creatively address their most complex challenges  
             </Typography>
             <Typography variant="body1" className="mb-2 text-gray-800" sx={{ fontSize: '18px'}}>
-                because, with the right partnership and perspective, your tomorrow has endless
+             across people, risk, and capital. Because with the right perspective and partnership, the 
             </Typography>
             <Typography variant="body1" className="mb-2 text-gray-800" sx={{ fontSize: '18px'}}>
-                possibilities.
+             possibilities for tomorrow are limitless.
             </Typography>
 
             <Typography variant="body1" className="mb-2 text-gray-800" sx={{ fontSize: '18px', mt:1}}>
-                As your trusted partner, we'll create momentum that propels you toward a stronger
+             As your trusted advisor, Alliance Atlantic works side by side with you gaining a deep 
             </Typography>
             <Typography variant="body1" className="mb-2 text-gray-800" sx={{ fontSize: '18px'}}>
-                future. Working shoulder to shoulder to deeply understand your business, align with
+             understanding of your business, aligning with your goals, and developing solutions that
             </Typography>
             <Typography variant="body1" className="mb-2 text-gray-800" sx={{ fontSize: '18px'}}>
-                your ambitions and create solutions that push beyond the expected. Our purpose,
+             go beyond the expected. Together, we create the momentum that drives your organization
             </Typography>
             <Typography variant="body1" className="mb-2 text-gray-800" sx={{ fontSize: '18px'}}>
-                realized.
+             toward a stronger, more resilient future.
             </Typography>
             
           </Box>
@@ -257,8 +258,7 @@ export default function TransformingTomorrows() {
               “
             </span>
             <Typography variant="h5" component="p" className="heading-4 mb-4" sx={{ fontStyle: 'italic', color: '#212529', marginTop: '30px' }}>
-            Our purpose is clear: We transform tomorrows. We help our clients navigate people, capital and risk challenges today to make
-            their vision of tomorrow a reality.”
+             At Alliance Atlantic, we guide our clients through the complexities of people, capital, and risk helping them turn today’s challenges into tomorrow’s opportunities and achieve their long-term vision.”
             </Typography>
             <Box component="cite" className="font-mono-small font-semibold not-italic block text-gray-700 mt-4">
               Carl Hess
@@ -332,10 +332,10 @@ export default function TransformingTomorrows() {
             Client success stories
           </Typography>
           <Typography variant="body1" className="mb-10 text-gray-800" sx={{ fontSize: '18px', mt:2 }}>
-            Working shoulder to shoulder with clients we reveal opportunities
+            Partnering closely with our clients, we uncover new opportunities,
           </Typography> 
           <Typography variant="body1" className="mb-10 text-gray-800" sx={{ fontSize: '18px' }}>
-            to explore, tackle complex challenges and transform tomorrows.
+            solve complex challenges, and shape a stronger tomorrow.
           </Typography>
 
           <Box className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-4">
@@ -351,10 +351,10 @@ export default function TransformingTomorrows() {
               </Box>
               <Box className="p-6 flex flex-col justify-between flex-grow">
                 <Typography variant="h5" className="font-bold mb-4 text-gray-900" sx={{ fontSize: '24px', fontWeight: 'bold' }}>
-                  A high-tech company brings a global, state-of-the-art approach to total rewards communication
+                 Transforming Workforce Strategy for a Global Manufacturer
                 </Typography>
                 <Typography variant="body2" className="text-gray-700 mb-4" sx={{ fontSize: '16px', mt:1 }}>
-                  Helped modernize an outdated company culture and decentralized HR approach by providing transparent and consistent global total reward...
+                A leading global manufacturing company was facing growing challenges in attracting and retaining top talent across multiple regions...
                 </Typography>   
                 <Link href="#" color="inherit" underline="none" className="flex items-center text-[#5409DA] hover:text-[#4E71FF] transition-colors self-end">
                   <ArrowForwardIcon sx={{ fontSize: '2rem', color: '#0e2aff' }} />
@@ -374,10 +374,10 @@ export default function TransformingTomorrows() {
               </Box>
               <Box className="p-6 flex flex-col justify-between flex-grow">
                 <Typography variant="h5" className="font-bold mb-4 text-gray-900" sx={{ fontSize: '24px', fontWeight: 'bold' }}>
-                  Empowering employees to own their career
+                 Managing Complex Risk for a Financial Services Leader
                 </Typography>
                 <Typography variant="body2" className="text-gray-700 mb-4" sx={{ fontSize: '16px', mt:1 }}>
-                  A global healthcare solutions provider creates a better employee experience by redesigning its job architecture and providing more effective...
+                 A multinational financial institution was facing increasing regulatory demands, complex market volatility, and a rapidly evolving risk landscape...
                 </Typography>
                 <Link href="#" color="inherit" underline="none" className="flex items-center text-[#5409DA] hover:text-[#4E71FF] transition-colors self-end">
                   <ArrowForwardIcon sx={{ fontSize: '2rem', color: '#0e2aff' }} />
@@ -407,7 +407,7 @@ export default function TransformingTomorrows() {
           <Box className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {/* Insight Card 1 */}
             <Paper elevation={3} className="rounded-lg overflow-hidden flex flex-col">
-              <Box className="relative w-full h-48">
+              <Box className="relative w-full h-64">
                 <Image
                   src="/images/ai-risk.jpg" // Placeholder image
                   alt="AI risk and governance"
@@ -419,15 +419,15 @@ export default function TransformingTomorrows() {
                 <Typography variant="overline" className="text-gray-600 tracking-widest font-bold !text-sm" sx={{ letterSpacing: '0.1em' }}>
                   ARTICLE
                 </Typography>
-                <Typography variant="h6" className="font-bold mt-1 text-gray-900" sx={{ fontSize: '20px' }}>
-                  AI risk and governance: Utopian and dystopian views
+                <Typography variant="h6" className="font-bold mt-1 text-gray-900" sx={{ fontSize: '20px', fontWeight: 'bold' }}>
+                 Navigating Global Workforce Transformation
                 </Typography>
               </Box>
             </Paper>
 
             {/* Insight Card 2 */}
             <Paper elevation={3} className="rounded-lg overflow-hidden flex flex-col">
-              <Box className="relative w-full h-48">
+              <Box className="relative w-full h-64">
                 <Image
                   src="/images/transparency.jpg" // Placeholder image
                   alt="Pay transparency"
@@ -439,15 +439,15 @@ export default function TransformingTomorrows() {
                 <Typography variant="overline" className="text-gray-600 tracking-widest font-bold !text-sm" sx={{ letterSpacing: '0.1em' }}>
                   ARTICLE
                 </Typography>
-                <Typography variant="h6" className="font-bold mt-1 text-gray-900" sx={{ fontSize: '20px' }}>
-                  The momentum and future of pay transparency in the U.S.
+                <Typography variant="h6" className="font-bold mt-1 text-gray-900" sx={{ fontSize: '20px', fontWeight: 'bold' }}>
+                 Strengthening Risk Resilience in Uncertain Markets
                 </Typography>
               </Box>
             </Paper>
 
             {/* Insight Card 3 */}
             <Paper elevation={3} className="rounded-lg overflow-hidden flex flex-col">
-              <Box className="relative w-full h-48">
+              <Box className="relative w-full h-64">
                 <Image
                   src="/images/complex-landscapte.jpg" // Placeholder image
                   alt="AI governance"
@@ -459,8 +459,8 @@ export default function TransformingTomorrows() {
                 <Typography variant="overline" className="text-gray-600 tracking-widest font-bold !text-sm" sx={{ letterSpacing: '0.1em' }}>
                   ARTICLE
                 </Typography>
-                <Typography variant="h6" className="font-bold mt-1 text-gray-900" sx={{ fontSize: '20px' }}>
-                  Navigating the complex landscape of AI governance: Challenges, tools, and guidance for a trustworthy future
+                <Typography variant="h6" className="font-bold mt-1 text-gray-900" sx={{ fontSize: '20px', fontWeight: 'bold' }}>
+                 Unlocking Capital Efficiency for Sustainable Growth
                 </Typography>
               </Box>
             </Paper>

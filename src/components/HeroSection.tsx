@@ -22,22 +22,22 @@ const HeroSection = () => {
       case 'Capital':
         return '/images/build.jpg';
       default:
-        return '/images/GettyImages-2.jpg';
+        return '/images/About-Us-Overview.jpg';
     }
   };
 
-  const getSvgImage = (section: Section | null) => {
-    switch (section) {
-      case 'People':
-        return '/images/WTWCO_Motifs_Large_FiCo_TL_2.svg';
-      case 'Risk':
-        return '/images/WTWCO_Motifs_Large_InSt_TL_1.svg';
-      case 'Capital':
-        return '/images/WTWCO_Motifs_Large_SuMa_TL_3.svg';
-      default:
-        return '/images/WTWCO_Motifs_Large_SuMa_TL_2.svg';
-    }
-  };
+  // const getSvgImage = (section: Section | null) => {
+  //   switch (section) {
+  //     case 'People':
+  //       return '/images/WTWCO_Motifs_Large_FiCo_TL_2.svg';
+  //     case 'Risk':
+  //       return '/images/WTWCO_Motifs_Large_InSt_TL_1.svg';
+  //     case 'Capital':
+  //       return '/images/WTWCO_Motifs_Large_SuMa_TL_3.svg';
+  //     default:
+  //       return '/images/WTWCO_Motifs_Large_SuMa_TL_2.svg';
+  //   }
+  // };
 
   const handleSectionHover = (section: Section | null) => {
     setActiveSection(section);
@@ -47,7 +47,7 @@ const HeroSection = () => {
     <Box className="relative w-full">
       <header className="relative w-full h-[600px] overflow-hidden">
         <Box className="absolute top-0 left-0 z-40 transition-opacity duration-[2000ms] ease-in-out">
-          <Image
+          {/* <Image
             key={activeSection || 'default'}
             src={getSvgImage(activeSection)}
             alt=""
@@ -63,7 +63,7 @@ const HeroSection = () => {
               transform: 'matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)',
               transition: 'all, opacity 2s cubic-bezier(0.5, 0, 0, 1) 0.1s, transform 2s cubic-bezier(0.5, 0, 0, 1) 0.1s'
             }}
-          />
+          /> */}
         </Box>
 
         <Box className="relative z-20 h-full flex flex-col md:flex-row items-stretch justify-between">
@@ -99,7 +99,7 @@ const HeroSection = () => {
             </Box>
           </Box>
 
-          <Box className="w-3/12 bg-[#5409DA] text-white flex items-center py-16 md:py-0">
+          <Box className="w-3/12 bg-[#4E71FF] text-white flex items-center py-16 md:py-0">
             <Box className="w-full py-8 px-8 flex flex-col justify-center">
               <Typography variant="h5" component="div" className="font-bold mb-6 text-xl md:text-2xl" sx={{ fontWeight: 'bold', fontSize: '25px', }}>
                 Discover More
@@ -121,10 +121,10 @@ const HeroSection = () => {
                         width: '100%',
                         textTransform: 'none',
                         color: 'white',
-                        backgroundColor: activeSection === section ? '#4E71FF' : '#5409DA',
-                        '&:hover': {
-                          backgroundColor: '#4E71FF',
-                        },
+                        // backgroundColor: activeSection === section ? '#4E71FF' : '#5409DA',
+                        // '&:hover': {
+                        //   backgroundColor: '#4E71FF',
+                        // },
                         transition: 'background-color 300ms ease-in-out',
                       }}
                       aria-label={`Content slider, ${section}, click to explore WTW content related to ${section.toLowerCase()} category`}
