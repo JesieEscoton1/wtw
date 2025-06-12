@@ -56,16 +56,17 @@ const ReportsCampaignsSection = () => {
     {
       type: '',
       title: 'Total Reward',
-      imageSrc: '/images/empower.jpg',
-      imageAlt: 'Benefits Trends Survey',
-      linkHref: '#'
+      imageSrc: '/images/fil.jpg',
+      imageAlt: 'Cyber Risks in Asia',
+      linkHref: '/campaign'
     },
     {
       type: '',
       title: 'Performance Management',
-      imageSrc: '/images/GettyImages-1.jpg',
-      imageAlt: 'Natural Catastrophe Review',
-      linkHref: '#'
+      imageSrc: '/images/cyber.jpg',
+      imageAlt: 'Cyber Risks in Asia',
+      linkHref: '/campaign',
+      isImage: true,
     },
   ];
 

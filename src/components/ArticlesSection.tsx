@@ -63,7 +63,7 @@ const ArticlesSection = () => {
     {
       type: '',
       title: 'People Software',
-      imageSrc: '/images/world-endless.jfif', // Updated to local path
+      imageSrc: '/images/world-complex.jpg', // Updated to local path
       imageAlt: 'Complex World',
       linkHref: '#'
     },
