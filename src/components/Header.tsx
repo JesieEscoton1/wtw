@@ -100,8 +100,17 @@ const Header = () => {
           </Button>
         </Box>
 
-        {/* Center section: Empty space */}
-        <Box className="flex-1" />
+        {/* Center section: Alliance Logo */}
+        <Box className="flex-1 flex justify-center items-center">
+          <Image
+            src="/images/alliance.png"
+            alt="Alliance Logo"
+            width={200}
+            height={60}
+            priority
+            style={{ objectFit: 'contain' }}
+          />
+        </Box>
 
         {/* Right section: Search */}
         <Box className="flex items-center border-l border-l-[1px] border-gray-300 pl-10 pr-4 h-[80px] -mt-3 -mb-3">
