@@ -1,6 +1,6 @@
 'use client';
 
-import { Box, Typography, Grid as MuiGrid, Card, CardContent, Grid } from '@mui/material';
+import { Box, Typography, Grid, Card, CardContent } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
@@ -58,25 +58,25 @@ const ReportsCampaignsSection = () => {
       title: 'Organizational Development',
       imageSrc: '/images/pexels-craytive.jpg',
       imageAlt: 'Benefits Trends Survey',
-      linkHref: '#'
+      linkHref: '/survey'
     },
     {
       type: '',
       title: 'Building HR Capability',
       imageSrc: '/images/nature.jpg',
       imageAlt: 'Natural Catastrophe Review',
-      linkHref: '#'
+      linkHref: '/report'
     },
   ];
 
   return (
     <Box className="py-16 px-4 md:px-8 bg-white">
       <Box className="container mx-auto max-w-12xl">
-        <Grid container spacing={14} justifyContent="center">
-          <Grid item xs={12} lg={8} key={0}>
+        <Grid container spacing={14}>
+          <Grid item xs={12} lg={8}>
             <ContentItem {...contentItems[0]} isFirstArticle={true} width={600} height={400} />
           </Grid>
-          <Grid item xs={12} lg={4} key={1}>
+          <Grid item xs={12} lg={4}>
             <ContentItem {...contentItems[1]} isFirstArticle={false} width={600} height={330} imageMarginTop="70px" />
           </Grid>
         </Grid>
