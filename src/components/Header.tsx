@@ -86,7 +86,7 @@ const Header = () => {
       {/* Main Navigation */}
       <Toolbar className="flex justify-between items-center px-4 py-3">
         {/* Left section: Menu */}
-        <Box className="flex items-center border-r border-r-[1px] border-gray-300 pr-10 pl-4 h-[80px] -mt-3 -mb-3">
+        <Box className="flex items-center border-r border-r-[1px] border-gray-300 pr-10 pl-4 h-[100px] -mt-3 -mb-3">
           <Button
             color="inherit"
             className="flex items-center normal-case hover:text-blue-600"
@@ -101,19 +101,19 @@ const Header = () => {
         </Box>
 
         {/* Center section: Alliance Logo */}
-        <Box className="flex-1 flex justify-center items-center">
+        <Box className="flex-2 flex justify-center items-center">
           <Image
             src="/images/alliance.png"
             alt="Alliance Logo"
-            width={200}
-            height={60}
+            width={100}
+            height={70}
             priority
             style={{ objectFit: 'contain' }}
           />
         </Box>
 
         {/* Right section: Search */}
-        <Box className="flex items-center border-l border-l-[1px] border-gray-300 pl-10 pr-4 h-[80px] -mt-3 -mb-3">
+        <Box className="flex items-center border-l border-l-[1px] border-gray-300 pl-10 pr-4 h-[100px] -mt-3 -mb-3">
           <Typography variant="body1" component="div" sx={{ mr: 1 }} className="text-gray-700">
             Search
           </Typography>

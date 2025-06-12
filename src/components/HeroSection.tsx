@@ -22,7 +22,7 @@ const HeroSection = () => {
       case 'Capital':
         return '/images/build.jpg';
       default:
-        return '/images/About-Us-Overview.jpg';
+        return '/images/fil.jpg';
     }
   };
 
@@ -99,7 +99,7 @@ const HeroSection = () => {
             </Box>
           </Box>
 
-          <Box className="w-3/12 bg-[#4E71FF] text-white flex items-center py-16 md:py-0">
+          <Box className="w-3/12 bg-[lightblue] text-white flex items-center py-16 md:py-0">
             <Box className="w-full py-8 px-8 flex flex-col justify-center">
               <Typography variant="h5" component="div" className="font-bold mb-6 text-xl md:text-2xl" sx={{ fontWeight: 'bold', fontSize: '25px', }}>
                 Discover More

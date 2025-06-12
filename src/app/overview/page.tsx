@@ -38,7 +38,7 @@ export default function OverviewPage() {
       <Header />
       
       {/* Hero Section */}
-      <Box className="bg-[#5409DA] py-5.5 px-4 md:px-0">
+      <Box className="bg-[lightblue] py-5.5 px-4 md:px-0">
         <Box className="container mx-auto max-w-7xl flex flex-col md:flex-row items-center gap-8 min-h-[440px]">
           {/* Left: Text */}
           <Box className="flex-1 text-white space-y-6 md:pr-8">
@@ -253,9 +253,9 @@ export default function OverviewPage() {
             component="blockquote"
             className="quote sr-reveal relative bg-white rounded-lg p-8 my-6 border-l-5"
             sx={{
-              borderLeftColor: '#5409DA',
-              borderRightColor: '#5409DA',
-              boxShadow: '0 5px 0 0 #5409DA, 0 8px 24px 0 rgba(44, 62, 80, 0.08)',
+              borderLeftColor: 'lightblue',
+              borderRightColor: 'lightblue',
+              boxShadow: '0 5px 0 0 lightblue, 0 8px 24px 0 rgba(44, 62, 80, 0.08)',
               overflow: 'visible',
             }}
           >
