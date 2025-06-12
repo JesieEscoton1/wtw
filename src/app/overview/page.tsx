@@ -78,7 +78,7 @@ export default function OverviewPage() {
                 className="rounded-lg shadow-lg"
                 priority
               />
-              <img
+              {/* <img
               src="/images/WTWCO_Motifs_Large_FiCo_BR_1.svg"
               alt=""
               style={{
@@ -92,7 +92,7 @@ export default function OverviewPage() {
                 userSelect: 'none',
                 display: 'block'
               }}
-            />
+            /> */}
             </Box>
           </Box>
         </Box>

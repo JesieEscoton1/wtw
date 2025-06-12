@@ -54,15 +54,15 @@ const ContentItem: React.FC<ContentItemProps> = ({ type, title, imageSrc, imageA
 const ReportsCampaignsSection = () => {
   const contentItems = [
     {
-      type: 'SURVEY',
-      title: '2025 Benefits Trends Survey',
+      type: '',
+      title: 'Organizational Development',
       imageSrc: '/images/pexels-craytive.jpg',
       imageAlt: 'Benefits Trends Survey',
       linkHref: '/survey'
     },
     {
-      type: 'REPORT',
-      title: 'Natural Catastrophe Review July - December 2024',
+      type: '',
+      title: 'Building HR Capability',
       imageSrc: '/images/nature.jpg',
       imageAlt: 'Natural Catastrophe Review',
       linkHref: '/report'
