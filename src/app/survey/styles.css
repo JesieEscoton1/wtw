@@ -1,0 +1,74 @@
+/* Survey Page Styles */
+.bg-purple-800 {
+  background-color: #4A148C;
+}
+
+.bg-purple-100 {
+  background-color: #E1BEE7;
+}
+
+.text-purple-800 {
+  color: #4A148C;
+}
+
+.bg-gray-50 {
+  background-color: #FAFAFA;
+}
+
+.text-gray-600 {
+  color: #666666;
+}
+
+/* Grid Layout */
+.grid {
+  display: grid;
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (min-width: 768px) {
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  
+  .md\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* Spacing */
+.gap-4 {
+  gap: 1rem;
+}
+
+.gap-8 {
+  gap: 2rem;
+}
+
+/* Shadows */
+.shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Rounded Corners */
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+/* Hover Effects */
+.hover\:bg-purple-700:hover {
+  background-color: #6A1B9A;
+}
+
+/* Transitions */
+.transition {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+} 
