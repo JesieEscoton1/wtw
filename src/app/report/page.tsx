@@ -54,21 +54,16 @@ export default function ReportPage() {
           <Container maxWidth="lg">
             <Typography 
               variant="overline" 
-              className="text-blue-600 block mb-4"
+              className="text-blue-500 block mb-4"
               sx={{ letterSpacing: '0.1em' }}
             >
-              REPORT | RESEARCH NETWORK NEWSLETTER
+              REPORT | Building HR Capability
             </Typography>
             <Typography variant="h2" className="text-blue-400 text-5xl font-bold mb-6">
-             Natural Catastrophe Review July - December 2024
+             Enhancing Human Resource Competencies
             </Typography>
             <Box className="max-w-2xl">
-              <Typography className="text-black opacity-90 mb-4">
-                January 28, 2025
-              </Typography>
-              <Typography className="text-black opacity-90 text-xl mb-8">
-                This edition presents insights and lessons learned from major natural disasters in the second half of 2024, explores key themes of the year, and offers an outlook for early 2025.
-              </Typography>
+             
               <button className="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition-colors">
                 Subscribe →
               </button>
@@ -88,23 +83,23 @@ export default function ReportPage() {
                 {/* Introduction */}
                 <Box className="prose max-w-none mb-12">
                   <Typography variant="body1" className="text-lg mb-8">
-                    Catastrophes are having a growing impact on society, with climate change and other factors increasing both their frequency and severity. This report examines the major natural catastrophe events that occurred in the second half of 2024, their impacts on communities and businesses, and the implications for risk management and insurance.
+                   Enhancing Human Resource Competencies means developing the skills and knowledge HR professionals need to support business goals effectively. This includes improving areas like recruitment, performance management, and HR technology. By building these capabilities, HR can become a strategic partner, driving employee engagement, growth, and organizational success.
                   </Typography>
                 </Box>
 
                 {/* Storms Section */}
                 <Box className="mb-12">
                   <Typography variant="h2" className="text-2xl font-bold mb-6">
-                    Storms, flooding and drought since 2024
+                    Developing Core HR Skills for Modern Workplaces
                   </Typography>
                   <Typography variant="body1" className="mb-6">
-                    The second half of 2024 saw several significant natural catastrophes, including:
+                    Developing Core HR Skills for Modern Workplaces is about equipping HR professionals with the essential capabilities needed to thrive in today’s fast-changing work environments. As organizations evolve, HR must move beyond traditional tasks and adopt a more strategic, tech-savvy, and people-focused approach. Key Focus Areas:
                   </Typography>
                   <ul className="list-disc pl-6 mb-6">
-                    <li className="mb-2">Hurricane Laura in the Gulf of Mexico</li>
-                    <li className="mb-2">Severe flooding in Central Europe</li>
-                    <li className="mb-2">Extended drought conditions in Western United States</li>
-                    <li className="mb-2">Typhoon Haishen in East Asia</li>
+                    <li className="mb-2">Foundational HR Knowledge: Strengthen skills in areas like recruitment, employee relations, and compliance.</li>
+                    <li className="mb-2">Tech and Data Proficiency: Use HR software and analytics to improve decision-making and efficiency.</li>
+                    <li className="mb-2">Communication and Emotional Intelligence: Build strong relationships and support a positive work culture.</li>
+                    <li className="mb-2">Change Management and Agility: Adapt quickly to organizational shifts and lead through transformation.</li>
                   </ul>
                   <Box className="relative h-[400px] w-full mb-8">
                     <Image
@@ -120,10 +115,10 @@ export default function ReportPage() {
                 {/* Economic Impact Section */}
                 <Box className="mb-12">
                   <Typography variant="h2" className="text-2xl font-bold mb-6">
-                    2024 becomes the first year to exceed $1.5T
+                    Leveraging Technology in HR Practices
                   </Typography>
                   <Typography variant="body1" className="mb-6">
-                    Total economic losses from natural catastrophes in 2024 exceeded $1.5 trillion, marking a historic high. Insurance covered approximately 40% of these losses, highlighting the ongoing protection gap in catastrophe risk transfer.
+                    Leveraging Technology in HR Practices means using digital tools and systems to improve HR processes like recruitment, performance management, and employee engagement, making them more efficient, data-driven, and user-friendly.
                   </Typography>
                   <Box className="relative h-[300px] w-full mb-8">
                     <Image
@@ -139,32 +134,32 @@ export default function ReportPage() {
                 {/* Climate Change Impact */}
                 <Box className="mb-12">
                   <Typography variant="h2" className="text-2xl font-bold mb-6">
-                    The growing influence of climate change
+                    Building Competencies for Talent Management
                   </Typography>
                   <Typography variant="body1" className="mb-6">
-                    Climate change continues to amplify natural catastrophe risks through:
+                    Building Competencies for Talent Management focuses on developing the skills HR professionals need to attract, develop, and retain top talent effectively. Key Areas:
                   </Typography>
                   <ul className="list-disc pl-6 mb-6">
-                    <li className="mb-2">Increased frequency of extreme weather events</li>
-                    <li className="mb-2">Greater intensity of storms and precipitation</li>
-                    <li className="mb-2">Rising sea levels affecting coastal regions</li>
-                    <li className="mb-2">Extended periods of drought and heat waves</li>
+                    <li className="mb-2"><b>Talent Acquisition</b> – Hiring the right people for the right roles</li>
+                    <li className="mb-2"><b>Performance Management</b> – Setting goals and tracking progress</li>
+                    <li className="mb-2"><b>Succession Planning </b>– Preparing future leaders</li>
+                    <li className="mb-2"><b>Employee Development</b> – Fostering growth through training and support</li>
                   </ul>
                 </Box>
 
                 {/* Interconnected Risks */}
                 <Box className="mb-12">
                   <Typography variant="h2" className="text-2xl font-bold mb-6">
-                    Interconnected and compounding risks
+                    Strengthening Communication and Influence in HR
                   </Typography>
                   <Typography variant="body1" className="mb-6">
-                    Natural catastrophes in 2024 demonstrated the complex interconnections between physical risks and their cascading impacts on:
+                    Strengthening Communication and Influence in HR means improving how HR professionals share ideas, build trust, and guide positive change across the organization. Key Focus Areas:
                   </Typography>
                   <ul className="list-disc pl-6 mb-6">
-                    <li className="mb-2">Supply chain disruptions</li>
-                    <li className="mb-2">Infrastructure resilience</li>
-                    <li className="mb-2">Business continuity</li>
-                    <li className="mb-2">Community vulnerability</li>
+                    <li className="mb-2"><b>Active Listening</b> – Understanding employee needs and concerns</li>
+                    <li className="mb-2"><b>Clear and Persuasive Messaging</b> – Communicating policies and initiatives effectively</li>
+                    <li className="mb-2"><b>Building Trust with Stakeholders</b> – Establishing credibility and reliability</li>
+                    <li className="mb-2"><b>Influencing Organizational Change</b> – Guiding leaders and teams through HR-driven initiatives</li>
                   </ul>
                 </Box>
 
@@ -174,13 +169,13 @@ export default function ReportPage() {
                     Outlook
                   </Typography>
                   <Typography variant="body1" className="mb-6">
-                    Looking ahead, organizations need to:
+                    Outlook of Enhancing HR Competencies:
                   </Typography>
                   <ul className="list-disc pl-6 mb-6">
-                    <li className="mb-2">Enhance risk assessment capabilities</li>
-                    <li className="mb-2">Develop comprehensive resilience strategies</li>
-                    <li className="mb-2">Invest in risk mitigation measures</li>
-                    <li className="mb-2">Review insurance coverage adequacy</li>
+                    <li className="mb-2">HR is becoming more strategic</li>
+                    <li className="mb-2">Continuous learning is essential</li>
+                    <li className="mb-2">Tech and data skills are key</li>
+                    <li className="mb-2">Soft skills like communication matter more</li>
                   </ul>
                 </Box>
 
@@ -191,14 +186,14 @@ export default function ReportPage() {
                   </Typography>
                   <div className="flex flex-wrap gap-2">
                     {[
-                      ' Research',
-                      'IPCC Reports',
-                      'Global Cat Database',
-                      'Insurance Industry Data',
-                      'Climate Science',
-                      'Economic Analysis'
+                      ' RUlrich, D. et al. (2008)',
+                      'SHRM (2024)',
+                      'CIPD (2023)',
+                      'World Economic Forum (2023)',
+                      'Harvard Business Review (2021)',
+                      'Academy of Management Perspectives (2015)'
                     ].map((tag) => (
-                      <span key={tag} className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">
+                      <span key={tag} className="bg-blue-300 text-black px-3 py-1 rounded-full text-sm">
                         {tag}
                       </span>
                     ))}
@@ -315,81 +310,81 @@ export default function ReportPage() {
               </Typography>
               
               <Box className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {/* Health and Benefits */}
+                {/* Talent Acquisition */}
                 <Box className="bg-white rounded-lg shadow-sm p-6 relative hover:shadow-md transition-shadow">
                   <Typography variant="h5" className="text-xl font-bold mb-4">
-                    Health and Benefits
+                    Talent Acquisition
                   </Typography>
                   <Typography variant="body1" className="text-gray-600 mb-8">
-                    We partner with you to build an effective employee benefits program that sustains a healthy, high-performing workforce.
+                    Building skills to attract and hire the right talent.
                   </Typography>
                   <Box className="absolute bottom-6 right-6">
-                    <span className="text-purple-600 text-xl">→</span>
+                    <span className="text-blue-300 text-xl">→</span>
                   </Box>
                 </Box>
 
-                {/* Wellbeing */}
+                {/* Performance Management */}
                 <Box className="bg-white rounded-lg shadow-sm p-6 relative hover:shadow-md transition-shadow">
                   <Typography variant="h5" className="text-xl font-bold mb-4">
-                    Wellbeing
+                    Performance Management
                   </Typography>
                   <Typography variant="body1" className="text-gray-600 mb-8">
-                    We unlock the business value of employee wellbeing, boosting the effectiveness of total rewards, increasing employee engagement, and improving outcomes.
+                    Enhancing abilities to set goals and evaluate employee performance.
                   </Typography>
                   <Box className="absolute bottom-6 right-6">
-                    <span className="text-purple-600 text-xl">→</span>
+                    <span className="text-blue-300 text-xl">→</span>
                   </Box>
                 </Box>
 
-                {/* Global Benefits Management */}
+                {/* HR Analytics */}
                 <Box className="bg-white rounded-lg shadow-sm p-6 relative hover:shadow-md transition-shadow">
                   <Typography variant="h5" className="text-xl font-bold mb-4">
-                    Global Benefits Management
+                    HR Analytics
                   </Typography>
                   <Typography variant="body1" className="text-gray-600 mb-8">
-                    WTW's Global Benefits Management solutions empower employers, employees and retirees to better navigate the changing benefits landscape.
+                    Using data to make informed HR decisions.
                   </Typography>
                   <Box className="absolute bottom-6 right-6">
-                    <span className="text-purple-600 text-xl">→</span>
+                    <span className="text-blue-300 text-xl">→</span>
                   </Box>
                 </Box>
 
-                {/* Employee Financial Resilience */}
+                {/* Employee Engagement */}
                 <Box className="bg-white rounded-lg shadow-sm p-6 relative hover:shadow-md transition-shadow">
                   <Typography variant="h5" className="text-xl font-bold mb-4">
-                    Employee Financial Resilience
+                    Employee Engagement
                   </Typography>
                   <Typography variant="body1" className="text-gray-600 mb-8">
-                    We can help you build a financially resilient workforce to improve engagement and retention for better business outcomes.
+                    Developing strategies to improve motivation and retention.
                   </Typography>
                   <Box className="absolute bottom-6 right-6">
-                    <span className="text-purple-600 text-xl">→</span>
+                    <span className="text-blue-300 text-xl">→</span>
                   </Box>
                 </Box>
 
-                {/* Diversity, Equity and Inclusion */}
+                {/* Learning and Development */}
                 <Box className="bg-white rounded-lg shadow-sm p-6 relative hover:shadow-md transition-shadow">
                   <Typography variant="h5" className="text-xl font-bold mb-4">
-                    Diversity, Equity and Inclusion
+                    Learning and Development
                   </Typography>
                   <Typography variant="body1" className="text-gray-600 mb-8">
-                    We provide data-driven diversity, equity and inclusion (DEI) solutions to support the people and risk strategies that enable your employees to thrive.
+                    Creating effective training and upskilling programs.
                   </Typography>
                   <Box className="absolute bottom-6 right-6">
-                    <span className="text-purple-600 text-xl">→</span>
+                    <span className="text-blue-300 text-xl">→</span>
                   </Box>
                 </Box>
 
-                {/* Retirement */}
+                {/* Change Management */}
                 <Box className="bg-white rounded-lg shadow-sm p-6 relative hover:shadow-md transition-shadow">
                   <Typography variant="h5" className="text-xl font-bold mb-4">
-                    Retirement
+                    Change Management
                   </Typography>
                   <Typography variant="body1" className="text-gray-600 mb-8">
-                    We partner with organizations to help with retirement plan set up, actuarial valuations, plan governance and administration services, employee communications and more.
+                    Building HR's role in leading and supporting organizational change.
                   </Typography>
                   <Box className="absolute bottom-6 right-6">
-                    <span className="text-purple-600 text-xl">→</span>
+                    <span className="text-blue-300 text-xl">→</span>
                   </Box>
                 </Box>
               </Box>
