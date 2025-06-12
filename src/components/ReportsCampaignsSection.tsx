@@ -56,14 +56,14 @@ const ReportsCampaignsSection = () => {
     {
       type: 'SURVEY',
       title: '2025 Benefits Trends Survey',
-      imageSrc: '/images/GettyImages-6.jpg',
+      imageSrc: '/images/pexels-craytive.jpg',
       imageAlt: 'Benefits Trends Survey',
       linkHref: '/survey'
     },
     {
       type: 'REPORT',
-      title: 'WTW Natural Catastrophe Review July - December 2024',
-      imageSrc: '/images/GettyImages-4.jpg',
+      title: 'Natural Catastrophe Review July - December 2024',
+      imageSrc: '/images/nature.jpg',
       imageAlt: 'Natural Catastrophe Review',
       linkHref: '/report'
     },

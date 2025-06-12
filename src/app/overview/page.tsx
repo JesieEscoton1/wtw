@@ -11,13 +11,24 @@ import Footer from '@/components/Footer';
 
 export default function OverviewPage() {
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isSecondaryPlaying, setIsSecondaryPlaying] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const secondaryVideoRef = useRef<HTMLVideoElement>(null);
 
   const handlePlayClick = () => {
     setIsPlaying(true);
     setTimeout(() => {
       if (videoRef.current) {
         videoRef.current.play().catch(() => {});
+      }
+    }, 100);
+  };
+
+  const handleSecondaryPlayClick = () => {
+    setIsSecondaryPlaying(true);
+    setTimeout(() => {
+      if (secondaryVideoRef.current) {
+        secondaryVideoRef.current.play().catch(() => {});
       }
     }, 100);
   };
@@ -60,7 +71,7 @@ export default function OverviewPage() {
             {/* Main Image */}
             <Box className="relative w-full h-2 md:h-96 z-10">
               <Image
-                src="/images/About-Us-Overview.jpg"
+                src="/images/hike.jpg"
                 alt="Hero Overview"
                 layout="fill"
                 objectFit="cover"
@@ -99,7 +110,7 @@ export default function OverviewPage() {
               From the unknown to the untapped?
             </Typography>
             <Typography variant="body1" className="mb-2 text-gray-800" sx={{ fontSize: '18px'}}>
-              At WTW, we provide data-driven, insight-led solutions in the areas of people, risk and capital that make your organization more resilient, motivate your workforce, and maximize performance.
+              We provide data-driven, insight-led solutions in the areas of people, risk and capital that make your organization more resilient, motivate your workforce, and maximize performance.
             </Typography>
             <Typography variant="body1" className="mb-2 text-gray-800" sx={{ fontSize: '18px'}}>
               We work shoulder to shoulder with you, bringing diverse points of view and a deep commitment to your success.
@@ -149,7 +160,7 @@ export default function OverviewPage() {
                       </Typography>
                        {/* Adding the smaller text based on the image */}
                       <Typography variant="body2" className="text-white opacity-90">
-                        At WTW, we celebrate perspective. Because it allows you t...
+                        We celebrate perspective. Because it allows you to embrace diverse ideas and experiences to build something better.
                       </Typography>
                     </Box>
                     {/* Share Icon */}
@@ -185,9 +196,6 @@ export default function OverviewPage() {
                 <Typography variant="caption" className="block mt-2 text-gray-700" sx={{ fontWeight: 'bold', fontSize: '15px'}}>
                     Perspective that moves you
                 </Typography>
-                <Typography variant="caption" className="block mt-2 text-gray-700" sx={{ fontSize: '14px', marginTop: '5px'}}>
-                    At WTW
-                </Typography>
                 <Typography variant="caption" className="block mt-2 text-gray-700" sx={{ fontSize: '14px'}}>
                     we celebrate perspective. Because it allows you to embrace diverse ideas and experiences to build something better.
                 </Typography>
@@ -209,11 +217,11 @@ export default function OverviewPage() {
               Our purpose and values
             </Typography>
             <Typography variant="body1" className="mb-4 text-gray-800" sx={{ fontSize: '18px', marginTop: '10px' }}>
-              Our purpose is why our company exists. At WTW, we transform tomorrows.
+              Our purpose is why our company exists. We transform tomorrows.
             </Typography>
             <Typography variant="body1" className="mb-4 text-gray-800" sx={{ fontSize: '18px',  marginTop: '10px'}}>
             And our values are more than words. A strong client focus, an emphasis on teamwork, unwavering integrity,
-            mutual respect and a constant striving for excellence are at the core of WTW's rich history.
+            mutual respect and a constant striving for excellence are at the core of our rich history.
             </Typography>
             <Box className="space-y-4">
               <Box>
@@ -269,36 +277,52 @@ export default function OverviewPage() {
               “
             </span>
             <Typography variant="h5" component="p" className="heading-4 mb-4" sx={{ fontStyle: 'italic', color: '#212529', marginTop: '30px' }}>
-              We are now WTW. Our name and brand reflect the clarity and actionable solutions we bring to today's challenges.
+              Our name and brand reflect the clarity and actionable solutions we bring to today's challenges.
             </Typography>
             <Box component="cite" className="font-mono-small font-semibold not-italic block text-gray-700 mt-4">
               Carl Hess
               <br />
-              <span className="font-bold">CEO, WTW</span>
+              <span className="font-bold">CEO</span>
             </Box>
             <span className="quote__block" />
           </Box>
 
           {/* Secondary Video */}
-          <Box className="w-full" sx={{ marginTop: '168%' }}>
-            <Box className="relative w-full h-0 pt-[56.25%] bg-black rounded-lg overflow-hidden">
-              <Image
-                src="/images/centuries.jpg"
-                alt="What will your tomorrow look like?"
-                layout="fill"
-                objectFit="cover"
-              />
-              <Box className="absolute inset-0 flex items-center justify-center">
-                <Box className="w-14 h-14 rounded-full bg-[#4E71FF] flex items-center justify-center opacity-90">
-                  <PlayArrowIcon style={{ fontSize: '40px', color: 'white' }} />
-                </Box>
-              </Box>
+          <Box className="w-full" sx={{ marginTop: '180%' }}>
+            <Box className="relative w-full h-0 pt-[56.25%] bg-black rounded-lg overflow-hidden cursor-pointer">
+              {!isSecondaryPlaying && (
+                <>
+                  <Image
+                    src="/images/centuries.jpg"
+                    alt="What will your tomorrow look like?"
+                    layout="fill"
+                    objectFit="cover"
+                  />
+                  <Box className="absolute inset-0 flex items-center justify-center" onClick={handleSecondaryPlayClick}>
+                    <Box className="w-14 h-14 rounded-full bg-[#4E71FF] flex items-center justify-center opacity-90 hover:opacity-100 transition-opacity">
+                      <PlayArrowIcon style={{ fontSize: '40px', color: 'white' }} />
+                    </Box>
+                  </Box>
+                </>
+              )}
+              {isSecondaryPlaying && (
+                <video
+                  ref={secondaryVideoRef}
+                  controls
+                  autoPlay
+                  className="absolute inset-0 w-full h-full object-cover"
+                  onEnded={() => setIsSecondaryPlaying(false)}
+                >
+                  <source src="/videos/Transforming Tomorrows - WTW.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              )}
             </Box>
             <Typography variant="caption" className="block mt-2 text-gray-700" sx={{ fontWeight: 'bold', fontSize: '15px', marginTop: '10px'}}>
             What will your tomorrow look like?
             </Typography>
             <Typography variant="caption" className="block mt-2 text-gray-700" sx={{ fontSize: '14px', marginTop: '5px'}}>
-              For almost two centuries, WTW has helped smart people transform tomorrow and solve their people, risk and capital challenges.
+              For almost two centuries, we have helped smart people transform tomorrow and solve their people, risk and capital challenges.
             </Typography>
             <Divider
                 sx={{
