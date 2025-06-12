@@ -91,7 +91,7 @@ export default function SurveyPage() {
               className="text-purple-800 block mb-4"
               sx={{ letterSpacing: '0.1em' }}
             >
-              SURVEY
+             Organizational Development
             </Typography>
             <Typography variant="h2" className="text-4xl font-bold mb-6 text-gray-900">
               2025 Benefits Trends Survey
@@ -153,7 +153,7 @@ export default function SurveyPage() {
                   Participate now
                 </Button>
 
-                <Typography variant="h2" className="text-2xl font-bold mb-8">
+              <Typography variant="h2" className="text-2xl font-bold mb-8">
                 Top reasons to participate in the 2025 Benefits Trends Survey:
               </Typography>
 
@@ -563,14 +563,7 @@ export default function SurveyPage() {
             </Box>
 
             {/* What Participants Will Receive Section */}
-            <Box className="mb-12">
-              
-            </Box>
 
-            {/* How to Take the Survey Section */}
-            <Box className="mb-12">
-              
-            </Box>
 
             {/* Capabilities Section */}
             <Box className="py-12">
