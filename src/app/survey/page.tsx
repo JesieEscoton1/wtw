@@ -88,24 +88,20 @@ export default function SurveyPage() {
           <Container maxWidth="lg">
             <Typography 
               variant="overline" 
-              className="text-purple-800 block mb-4"
+              className="text-blue-400 block mb-4"
               sx={{ letterSpacing: '0.1em' }}
             >
              Organizational Development
             </Typography>
-            <Typography variant="h2" className="text-4xl font-bold mb-6 text-gray-900">
-              2025 Benefits Trends Survey
-            </Typography>
+            
             <Box className="max-w-2xl">
               <Typography variant="h3" className="text-2xl mb-4 text-gray-900">
-                Fielding now
+                Adapting to Evolve: The Role of Change Management in Modern Organizational Success
               </Typography>
               <Typography variant="body1" className="text-sm mb-2 text-gray-900">
-                March 3, 2025
+                June 13, 2025
               </Typography>
-              <Typography variant="body1" className="text-gray-700">
-                What challenges, solutions and innovations are shaping today's employee benefits landscape? Take the survey.
-              </Typography>
+              
             </Box>
           </Container>
         </Box>
@@ -121,18 +117,16 @@ export default function SurveyPage() {
               {/* Left column for text */}
               <Box className="col-span-7">
                 <Typography variant="body1" className="text-gray-700 mb-8">
-                  In today's fast-paced business world, staying ahead in benefits management is crucial. Our biennial survey examines the key factors shaping organizations' benefits strategies, the challenges they face and the future changes being planned. It provides actionable insights to help your company thrive by examining the current landscape and offering critical information to get (or keep) you ahead of the curve.
+                  In an era defined by rapid technological advancements and shifting market dynamics, organizations must continuously adapt to maintain relevance and achieve long-term success. Change management has become a vital strategic tool that enables businesses to navigate transitions effectively, whether they involve restructuring, digital transformation, or cultural shifts. By implementing structured change processes and fostering a culture of adaptability, organizations can minimize resistance, improve employee engagement, and align their operations with evolving goals. As such, mastering the principles and practices of change management is essential for any organization seeking not only to survive but to thrive in a competitive and constantly changing environment.
                 </Typography>
 
                 {/* About Survey Card */}
                 <Box className="bg-white shadow-sm rounded-lg border border-gray-200 p-6 mb-8">
                   <Box className="flex justify-between items-center">
                     <Box>
-                      <Typography variant="overline" className="text-gray-600 block mb-2">
-                        UNLOCK MORE
-                      </Typography>
+                      
                       <Typography variant="h4" className="text-xl font-bold">
-                        About this Survey
+                        About this Organizational Development
                       </Typography>
                     </Box>
                     <Button className="min-w-0 p-2 text-purple-600 hover:bg-purple-50 rounded-full">
@@ -142,12 +136,12 @@ export default function SurveyPage() {
                 </Box>
 
                 <Typography variant="body1" className="text-gray-700 mb-8">
-                  Our 2025 Benefits Trends Survey, fielding in over 90 markets, offers a comprehensive approach to understanding the future direction of an organization's benefit strategy. This year's survey delves into a wide range of topics, including the role of benefits within the organization, planned spending, priorities and effectiveness. It also explores communication and engagement strategies, the use of technology, financial management, vendor management and emerging trends such as AI in benefits support and support for specific employee groups.
+                  Effective change management includes controlling people's attitudes, actions, and expectations in addition to putting new systems or procedures into place. By setting clear objectives, offering assistance, and encouraging a sense of belonging during the transition process, leaders can help their teams navigate through times of uncertainty. Employees are more inclined to accept new directions and positively impact the outcome when they get the rationale behind organizational changes and feel engaged in the process.              
                 </Typography>
 
                 <Button
                   variant="contained"
-                  className="bg-purple-600 hover:bg-purple-700 rounded-full px-8 py-3 normal-case"
+                  className="bg-blue-300 hover:bg-blue-300 rounded-full px-8 py-3 normal-case"
                   endIcon={<span>→</span>}
                 >
                   Participate now
@@ -170,7 +164,7 @@ export default function SurveyPage() {
                   </Box>
                   <Box>
                     <Typography variant="h6" className="font-bold mb-2">
-                      Personalized scorecard
+                      Enhances Organizational Performance
                     </Typography>
                     <Typography variant="body1" className="text-gray-600">
                       Receive a best-in-class personalized scorecard to benchmark your organization's benefits strategies against your peers.
@@ -190,7 +184,7 @@ export default function SurveyPage() {
                   </Box>
                   <Box>
                     <Typography variant="h6" className="font-bold mb-2">
-                      Insights into business issues
+                      Facilitates Change Management
                     </Typography>
                     <Typography variant="body1" className="text-gray-600">
                       Gain insights into the business issues shaping benefits strategies, such as aligning with company objectives and market trends.
@@ -210,7 +204,7 @@ export default function SurveyPage() {
                   </Box>
                   <Box>
                     <Typography variant="h6" className="font-bold mb-2">
-                      Assess effectiveness
+                      Promotes Continuous Improvement
                     </Typography>
                     <Typography variant="body1" className="text-gray-600">
                       Assess how well your current benefits strategy meets employee needs and addresses challenges like flexible work and talent competition.
@@ -230,7 +224,7 @@ export default function SurveyPage() {
                   </Box>
                   <Box>
                     <Typography variant="h6" className="font-bold mb-2">
-                      Identify challenges
+                       Strengthens Leadership and Employee Engagement
                     </Typography>
                     <Typography variant="body1" className="text-gray-600">
                       Identify the most pressing challenges in managing benefits costs and risks, including rising expenses and regulatory changes and how to manage them.
@@ -250,7 +244,7 @@ export default function SurveyPage() {
                   </Box>
                   <Box>
                     <Typography variant="h6" className="font-bold mb-2">
-                      Attract and retain talent
+                      Aligns Organizational Goals with Employee Goals
                     </Typography>
                     <Typography variant="body1" className="text-gray-600">
                       Discover which benefits are most effective in attracting and retaining talent by understanding what employees value most.
@@ -270,7 +264,7 @@ export default function SurveyPage() {
                   </Box>
                   <Box>
                     <Typography variant="h6" className="font-bold mb-2">
-                      Drive value from your benefits
+                      Improves Decision-Making and Problem-Solving
                     </Typography>
                     <Typography variant="body1" className="text-gray-600">
                       Understand how to get more value and better outcomes from your existing benefit spend.
@@ -279,26 +273,26 @@ export default function SurveyPage() {
                 </Box>
 
                 <Typography variant="h2" className="text-2xl font-bold mb-6">
-                Participants of the 2025 Benefits Trends Survey will receive:
+                Driving Growth from Within: The Impact of Organizational Development on Business Success
               </Typography>
               <List>
                 <ListItem>
                   <ListItemIcon>
-                    <span className="text-purple-600">•</span>
+                    <span className="text-blue-300">•</span>
                   </ListItemIcon>
-                  <ListItemText primary="Early access to the global findings" />
+                  <ListItemText primary="Improves Efficiency and Productivity" />
                 </ListItem>
                 <ListItem>
                   <ListItemIcon>
-                    <span className="text-purple-600">•</span>
+                    <span className="text-blue-300">•</span>
                   </ListItemIcon>
-                  <ListItemText primary="A personalized scorecard to help benchmark against peers" />
+                  <ListItemText primary="Supports Effective Change Management" />
                 </ListItem>
                 <ListItem>
                   <ListItemIcon>
-                    <span className="text-purple-600">•</span>
+                    <span className="text-blue-300">•</span>
                   </ListItemIcon>
-                  <ListItemText primary="The opportunity to meet with WTW to talk through your results and identify areas of development" />
+                  <ListItemText primary="Fosters a Positive Organizational Culture" />
                 </ListItem>
               </List>
 
@@ -316,21 +310,11 @@ export default function SurveyPage() {
                 </Typography>
               </Box>
                <hr></hr>
-              <Typography variant="body1" className="text-gray-600 mb-8">
-                Participation and results are complimentary.
-              </Typography>
-
-              <Typography variant="h2" className="text-2xl font-bold mb-6">
-                How to take the 2025 Benefits Trends Survey
-              </Typography>
-              <Typography variant="body1" className="text-gray-700 mb-4">
-                The questionnaire is intended primarily for benefits, compensation and benefits, HR and Total Rewards professionals. It will take about 30 minutes to complete and is available in the following languages.
-              </Typography>
-
+              
               <Box className="bg-white shadow-sm rounded-lg border border-gray-200 p-6 mb-8">
                   <Box className="flex justify-between items-center">
                     <Box>
-                      <Typography variant="h5" className="text-xl font-bold">
+                      <Typography variant="h5" className="text-xl font-bold text-blue-300">
                         Available languages
                       </Typography>
                     
@@ -426,7 +410,7 @@ export default function SurveyPage() {
               {/* Right column for Global Research and Contact */}
               <Box className="col-span-5">
                 {/* Global Research Card */}
-                <Box className="bg-white rounded-lg border-l-4 border-pink-500 border-t border-r border-b p-6 mb-12">
+                <Box className="bg-white rounded-lg border-l-4 border-blue-300 border-t border-r border-b p-6 mb-12">
                   <Typography variant="overline" className="text-gray-600 block mb-4">
                     GLOBAL RESEARCH
                   </Typography>
@@ -568,85 +552,85 @@ export default function SurveyPage() {
             {/* Capabilities Section */}
             <Box className="py-12">
               <Typography variant="h2" className="text-3xl font-bold mb-8">
-                Capabilities related to benefits trends
+                Capabilities related to Organizational Development
               </Typography>
               
               <Box className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {/* Health and Benefits */}
                 <Box className="bg-white rounded-lg shadow-sm p-6 relative hover:shadow-md transition-shadow">
                   <Typography variant="h5" className="text-xl font-bold mb-4">
-                    Health and Benefits
+                   Strategic Planning Capability
                   </Typography>
                   <Typography variant="body1" className="text-gray-600 mb-8">
-                    We partner with you to build an effective employee benefits program that sustains a healthy, high-performing workforce.
+                    The ability to set clear goals, assess internal and external environments, and align organizational initiatives with long-term objectives.
                   </Typography>
                   <Box className="absolute bottom-6 right-6">
-                    <span className="text-purple-600 text-xl">→</span>
+                    <span className="text-blue-300 text-xl">→</span>
                   </Box>
                 </Box>
 
                 {/* Wellbeing */}
                 <Box className="bg-white rounded-lg shadow-sm p-6 relative hover:shadow-md transition-shadow">
                   <Typography variant="h5" className="text-xl font-bold mb-4">
-                    Wellbeing
+                     Change Management Capability
                   </Typography>
                   <Typography variant="body1" className="text-gray-600 mb-8">
-                    We unlock the business value of employee wellbeing, boosting the effectiveness of total rewards, increasing employee engagement, and improving outcomes.
+                   Proficiency in planning, implementing, and supporting change initiatives while managing employee engagement and minimizing resistance.
                   </Typography>
                   <Box className="absolute bottom-6 right-6">
-                    <span className="text-purple-600 text-xl">→</span>
+                    <span className="text-blue-300 text-xl">→</span>
                   </Box>
                 </Box>
 
                 {/* Global Benefits Management */}
                 <Box className="bg-white rounded-lg shadow-sm p-6 relative hover:shadow-md transition-shadow">
                   <Typography variant="h5" className="text-xl font-bold mb-4">
-                    Global Benefits Management
+                   Leadership Development
                   </Typography>
                   <Typography variant="body1" className="text-gray-600 mb-8">
-                    WTW's Global Benefits Management solutions empower employers, employees and retirees to better navigate the changing benefits landscape.
+                    Strengthening leadership at all levels to guide teams, make informed decisions, and champion continuous improvement and innovation.
                   </Typography>
                   <Box className="absolute bottom-6 right-6">
-                    <span className="text-purple-600 text-xl">→</span>
+                    <span className="text-blue-300  text-xl">→</span>
                   </Box>
                 </Box>
 
                 {/* Employee Financial Resilience */}
                 <Box className="bg-white rounded-lg shadow-sm p-6 relative hover:shadow-md transition-shadow">
                   <Typography variant="h5" className="text-xl font-bold mb-4">
-                    Employee Financial Resilience
+                     Talent and Performance Management
                   </Typography>
                   <Typography variant="body1" className="text-gray-600 mb-8">
-                    We can help you build a financially resilient workforce to improve engagement and retention for better business outcomes.
+                    Building systems that recruit, retain, and develop employees, while also managing performance to meet organizational goals.
                   </Typography>
                   <Box className="absolute bottom-6 right-6">
-                    <span className="text-purple-600 text-xl">→</span>
+                    <span className="text-blue-300  text-xl">→</span>
                   </Box>
                 </Box>
 
                 {/* Diversity, Equity and Inclusion */}
                 <Box className="bg-white rounded-lg shadow-sm p-6 relative hover:shadow-md transition-shadow">
                   <Typography variant="h5" className="text-xl font-bold mb-4">
-                    Diversity, Equity and Inclusion
+                   Communication and Collaboration
                   </Typography>
                   <Typography variant="body1" className="text-gray-600 mb-8">
-                    We provide data-driven diversity, equity and inclusion (DEI) solutions to support the people and risk strategies that enable your employees to thrive.
+                    Enhancing open communication channels and fostering teamwork to support transparency, alignment, and shared purpose across departments.
                   </Typography>
                   <Box className="absolute bottom-6 right-6">
-                    <span className="text-purple-600 text-xl">→</span>
+                    <span className="text-blue-300  text-xl">→</span>
                   </Box>
                 </Box>
 
                 {/* Retirement */}
                 <Box className="bg-white rounded-lg shadow-sm p-6 relative hover:shadow-md transition-shadow">
                   <Typography variant="h5" className="text-xl font-bold mb-4">
-                    Retirement
+                    Organizational Learning and Innovation
                   </Typography>
                   <Typography variant="body1" className="text-gray-600 mb-8">
-                    We partner with organizations to help with retirement plan set up, actuarial valuations, plan governance and administration services, employee communications and more.
+                    Promoting a learning culture that encourages knowledge sharing, experimentation, and adaptation in response to challenges and opportunities.
                   </Typography>
                   <Box className="absolute bottom-6 right-6">
-                    <span className="text-purple-600 text-xl">→</span>
+                    <span className="text-blue-300 text-xl">→</span>
                   </Box>
                 </Box>
               </Box>
