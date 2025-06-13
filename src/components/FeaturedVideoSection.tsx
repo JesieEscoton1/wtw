@@ -1,7 +1,6 @@
 'use client';
 
-import { Box, Typography, Link, Button, IconButton } from '@mui/material';
-import PlayCircleFilledIcon from '@mui/icons-material/PlayCircleFilled';
+import { Box, Typography, Button, IconButton } from '@mui/material';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import ShareIcon from '@mui/icons-material/Share';

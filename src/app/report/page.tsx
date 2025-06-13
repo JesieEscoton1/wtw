@@ -93,7 +93,7 @@ export default function ReportPage() {
                     Developing Core HR Skills for Modern Workplaces
                   </Typography>
                   <Typography variant="body1" className="mb-6">
-                    Developing Core HR Skills for Modern Workplaces is about equipping HR professionals with the essential capabilities needed to thrive in today’s fast-changing work environments. As organizations evolve, HR must move beyond traditional tasks and adopt a more strategic, tech-savvy, and people-focused approach. Key Focus Areas:
+                    Developing Core HR Skills for Modern Workplaces is about equipping HR professionals with the essential capabilities needed to thrive in today&#39;s fast-changing work environments. As organizations evolve, HR must move beyond traditional tasks and adopt a more strategic, tech-savvy, and people-focused approach. Key Focus Areas:
                   </Typography>
                   <ul className="list-disc pl-6 mb-6">
                     <li className="mb-2">Foundational HR Knowledge: Strengthen skills in areas like recruitment, employee relations, and compliance.</li>
@@ -270,7 +270,7 @@ export default function ReportPage() {
                         className="mt-1"
                       />
                       <label className="text-sm text-gray-600">
-                        Yes, I'd also like to receive additional information about WTW offerings.
+                        Yes, I&apos;d also like to receive additional information about WTW offerings.
                       </label>
                     </div>
 
@@ -381,7 +381,7 @@ export default function ReportPage() {
                     Change Management
                   </Typography>
                   <Typography variant="body1" className="text-gray-600 mb-8">
-                    Building HR's role in leading and supporting organizational change.
+                    Building HR&#39;s role in leading and supporting organizational change.
                   </Typography>
                   <Box className="absolute bottom-6 right-6">
                     <span className="text-blue-300 text-xl">→</span>

@@ -2,7 +2,6 @@
 
 import Image from 'next/image';
 import { Box, Typography, Button } from '@mui/material';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -84,7 +83,7 @@ const HeroSection = () => {
               <h1 className="heading-1 m-0 mb-3 text-gray-900 font-serif leading-tight text-4xl md:text-5xl" style={{ textWrap: 'balance', fontWeight: 'bold' }}>
                 Empowering Organizations for Resilience
               </h1>
-              <span className="heading-3 p-0 mt-3 mb-2 text-black font-serif font-bold text-2xl md:text-md">Unlock your company's potential with our consulting services</span><br/>
+              <span className="heading-3 p-0 mt-3 mb-2 text-black font-serif font-bold text-2xl md:text-md">Unlock your company&#39;s potential with our consulting services</span><br/>
                <span className="arrow-link arrow-link--inbody p-0 heading-6 m-0 mt-3 inline-block"> 
                 <button
                   onClick={() => window.location.href = '/transforming-tomorrows'}

@@ -1,6 +1,6 @@
 'use client';
 
-import { Box, Typography, Button, Grid, Card, CardContent } from '@mui/material';
+import { Box, Typography, Grid, Card, CardContent } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
@@ -17,7 +17,7 @@ interface ArticleItemProps {
   imageMarginTop?: number | string;
 }
 
-const ArticleItem: React.FC<ArticleItemProps> = ({ type, title, imageSrc, imageAlt, linkHref, isFirstArticle, width, height, imageMarginTop }) => {
+const ArticleItem: React.FC<ArticleItemProps> = ({ type, title, imageSrc, imageAlt, linkHref, width, height, imageMarginTop }) => {
   return (
     <a href={linkHref} className="block" /* Apply styling for d-block */>
       <Card elevation={0} className="flex flex-col h-full border-none shadow-none">

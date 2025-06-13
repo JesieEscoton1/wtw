@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Typography, Button, IconButton, Link, Paper, Divider } from '@mui/material';
+import { Box, Typography, Button, IconButton, Divider } from '@mui/material';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import ShareIcon from '@mui/icons-material/Share';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
@@ -224,7 +224,7 @@ export default function OverviewPage() {
             <Box className="space-y-4">
               <Box>
                 <Typography variant="subtitle1" className="font-bold text-gray-900" sx={{ fontSize: '25px', fontWeight: 'bold',  marginTop: '20px'}}>Client focus</Typography>
-                <Typography variant="body2" className="text-gray-800" sx={{ fontSize: '18px'}}>Our clients’ success is our highest priority. In every engagement, we act in their best interests listening carefully, understanding their unique needs, honoring their perspectives, and consistently striving to exceed expectations.</Typography>
+                <Typography variant="body2" className="text-gray-800" sx={{ fontSize: '18px'}}>Our clients' success is our highest priority. In every engagement, we act in their best interests listening carefully, understanding their unique needs, honoring their perspectives, and consistently striving to exceed expectations.</Typography>
               </Box> 
               <Box>
                 <Typography variant="subtitle1" className="font-bold text-gray-900" sx={{ fontSize: '25px', fontWeight: 'bold', marginTop: '20px'}}>Teamwork</Typography>
@@ -272,10 +272,10 @@ export default function OverviewPage() {
                 fontFamily: 'serif',
               }}
             >
-              “
+              "
             </span>
             <Typography variant="h5" component="p" className="heading-4 mb-4" sx={{ fontStyle: 'italic', color: '#212529', marginTop: '30px' }}>
-              Our name and brand reflect the clarity and actionable solutions we bring to today's challenges.
+              Our name and brand reflect the clarity and actionable solutions we bring to today&apos;s challenges.
             </Typography>
             <Box component="cite" className="font-mono-small font-semibold not-italic block text-gray-700 mt-4">
               Carl Hess

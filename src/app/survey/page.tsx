@@ -3,45 +3,11 @@
 import './styles.css';
 import { Box, Typography, Container, List, ListItem, ListItemIcon, ListItemText, Avatar, Button } from '@mui/material';
 import Image from 'next/image';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChartLine, faUsers, faShieldAlt, faChartBar, faClock, faCamera } from '@fortawesome/free-solid-svg-icons';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 export default function SurveyPage() {
-  const reasons = [
-    {
-      icon: faChartLine,
-      title: "Forward-focused",
-      description: "Understand how organizations are evolving their benefits strategies to meet changing needs"
-    },
-    {
-      icon: faUsers,
-      title: "Insights from leaders",
-      description: "Learn from organizations across diverse sectors to understand their benefits and wellbeing priorities"
-    },
-    {
-      icon: faShieldAlt,
-      title: "Assess effectiveness",
-      description: "Evaluate how your benefits strategy compares with your peers and identify improvement areas"
-    },
-    {
-      icon: faChartBar,
-      title: "Benefits challenges",
-      description: "Discover key issues that affect your benefits strategy and solutions to address them"
-    },
-    {
-      icon: faClock,
-      title: "Future-proof solutions",
-      description: "Get insights on emerging trends to help you develop a future-ready benefits strategy"
-    },
-    {
-      icon: faCamera,
-      title: "What others get typically",
-      description: "Benchmark your benefits against peers to ensure competitiveness"
-    }
-  ];
-
   return (
     <Box>
       <Box 
@@ -136,7 +102,7 @@ export default function SurveyPage() {
                 </Box>
 
                 <Typography variant="body1" className="text-gray-700 mb-8">
-                  Effective change management includes controlling people's attitudes, actions, and expectations in addition to putting new systems or procedures into place. By setting clear objectives, offering assistance, and encouraging a sense of belonging during the transition process, leaders can help their teams navigate through times of uncertainty. Employees are more inclined to accept new directions and positively impact the outcome when they get the rationale behind organizational changes and feel engaged in the process.              
+                  Effective change management includes controlling people&apos;s attitudes, actions, and expectations in addition to putting new systems or procedures into place. By setting clear objectives, offering assistance, and encouraging a sense of belonging during the transition process, leaders can help their teams navigate through times of uncertainty. Employees are more inclined to accept new directions and positively impact the outcome when they get the rationale behind organizational changes and feel engaged in the process.              
                 </Typography>
 
                 <Button
@@ -167,7 +133,7 @@ export default function SurveyPage() {
                       Enhances Organizational Performance
                     </Typography>
                     <Typography variant="body1" className="text-gray-600">
-                      Receive a best-in-class personalized scorecard to benchmark your organization's benefits strategies against your peers.
+                      Receive a best-in-class personalized scorecard to benchmark your organization&apos;s benefits strategies against your peers.
                     </Typography>
                   </Box>
                 </Box>
@@ -418,7 +384,7 @@ export default function SurveyPage() {
                     2025 Benefits Trends Survey
                   </Typography>
                   <Typography variant="body1" className="mb-6">
-                    Track trends around employers' benefit plans and understand how you can improve benefits outcomes
+                    Track trends around employers&apos; benefit plans and understand how you can improve benefits outcomes
                   </Typography>
                   <Button
                     className="text-purple-600 hover:text-purple-700 p-0 normal-case font-bold"

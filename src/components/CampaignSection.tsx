@@ -1,6 +1,6 @@
 'use client';
 
-import { Box, Typography, Grid as MuiGrid, Card, CardContent, Grid } from '@mui/material';
+import { Box, Typography, Card, CardContent, Grid } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
@@ -17,7 +17,7 @@ interface ContentItemProps {
     imageMarginTop?: number | string;
 }
 
-const ContentItem: React.FC<ContentItemProps> = ({ type, title, imageSrc, imageAlt, linkHref, isFirstArticle, width, height, imageMarginTop }) => {
+const ContentItem: React.FC<ContentItemProps> = ({ type, title, imageSrc, imageAlt, linkHref, width, height, imageMarginTop }) => {
   return (
     <a href={linkHref} className="block" /* Apply styling for d-block */>
       <Card elevation={0} className="flex flex-col h-full border-none shadow-none">
