@@ -42,8 +42,8 @@ const ContentItem: React.FC<ContentItemProps> = ({ type, title, imageSrc, imageA
               {title}
             </Typography>
           </Box>
-          <Typography className="text-blue-700 normal-case p-0 justify-start text-sm font-bold hover:text-blue-900 transition-colors duration-300" sx={{ fontWeight: 'bold', display: 'flex', alignItems: 'center', fontSize: '23px' }}>
-            Read more <FontAwesomeIcon icon={faArrowRight} style={{ fontSize: '22px', marginLeft: '6px', marginTop: '4px' }} />
+          <Typography className="normal-case p-0 justify-start text-sm font-bold hover:text-blue-900 transition-colors duration-300" sx={{ fontWeight: 'bold', display: 'flex', alignItems: 'center', fontSize: '23px', color: '#00aaff' }}>
+            Read more <FontAwesomeIcon icon={faArrowRight} style={{ fontSize: '22px', marginLeft: '6px', marginTop: '4px', color: '#00aaff' }} />
           </Typography>
         </CardContent>
       </Card>
@@ -63,7 +63,7 @@ const ReportsCampaignsSection = () => {
     {
       type: '',
       title: 'Performance Management',
-      imageSrc: '/images/cyber.jpg',
+      imageSrc: '/images/Performance-Management.png',
       imageAlt: 'Cyber Risks in Asia',
       linkHref: '/campaign',
       isImage: true,
@@ -75,10 +75,10 @@ const ReportsCampaignsSection = () => {
       <Box className="container mx-auto max-w-12xl">
         <Grid container spacing={14} justifyContent="center">
           <Grid item xs={12} lg={8} key={0}>
-            <ContentItem {...contentItems[0]} isFirstArticle={true} width={600} height={400} />
+            <ContentItem {...contentItems[0]} isFirstArticle={true} width={630} height={350} imageMarginTop="51px" />
           </Grid>
           <Grid item xs={12} lg={4} key={1}>
-            <ContentItem {...contentItems[1]} isFirstArticle={false} width={600} height={330} imageMarginTop="70px" />
+            <ContentItem {...contentItems[1]} isFirstArticle={false} width={700} height={400} />
           </Grid>
         </Grid>
       </Box>

@@ -68,7 +68,7 @@ const FeaturedVideoSection = () => {
                   {/* Bottom Row: Play Button (positioned bottom left) */}
                    <Box className="flex justify-start items-end">
                      {/* Play Button - Purple Circle with White Triangle */}
-                     <Box className="w-18 h-18 rounded-full bg-[#4E71FF] flex items-center justify-center opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+                     <Box className="w-18 h-18 rounded-full bg-[#00aaff] flex items-center justify-center opacity-90 group-hover:opacity-100 transition-opacity duration-300">
                        <PlayArrowIcon style={{ fontSize: '60px', color: 'white' }} />
                      </Box>
                    </Box>
@@ -105,8 +105,8 @@ const FeaturedVideoSection = () => {
               color="primary"
               onClick={() => window.location.href = '/overview'}
               endIcon={<ArrowForwardIcon style={{ fontSize: '1.5rem' }} />}
-              className="normal-case p-0 ml-0 justify-start text-lg font-bold text-blue-700 hover:text-blue-900 transition-colors duration-300"
-              style={{ textDecoration: 'none', color: '#1449e6', fontSize: '20px', fontWeight: 'bold', marginTop: '0px' }}
+              className="normal-case p-0 ml-0 justify-start text-lg font-bold hover:text-blue-900 transition-colors duration-300"
+              style={{ textDecoration: 'none', color: '#00aaff', fontSize: '20px', fontWeight: 'bold', marginTop: '0px' }}
             >
               Learn more about our story
             </Button>

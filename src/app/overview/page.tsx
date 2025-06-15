@@ -53,12 +53,12 @@ export default function OverviewPage() {
               Overview
             </Typography>
             <Typography variant="h5" className="opacity-90 mb-6 !text-xl md:!text-1xl font-normal">
-              Managing people, risk and capital to propel the world's leading businesses forward. This is perspective that moves you.
+             Guiding organizations in navigating people, risk, and capital to drive leading businesses toward future growth. This is insight that empowers progress.
             </Typography>
             <Button
               variant="contained"
               className="bg-[#E04A9B] hover:bg-pink-600 normal-case font-bold rounded-full px-8 py-3 text-lg shadow-none"
-              style={{ background: '#4E71FF', borderRadius: '9999px', fontWeight: 700, marginTop: 20, color: 'white', fontSize: '18px' }}
+              style={{ background: '#00aaff', borderRadius: '9999px', fontWeight: 700, marginTop: 20, color: 'white', fontSize: '18px' }}
               endIcon={<ArrowForwardIcon />}
             >
               Contact Us
@@ -71,7 +71,7 @@ export default function OverviewPage() {
             {/* Main Image */}
             <Box className="relative w-full h-2 md:h-96 z-10">
               <Image
-                src="/images/hike.jpg"
+                src="/images/overview-manage.png"
                 alt="Hero Overview"
                 layout="fill"
                 objectFit="cover"
@@ -169,7 +169,7 @@ export default function OverviewPage() {
                   {/* Bottom Row: Play Button (positioned bottom left) */}
                    <Box className="flex justify-start items-end">
                      {/* Play Button - Purple Circle with White Triangle */}
-                     <Box className="w-18 h-18 rounded-full bg-[#4E71FF] flex items-center justify-center opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+                     <Box className="w-18 h-18 rounded-full bg-[#00aaff] flex items-center justify-center opacity-90 group-hover:opacity-100 transition-opacity duration-300">
                        <PlayArrowIcon style={{ fontSize: '60px', color: 'white' }} />
                      </Box>
                    </Box>
@@ -297,7 +297,7 @@ export default function OverviewPage() {
                     objectFit="cover"
                   />
                   <Box className="absolute inset-0 flex items-center justify-center" onClick={handleSecondaryPlayClick}>
-                    <Box className="w-14 h-14 rounded-full bg-[#4E71FF] flex items-center justify-center opacity-90 hover:opacity-100 transition-opacity">
+                    <Box className="w-14 h-14 rounded-full bg-[#00aaff] flex items-center justify-center opacity-90 hover:opacity-100 transition-opacity">
                       <PlayArrowIcon style={{ fontSize: '40px', color: 'white' }} />
                     </Box>
                   </Box>

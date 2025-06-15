@@ -93,8 +93,8 @@ const Header = () => {
             onClick={toggleDrawer(true)}
             sx={{ p: 0, minWidth: 0 }}
           >
-            {openDrawer ? <CloseIcon sx={{ mr: 1 }} /> : <MenuIcon sx={{ mr: 1, color: '#4E71FF', }} />}
-            <Typography variant="body1" component="div" className="text-blue-700" sx={{ fontWeight: 'bold' }}>
+            {openDrawer ? <CloseIcon sx={{ mr: 1 }} /> : <MenuIcon sx={{ mr: 1, color: '#00aaff', }} />}
+            <Typography variant="body1" component="div" className="" sx={{ fontWeight: 'bold', color: '#00aaff' }}>
               Menu
             </Typography>
           </Button>
@@ -140,7 +140,7 @@ const Header = () => {
           onClick={toggleDrawer(false)}
           onKeyDown={toggleDrawer(false)}
         >
-          <Box className="flex items-center border-b border-gray-300 h-[80px] px-4 py-3 bg-blue-700">
+          <Box className="flex items-center border-b border-gray-300 h-[80px] px-4 py-3 bg-[#00aaff]">
             <Button
               color="inherit"
               className="normal-case text-white"
@@ -162,13 +162,13 @@ const Header = () => {
                   fontSize: '32px',
                   color: 'black',
                   '&:hover': {
-                    color: '#4E71FF', // Primary blue
+                    color: '#00aaff', // Primary blue
                   },
                 }}
               >
                 About Us
               </Typography>
-              <ChevronRightIcon className="text-gray-700 opacity-0 group-hover:opacity-100 group-hover:text-blue-700 transition-opacity duration-200 mr-4" sx={{ fontSize: '2.5rem', mt: '2.5px', ml: '-3px' }} />
+              <ChevronRightIcon className="text-gray-700 opacity-0 group-hover:opacity-100 group-hover:text-[#00aaff] transition-opacity duration-200 mr-4" sx={{ fontSize: '2.5rem', mt: '2.5px', ml: '-3px' }} />
             </ListItem>
             <ListItem onClick={toggleDrawer(false)} className="flex justify-between items-center group">
               <Typography 
@@ -179,13 +179,13 @@ const Header = () => {
                   fontSize: '32px',
                   color: 'black',
                   '&:hover': {
-                    color: '#4E71FF', // Primary blue
+                    color: '#00aaff', // Primary blue
                   },
                 }}
               >
                 Solutions
               </Typography>
-              <ChevronRightIcon className="text-gray-700 opacity-0 group-hover:opacity-100 group-hover:text-blue-700 transition-opacity duration-200 mr-4" sx={{ fontSize: '2.5rem', mt: '2.5px', ml: '-3px' }} />
+              <ChevronRightIcon className="text-gray-700 opacity-0 group-hover:opacity-100 group-hover:text-[#00aaff] transition-opacity duration-200 mr-4" sx={{ fontSize: '2.5rem', mt: '2.5px', ml: '-3px' }} />
             </ListItem>
             <ListItem onClick={toggleDrawer(false)} className="flex justify-between items-center group">
               <Typography 
@@ -196,13 +196,13 @@ const Header = () => {
                   fontSize: '32px',
                   color: 'black',
                   '&:hover': {
-                    color: '#4E71FF',
+                    color: '#00aaff',
                   },
                 }}
               >
                 Insights
               </Typography>
-              <ChevronRightIcon className="text-gray-700 opacity-0 group-hover:opacity-100 group-hover:text-blue-700 transition-opacity duration-200 mr-4" sx={{ fontSize: '2.5rem', mt: '2.5px', ml: '-3px' }} />
+              <ChevronRightIcon className="text-gray-700 opacity-0 group-hover:opacity-100 group-hover:text-[#00aaff] transition-opacity duration-200 mr-4" sx={{ fontSize: '2.5rem', mt: '2.5px', ml: '-3px' }} />
             </ListItem>
           </List>
         </Box>

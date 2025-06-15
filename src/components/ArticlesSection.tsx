@@ -42,8 +42,8 @@ const ArticleItem: React.FC<ArticleItemProps> = ({ type, title, imageSrc, imageA
               {title}
             </Typography>
           </Box>
-          <Typography className="text-blue-700 normal-case p-0 justify-start text-sm font-bold hover:text-blue-900 transition-colors duration-300" sx={{ fontWeight: 'bold', display: 'flex', alignItems: 'center', fontSize: '23px' }}>
-            Read more <FontAwesomeIcon icon={faArrowRight} style={{ fontSize: '22px', marginLeft: '6px', marginTop: '4px' }} />
+          <Typography className="normal-case p-0 justify-start text-sm font-bold hover:text-blue-900 transition-colors duration-300" sx={{ fontWeight: 'bold', display: 'flex', alignItems: 'center', fontSize: '23px', color: '#00aaff' }}>
+            Read more <FontAwesomeIcon icon={faArrowRight} style={{ fontSize: '22px', marginLeft: '6px', marginTop: '4px', color: '#00aaff' }} />
           </Typography>
         </CardContent>
       </Card>
@@ -63,7 +63,7 @@ const ArticlesSection = () => {
     {
       type: '',
       title: 'People Software',
-      imageSrc: '/images/world-complex.jpg', // Updated to local path
+      imageSrc: '/images/People-Software.png', // Updated to local path
       imageAlt: 'Complex World',
       linkHref: '#'
     },
@@ -77,7 +77,7 @@ const ArticlesSection = () => {
             <ArticleItem {...articleItems[0]} isFirstArticle={true} width={674} height={450} />
           </Grid>
           <Grid item xs={12} lg={4} key={1}>
-            <ArticleItem {...articleItems[1]} isFirstArticle={false} width={580} height={378} imageMarginTop="74px" />
+            <ArticleItem {...articleItems[1]} isFirstArticle={false} width={600} height={378} imageMarginTop="74px" />
           </Grid>
         </Grid>
       </Box>
