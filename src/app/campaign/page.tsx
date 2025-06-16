@@ -71,7 +71,7 @@ export default function TransformingTomorrows() {
             {/* Main Image */}
             <Box className="relative w-full h-2 md:h-96 z-10">
               <Image
-                src="/images/reward.jpg"
+                src="/images/TR1.png"
                 alt="Hero Overview"
                 layout="fill"
                 objectFit="cover"
@@ -475,7 +475,7 @@ export default function TransformingTomorrows() {
             <Paper elevation={3} className="rounded-lg overflow-hidden flex flex-col">
               <Box className="relative w-full h-64">
                 <Image
-                  src="/images/high-tech.jpg" // Placeholder image
+                  src="/images/TR2.png" // Placeholder image
                   alt="Client Story 1"
                   layout="fill"
                   objectFit="cover"
@@ -498,7 +498,7 @@ export default function TransformingTomorrows() {
             <Paper elevation={3} className="rounded-lg overflow-hidden flex flex-col">
               <Box className="relative w-full h-64">
                 <Image
-                  src="/images/empower.jpg" // Placeholder image
+                  src="/images/TR3.png" // Placeholder image
                   alt="Client Story 2"
                   layout="fill"
                   objectFit="cover"
@@ -541,7 +541,7 @@ export default function TransformingTomorrows() {
             <Paper elevation={3} className="rounded-lg overflow-hidden flex flex-col">
               <Box className="relative w-full h-48">
                 <Image
-                  src="/images/ai-risk.jpg" // Placeholder image
+                  src="/images/TR4.png" // Placeholder image
                   alt="AI risk and governance"
                   layout="fill"
                   objectFit="cover"
@@ -561,7 +561,7 @@ export default function TransformingTomorrows() {
             <Paper elevation={3} className="rounded-lg overflow-hidden flex flex-col">
               <Box className="relative w-full h-48">
                 <Image
-                  src="/images/transparency.jpg" // Placeholder image
+                  src="/images/TR5.png" // Placeholder image
                   alt="Pay transparency"
                   layout="fill"
                   objectFit="cover"
@@ -581,7 +581,7 @@ export default function TransformingTomorrows() {
             <Paper elevation={3} className="rounded-lg overflow-hidden flex flex-col">
               <Box className="relative w-full h-48">
                 <Image
-                  src="/images/complex-landscapte.jpg" // Placeholder image
+                  src="/images/TR6.png" // Placeholder image
                   alt="AI governance"
                   layout="fill"
                   objectFit="cover"

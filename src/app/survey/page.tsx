@@ -33,7 +33,7 @@ export default function SurveyPage() {
             left: 0,
             right: 0,
             bottom: 0,
-            backgroundImage: 'url(/images/fil.jpg)',
+            backgroundImage: 'url(/images/OD1.png)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
@@ -265,7 +265,7 @@ export default function SurveyPage() {
               {/* Survey Scorecard Sample */}
               <Box className="my-8">
                 <Image
-                  src="/images/fil2.jpg"
+                  src="/images/OD2.png"
                   alt="Sample of a Benefits Trends Survey scorecard"
                   width={800}
                   height={400}

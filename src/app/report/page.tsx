@@ -33,7 +33,7 @@ export default function ReportPage() {
             left: 0,
             right: 0,
             bottom: 0,
-            backgroundImage: 'url(/images/fil3.jpg)',
+            backgroundImage: 'url(/images/HR1.png)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
@@ -103,7 +103,7 @@ export default function ReportPage() {
                   </ul>
                   <Box className="relative h-[400px] w-full mb-8">
                     <Image
-                      src="/images/fil4.jpg"
+                      src="/images/HR3.png"
                       alt="Global catastrophe map"
                       layout="fill"
                       objectFit="contain"
@@ -122,7 +122,7 @@ export default function ReportPage() {
                   </Typography>
                   <Box className="relative h-[300px] w-full mb-8">
                     <Image
-                      src="/images/fil2.jpg"
+                      src="/images/HR2.png"
                       alt="Economic losses chart"
                       layout="fill"
                       objectFit="contain"
