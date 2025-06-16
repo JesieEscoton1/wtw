@@ -1,7 +1,7 @@
 'use client';
 
 import * as React from 'react';
-import createCache from '@emotion/cache';
+import createCache, { Options } from '@emotion/cache';
 import { useServerInsertedHTML } from 'next/navigation';
 import { CacheProvider } from '@emotion/react';
 import { ThemeProvider } from '@mui/material/styles';
@@ -13,7 +13,7 @@ import theme from '../theme'; // Assuming you have a theme file at src/theme.ts
 // This implementation is from emotion-js
 // https://github.com/emotion-js/emotion/issues/2928#issuecomment-1319747902
 export default function ThemeRegistry(props: {
-  options: any;
+  options: Options;
   children: React.ReactNode;
 }) {
   const { options, children } = props;

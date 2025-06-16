@@ -8,8 +8,6 @@ import Image from 'next/image';
 import { useState, useRef } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import MailOutlineIcon from '@mui/icons-material/MailOutline';
 
 export default function TransformingTomorrows() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -255,10 +253,10 @@ export default function TransformingTomorrows() {
                 fontFamily: 'serif',
               }}
             >
-              “
+              &quot;
             </span>
             <Typography variant="h5" component="p" className="heading-4 mb-4" sx={{ fontStyle: 'italic', color: '#212529', marginTop: '30px' }}>
-             At Alliance Atlantic, we guide our clients through the complexities of people, capital, and risk helping them turn today’s challenges into tomorrow’s opportunities and achieve their long-term vision.”
+             At Alliance Atlantic, we guide our clients through the complexities of people, capital, and risk helping them turn today&apos;s challenges into tomorrow&apos;s opportunities and achieve their long-term vision.&quot;
             </Typography>
             <Box component="cite" className="font-mono-small font-semibold not-italic block text-gray-700 mt-4">
               Carl Hess

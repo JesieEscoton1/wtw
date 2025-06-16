@@ -8,8 +8,6 @@ import Image from 'next/image';
 import { useState, useRef } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
@@ -112,13 +110,13 @@ export default function TransformingTomorrows() {
             Our reward initiatives are carefully crafted to align with the overall business strategy and human capital
             </Typography>
             <Typography variant="body1" className="mb-2 text-gray-800" sx={{ fontSize: '18px'}}>
-            priorities of the organization. Whether it's driving high performance, attracting top talent, or supporting
+            priorities of the organization. Whether it&apos;s driving high performance, attracting top talent, or supporting
             </Typography>
             <Typography variant="body1" className="mb-2 text-gray-800" sx={{ fontSize: '18px'}}>
             workforce transformation, our approach ensures that reward programs reinforce organizational objectives.
             </Typography>
             <Typography variant="body1" className="mb-2 text-gray-800" sx={{ fontSize: '18px'}}>
-            We also take into account the company's unique culture and values, making sure that our reward systems
+            We also take into account the company&apos;s unique culture and values, making sure that our reward systems
             </Typography>
             <Typography variant="body1" className="mb-2 text-gray-800" sx={{ fontSize: '18px'}}>
             reinforce the behaviors and outcomes that matter most to our success.
@@ -284,7 +282,7 @@ export default function TransformingTomorrows() {
           >
             
             <Typography variant="h5" component="p" className="heading-4 mb-4" sx={{ fontStyle: 'italic', color: '#212529', marginTop: '30px' }}>
-            Taking a Total Reward perspective and approach, we develop various forms of reward programs aligned with the organization's business and people strategies, its culture and appropriate to the various employee groups.
+            Taking a Total Reward perspective and approach, we develop various forms of reward programs aligned with the organization&apos;s business and people strategies, its culture and appropriate to the various employee groups.
             </Typography>
            
             <span className="quote__block" />
@@ -359,7 +357,7 @@ export default function TransformingTomorrows() {
                         className="mt-1"
                       />
                       <label className="text-sm text-gray-600">
-                        Yes, I'd also like to receive additional information about WTW offerings.
+                        Yes, I&apos;d also like to receive additional information about WTW offerings.
                       </label>
                     </div>
 

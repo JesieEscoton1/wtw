@@ -1,9 +1,10 @@
 'use client';
 
-import { Box, Typography, Button, Grid, Card, CardContent } from '@mui/material';
+import { Box, Typography, Card, CardContent } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
+
 
 interface ArticleItemProps {
   type: string;
@@ -11,13 +12,12 @@ interface ArticleItemProps {
   imageSrc: string;
   imageAlt: string;
   linkHref: string;
-  isFirstArticle?: boolean;
   width?: number | string;
   height?: number | string;
   imageMarginTop?: number | string;
 }
 
-const ArticleItem: React.FC<ArticleItemProps> = ({ type, title, imageSrc, imageAlt, linkHref, isFirstArticle, width, height, imageMarginTop }) => {
+const ArticleItem: React.FC<ArticleItemProps> = ({ type, title, imageSrc, imageAlt, linkHref, width, height, imageMarginTop }) => {
   return (
     <a href={linkHref} className="block" /* Apply styling for d-block */>
       <Card elevation={0} className="flex flex-col h-full border-none shadow-none">
@@ -72,14 +72,19 @@ const ArticlesSection = () => {
   return (
     <Box className="py-16 px-4 md:px-8 bg-white">
       <Box className="container mx-auto max-w-12xl">
-        <Grid container spacing={14} justifyContent="center">
-          <Grid item xs={12} lg={8} key={0}>
-            <ArticleItem {...articleItems[0]} isFirstArticle={true} width={674} height={450} />
-          </Grid>
-          <Grid item xs={12} lg={4} key={1}>
-            <ArticleItem {...articleItems[1]} isFirstArticle={false} width={580} height={378} imageMarginTop="74px" />
-          </Grid>
-        </Grid>
+        <Box sx={{ 
+          display: 'grid',
+          gridTemplateColumns: { xs: '1fr', lg: '2fr 1fr' },
+          gap: '56px',
+          justifyContent: 'center'
+        }}>
+          <Box>
+            <ArticleItem {...articleItems[0]} width={674} height={450} />
+          </Box>
+          <Box>
+            <ArticleItem {...articleItems[1]} width={580} height={378} imageMarginTop="74px" />
+          </Box>
+        </Box>
       </Box>
     </Box>
   );
