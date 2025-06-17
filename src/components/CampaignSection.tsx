@@ -17,7 +17,6 @@ interface ContentItemProps {
 }
 
 const ContentItem: React.FC<ContentItemProps> = ({ type, title, imageSrc, imageAlt, linkHref, width, height, imageMarginTop }) => {
-const ContentItem: React.FC<ContentItemProps> = ({ type, title, imageSrc, imageAlt, linkHref, width, height, imageMarginTop }) => {
   return (
     <a href={linkHref} className="block" /* Apply styling for d-block */>
       <Card elevation={0} className="flex flex-col h-full border-none shadow-none">

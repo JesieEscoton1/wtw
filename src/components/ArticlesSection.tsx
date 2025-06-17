@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
 
-
 interface ArticleItemProps {
   type: string;
   title: string;
@@ -17,7 +16,6 @@ interface ArticleItemProps {
   imageMarginTop?: number | string;
 }
 
-const ArticleItem: React.FC<ArticleItemProps> = ({ type, title, imageSrc, imageAlt, linkHref, width, height, imageMarginTop }) => {
 const ArticleItem: React.FC<ArticleItemProps> = ({ type, title, imageSrc, imageAlt, linkHref, width, height, imageMarginTop }) => {
   return (
     <a href={linkHref} className="block" /* Apply styling for d-block */>
