@@ -36,52 +36,6 @@ const Header = () => {
   return (
     <AppBar position="static" color="transparent" elevation={0} className="bg-white">
       {/* Utility Navigation */}
-      <Box className="hidden md:flex w-full justify-between items-center px-4 py-2 bg-gray-50 text-sm border-b border-b-[1px] border-gray-300">
-        {/* Country Selector */}
-        <Box className="flex items-center">
-          <Button 
-            color="inherit" 
-            className="normal-case hover:bg-gray-100"
-            onClick={handleMenuClick}
-          >
-            <LanguageIcon fontSize="small" sx={{ mr: 0.5 }} />
-            <Typography variant="body2" component="span" className="font-bold" sx={{ fontWeight: 'bold' }}>PH</Typography>
-            <Typography variant="body2" component="span">&nbsp;| EN</Typography>
-            <ExpandMoreIcon fontSize="medium" sx={{ ml: 0.5 }} />
-          </Button>
-          <Menu
-            anchorEl={anchorEl}
-            open={Boolean(anchorEl)}
-            onClose={handleClose}
-            className="mt-1"
-          >
-            <MenuItem onClick={handleClose}>English (US)</MenuItem>
-            <MenuItem onClick={handleClose}>English (UK)</MenuItem>
-            <MenuItem onClick={handleClose}>Español</MenuItem>
-          </Menu>
-        </Box>
-
-        {/* Utility Links */}
-        <Box component="nav" aria-label="Featured Links">
-          <ul className="flex space-x-6 list-none p-0 m-0">
-            <li>
-              <Button color="inherit" href="#" className="normal-case hover:text-blue-600" target="_blank" rel="noopener noreferrer">
-                News
-              </Button>
-            </li>
-            <li>
-              <Button color="inherit" href="#" className="normal-case hover:text-blue-600" target="_blank" rel="noopener noreferrer">
-                Investor Relations
-              </Button>
-            </li>
-            <li>
-              <Button color="inherit" href="#" className="normal-case hover:text-blue-600" target="_blank" rel="noopener noreferrer">
-                Careers
-              </Button>
-            </li>
-          </ul>
-        </Box>
-      </Box>
 
       {/* Main Navigation */}
       <Toolbar className="flex justify-between items-center px-2 md:px-4 py-2 md:py-3">
@@ -105,11 +59,11 @@ const Header = () => {
           <Image
             src="/images/alliance.png"
             alt="Alliance Logo"
-            width={80}
-            height={56}
+            width={120}
+            height={84}
             priority
             style={{ objectFit: 'contain' }}
-            className="md:w-[100px] md:h-[70px]"
+            className="md:w-[150px] md:h-[105px]"
           />
         </Box>
 
@@ -154,7 +108,7 @@ const Header = () => {
             </Button>
           </Box>
           <List>
-            <ListItem 
+            {/* <ListItem 
               onClick={(event) => {
                 toggleDrawer(false)(event);
                 window.location.href = '/overview';
@@ -176,8 +130,8 @@ const Header = () => {
                 About Us
               </Typography>
               <ChevronRightIcon className="text-gray-700 opacity-0 group-hover:opacity-100 group-hover:text-[#00aaff] transition-opacity duration-200 mr-4" sx={{ fontSize: '2.5rem', mt: '2.5px', ml: '-3px' }} />
-            </ListItem>
-            <ListItem 
+            </ListItem> */}
+            {/* <ListItem 
               onClick={(event) => {
                 toggleDrawer(false)(event);
                 window.location.href = '/survey';
@@ -199,8 +153,8 @@ const Header = () => {
                 Organizational Development
               </Typography>
               <ChevronRightIcon className="text-gray-700 opacity-0 group-hover:opacity-100 group-hover:text-[#00aaff] transition-opacity duration-200 mr-4" sx={{ fontSize: '2.5rem', mt: '2.5px', ml: '-3px' }} />
-            </ListItem>
-            <ListItem 
+            </ListItem> */}
+            {/* <ListItem 
               onClick={(event) => {
                 toggleDrawer(false)(event);
                 window.location.href = '/report';
@@ -220,6 +174,50 @@ const Header = () => {
                 }}
               >
                 Building HR Capability
+              </Typography>
+              <ChevronRightIcon className="text-gray-700 opacity-0 group-hover:opacity-100 group-hover:text-[#00aaff] transition-opacity duration-200 mr-4" sx={{ fontSize: '2.5rem', mt: '2.5px', ml: '-3px' }} />
+            </ListItem> */}
+            <ListItem 
+              // onClick={(event) => {
+              //   toggleDrawer(false)(event);
+              //   window.location.href = '/news';
+              // }}
+              className="flex justify-between items-center group"
+            >
+              <Typography 
+                component="div" 
+                className="px-4 py-2 underline-transition"
+                sx={{
+                  fontWeight: 'bold',
+                  color: 'black',
+                  '&:hover': {
+                    color: '#00aaff',
+                  },
+                }}
+              >
+                News
+              </Typography>
+              <ChevronRightIcon className="text-gray-700 opacity-0 group-hover:opacity-100 group-hover:text-[#00aaff] transition-opacity duration-200 mr-4" sx={{ fontSize: '2.5rem', mt: '2.5px', ml: '-3px' }} />
+            </ListItem>
+            <ListItem 
+              // onClick={(event) => {
+              //   toggleDrawer(false)(event);
+              //   window.location.href = '/careers';
+              // }}
+              className="flex justify-between items-center group"
+            >
+              <Typography 
+                component="div" 
+                className="px-4 py-2 underline-transition"
+                sx={{
+                  fontWeight: 'bold',
+                  color: 'black',
+                  '&:hover': {
+                    color: '#00aaff',
+                  },
+                }}
+              >
+                Careers
               </Typography>
               <ChevronRightIcon className="text-gray-700 opacity-0 group-hover:opacity-100 group-hover:text-[#00aaff] transition-opacity duration-200 mr-4" sx={{ fontSize: '2.5rem', mt: '2.5px', ml: '-3px' }} />
             </ListItem>

@@ -4,6 +4,7 @@ import { Box, Typography, Card, CardContent } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
+import Grid from '@mui/material/Grid';
 
 interface ArticleItemProps {
   type: string;

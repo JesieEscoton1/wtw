@@ -73,7 +73,6 @@ const Footer = () => {
             <Box className="w-full md:w-4/12 px-4 mb-6 md:mb-0">
               <ul className="site-footer__secondary list-none p-0 m-0">
                 {[
-                  { text: 'Investor Relations' },
                   { text: 'Careers' },
                   { text: 'Office Locations' },
                   { text: 'Social Media' },
@@ -99,7 +98,6 @@ const Footer = () => {
             <Box className="w-full md:w-4/12 px-4">
               <ul className="site-footer__secondary list-none p-0 m-0">
                 {[
-                  { text: 'Global Website Privacy Notice' },
                   { text: 'Terms of Use' },
                   { text: 'Accessibility Statement' },
                   { text: 'Cookie Notice' },
