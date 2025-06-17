@@ -84,9 +84,9 @@ const Header = () => {
       </Box>
 
       {/* Main Navigation */}
-      <Toolbar className="flex justify-between items-center px-4 py-3">
+      <Toolbar className="flex justify-between items-center px-2 md:px-4 py-2 md:py-3">
         {/* Left section: Menu */}
-        <Box className="flex items-center border-r border-r-[1px] border-gray-300 pr-10 pl-4 h-[100px] -mt-3 -mb-3">
+        <Box className="flex items-center border-r border-r-[1px] border-gray-300 pr-4 md:pr-10 pl-2 md:pl-4 h-[80px] md:h-[100px] -mt-3 -mb-3">
           <Button
             color="inherit"
             className="flex items-center normal-case hover:text-blue-600"
@@ -94,7 +94,7 @@ const Header = () => {
             sx={{ p: 0, minWidth: 0 }}
           >
             {openDrawer ? <CloseIcon sx={{ mr: 1 }} /> : <MenuIcon sx={{ mr: 1, color: '#00aaff', }} />}
-            <Typography variant="body1" component="div" className="" sx={{ fontWeight: 'bold', color: '#00aaff' }}>
+            <Typography variant="body1" component="div" className="text-sm md:text-base" sx={{ fontWeight: 'bold', color: '#00aaff' }}>
               Menu
             </Typography>
           </Button>
@@ -105,16 +105,17 @@ const Header = () => {
           <Image
             src="/images/alliance.png"
             alt="Alliance Logo"
-            width={100}
-            height={70}
+            width={80}
+            height={56}
             priority
             style={{ objectFit: 'contain' }}
+            className="md:w-[100px] md:h-[70px]"
           />
         </Box>
 
         {/* Right section: Search */}
-        <Box className="flex items-center border-l border-l-[1px] border-gray-300 pl-10 pr-4 h-[100px] -mt-3 -mb-3">
-          <Typography variant="body1" component="div" sx={{ mr: 1 }} className="text-gray-700">
+        <Box className="flex items-center border-l border-l-[1px] border-gray-300 pl-4 md:pl-10 pr-2 md:pr-4 h-[80px] md:h-[100px] -mt-3 -mb-3">
+          <Typography variant="body1" component="div" sx={{ mr: 1 }} className="text-gray-700 text-sm md:text-base">
             Search
           </Typography>
           <IconButton
@@ -153,7 +154,13 @@ const Header = () => {
             </Button>
           </Box>
           <List>
-            <ListItem onClick={toggleDrawer(false)} className="flex justify-between items-center group">
+            <ListItem 
+              onClick={(event) => {
+                toggleDrawer(false)(event);
+                window.location.href = '/overview';
+              }} 
+              className="flex justify-between items-center group"
+            >
               <Typography 
                 component="div" 
                 className="px-4 py-2 underline-transition"
@@ -170,7 +177,13 @@ const Header = () => {
               </Typography>
               <ChevronRightIcon className="text-gray-700 opacity-0 group-hover:opacity-100 group-hover:text-[#00aaff] transition-opacity duration-200 mr-4" sx={{ fontSize: '2.5rem', mt: '2.5px', ml: '-3px' }} />
             </ListItem>
-            <ListItem onClick={toggleDrawer(false)} className="flex justify-between items-center group">
+            <ListItem 
+              onClick={(event) => {
+                toggleDrawer(false)(event);
+                window.location.href = '/survey';
+              }} 
+              className="flex justify-between items-center group"
+            >
               <Typography 
                 component="div" 
                 className="px-4 py-2 underline-transition"
@@ -183,11 +196,17 @@ const Header = () => {
                   },
                 }}
               >
-                Solutions
+                Organizational Development
               </Typography>
               <ChevronRightIcon className="text-gray-700 opacity-0 group-hover:opacity-100 group-hover:text-[#00aaff] transition-opacity duration-200 mr-4" sx={{ fontSize: '2.5rem', mt: '2.5px', ml: '-3px' }} />
             </ListItem>
-            <ListItem onClick={toggleDrawer(false)} className="flex justify-between items-center group">
+            <ListItem 
+              onClick={(event) => {
+                toggleDrawer(false)(event);
+                window.location.href = '/report';
+              }} 
+              className="flex justify-between items-center group"
+            >
               <Typography 
                 component="div" 
                 className="px-4 py-2 underline-transition"
@@ -200,7 +219,7 @@ const Header = () => {
                   },
                 }}
               >
-                Insights
+                Building HR Capability
               </Typography>
               <ChevronRightIcon className="text-gray-700 opacity-0 group-hover:opacity-100 group-hover:text-[#00aaff] transition-opacity duration-200 mr-4" sx={{ fontSize: '2.5rem', mt: '2.5px', ml: '-3px' }} />
             </ListItem>

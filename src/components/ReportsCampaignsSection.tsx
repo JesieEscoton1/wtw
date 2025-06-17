@@ -14,34 +14,65 @@ interface ContentItemProps {
     width?: number | string;
     height?: number | string;
     imageMarginTop?: number | string;
+    mobileHeight?: number | string;
+    mobileWidth?: number | string;
 }
 
-const ContentItem: React.FC<ContentItemProps> = ({ type, title, imageSrc, imageAlt, linkHref, width, height, imageMarginTop }) => {
+const ContentItem: React.FC<ContentItemProps> = ({ type, title, imageSrc, imageAlt, linkHref, width, height, imageMarginTop, mobileHeight, mobileWidth }) => {
   return (
-    <a href={linkHref} className="block" /* Apply styling for d-block */>
+    <a href={linkHref} className="block">
       <Card elevation={0} className="flex flex-col h-full border-none shadow-none">
         <Box
-          className="relative w-full overflow-hidden mb-0 hidden md:block transition-transform duration-300 hover:scale-95" /* Add hover scale and transition */
-          sx={width || height || imageMarginTop ? { width, height, marginTop: imageMarginTop } : {}} /* Apply fixed width, height, and conditional top margin to the image */
+          className="relative w-full overflow-hidden mb-4 md:mb-0 transition-transform duration-300 hover:scale-95"
+          sx={{
+            width: { xs: mobileWidth || '100%', md: width },
+            height: { xs: mobileHeight || '250px', md: height },
+            marginTop: { xs: 0, md: imageMarginTop }
+          }}
         >
-          {/* Use local image path */}
           <Image
             src={imageSrc}
             alt={imageAlt}
             layout="fill"
             objectFit="cover"
+            className="object-cover"
           />
         </Box>
         <CardContent className="flex flex-col justify-between flex-grow p-0 last:pb-0">
           <Box>
-            <Typography variant="overline" color="black" className="block mb-1" sx={{ fontWeight: 'bold', fontSize: '20px', }}>
+            <Typography 
+              variant="overline" 
+              color="black" 
+              className="block mb-1" 
+              sx={{ 
+                fontWeight: 'bold', 
+                fontSize: { xs: '16px', md: '20px' }
+              }}
+            >
               {type}
             </Typography>
-            <Typography variant="h6" component="h3" className="mb-4 leading-tight" sx={{ fontWeight: 'bold', fontSize: '20px', }}>
+            <Typography 
+              variant="h6" 
+              component="h3" 
+              className="mb-4 leading-tight" 
+              sx={{ 
+                fontWeight: 'bold', 
+                fontSize: { xs: '18px', md: '20px' }
+              }}
+            >
               {title}
             </Typography>
           </Box>
-          <Typography className="normal-case p-0 justify-start text-sm font-bold hover:text-blue-900 transition-colors duration-300" sx={{ fontWeight: 'bold', display: 'flex', alignItems: 'center', fontSize: '23px', color: '#00aaff' }}>
+          <Typography 
+            className="normal-case p-0 justify-start text-sm font-bold hover:text-blue-900 transition-colors duration-300" 
+            sx={{ 
+              fontWeight: 'bold', 
+              display: 'flex', 
+              alignItems: 'center', 
+              fontSize: { xs: '18px', md: '23px' }, 
+              color: '#00aaff' 
+            }}
+          >
             Read more <FontAwesomeIcon icon={faArrowRight} style={{ fontSize: '22px', marginLeft: '6px', marginTop: '4px' }} />
           </Typography>
         </CardContent>
@@ -69,21 +100,16 @@ const ReportsCampaignsSection = () => {
   ];
 
   return (
-    <Box className="py-16 px-4 md:px-8 bg-white">
+    <Box className="py-8 md:py-16 px-4 md:px-8 bg-white">
       <Box className="container mx-auto max-w-12xl">
-        <Box sx={{ 
-          display: 'grid',
-          gridTemplateColumns: { xs: '1fr', lg: '2fr 1fr' },
-          gap: '56px',
-          justifyContent: 'center'
-        }}>
-          <Box>
-            <ContentItem {...contentItems[0]} width={600} height={400} />
-          </Box>
-          <Box>
-            <ContentItem {...contentItems[1]} width={600} height={330} imageMarginTop="70px" />
-          </Box>
-        </Box>
+        <Grid container spacing={{ xs: 4, md: 14 }}>
+          <Grid item xs={12} lg={8}>
+            <ContentItem {...contentItems[0]} isFirstArticle={true} width={600} height={400} mobileHeight={350} mobileWidth={630} />
+          </Grid>
+          <Grid item xs={12} lg={4}>
+            <ContentItem {...contentItems[1]} isFirstArticle={false} width={600} height={330} mobileHeight={350} mobileWidth={630} imageMarginTop="70px" />
+          </Grid>
+        </Grid>
       </Box>
     </Box>
   );
