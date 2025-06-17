@@ -32,7 +32,7 @@ export default function SurveyPage() {
             left: 0,
             right: 0,
             bottom: 0,
-            backgroundImage: 'url(/images/fil.jpg)',
+            backgroundImage: 'url(/images/OD1.png)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
@@ -102,6 +102,7 @@ export default function SurveyPage() {
 
                 <Typography variant="body1" className="text-gray-700 mb-8">
                   Effective change management includes controlling people&apos;s attitudes, actions, and expectations in addition to putting new systems or procedures into place. By setting clear objectives, offering assistance, and encouraging a sense of belonging during the transition process, leaders can help their teams navigate through times of uncertainty. Employees are more inclined to accept new directions and positively impact the outcome when they get the rationale behind organizational changes and feel engaged in the process.              
+                  Effective change management includes controlling people&apos;s attitudes, actions, and expectations in addition to putting new systems or procedures into place. By setting clear objectives, offering assistance, and encouraging a sense of belonging during the transition process, leaders can help their teams navigate through times of uncertainty. Employees are more inclined to accept new directions and positively impact the outcome when they get the rationale behind organizational changes and feel engaged in the process.              
                 </Typography>
 
                 <Button
@@ -132,6 +133,7 @@ export default function SurveyPage() {
                       Enhances Organizational Performance
                     </Typography>
                     <Typography variant="body1" className="text-gray-600">
+                      Receive a best-in-class personalized scorecard to benchmark your organization&apos;s benefits strategies against your peers.
                       Receive a best-in-class personalized scorecard to benchmark your organization&apos;s benefits strategies against your peers.
                     </Typography>
                   </Box>
@@ -264,7 +266,7 @@ export default function SurveyPage() {
               {/* Survey Scorecard Sample */}
               <Box className="my-8">
                 <Image
-                  src="/images/fil2.jpg"
+                  src="/images/OD2.png"
                   alt="Sample of a Benefits Trends Survey scorecard"
                   width={800}
                   height={400}
@@ -383,6 +385,7 @@ export default function SurveyPage() {
                     2025 Benefits Trends Survey
                   </Typography>
                   <Typography variant="body1" className="mb-6">
+                    Track trends around employers&apos; benefit plans and understand how you can improve benefits outcomes
                     Track trends around employers&apos; benefit plans and understand how you can improve benefits outcomes
                   </Typography>
                   <Button

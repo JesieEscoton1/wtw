@@ -18,6 +18,7 @@ interface ArticleItemProps {
 }
 
 const ArticleItem: React.FC<ArticleItemProps> = ({ type, title, imageSrc, imageAlt, linkHref, width, height, imageMarginTop }) => {
+const ArticleItem: React.FC<ArticleItemProps> = ({ type, title, imageSrc, imageAlt, linkHref, width, height, imageMarginTop }) => {
   return (
     <a href={linkHref} className="block" /* Apply styling for d-block */>
       <Card elevation={0} className="flex flex-col h-full border-none shadow-none">
@@ -42,8 +43,8 @@ const ArticleItem: React.FC<ArticleItemProps> = ({ type, title, imageSrc, imageA
               {title}
             </Typography>
           </Box>
-          <Typography className="text-blue-700 normal-case p-0 justify-start text-sm font-bold hover:text-blue-900 transition-colors duration-300" sx={{ fontWeight: 'bold', display: 'flex', alignItems: 'center', fontSize: '23px' }}>
-            Read more <FontAwesomeIcon icon={faArrowRight} style={{ fontSize: '22px', marginLeft: '6px', marginTop: '4px' }} />
+          <Typography className="normal-case p-0 justify-start text-sm font-bold hover:text-blue-900 transition-colors duration-300" sx={{ fontWeight: 'bold', display: 'flex', alignItems: 'center', fontSize: '23px', color: '#00aaff' }}>
+            Read more <FontAwesomeIcon icon={faArrowRight} style={{ fontSize: '22px', marginLeft: '6px', marginTop: '4px', color: '#00aaff' }} />
           </Typography>
         </CardContent>
       </Card>
@@ -63,7 +64,7 @@ const ArticlesSection = () => {
     {
       type: '',
       title: 'People Software',
-      imageSrc: '/images/world-complex.jpg', // Updated to local path
+      imageSrc: '/images/People-Software.png', // Updated to local path
       imageAlt: 'Complex World',
       linkHref: '#'
     },

@@ -6,6 +6,7 @@ import { useServerInsertedHTML } from 'next/navigation';
 import { CacheProvider } from '@emotion/react';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
+import { Options } from '@emotion/cache';
 
 // You can replace this with your own theme
 import theme from '../theme'; // Assuming you have a theme file at src/theme.ts

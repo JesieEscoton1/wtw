@@ -33,7 +33,7 @@ export default function ReportPage() {
             left: 0,
             right: 0,
             bottom: 0,
-            backgroundImage: 'url(/images/fil3.jpg)',
+            backgroundImage: 'url(/images/HR1.png)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
@@ -93,7 +93,7 @@ export default function ReportPage() {
                     Developing Core HR Skills for Modern Workplaces
                   </Typography>
                   <Typography variant="body1" className="mb-6">
-                    Developing Core HR Skills for Modern Workplaces is about equipping HR professionals with the essential capabilities needed to thrive in today&apos;s fast-changing work environments. As organizations evolve, HR must move beyond traditional tasks and adopt a more strategic, tech-savvy, and people-focused approach. Key Focus Areas:
+                    Developing Core HR Skills for Modern Workplaces is about equipping HR professionals with the essential capabilities needed to thrive in today&#39;s fast-changing work environments. As organizations evolve, HR must move beyond traditional tasks and adopt a more strategic, tech-savvy, and people-focused approach. Key Focus Areas:
                   </Typography>
                   <ul className="list-disc pl-6 mb-6">
                     <li className="mb-2">Foundational HR Knowledge: Strengthen skills in areas like recruitment, employee relations, and compliance.</li>
@@ -103,7 +103,7 @@ export default function ReportPage() {
                   </ul>
                   <Box className="relative h-[400px] w-full mb-8">
                     <Image
-                      src="/images/fil4.jpg"
+                      src="/images/HR3.png"
                       alt="Global catastrophe map"
                       layout="fill"
                       objectFit="contain"
@@ -122,7 +122,7 @@ export default function ReportPage() {
                   </Typography>
                   <Box className="relative h-[300px] w-full mb-8">
                     <Image
-                      src="/images/fil2.jpg"
+                      src="/images/HR2.png"
                       alt="Economic losses chart"
                       layout="fill"
                       objectFit="contain"
@@ -381,7 +381,7 @@ export default function ReportPage() {
                     Change Management
                   </Typography>
                   <Typography variant="body1" className="text-gray-600 mb-8">
-                    Building HR&apos;s role in leading and supporting organizational change.
+                    Building HR&#39;s role in leading and supporting organizational change.
                   </Typography>
                   <Box className="absolute bottom-6 right-6">
                     <span className="text-blue-300 text-xl">→</span>

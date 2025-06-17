@@ -15,11 +15,11 @@ const HeroSection = () => {
   const getBackgroundImage = (section: Section | null) => {
     switch (section) {
       case 'People':
-        return '/images/people.jpg';
+        return '/images/people1.jpg';
       case 'Risk':
-        return '/images/at-the-summit.jpg';
+        return '/images/risk1.png';
       case 'Capital':
-        return '/images/build.jpg';
+        return '/images/capital.png';
       default:
         return '/images/fil.jpg';
     }
@@ -88,8 +88,8 @@ const HeroSection = () => {
                 <button
                   onClick={() => window.location.href = '/transforming-tomorrows'}
                   aria-label="Link, Click to visit our Transforming Tomorrows page"
-                  className="text-blue-700 normal-case p-0 justify-start text-base font-bold hover:text-blue-900 transition-colors duration-300 bg-transparent border-none cursor-pointer"
-                  style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', fontWeight: 'bold', fontSize: '23px' }}
+                  className="normal-case p-0 justify-start text-base font-bold hover:text-blue-900 transition-colors duration-300 bg-transparent border-none cursor-pointer"
+                  style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', fontWeight: 'bold', fontSize: '23px', color: '#00aaff' }}
                 >
                   Get Started
                   <FontAwesomeIcon icon={faArrowRight} style={{ fontSize: '22px', marginLeft: '10px', marginTop: '3px' }} />
@@ -120,10 +120,9 @@ const HeroSection = () => {
                         width: '100%',
                         textTransform: 'none',
                         color: 'white',
-                        // backgroundColor: activeSection === section ? '#4E71FF' : '#5409DA',
-                        // '&:hover': {
-                        //   backgroundColor: '#4E71FF',
-                        // },
+                        '&:hover': {
+                          backgroundColor: '#00aaff',
+                        },
                         transition: 'background-color 300ms ease-in-out',
                       }}
                       aria-label={`Content slider, ${section}, click to explore WTW content related to ${section.toLowerCase()} category`}

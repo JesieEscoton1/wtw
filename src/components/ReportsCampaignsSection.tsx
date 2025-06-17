@@ -41,7 +41,7 @@ const ContentItem: React.FC<ContentItemProps> = ({ type, title, imageSrc, imageA
               {title}
             </Typography>
           </Box>
-          <Typography className="text-blue-700 normal-case p-0 justify-start text-sm font-bold hover:text-blue-900 transition-colors duration-300" sx={{ fontWeight: 'bold', display: 'flex', alignItems: 'center', fontSize: '23px' }}>
+          <Typography className="normal-case p-0 justify-start text-sm font-bold hover:text-blue-900 transition-colors duration-300" sx={{ fontWeight: 'bold', display: 'flex', alignItems: 'center', fontSize: '23px', color: '#00aaff' }}>
             Read more <FontAwesomeIcon icon={faArrowRight} style={{ fontSize: '22px', marginLeft: '6px', marginTop: '4px' }} />
           </Typography>
         </CardContent>
@@ -55,14 +55,14 @@ const ReportsCampaignsSection = () => {
     {
       type: '',
       title: 'Organizational Development',
-      imageSrc: '/images/pexels-craytive.jpg',
+      imageSrc: '/images/Organizational-Development.png',
       imageAlt: 'Benefits Trends Survey',
       linkHref: '/survey'
     },
     {
       type: '',
       title: 'Building HR Capability',
-      imageSrc: '/images/nature.jpg',
+      imageSrc: '/images/Building-Capability.png',
       imageAlt: 'Natural Catastrophe Review',
       linkHref: '/report'
     },

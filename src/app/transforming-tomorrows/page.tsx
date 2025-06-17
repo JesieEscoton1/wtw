@@ -49,12 +49,12 @@ export default function TransformingTomorrows() {
              Tomorrows
             </Typography>
             <Typography variant="h5" className="opacity-90 mb-6 !text-xl md:!text-1xl font-normal">
-            We help you achieve your boldest ambitions
+             We enable you to pursue your highest aspirations with confidence.
             </Typography>
             <Button
               variant="contained"
               className="bg-[#E04A9B] hover:bg-pink-600 normal-case font-bold rounded-full px-8 py-3 text-lg shadow-none"
-              style={{ background: '#4E71FF', borderRadius: '9999px', fontWeight: 700, marginTop: 20, color: 'white', fontSize: '18px' }}
+              style={{ background: '#00aaff', borderRadius: '9999px', fontWeight: 700, marginTop: 20, color: 'white', fontSize: '18px' }}
               endIcon={<ArrowForwardIcon />}
             >
               Contact Us
@@ -67,7 +67,7 @@ export default function TransformingTomorrows() {
             {/* Main Image */}
             <Box className="relative w-full h-2 md:h-96 z-10">
               <Image
-                src="/images/transform.jpg"
+                src="/images/Transforming.png"
                 alt="Hero Overview"
                 layout="fill"
                 objectFit="cover"
@@ -184,7 +184,7 @@ export default function TransformingTomorrows() {
                   {/* Bottom Row: Play Button (positioned bottom left) */}
                    <Box className="flex justify-start items-end">
                      {/* Play Button - Purple Circle with White Triangle */}
-                     <Box className="w-18 h-18 rounded-full bg-[#4E71FF] flex items-center justify-center opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+                     <Box className="w-18 h-18 rounded-full bg-[#00aaff] flex items-center justify-center opacity-90 group-hover:opacity-100 transition-opacity duration-300">
                        <PlayArrowIcon style={{ fontSize: '60px', color: 'white' }} />
                      </Box>
                    </Box>
@@ -267,36 +267,36 @@ export default function TransformingTomorrows() {
           </Box>
 
           {/* How we help: Section */}
-          <Box className="border border-[#5409DA] p-8 rounded-sm space-y-4 mt-8">
+          <Box className="border border-[lightblue] p-8 rounded-sm space-y-4 mt-8">
             <Typography variant="h5" className="font-bold text-gray-900" sx={{ fontWeight: 'bold', marginBottom: '10px' }}>
               How we help:
             </Typography>
-            <Link href="#" color="inherit" underline="none" className="group flex items-center text-[#5409DA] hover:text-[#4E71FF] transition-colors">
+            <Link href="#" color="inherit" underline="none" className="group flex items-center text-[#00aaff] hover:text-[#00aaff] transition-colors">
               <Box className="relative">
-                <Typography variant="body1" className="font-semibold text-blue-700 mr-2" sx={{ fontWeight: 'bold' }}>
+                <Typography variant="body1" className="font-semibold mr-2" sx={{ fontWeight: 'bold', color: '#00aaff' }}>
                   People solutions
                 </Typography>
-                <Box className="absolute bottom-0 left-0 h-[2px] w-0 bg-[#0e2aff] group-hover:w-full transition-all duration-300"></Box>
+                <Box className="absolute bottom-0 left-0 h-[2px] w-0 bg-[#00aaff] group-hover:w-full transition-all duration-300"></Box>
               </Box>
-              <ArrowForwardIcon sx={{ fontSize: '1.25rem', ml:.5, color: '#0e2aff' }} />
+              <ArrowForwardIcon sx={{ fontSize: '1.25rem', ml:.5, color: '#00aaff' }} />
             </Link>
-            <Link href="#" color="inherit" underline="none" className="group flex items-center text-[#5409DA] hover:text-[#4E71FF] transition-colors">
+            <Link href="#" color="inherit" underline="none" className="group flex items-center text-[#00aaff] hover:text-[#00aaff] transition-colors">
               <Box className="relative mt-1">
-                <Typography variant="body1" className="font-semibold text-blue-700 mr-2" sx={{ fontWeight: 'bold' }}>
+                <Typography variant="body1" className="font-semibold mr-2" sx={{ fontWeight: 'bold', color: '#00aaff' }}>
                   Risk solutions
                 </Typography>
-                <Box className="absolute bottom-0 left-0 h-[2px] w-0 bg-[#0e2aff] group-hover:w-full transition-all duration-300"></Box>
+                <Box className="absolute bottom-0 left-0 h-[2px] w-0 bg-[#00aaff] group-hover:w-full transition-all duration-300"></Box>
               </Box>
-              <ArrowForwardIcon sx={{ fontSize: '1.25rem', ml:.5, color: '#0e2aff' }} />
+              <ArrowForwardIcon sx={{ fontSize: '1.25rem', ml:.5, color: '#00aaff' }} />
             </Link>
-            <Link href="#" color="inherit" underline="none" className="group flex items-center text-[#5409DA] hover:text-[#4E71FF] transition-colors">
+            <Link href="#" color="inherit" underline="none" className="group flex items-center text-[#00aaff] hover:text-[#00aaff] transition-colors">
               <Box className="relative mt-1">
-                <Typography variant="body1" className="font-semibold text-blue-700 mr-2" sx={{ fontWeight: 'bold' }}>
+                <Typography variant="body1" className="font-semibold mr-2" sx={{ fontWeight: 'bold', color: '#00aaff' }}>
                   Capital solutions
                 </Typography>
-                <Box className="absolute bottom-0 left-0 h-[2px] w-0 bg-[#0e2aff] group-hover:w-full transition-all duration-300"></Box>
+                <Box className="absolute bottom-0 left-0 h-[2px] w-0 bg-[#00aaff] group-hover:w-full transition-all duration-300"></Box>
               </Box>
-              <ArrowForwardIcon sx={{ fontSize: '1.25rem', ml:.5, color: '#0e2aff' }} />
+              <ArrowForwardIcon sx={{ fontSize: '1.25rem', ml:.5, color: '#00aaff' }} />
             </Link>
           </Box>
 
@@ -304,7 +304,7 @@ export default function TransformingTomorrows() {
           <Paper elevation={3} className="rounded-lg overflow-hidden mt-8">
             <Box className="relative w-full h-56">
               <Image
-                src="/images/smarter.jpg" // Reusing an existing image for now
+                src="/images/smart-risk.png" // Reusing an existing image for now
                 alt="Featured Image"
                 layout="fill"
                 objectFit="cover"
@@ -341,7 +341,7 @@ export default function TransformingTomorrows() {
             <Paper elevation={3} className="rounded-lg overflow-hidden flex flex-col">
               <Box className="relative w-full h-64">
                 <Image
-                  src="/images/high-tech.jpg" // Placeholder image
+                  src="/images/transforming-workforce.png" // Placeholder image
                   alt="Client Story 1"
                   layout="fill"
                   objectFit="cover"
@@ -355,7 +355,7 @@ export default function TransformingTomorrows() {
                 A leading global manufacturing company was facing growing challenges in attracting and retaining top talent across multiple regions...
                 </Typography>   
                 <Link href="#" color="inherit" underline="none" className="flex items-center text-[#5409DA] hover:text-[#4E71FF] transition-colors self-end">
-                  <ArrowForwardIcon sx={{ fontSize: '2rem', color: '#0e2aff' }} />
+                  <ArrowForwardIcon sx={{ fontSize: '2rem', color: '#00aaff' }} />
                 </Link>
               </Box>
             </Paper>
@@ -378,7 +378,7 @@ export default function TransformingTomorrows() {
                  A multinational financial institution was facing increasing regulatory demands, complex market volatility, and a rapidly evolving risk landscape...
                 </Typography>
                 <Link href="#" color="inherit" underline="none" className="flex items-center text-[#5409DA] hover:text-[#4E71FF] transition-colors self-end">
-                  <ArrowForwardIcon sx={{ fontSize: '2rem', color: '#0e2aff' }} />
+                  <ArrowForwardIcon sx={{ fontSize: '2rem', color: '#00aaff' }} />
                 </Link>
               </Box>
             </Paper>
@@ -394,10 +394,10 @@ export default function TransformingTomorrows() {
              Industry insights
             </Typography>
             <Link href="#" color="inherit" underline="none" className="flex items-center text-white hover:text-gray-300 transition-colors">
-              <Typography variant="body1" className="text-white font-semibold mr-2" sx={{ fontWeight: 'bold' }}>
+              <Typography variant="body1" className="text-white font-semibold mr-2" sx={{ fontWeight: 'bold', fontSize: '20px' }}>
                 See all insights
               </Typography>
-              <ArrowForwardIcon sx={{ fontSize: '1.25rem', ml: '2px', color: 'white', fontWeight: 'bold' }} />
+              <ArrowForwardIcon sx={{ fontSize: '1.5rem', ml: '2px', color: 'white', fontWeight: 'bold' }} />
             </Link>
           </Box>
 
@@ -427,7 +427,7 @@ export default function TransformingTomorrows() {
             <Paper elevation={3} className="rounded-lg overflow-hidden flex flex-col">
               <Box className="relative w-full h-64">
                 <Image
-                  src="/images/transparency.jpg" // Placeholder image
+                  src="/images/strengthening-risk.png" // Placeholder image
                   alt="Pay transparency"
                   layout="fill"
                   objectFit="cover"
