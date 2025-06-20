@@ -317,68 +317,7 @@ export default function TransformingTomorrows() {
       </Box>
 
       {/* Client Success Stories Section */}
-      <Box className="w-full bg-gray-100 py-6 md:py-10 px-4 md:px-0">
-        <Box className="container mx-auto max-w-7xl">
-          <Typography variant="h4" className="font-bold mb-4 text-gray-900" sx={{ fontSize: '28px', md: '35px', fontWeight: 'bold' }}>
-            Client success stories
-          </Typography>
-          <Typography variant="body1" className="mb-6 md:mb-10 text-gray-800" sx={{ fontSize: '18px', md: '18px', mt:2 }}>
-            Partnering closely with our clients, we uncover new opportunities,
-          </Typography> 
-          <Typography variant="body1" className="mb-6 md:mb-10 text-gray-800" sx={{ fontSize: '18px', md: '18px' }}>
-            solve complex challenges, and shape a stronger tomorrow.
-          </Typography>
-
-          <Box className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 mt-4">
-            {/* Card 1 */}
-            <Paper elevation={3} className="rounded-lg overflow-hidden flex flex-col">
-              <Box className="relative w-full h-48 md:h-64">
-                <Image
-                  src="/images/transforming-workforce.png"
-                  alt="Client Story 1"
-                  layout="fill"
-                  objectFit="cover"
-                />
-              </Box>
-              <Box className="p-4 md:p-6 flex flex-col justify-between flex-grow">
-                <Typography variant="h5" className="font-bold mb-3 md:mb-4 text-gray-900" sx={{ fontSize: '20px', md: '24px', fontWeight: 'bold' }}>
-                 Transforming Workforce Strategy for a Global Manufacturer
-                </Typography>
-                <Typography variant="body2" className="text-gray-700 mb-3 md:mb-4" sx={{ fontSize: '18px', md: '16px', mt:1 }}>
-                A leading global manufacturing company was facing growing challenges in attracting and retaining top talent across multiple regions...
-                </Typography>   
-                <Link href="#" color="inherit" underline="none" className="flex items-center text-[#5409DA] hover:text-[#4E71FF] transition-colors self-end">
-                  <ArrowForwardIcon sx={{ fontSize: '1.5rem', md: '2rem', color: '#00aaff' }} />
-                </Link>
-              </Box>
-            </Paper>
-
-            {/* Card 2 */}
-            <Paper elevation={3} className="rounded-lg overflow-hidden flex flex-col">
-              <Box className="relative w-full h-48 md:h-64">
-                <Image
-                  src="/images/empower.jpg"
-                  alt="Client Story 2"
-                  layout="fill"
-                  objectFit="cover"
-                />
-              </Box>
-              <Box className="p-4 md:p-6 flex flex-col justify-between flex-grow">
-                <Typography variant="h5" className="font-bold mb-3 md:mb-4 text-gray-900" sx={{ fontSize: '20px', md: '24px', fontWeight: 'bold' }}>
-                 Managing Complex Risk for a Financial Services Leader
-                </Typography>
-                <Typography variant="body2" className="text-gray-700 mb-3 md:mb-4" sx={{ fontSize: '18px', md: '16px', mt:1 }}>
-                 A multinational financial institution was facing increasing regulatory demands, complex market volatility, and a rapidly evolving risk landscape...
-                </Typography>
-                <Link href="#" color="inherit" underline="none" className="flex items-center text-[#5409DA] hover:text-[#4E71FF] transition-colors self-end">
-                  <ArrowForwardIcon sx={{ fontSize: '1.5rem', md: '2rem', color: '#00aaff' }} />
-                </Link>
-              </Box>
-            </Paper>
-          </Box>
-        </Box>
-      </Box>
-
+     
       {/* WTW Insights Section */}
       <Box className="w-full bg-[lightblue] py-6 md:py-10 px-4 md:px-0 relative">
         <Box className="container mx-auto max-w-7xl">
