@@ -34,7 +34,7 @@ export default function TransformingTomorrows() {
           {/* Left: Text */}
           <Box className="flex-1 text-white space-y-6 md:pr-8">
             <Typography variant="overline" className="text-blue-500 tracking-widest font-bold !text-base" style={{ letterSpacing: '0.15em', fontWeight: 'bold'}}>
-              Total Reward
+              Total Rewards
             </Typography>
             <Typography
               variant="h1"
