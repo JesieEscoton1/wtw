@@ -223,7 +223,7 @@ export default function TransformingTomorrows() {
         {/* Right Column: Quote and Secondary Video */}
         <Box className="space-y-6 md:space-y-8">
           {/* Quote Box */}
-          <Box
+          {/* <Box
             component="blockquote"
             className="quote sr-reveal relative bg-white rounded-lg p-4 md:p-8 my-4 md:my-6 border-l-5"
             sx={{
@@ -255,7 +255,7 @@ export default function TransformingTomorrows() {
               <br />
               <span className="font-bold">CEO</span>
             </Box>
-          </Box>
+          </Box> */}
 
           {/* How we help: Section */}
           <Box className="border border-[lightblue] p-4 md:p-8 rounded-sm space-y-3 md:space-y-4 mt-6 md:mt-8">
