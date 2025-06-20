@@ -8,6 +8,8 @@ import Image from 'next/image';
 import { useState, useRef } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
 
 export default function TransformingTomorrows() {
   const [isPlaying, setIsPlaying] = useState(false);

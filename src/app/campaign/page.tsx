@@ -181,79 +181,6 @@ export default function TransformingTomorrows() {
                                                 </Box>
 
 
-          {/* Featured Video Section */}
-          <Box className="w-full">
-            <Typography variant="h6" className="font-bold mt-4 text-gray-900" sx={{ marginBottom: '15px' , fontWeight: 'bold'}}>
-                Together we transform tomorrows.
-            </Typography>
-            <Box className="relative w-full h-0 pb-[56.25%] bg-black rounded-lg overflow-hidden cursor-pointer">
-              {!isPlaying && (
-                <Box
-                className="absolute inset-0"
-                onClick={handlePlayClick}
-              >
-                {/* Background Image */}
-                <Image
-                  src="/images/centuries.jpg"
-                  alt="Video Thumbnail"
-                  layout="fill"
-                  objectFit="cover"
-                  className="transition-transform duration-300 group-hover:scale-105"
-                />
-
-                {/* Overlay with gradient and content */}
-                <Box className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent p-6 flex flex-col justify-between">
-                  {/* Top Row: Title and Share Icon */}
-                  <Box className="flex justify-between items-start">
-                    {/* Title and Subtitle */}
-                    <Box className="flex flex-col">
-                      <Typography variant="h4" component="h3" className="text-white font-serif">
-                        What will your tomorrow look like?
-                      </Typography>
-                       {/* Adding the smaller text based on the image */}
-                      <Typography variant="body2" className="text-white opacity-90">
-                        For almost two centuries, Smart people transform tomorrows and solve their people, risk and capital challenges.
-                      </Typography>
-                    </Box>
-                    {/* Share Icon */}
-                    <IconButton aria-label="share" size="large" className="text-white opacity-80 hover:opacity-100 transition-opacity">
-                      <ShareIcon sx={{ color: 'white' }}/>
-                    </IconButton>
-                  </Box>
-
-                  {/* Bottom Row: Play Button (positioned bottom left) */}
-                   <Box className="flex justify-start items-end">
-                     {/* Play Button - Purple Circle with White Triangle */}
-                     <Box className="w-18 h-18 rounded-full bg-[#4E71FF] flex items-center justify-center opacity-90 group-hover:opacity-100 transition-opacity duration-300">
-                       <PlayArrowIcon style={{ fontSize: '60px', color: 'white' }} />
-                     </Box>
-                   </Box>
-                </Box>
-              </Box>
-              )}
-              {isPlaying && (
-                <video
-                  ref={videoRef}
-                  controls
-                  autoPlay
-                  className="absolute inset-0 w-full h-full object-cover"
-                  onEnded={() => setIsPlaying(false)}
-                >
-                  <source src="/videos/Transforming Tomorrows - WTW.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              )}
-            </Box>
-            <Box className="p-4">
-                <Typography variant="caption" className="block mt-2 text-gray-700" sx={{ fontWeight: 'bold', fontSize: '15px'}}>
-                    What will your tomorrow look like?
-                </Typography>
-                <Typography variant="caption" className="block mt-2 text-gray-700" sx={{ fontSize: '14px'}}>
-                    For almost two centuries, Smart people transform tomorrows and solve their people, risk and capital challenges.
-                </Typography>
-            </Box>
-          </Box>
-
           {/* Purpose and Values */}
           <Divider
             sx={{
@@ -351,16 +278,6 @@ export default function TransformingTomorrows() {
                       />
                     </div>
 
-                    <div className="flex items-start gap-2">
-                      <input
-                        type="checkbox"
-                        className="mt-1"
-                      />
-                      <label className="text-sm text-gray-600">
-                        Yes, I&apos;d also like to receive additional information about WTW offerings.
-                      </label>
-                    </div>
-
                     <Typography variant="body2" className="text-sm text-gray-600">
                       For more information on how we handle your personal information, please see our global{' '}
                       <Link href="#" className="text-blue-600 hover:underline">
@@ -376,7 +293,7 @@ export default function TransformingTomorrows() {
                       Submit →
                     </button>
                     {/* Global Research Card */}
-                <Box className="bg-white rounded-lg border-l-4 border-blue-300 border-t border-r border-b p-6 mb-12">
+                {/* <Box className="bg-white rounded-lg border-l-4 border-blue-300 border-t border-r border-b p-6 mb-12">
                   <Typography variant="overline" className="text-gray-600 block mb-4">
                     TOTAL REWARD
                   </Typography>
@@ -393,7 +310,7 @@ export default function TransformingTomorrows() {
                     Participate now
                   </Button>
                   
-                </Box>
+                </Box> */}
             
                   </form>
                 </Box>
@@ -451,72 +368,6 @@ export default function TransformingTomorrows() {
   </Box>
 </Box>
 
-
-
-
-
-      {/* Client Success Stories Section */}
-      <Box className="w-full bg-gray-100 py-10 px-4 md:px-0">
-        <Box className="container mx-auto max-w-7xl">
-          <Typography variant="h4" className="font-bold mb-4 text-gray-900" sx={{ fontSize: '35px', fontWeight: 'bold' }}>
-            Success stories
-          </Typography> 
-          <Typography variant="body1" className="mb-10 text-gray-800" sx={{ fontSize: '18px', mt:2 }}>
-            Working shoulder to shoulder with clients we reveal opportunities
-          </Typography> 
-          <Typography variant="body1" className="mb-10 text-gray-800" sx={{ fontSize: '18px' }}>
-            to explore, tackle complex challenges and transform tomorrows.
-          </Typography>
-
-          <Box className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-4">
-            {/* Card 1 */}
-            <Paper elevation={3} className="rounded-lg overflow-hidden flex flex-col">
-              <Box className="relative w-full h-64">
-                <Image
-                  src="/images/TR2.png" // Placeholder image
-                  alt="Client Story 1"
-                  layout="fill"
-                  objectFit="cover"
-                />
-              </Box>
-              <Box className="p-6 flex flex-col justify-between flex-grow">
-                <Typography variant="h5" className="font-bold mb-4 text-gray-900" sx={{ fontSize: '24px', fontWeight: 'bold' }}>
-                HealthPlus Solutions
-                </Typography>
-                <Typography variant="body2" className="text-gray-700 mb-4" sx={{ fontSize: '16px', mt:1 }}>
-                40% increase in employee engagement scores after aligning their rewards strategy with company values and personalizing incentives across job roles.
-                </Typography>   
-                <Link href="#" color="inherit" underline="none" className="flex items-center text-[#5409DA] hover:text-[#4E71FF] transition-colors self-end">
-                  <ArrowForwardIcon sx={{ fontSize: '2rem', color: '#0e2aff' }} />
-                </Link>
-              </Box>
-            </Paper>
-
-            {/* Card 2 */}
-            <Paper elevation={3} className="rounded-lg overflow-hidden flex flex-col">
-              <Box className="relative w-full h-64">
-                <Image
-                  src="/images/TR3.png" // Placeholder image
-                  alt="Client Story 2"
-                  layout="fill"
-                  objectFit="cover"
-                />
-              </Box>
-              <Box className="p-6 flex flex-col justify-between flex-grow">
-                <Typography variant="h5" className="font-bold mb-4 text-gray-900" sx={{ fontSize: '24px', fontWeight: 'bold' }}>
-                TechCorp
-                </Typography>
-                <Typography variant="body2" className="text-gray-700 mb-4" sx={{ fontSize: '16px', mt:1 }}>
-                boosted employee retention by 35% in one year after implementing a Total Rewards program that combined flexible benefits, career development, and performance bonuses.
-                </Typography>
-                <Link href="#" color="inherit" underline="none" className="flex items-center text-[#5409DA] hover:text-[#4E71FF] transition-colors self-end">
-                  <ArrowForwardIcon sx={{ fontSize: '2rem', color: '#0e2aff' }} />
-                </Link>
-              </Box>
-            </Paper>
-          </Box>
-        </Box>
-      </Box>
 
       {/* WTW Insights Section */}
       <Box className="w-full bg-[lightblue] py-10 px-4 md:px-0 relative">
