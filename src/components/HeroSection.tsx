@@ -7,7 +7,7 @@ import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
-type Section = 'People' | 'Risk' | 'Capital';
+type Section = 'People';
 
 const HeroSection = () => {
   const [activeSection, setActiveSection] = useState<Section | null>(null);
@@ -16,12 +16,12 @@ const HeroSection = () => {
     switch (section) {
       case 'People':
         return '/images/people1.jpg';
-      case 'Risk':
-        return '/images/risk1.png';
-      case 'Capital':
-        return '/images/capital.png';
+      // case 'Risk':
+      //   return '/images/risk1.png';
+      // case 'Capital':
+      //   return '/images/capital.png';
       default:
-        return '/images/fil.jpg';
+        return '/images/hr-consulting.png';
     }
   };
 
@@ -81,9 +81,9 @@ const HeroSection = () => {
             />
             <Box className="hero-homepage__title-block bg-white p-6 md:p-12 shadow-xl w-[90%] md:max-w-xl transform transition-all duration-300 hover:shadow-2xl absolute z-10 top-[10%] left-1/2 -translate-x-1/2 md:top-[8.5%] md:left-[4%] md:translate-x-0">
               <h1 className="heading-1 m-0 mb-2 md:mb-3 text-gray-900 font-serif leading-tight text-2xl md:text-5xl" style={{ textWrap: 'balance', fontWeight: 'bold' }}>
-                Empowering Organizations for Resilience
+                Empowering People, Transforming Workforces
               </h1>
-              <span className="heading-3 p-0 mt-2 md:mt-3 mb-2 text-black font-serif font-bold text-lg md:text-2xl">Unlock your company&#39;s potential with our consulting services</span><br/>
+              <span className="heading-3 p-0 mt-2 md:mt-3 mb-2 text-black font-serif font-bold text-lg md:text-2xl">Unlock your organization's potential with expert HR consulting and talent solutions</span><br/>
                <span className="arrow-link arrow-link--inbody p-0 heading-6 m-0 mt-2 md:mt-3 inline-block"> 
                 <button
                   onClick={() => window.location.href = '/transforming-tomorrows'}
@@ -104,7 +104,7 @@ const HeroSection = () => {
                 Discover More
               </Typography> 
               <Box className="accordion space-y-0 pt-2 md:pt-4" id="homepage-nav-accordion">
-                {(['People', 'Risk', 'Capital'] as Section[]).map((section) => (
+                {(['People'] as Section[]).map((section) => (
                   <Box 
                     key={section}
                     className="homepage-nav-item"

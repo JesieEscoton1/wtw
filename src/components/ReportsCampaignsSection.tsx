@@ -19,10 +19,10 @@ const GridItem = styled('div')(({ theme }) => ({
   gridColumn: 'span 12',
   [theme.breakpoints.up('lg')]: {
     '&:first-of-type': {
-      gridColumn: 'span 8',
+      gridColumn: 'span 6',
     },
     '&:last-of-type': {
-      gridColumn: 'span 4',
+      gridColumn: 'span 6',
     },
   },
 }));
@@ -129,7 +129,7 @@ const ReportsCampaignsSection = () => {
             <ContentItem {...contentItems[0]} width={600} height={400} mobileHeight={350} mobileWidth={630} />
           </GridItem>
           <GridItem>
-            <ContentItem {...contentItems[1]} width={600} height={330} mobileHeight={350} mobileWidth={630} imageMarginTop="70px" />
+            <ContentItem {...contentItems[1]} width={600} height={400} mobileHeight={350} mobileWidth={630} />
           </GridItem>
         </Grid>
       </Box>

@@ -4,7 +4,28 @@ import { Box, Typography, Card, CardContent } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
-import Grid from '@mui/material/Grid';
+import { styled } from '@mui/material/styles';
+
+const Grid = styled('div')(({ theme }) => ({
+  display: 'grid',
+  gridTemplateColumns: 'repeat(12, 1fr)',
+  gap: theme.spacing(4),
+  [theme.breakpoints.up('lg')]: {
+    gap: theme.spacing(14),
+  },
+}));
+
+const GridItem = styled('div')(({ theme }) => ({
+  gridColumn: 'span 12',
+  [theme.breakpoints.up('lg')]: {
+    '&:first-of-type': {
+      gridColumn: 'span 6',
+    },
+    '&:last-of-type': {
+      gridColumn: 'span 6',
+    },
+  },
+}));
 
 interface ArticleItemProps {
   type: string;
@@ -102,13 +123,13 @@ const ArticlesSection = () => {
   return (
     <Box className="py-8 md:py-16 px-4 md:px-8 bg-white">
       <Box className="container mx-auto max-w-12xl">
-        <Grid container spacing={{ xs: 4, md: 14 }} justifyContent="center">
-          <Grid component="div" item xs={12} lg={8}>
-            <ArticleItem {...articleItems[0]} isFirstArticle={true} width={674} height={450} mobileHeight={350} mobileWidth={630} />
-          </Grid>
-          <Grid component="div" item xs={12} lg={4}>
-            <ArticleItem {...articleItems[1]} isFirstArticle={false} width={600} height={378} mobileHeight={350} mobileWidth={630} imageMarginTop="74px" />
-          </Grid>
+        <Grid>
+          <GridItem>
+            <ArticleItem {...articleItems[0]} width={600} height={400} mobileHeight={350} mobileWidth={630} />
+          </GridItem>
+          <GridItem>
+            <ArticleItem {...articleItems[1]} width={600} height={400} mobileHeight={350} mobileWidth={630} />
+          </GridItem>
         </Grid>
       </Box>
     </Box>
