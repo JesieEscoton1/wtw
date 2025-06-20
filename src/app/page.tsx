@@ -19,7 +19,6 @@ export default function Home() {
           <ReportsCampaignsSection />
           <CampaignSection />
           <ArticlesSection />
-          <FeaturedVideoSection />
         </Box>
       </Box>
       <Footer />

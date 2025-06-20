@@ -109,7 +109,7 @@ export default function OverviewPage() {
           </Box>
 
           {/* Featured Video Section */}
-          <Box className="w-full">  
+          {/* <Box className="w-full">  
             <Typography variant="subtitle1" className="font-bold mt-4 text-gray-900 !text-xl md:!text-2xl" sx={{ marginTop: '0px', fontWeight: 'bold', marginBottom: '15px'}}>
               This is perspective that moves you.
             </Typography>
@@ -171,10 +171,10 @@ export default function OverviewPage() {
                     we celebrate perspective. Because it allows you to embrace diverse ideas and experiences to build something better.
                 </Typography>
             </Box>
-          </Box>
+          </Box> */}
 
           {/* Purpose and Values */}
-          <Divider
+          {/* <Divider
             sx={{
               my: -2,
               borderColor: '#e5e1ea',
@@ -182,7 +182,8 @@ export default function OverviewPage() {
               opacity: 1,
               width: '100%',
             }}
-          />
+          /> */}
+          
           <Box className="mt-8 md:mt-12">
             <Typography variant="h5" className="font-bold mb-4 text-gray-900 !text-xl md:!text-2xl" sx={{ fontWeight: 'bold'}}>
               Our purpose and values
@@ -245,7 +246,7 @@ export default function OverviewPage() {
                 fontFamily: 'serif',
               }}
             >
-              &quot;
+                &nbsp; &quot;
             </span>
             <Typography variant="h5" component="p" className="heading-4 mb-4 !text-lg md:!text-xl" sx={{ fontStyle: 'italic', color: '#212529', marginTop: '30px' }}>
               Our name and brand reflect the clarity and actionable solutions we bring to today&apos;s challenges.
@@ -259,7 +260,7 @@ export default function OverviewPage() {
           </Box>
 
           {/* Secondary Video */}
-          <Box className="w-full" sx={{ marginTop: { xs: '100%', md: '180%' } }}>
+          {/* <Box className="w-full" sx={{ marginTop: { xs: '100%', md: '180%' } }}>
             <Box className="relative w-full h-0 pt-[56.25%] bg-black rounded-lg overflow-hidden cursor-pointer">
               {!isSecondaryPlaying && (
                 <>
@@ -304,7 +305,7 @@ export default function OverviewPage() {
                 width: '100%',
                 }}
             />
-          </Box>
+          </Box> */}
         </Box>
       </Box>
 

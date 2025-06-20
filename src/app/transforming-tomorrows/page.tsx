@@ -113,16 +113,38 @@ export default function TransformingTomorrows() {
             </Typography>
 
             <Typography variant="body1" className="mb-2 text-gray-800" sx={{ fontSize: '18px', mt:1}}>
-             As your trusted advisor, Alliance Atlantic works side by side with you gaining a deep 
-             understanding of your business, aligning with your goals, and developing solutions that
-             go beyond the expected. Together, we create the momentum that drives your organization
-             toward a stronger, more resilient future.
+             We don't just solve problems we work side by side with you to anticipate change, align with
+             your ambitions, and build tailored solutions that drive sustainable growth.
             </Typography>
-            
+
+          </Box>
+
+          <Typography variant="h6" className="font-bold mt-4 text-gray-900 text-lg md:text-xl" sx={{ marginBottom: '15px' , fontWeight: 'bold'}}>
+                Together we transform tomorrows.
+          </Typography>
+
+          <Typography variant="body1" className="mb-2 text-gray-800" sx={{ fontSize: '18px', mt:1}}>
+           At Alliance Atlantic, we believe that shaping a better future starts with strong partnerships
+           today. Collaborating closely with our clients, we navigate the complexities of people to uncover opportunities and deliver strategic impact.
+          </Typography>
+
+          <Typography variant="body1" className="mb-2 text-gray-800" sx={{ fontSize: '18px', mt:1}}>
+           We don't just solve problems we work side by side with you to anticipate change, align with
+           your ambitions, and build tailored solutions that drive sustainable growth.
+          </Typography>
+          
+          <Box className="relative w-full h-[400px] my-8">
+              <Image
+                src="/images/transform-tomorrows.png"
+                alt="Transform Tomorrows"
+                layout="fill"
+                objectFit="cover"
+                className="rounded-lg shadow-lg"
+              />
           </Box>
 
           {/* Featured Video Section */}
-          <Box className="w-full">
+          {/* <Box className="w-full">
             <Typography variant="h6" className="font-bold mt-4 text-gray-900 text-lg md:text-xl" sx={{ marginBottom: '15px' , fontWeight: 'bold'}}>
                 Together we transform tomorrows.
             </Typography>
@@ -132,7 +154,6 @@ export default function TransformingTomorrows() {
                 className="absolute inset-0"
                 onClick={handlePlayClick}
               >
-                {/* Background Image */}
                 <Image
                   src="/images/centuries.jpg"
                   alt="Video Thumbnail"
@@ -141,29 +162,22 @@ export default function TransformingTomorrows() {
                   className="transition-transform duration-300 group-hover:scale-105"
                 />
 
-                {/* Overlay with gradient and content */}
                 <Box className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent p-6 flex flex-col justify-between">
-                  {/* Top Row: Title and Share Icon */}
                   <Box className="flex justify-between items-start">
-                    {/* Title and Subtitle */}
                     <Box className="flex flex-col">
                       <Typography variant="h4" component="h3" className="text-white font-serif">
                         What will your tomorrow look like?
                       </Typography>
-                       {/* Adding the smaller text based on the image */}
                       <Typography variant="body2" className="text-white opacity-90">
                         For almost two centuries, Smart people transform tomorrows and solve their people, risk and capital challenges.
                       </Typography>
                     </Box>
-                    {/* Share Icon */}
                     <IconButton aria-label="share" size="large" className="text-white opacity-80 hover:opacity-100 transition-opacity">
                       <ShareIcon sx={{ color: 'white' }}/>
                     </IconButton>
                   </Box>
 
-                  {/* Bottom Row: Play Button (positioned bottom left) */}
                    <Box className="flex justify-start items-end">
-                     {/* Play Button - Purple Circle with White Triangle */}
                      <Box className="w-18 h-18 rounded-full bg-[#00aaff] flex items-center justify-center opacity-90 group-hover:opacity-100 transition-opacity duration-300">
                        <PlayArrowIcon style={{ fontSize: '60px', color: 'white' }} />
                      </Box>
@@ -192,10 +206,9 @@ export default function TransformingTomorrows() {
                     For almost two centuries, Smart people transform tomorrows and solve their people, risk and capital challenges.
                 </Typography>
             </Box>
-          </Box>
+          </Box> */}
 
-          {/* Purpose and Values */}
-          <Divider
+          {/* <Divider
             sx={{
               my: -2,
               borderColor: '#e5e1ea',
@@ -203,7 +216,7 @@ export default function TransformingTomorrows() {
               opacity: 1,
               width: '100%',
             }}
-          />
+          /> */}
          
         </Box>
 
@@ -232,7 +245,7 @@ export default function TransformingTomorrows() {
                 fontFamily: 'serif',
               }}
             >
-              "
+              &nbsp; "
             </span>
             <Typography variant="h5" component="p" className="heading-4 mb-4 text-lg md:text-xl" sx={{ fontStyle: 'italic', color: '#212529', marginTop: '30px' }}>
              At Alliance Atlantic, we guide our clients through the complexities of people, capital, and risk helping them turn today's challenges into tomorrow's opportunities and achieve their long-term vision."
