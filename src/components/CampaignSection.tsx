@@ -122,7 +122,7 @@ const ReportsCampaignsSection = () => {
   ];
 
   return (
-    <Box className="py-8 md:py-16 px-4 md:px-8 bg-white">
+    <Box className="py-8 md:py-0 px-4 md:px-8 bg-white">
       <Box className="container mx-auto max-w-12xl">
         <Grid>
           <GridItem>

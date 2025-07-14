@@ -15,9 +15,9 @@ const Footer = () => {
           {/* Logo and Social Icons Column */}
           <Box className="w-full md:w-3/12 lg:w-2/12 px-4 mb-8 md:mb-0 flex flex-col items-center md:items-start">
             {/* Social Media Links */}
-            <Box className="site-footer__social-container flex space-x-4 mt-4 md:mt-70">
+            {/* <Box className="site-footer__social-container flex space-x-4 mt-4 md:mt-70">
               <IconButton 
-                rel="noopener noreferrer" 
+                rel="noopener noreferrer"
                 color="inherit" 
                 aria-label="Facebook" 
                 className="p-0 text-white opacity-75 hover:opacity-100 transition-opacity hover:scale-110 transform duration-300"
@@ -40,7 +40,7 @@ const Footer = () => {
               >
                 <InstagramIcon className="text-[20px] md:text-[24px]" />
               </IconButton>
-            </Box>
+            </Box> */}
           </Box>
 
           {/* Primary and Secondary Links Container */}
@@ -129,7 +129,7 @@ const Footer = () => {
           {/* Copyright */}
           <Box className="w-full md:w-auto px-4 mb-4 md:mb-0 text-center md:text-left">
             <Typography variant="body2" color="inherit" className="font-p-xsmall m-0 site-footer__copyright text-xs sm:text-sm opacity-75">
-              Copyright © {new Date().getFullYear()} Company Name. All rights reserved.
+              Copyright © {new Date().getFullYear()} HR Consulting. All rights reserved.
             </Typography>
           </Box>
         </Box>
