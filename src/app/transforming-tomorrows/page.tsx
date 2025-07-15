@@ -260,7 +260,7 @@ export default function TransformingTomorrows() {
           </Box> */}
 
           {/* How we help: Section */}
-          <Box className="border border-[lightblue] p-4 md:p-8 rounded-sm space-y-3 md:space-y-4 mt-6 md:mt-8">
+          {/* <Box className="border border-[lightblue] p-4 md:p-8 rounded-sm space-y-3 md:space-y-4 mt-6 md:mt-8">
             <Typography variant="h5" className="font-bold text-gray-900 text-lg md:text-xl" sx={{ fontWeight: 'bold', marginBottom: '10px' }}>
               How we help:
             </Typography>
@@ -291,7 +291,7 @@ export default function TransformingTomorrows() {
               </Box>
               <ArrowForwardIcon sx={{ fontSize: '1.25rem', ml:.5, color: '#00aaff' }} />
             </Link>
-          </Box>
+          </Box> */}
 
           {/* Featured Section */}
           <Paper elevation={3} className="rounded-lg overflow-hidden mt-6 md:mt-8">
@@ -319,8 +319,8 @@ export default function TransformingTomorrows() {
       {/* Client Success Stories Section */}
      
       {/* WTW Insights Section */}
-      <Box className="w-full bg-[lightblue] py-6 md:py-10 px-4 md:px-0 relative">
-        <Box className="container mx-auto max-w-7xl">
+      {/* <Box className="w-full bg-[lightblue] py-6 md:py-10 px-4 md:px-0 relative"> */}
+        {/* <Box className="container mx-auto max-w-7xl">
           <Box className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 md:mb-8">
             <Typography variant="h4" className="font-bold text-white mb-4 md:mb-0" sx={{ fontSize: '28px', md: '35px' }}>
              Industry insights
@@ -331,12 +331,11 @@ export default function TransformingTomorrows() {
               </Typography>
               <ArrowForwardIcon sx={{ fontSize: '1.25rem', md: '1.5rem', ml: '2px', color: 'white', fontWeight: 'bold' }} />
             </Link>
-          </Box>
+          </Box> */}
 
           {/* Insights Carousel/Cards */}
-          <Box className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8">
-            {/* Insight Card 1 */}
-            <Paper elevation={3} className="rounded-lg overflow-hidden flex flex-col">
+          {/* <Box className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8"> */}
+            {/* <Paper elevation={3} className="rounded-lg overflow-hidden flex flex-col">
               <Box className="relative w-full h-48 md:h-64">
                 <Image
                   src="/images/ai-risk.jpg"
@@ -355,7 +354,6 @@ export default function TransformingTomorrows() {
               </Box>
             </Paper>
 
-            {/* Insight Card 2 */}
             <Paper elevation={3} className="rounded-lg overflow-hidden flex flex-col">
               <Box className="relative w-full h-48 md:h-64">
                 <Image
@@ -375,7 +373,6 @@ export default function TransformingTomorrows() {
               </Box>
             </Paper>
 
-            {/* Insight Card 3 */}
             <Paper elevation={3} className="rounded-lg overflow-hidden flex flex-col">
               <Box className="relative w-full h-48 md:h-64">
                 <Image
@@ -393,10 +390,10 @@ export default function TransformingTomorrows() {
                  Unlocking Capital Efficiency for Sustainable Growth
                 </Typography>
               </Box>
-            </Paper>
-          </Box>
-        </Box>
-      </Box>    
+            </Paper> */}
+          {/* </Box> */}
+        {/* </Box> */}
+      {/* </Box>     */}
 
       <Footer />
     </Box>

@@ -116,7 +116,7 @@ const ReportsCampaignsSection = () => {
       title: 'Performance Management',
       imageSrc: '/images/Performance-Management.png',
       imageAlt: 'Cyber Risks in Asia',
-      linkHref: '/campaign',
+      linkHref: '',
       isImage: true,
     },
   ];
