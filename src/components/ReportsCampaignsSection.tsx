@@ -110,14 +110,14 @@ const ReportsCampaignsSection = () => {
       title: 'Organizational Development',
       imageSrc: '/images/Organizational-Development.png',
       imageAlt: 'Benefits Trends Survey',
-      linkHref: '/survey'
+      linkHref: '/organizational-development'
     },
     {
       type: '',
       title: 'Building HR Capability',
       imageSrc: '/images/Building-Capability.png',
       imageAlt: 'Natural Catastrophe Review',
-      linkHref: '/report'
+      linkHref: '/building-hr-capability'
     },
   ];
 

@@ -28,7 +28,7 @@ export default function OverviewPage() {
               Overview
             </Typography>
             <Typography variant="h5" className="opacity-90 mb-6 !text-lg md:!text-xl font-normal">
-             Guiding organizations in navigating people, risk, and capital to drive leading businesses toward future growth. This is insight that empowers progress.
+             Guiding organizations in navigating people to drive leading businesses toward future growth. This is insight that empowers progress.
             </Typography>
             <Button
               variant="contained"
