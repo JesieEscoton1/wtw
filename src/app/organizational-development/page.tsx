@@ -6,7 +6,7 @@ import Image from 'next/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
-export default function SurveyPage() {
+export default function OrganizationalDevelopment() {
   return (
     <Box>
       <Box 

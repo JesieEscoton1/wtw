@@ -278,7 +278,7 @@ export default function TransformingTomorrows() {
           </Box> */}
 
           {/* Featured Section */}
-          <Paper elevation={3} className="rounded-lg overflow-hidden mt-6 md:mt-8">
+          {/* <Paper elevation={3} className="rounded-lg overflow-hidden mt-6 md:mt-8">
             <Box className="relative w-full h-48 md:h-56">
               <Image
                 src="/images/smart-risk.png"
@@ -295,7 +295,7 @@ export default function TransformingTomorrows() {
                 A smarter way to risk
               </Typography>
             </Box>
-          </Paper>
+          </Paper> */}
         </Box>
         
       </Box>

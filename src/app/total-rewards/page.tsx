@@ -8,7 +8,7 @@ import Footer from '@/components/Footer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
-export default function TransformingTomorrows() {
+export default function TotalRewards() {
 
   return (
     <Box className="w-full min-h-screen bg-white">
