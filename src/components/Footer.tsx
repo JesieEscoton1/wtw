@@ -1,11 +1,9 @@
 'use client';
 
 import React from 'react';
-import { Box, Typography, Link, IconButton } from '@mui/material';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import InstagramIcon from '@mui/icons-material/Instagram';
+import { Box, Typography, Link as MuiLink } from '@mui/material';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Footer = () => {
   return (
@@ -42,17 +40,17 @@ const Footer = () => {
                 <InstagramIcon className="text-[20px] md:text-[24px]" />
               </IconButton>
             </Box> */}
-            <a href="/" className="cursor-pointer">
-                        <Image
-                          src="/images/alliance.svg"
-                          alt="Alliance Logo"
-                          width={120}
-                          height={84}
-                          priority
-                          style={{ objectFit: 'contain' }}
-                          className="md:w-[150px] md:h-[105px] ml-20 mb-5"
-                        />
-                      </a>
+            <Link href="/" className="cursor-pointer">
+              <Image
+                src="/images/alliance.svg"
+                alt="Alliance Logo"
+                width={120}
+                height={84}
+                priority
+                style={{ objectFit: 'contain' }}
+                className="md:w-[150px] md:h-[105px] ml-20 mb-5"
+              />
+            </Link>
           </Box>
 
           {/* Primary and Secondary Links Container */}
@@ -67,13 +65,13 @@ const Footer = () => {
         { text: 'Performance Management' },
       ].map((link, index) => (
         <li key={index}>
-          <Link
-            href={link.href || '#'}
-            className="text-sm font-semibold !text-black hover:text-blue-700 transition-colors duration-300"
-            underline="none"
-          >
-            {link.text}
-          </Link>
+            <MuiLink
+              href={link.href || '#'}
+              className="text-sm font-semibold !text-black hover:text-blue-700 transition-colors duration-300"
+              underline="none"
+            >
+              {link.text}
+            </MuiLink>
         </li>
       ))}
     </ul>

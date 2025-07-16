@@ -1,37 +1,12 @@
 "use client";
 
-import { Box, Typography, Button, IconButton, Divider } from '@mui/material';
-import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-import ShareIcon from '@mui/icons-material/Share';
+import { Box, Typography, Button, Divider } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Image from 'next/image';
-import { useState, useRef } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 export default function OverviewPage() {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [isSecondaryPlaying, setIsSecondaryPlaying] = useState(false);
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const secondaryVideoRef = useRef<HTMLVideoElement>(null);
-
-  const handlePlayClick = () => {
-    setIsPlaying(true);
-    setTimeout(() => {
-      if (videoRef.current) {
-        videoRef.current.play().catch(() => {});
-      }
-    }, 100);
-  };
-
-  const handleSecondaryPlayClick = () => {
-    setIsSecondaryPlaying(true);
-    setTimeout(() => {
-      if (secondaryVideoRef.current) {
-        secondaryVideoRef.current.play().catch(() => {});
-      }
-    }, 100);
-  };
 
   return (
     <Box className="w-full min-h-screen bg-white">
@@ -199,7 +174,7 @@ export default function OverviewPage() {
             <Box className="space-y-4">
               <Box>
                 <Typography variant="subtitle1" className="font-bold text-gray-900 !text-lg md:!text-2xl" sx={{ fontWeight: 'bold', marginTop: '20px'}}>Client focus</Typography>
-                <Typography variant="body2" className="text-gray-800 !text-base md:!text-lg">Our clients' success is our highest priority. In every engagement, we act in their best interests listening carefully, understanding their unique needs, honoring their perspectives, and consistently striving to exceed expectations.</Typography>
+                <Typography variant="body2" className="text-gray-800 !text-base md:!text-lg">Our clients&apos; success is our highest priority. In every engagement, we act in their best interests listening carefully, understanding their unique needs, honoring their perspectives, and consistently striving to exceed expectations.</Typography>
               </Box> 
               <Box>
                 <Typography variant="subtitle1" className="font-bold text-gray-900 !text-lg md:!text-2xl" sx={{ fontWeight: 'bold', marginTop: '20px'}}>Teamwork</Typography>

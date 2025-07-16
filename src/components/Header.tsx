@@ -1,26 +1,16 @@
 'use client';
 
-import { AppBar, Toolbar, IconButton, Typography, Box, Button, Menu, MenuItem, Drawer, List, ListItem } from '@mui/material';
+import { AppBar, Toolbar, IconButton, Typography, Box, Button, Drawer, List, ListItem } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
-import LanguageIcon from '@mui/icons-material/Language';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import CloseIcon from '@mui/icons-material/Close';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import Image from 'next/image';
 import { useState } from 'react';
+import Link from 'next/link';
 
 const Header = () => {
-  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const [openDrawer, setOpenDrawer] = useState(false);
-
-  const handleMenuClick = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
 
   const toggleDrawer = (open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
     if (
@@ -56,7 +46,7 @@ const Header = () => {
 
         {/* Center section: Alliance Logo */}
         <Box className="flex-2 flex justify-center items-center">
-          <a href="/" className="cursor-pointer">
+          <Link href="/" className="cursor-pointer">
             <Image
               src="/images/alliance.svg"
               alt="Alliance Logo"
@@ -66,7 +56,7 @@ const Header = () => {
               style={{ objectFit: 'contain' }}
               className="md:w-[150px] md:h-[105px]"
             />
-          </a>
+          </Link>
         </Box>
 
         {/* Right section: Search */}
