@@ -7,6 +7,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import Image from 'next/image';
 import { useState } from 'react';
+import Link from 'next/link';
 
 const Header = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
@@ -27,9 +28,9 @@ const Header = () => {
       {/* Utility Navigation */}
 
       {/* Main Navigation */}
-      <Toolbar className="flex justify-between items-center px-2 md:px-4 py-2 md:py-3">
+      <Toolbar className="flex justify-between items-center px-2 md:px-4 py-2 md:py-0">
         {/* Left section: Menu */}
-        <Box className="flex items-center border-r border-r-[1px] border-gray-300 pr-4 md:pr-10 pl-2 md:pl-4 h-[80px] md:h-[100px] -mt-3 -mb-3">
+        <Box className="flex items-center border-r border-r-[1px] border-gray-300 pr-4 md:pr-10 pl-2 md:pl-4 h-[80px] md:h-[105px] -mt-3 -mb-3">
           <Button
             color="inherit"
             className="flex items-center normal-case hover:text-blue-600"
@@ -45,19 +46,21 @@ const Header = () => {
 
         {/* Center section: Alliance Logo */}
         <Box className="flex-2 flex justify-center items-center">
-          <Image
-            src="/images/alliance.png"
-            alt="Alliance Logo"
-            width={120}
-            height={84}
-            priority
-            style={{ objectFit: 'contain' }}
-            className="md:w-[150px] md:h-[105px]"
-          />
+          <Link href="/" className="cursor-pointer">
+            <Image
+              src="/images/alliance.svg"
+              alt="Alliance Logo"
+              width={120}
+              height={84}
+              priority
+              style={{ objectFit: 'contain' }}
+              className="md:w-[150px] md:h-[105px]"
+            />
+          </Link>
         </Box>
 
         {/* Right section: Search */}
-        <Box className="flex items-center border-l border-l-[1px] border-gray-300 pl-4 md:pl-10 pr-2 md:pr-4 h-[80px] md:h-[100px] -mt-3 -mb-3">
+        <Box className="flex items-center border-l border-l-[1px] border-gray-300 pl-4 md:pl-10 pr-2 md:pr-4 h-[80px] md:h-[105px] -mt-3 -mb-3">
           <Typography variant="body1" component="div" sx={{ mr: 1 }} className="text-gray-700 text-sm md:text-base">
             Search
           </Typography>

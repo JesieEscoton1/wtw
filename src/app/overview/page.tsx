@@ -1,12 +1,13 @@
 "use client";
 
-import { Box, Typography, Button } from '@mui/material';
+import { Box, Typography, Button, Divider } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Image from 'next/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 export default function OverviewPage() {
+
   return (
     <Box className="w-full min-h-screen bg-white">
       <Header />
@@ -27,7 +28,7 @@ export default function OverviewPage() {
               Overview
             </Typography>
             <Typography variant="h5" className="opacity-90 mb-6 !text-lg md:!text-xl font-normal">
-             Guiding organizations in navigating people, risk, and capital to drive leading businesses toward future growth. This is insight that empowers progress.
+             Guiding organizations in navigating people to drive leading businesses toward future growth. This is insight that empowers progress.
             </Typography>
             <Button
               variant="contained"
@@ -238,41 +239,20 @@ export default function OverviewPage() {
           </Box> */}
 
           {/* Secondary Video */}
-          {/* <Box className="w-full" sx={{ marginTop: { xs: '100%', md: '180%' } }}>
-            <Box className="relative w-full h-0 pt-[56.25%] bg-black rounded-lg overflow-hidden cursor-pointer">
-              {!isSecondaryPlaying && (
-                <>
-                  <Image
-                    src="/images/centuries.jpg"
-                    alt="What will your tomorrow look like?"
-                    layout="fill"
-                    objectFit="cover"
-                  />
-                  <Box className="absolute inset-0 flex items-center justify-center" onClick={handleSecondaryPlayClick}>
-                    <Box className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#00aaff] flex items-center justify-center opacity-90 hover:opacity-100 transition-opacity">
-                      <PlayArrowIcon style={{ fontSize: '30px', color: 'white' }} className="md:!text-[40px]" />
-                    </Box>
-                  </Box>
-                </>
-              )}
-              {isSecondaryPlaying && (
-                <video
-                  ref={secondaryVideoRef}
-                  controls
-                  autoPlay
-                  className="absolute inset-0 w-full h-full object-cover"
-                  onEnded={() => setIsSecondaryPlaying(false)}
-                >
-                  <source src="/videos/Transforming Tomorrows - WTW.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              )}
+          <Box className="w-full" sx={{ marginTop: { xs: '100%', md: '0%' } }}>
+            <Box className="relative w-full h-0 pt-[56.25%] bg-black rounded-lg overflow-hidden">
+                <Image
+                  src="/images/complexity.png"
+                  alt="What will your tomorrow look like?"
+                  layout="fill"
+                  objectFit="cover"
+                />
             </Box>
             <Typography variant="caption" className="block mt-2 text-gray-700 !text-sm md:!text-base" sx={{ fontWeight: 'bold', marginTop: '10px'}}>
             What will your tomorrow look like?
             </Typography>
             <Typography variant="caption" className="block mt-2 text-gray-700 !text-xs md:!text-sm" sx={{ marginTop: '5px'}}>
-              For almost two centuries, we have helped smart people transform tomorrow and solve their people, risk and capital challenges.
+            For almost two centuries, Alliance Atlantic has helped forward-thinking leaders transform their organizations solving people challenges and empowering growth through strategic HR consulting.
             </Typography>
             <Divider
                 sx={{
@@ -283,7 +263,7 @@ export default function OverviewPage() {
                 width: '100%',
                 }}
             />
-          </Box> */}
+          </Box>
         </Box>
       </Box>
 

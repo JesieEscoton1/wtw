@@ -109,20 +109,20 @@ const ReportsCampaignsSection = () => {
       title: 'Total Rewards',
       imageSrc: '/images/fil3.jpg',
       imageAlt: 'Cyber Risks in Asia',
-      linkHref: '/campaign'
+      linkHref: '/total-rewards'
     },
     {
       type: '',
       title: 'Performance Management',
       imageSrc: '/images/Performance-Management.png',
       imageAlt: 'Cyber Risks in Asia',
-      linkHref: '/campaign',
+      linkHref: 'performance-management',
       isImage: true,
     },
   ];
 
   return (
-    <Box className="py-8 md:py-16 px-4 md:px-8 bg-white">
+    <Box className="py-8 md:py-0 px-4 md:px-8 bg-white">
       <Box className="container mx-auto max-w-12xl">
         <Grid>
           <GridItem>

@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Typography, Button, Link, Paper, Divider } from '@mui/material';
+import { Box, Typography, Button, Link, Divider } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Image from 'next/image';
 import Header from '@/components/Header';
@@ -8,7 +8,8 @@ import Footer from '@/components/Footer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
-export default function TransformingTomorrows() {
+export default function TotalRewards() {
+
   return (
     <Box className="w-full min-h-screen bg-white">
       <Header />
@@ -355,7 +356,7 @@ export default function TransformingTomorrows() {
 
 
       {/* WTW Insights Section */}
-      <Box className="w-full bg-[lightblue] py-10 px-4 md:px-0 relative">
+      {/* <Box className="w-full bg-[lightblue] py-10 px-4 md:px-0 relative">
         <Box className="container mx-auto max-w-7xl">
           <Box className="flex justify-between items-center mb-8">
             <Typography variant="h4" className="font-bold text-black" sx={{ fontSize: '35px' }}>
@@ -367,12 +368,12 @@ export default function TransformingTomorrows() {
               </Typography>
               <ArrowForwardIcon sx={{ fontSize: '1.25rem', ml: '2px', color: 'blue', fontWeight: 'bold' }} />
             </Link>
-          </Box>
+          </Box> */}
 
           {/* Insights Carousel/Cards */}
-          <Box className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          {/* <Box className="grid grid-cols-1 md:grid-cols-4 gap-8"> */}
             {/* Insight Card 1 */}
-            <Paper elevation={3} className="rounded-lg overflow-hidden flex flex-col">
+            {/* <Paper elevation={3} className="rounded-lg overflow-hidden flex flex-col">
               <Box className="relative w-full h-48">
                 <Image
                   src="/images/TR4.png" // Placeholder image
@@ -389,10 +390,10 @@ export default function TransformingTomorrows() {
                 Adopting a Total Rewards perspective allows organizations to align reward programs with business goals and employee expectations
                 </Typography>
               </Box>
-            </Paper>
+            </Paper> */}
 
             {/* Insight Card 2 */}
-            <Paper elevation={3} className="rounded-lg overflow-hidden flex flex-col">
+            {/* <Paper elevation={3} className="rounded-lg overflow-hidden flex flex-col">
               <Box className="relative w-full h-48">
                 <Image
                   src="/images/TR5.png" // Placeholder image
@@ -409,10 +410,10 @@ export default function TransformingTomorrows() {
                 Customized reward solutions address the diverse needs of various employee groups, enhancing engagement and retention.
                 </Typography>
               </Box>
-            </Paper>
+            </Paper> */}
 
             {/* Insight Card 3 */}
-            <Paper elevation={3} className="rounded-lg overflow-hidden flex flex-col">
+            {/* <Paper elevation={3} className="rounded-lg overflow-hidden flex flex-col">
               <Box className="relative w-full h-48">
                 <Image
                   src="/images/TR6.png" // Placeholder image
@@ -429,11 +430,11 @@ export default function TransformingTomorrows() {
                 Reward strategies that reflect organizational culture help reinforce desired behaviors and strengthen company identity.
                 </Typography>
               </Box>
-            </Paper>
-          </Box>
+            </Paper> */}
+          {/* </Box>
     
         </Box>
-      </Box>    
+      </Box>     */}
 
       <Footer />
     </Box>
