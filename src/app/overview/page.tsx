@@ -67,7 +67,7 @@ export default function OverviewPage() {
               From the unknown to the untapped?
             </Typography>
             <Typography variant="body1" className="mb-2 text-gray-800 !text-base md:!text-lg" sx={{ mt:1}}>
-             At Alliance Atlantic, we deliver solutions driven by data and insights across people, risk, and capital helping organizations build resilience, inspire their people,
+             At Alliance Atlantic, we deliver solutions driven by data and insights across people helping organizations build resilience, inspire their people,
              and enhance overall performance.
             </Typography>
             <Typography variant="body1" className="mb-2 text-gray-800 !text-base md:!text-lg" sx={{ mt:1}}>
