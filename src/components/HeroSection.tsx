@@ -83,7 +83,7 @@ const HeroSection = () => {
               <h1 className="heading-1 m-0 mb-2 md:mb-3 text-gray-900 font-serif leading-tight text-2xl md:text-5xl" style={{ textWrap: 'balance', fontWeight: 'bold' }}>
                 Empowering People, Transforming Workforces
               </h1>
-              <span className="heading-3 p-0 mt-2 md:mt-3 mb-2 text-black font-serif font-bold text-lg md:text-2xl">Unlock your organization's potential with expert HR consulting and talent solutions</span><br/>
+              <span className="heading-3 p-0 mt-2 md:mt-3 mb-2 text-black font-serif font-bold text-lg md:text-2xl">Unlock your organization&apos;s potential with expert HR consulting and talent solutions</span><br/>
                <span className="arrow-link arrow-link--inbody p-0 heading-6 m-0 mt-2 md:mt-3 inline-block"> 
                 <button
                   onClick={() => window.location.href = '/transforming-tomorrows'}

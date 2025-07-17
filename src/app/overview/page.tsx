@@ -1,38 +1,12 @@
 "use client";
 
-import { Box, Typography, Button, IconButton, Divider } from '@mui/material';
-import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-import ShareIcon from '@mui/icons-material/Share';
+import { Box, Typography, Button } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Image from 'next/image';
-import { useState, useRef } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 export default function OverviewPage() {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [isSecondaryPlaying, setIsSecondaryPlaying] = useState(false);
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const secondaryVideoRef = useRef<HTMLVideoElement>(null);
-
-  const handlePlayClick = () => {
-    setIsPlaying(true);
-    setTimeout(() => {
-      if (videoRef.current) {
-        videoRef.current.play().catch(() => {});
-      }
-    }, 100);
-  };
-
-  const handleSecondaryPlayClick = () => {
-    setIsSecondaryPlaying(true);
-    setTimeout(() => {
-      if (secondaryVideoRef.current) {
-        secondaryVideoRef.current.play().catch(() => {});
-      }
-    }, 100);
-  };
-
   return (
     <Box className="w-full min-h-screen bg-white">
       <Header />
@@ -91,20 +65,24 @@ export default function OverviewPage() {
             <Typography variant="h6" className="font-bold mb-0 text-gray-900 !text-lg md:!text-xl" sx={{ fontWeight: 'bold', mt:1}}>
               From the unknown to the untapped?
             </Typography>
-            <Typography variant="body1" className="mb-2 text-gray-800 !text-base md:!text-lg" sx={{ mt:1}}>
+            <Typography variant="body1" className="mb-2 text-gray-800 !text-base md:!text-lg" sx={{ mt:1 }}>
              At Alliance Atlantic, we deliver solutions driven by data and insights across people, risk, and capital helping organizations build resilience, inspire their people,
              and enhance overall performance.
             </Typography>
-            <Typography variant="body1" className="mb-2 text-gray-800 !text-base md:!text-lg" sx={{ mt:1}}>
+            <Typography variant="body1" className="mb-2 text-gray-800 !text-base md:!text-lg" sx={{ mt:1 }}>
              We work in true partnership with our clients, bringing together diverse expertise and a steadfast commitment to their success. Through open collaboration and critical
              thinking, we challenge assumptions to uncover the most effective paths forward.
             </Typography>
-            <Typography variant="body1" className="mb-2 text-gray-800 !text-base md:!text-lg" sx={{ mt:1}}>
+            <Typography variant="body1" className="mb-2 text-gray-800 !text-base md:!text-lg" sx={{ mt:1 }}>
              Our global experience, combined with local understanding, allows us to deliver tailored solutions that address your unique needs with precision.
             </Typography>
-            <Typography variant="body1" className="mb-2 text-gray-800 !text-base md:!text-lg" sx={{ mt:1}}>
+            <Typography variant="body1" className="mb-2 text-gray-800 !text-base md:!text-lg" sx={{ mt:1 }}>
              Together, we broaden perspectives, sharpen strategies, and transform your most complex issues into clear, actionable opportunities paving the way
              for sustainable, long-term growth.
+            </Typography>
+            <Typography variant="body1" className="mb-2 text-gray-800" sx={{ fontSize: '18px', mt:1 }}>
+             We don&apos;t just solve problems we work side by side with you to anticipate change, align with
+             your ambitions, and build tailored solutions that drive sustainable growth.
             </Typography>
           </Box>
 
@@ -199,7 +177,7 @@ export default function OverviewPage() {
             <Box className="space-y-4">
               <Box>
                 <Typography variant="subtitle1" className="font-bold text-gray-900 !text-lg md:!text-2xl" sx={{ fontWeight: 'bold', marginTop: '20px'}}>Client focus</Typography>
-                <Typography variant="body2" className="text-gray-800 !text-base md:!text-lg">Our clients' success is our highest priority. In every engagement, we act in their best interests listening carefully, understanding their unique needs, honoring their perspectives, and consistently striving to exceed expectations.</Typography>
+                <Typography variant="body2" className="text-gray-800 !text-base md:!text-lg">Our clients&apos; success is our highest priority. In every engagement, we act in their best interests listening carefully, understanding their unique needs, honoring their perspectives, and consistently striving to exceed expectations.</Typography>
               </Box> 
               <Box>
                 <Typography variant="subtitle1" className="font-bold text-gray-900 !text-lg md:!text-2xl" sx={{ fontWeight: 'bold', marginTop: '20px'}}>Teamwork</Typography>

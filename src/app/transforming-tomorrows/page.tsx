@@ -1,29 +1,12 @@
 "use client";
 
-import { Box, Typography, Button, IconButton, Link, Paper, Divider } from '@mui/material';
-import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-import ShareIcon from '@mui/icons-material/Share';
+import { Box, Typography, Button, Link, Paper } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Image from 'next/image';
-import { useState, useRef } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import MailOutlineIcon from '@mui/icons-material/MailOutline';
 
 export default function TransformingTomorrows() {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  const handlePlayClick = () => {
-    setIsPlaying(true);
-    setTimeout(() => {
-      if (videoRef.current) {
-        videoRef.current.play().catch(() => {});
-      }
-    }, 100);
-  };
-
   return (
     <Box className="w-full min-h-screen bg-white">
       <Header />
@@ -114,8 +97,8 @@ export default function TransformingTomorrows() {
              possibilities for tomorrow are limitless.
             </Typography>
 
-            <Typography variant="body1" className="mb-2 text-gray-800" sx={{ fontSize: '18px', mt:1}}>
-             We don't just solve problems we work side by side with you to anticipate change, align with
+            <Typography variant="body1" className="mb-2 text-gray-800" sx={{ fontSize: '18px', mt:1 }}>
+             We don&apos;t just solve problems we work side by side with you to anticipate change, align with
              your ambitions, and build tailored solutions that drive sustainable growth.
             </Typography>
 
@@ -131,7 +114,7 @@ export default function TransformingTomorrows() {
           </Typography>
 
           <Typography variant="body1" className="mb-2 text-gray-800" sx={{ fontSize: '18px', mt:1}}>
-           We don't just solve problems we work side by side with you to anticipate change, align with
+           We don&apos;t just solve problems we work side by side with you to anticipate change, align with
            your ambitions, and build tailored solutions that drive sustainable growth.
           </Typography>
           
