@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <Box component="footer" className="site-footer  bg-[lightblue] text-white py-8 sm:py-12 px-4 md:px-8 relative">
+    <Box component="footer" className="site-footer  bg-[lightblue] text-white py-8 sm:py-6 px-4 md:px-8 relative">
       <Box className="container mx-auto max-w-7xl">
         {/* Top Section: Logo and Links */}
         <Box className="flex flex-col md:flex-row flex-wrap -mx-4 justify-between">
@@ -42,41 +42,88 @@ const Footer = () => {
             </Box> */}
             <Link href="/" className="cursor-pointer">
               <Image
-                src="/images/alliance.svg"
+                src="/images/alliance-bg.png"
                 alt="Alliance Logo"
-                width={120}
-                height={84}
+                width={240}
+                height={168}
                 priority
                 style={{ objectFit: 'contain' }}
-                className="md:w-[150px] md:h-[105px] ml-20 mb-5"
+                className="md:w-[240px] md:h-[168px] mb-5 mt-[-40px]"
               />
             </Link>
           </Box>
 
           {/* Primary and Secondary Links Container */}
-          <Box className="w-full md:w-8/12 lg:w-9/12 px-4 flex flex-wrap items-center">
-  <Box className="w-full px-4 mb-6 md:mb-0">
-    <ul className="flex flex-wrap gap-x-6 gap-y-2 list-none p-0 m-0">
-      {[
-        { text: 'About Us', href: '/overview' },
-        { text: 'Organizational Development', href: '/survey' },
-        { text: 'Building HR Capability', href: '/report' },
-        { text: 'Total Reward', href: '/campaign' },
-        { text: 'Performance Management' },
-      ].map((link, index) => (
-        <li key={index}>
-            <MuiLink
-              href={link.href || '#'}
-              className="text-sm font-semibold !text-black hover:text-blue-700 transition-colors duration-300"
-              underline="none"
-            >
-              {link.text}
-            </MuiLink>
-        </li>
-      ))}
-    </ul>
-  </Box>
-</Box>
+          <Box className="w-full md:w-8/12 lg:w-9/12 px-4 flex flex-col md:flex-row items-stretch gap-y-8 md:gap-y-0 md:gap-x-8">
+            {/* Our Services Column */}
+            <Box className="w-full md:w-1/3 mb-6 md:mb-0 flex flex-col items-center md:items-start">
+              <Typography variant="h6" className="font-bold mb-3 !text-black" sx={{ fontWeight: 'bold', color: 'black' }}>
+                Our Services
+              </Typography>
+              <ul className="flex flex-col gap-y-2 list-none p-0 m-0">
+                {[
+                  { text: 'About Us', href: '/overview' },
+                  { text: 'Organizational Development', href: '/survey' },
+                  { text: 'Building HR Capability', href: '/report' },
+                  { text: 'Total Reward', href: '/campaign' },
+                  { text: 'Performance Management' },
+                ].map((link, index) => (
+                  <li key={index}>
+                    <MuiLink
+                      href={link.href || '#'}
+                      className="text-sm font-semibold !text-black hover:text-blue-700 transition-colors duration-300"
+                      underline="none"
+                    >
+                      {link.text}
+                    </MuiLink>
+                  </li>
+                ))}
+              </ul>
+            </Box>
+            {/* Contact Us Column */}
+            <Box className="w-full md:w-1/3 mb-6 md:mb-0 flex flex-col items-center md:items-start">
+              <Typography variant="h6" className="font-bold mb-3 !text-black" sx={{ fontWeight: 'bold', color: 'black' }}>
+                Contact Us
+              </Typography>
+              <Typography variant="body2" className="!text-black mb-1" sx={{ color: 'black', fontWeight: 500 }}>
+                <span style={{ fontWeight: 'bold' }}>Email:</span> <a href="mailto:info@allianceatlantic.net" className="underline hover:text-blue-700">info@allianceatlantic.net</a>
+              </Typography>
+              <Typography variant="body2" className="!text-black mb-3" sx={{ color: 'black' }}>
+                Feel free to let us know how we may be of help.
+              </Typography>
+              <Typography variant="body2" className="!text-black mb-1" sx={{ color: 'black', fontWeight: 500 }}>
+                Alliance Atlantic
+              </Typography>
+              <Typography variant="body2" className="!text-black mb-1" sx={{ color: 'black', fontWeight: 500 }}>
+                <span style={{ fontWeight: 'bold' }}>Business Hours:</span>
+              </Typography>
+              <Typography variant="body2" className="!text-black mb-1" sx={{ color: 'black' }}>
+                Mon–Fri: 9:00 am – 6:00 pm
+              </Typography>
+              <Typography variant="body2" className="!text-black" sx={{ color: 'black', fontStyle: 'italic' }}>
+                Open today
+              </Typography>
+            </Box>
+            {/* Book a Meeting Column */}
+            <Box className="w-full md:w-1/3 mb-6 md:mb-0 flex flex-col items-center justify-center">
+              <Typography variant="h6" className="font-bold mb-3 !text-black text-center" sx={{ fontWeight: 'bold', color: 'black', textAlign: 'center' }}>
+                Book a Meeting
+              </Typography>
+              <a
+                href="https://calendly.com/your-client-link" // TODO: Replace with actual Calendly link
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block w-full flex justify-center"
+              >
+                <button
+                  className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-md transition-colors duration-300 text-base md:text-lg"
+                  style={{ minWidth: '200px' }}
+                >
+                  Book a Meeting With Us
+                </button>
+              </a>
+            </Box>
+          </Box>
 
         </Box>
 

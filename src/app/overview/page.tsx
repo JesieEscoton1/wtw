@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Typography, Button, Divider } from '@mui/material';
+import { Box, Typography, Button } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Image from 'next/image';
 import Header from '@/components/Header';
@@ -79,9 +79,6 @@ export default function OverviewPage() {
             evaluation, HR technology, and talent strategy.By putting people at the center of every
             solution, we help build future-ready teams and cultures rooted in purpose and progress.
             When your people thrive, your business grows.
-            </Typography>
-            <Typography variant="body1" className="text-gray-800 !text-base md:!text-lg">
-            
             </Typography>
           </Box>
         </Box>

@@ -91,7 +91,7 @@ export default function PeopleSoftware() {
                 { color: '#ffd600', title: 'Process Automation', desc: 'Automate payroll, leave, and reviews.' },
                 { color: '#00b894', title: 'System Integration', desc: 'Connect HR with finance, ops, and more.' },
                 { color: '#ff5252', title: 'Change Management', desc: 'Training and communication for smooth adoption.' }
-              ].map((item, idx, arr) => (
+              ].map((item) => (
                 <Box key={item.title} sx={{ display: 'flex', alignItems: 'flex-start', position: 'relative', zIndex: 1 }}>
                   {/* Dot Icon */}
                   <Box sx={{
@@ -154,7 +154,7 @@ export default function PeopleSoftware() {
         <Box>
           <Paper elevation={2} sx={{ p: 4, borderRadius: 3, background: '#e3f4fb', border: '1px solid #b2e0f7', maxWidth: 600, mx: 'auto' }}>
             <Typography variant="body1" sx={{ fontStyle: 'italic', color: '#0077b6', mb: 0, textAlign: 'center' }}>
-              "Alliance Atlantic helped us modernize our HR systems. The process was smooth, and our team is now more engaged and productive than ever."
+              &quot;Alliance Atlantic helped us modernize our HR systems. The process was smooth, and our team is now more engaged and productive than ever.&quot;
             </Typography>
           </Paper>
         </Box>
@@ -221,7 +221,7 @@ export default function PeopleSoftware() {
                 title: 'Misaligned Software',
                 desc: 'HR tech doesn’t support business strategy or growth.'
               }
-            ].map((item, idx) => (
+            ].map((item) => (
               <Paper key={item.title} elevation={1} sx={{
                 width: { xs: '100%', md: 'auto' },
                 minWidth: { xs: 'unset', md: 260 },

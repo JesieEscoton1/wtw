@@ -2,7 +2,8 @@
 
 import './styles.css';
 import { Box, Typography, Container, List, ListItem, ListItemIcon, ListItemText, Avatar, Button } from '@mui/material';
-import Image from 'next/image';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
@@ -52,7 +53,7 @@ export default function OrganizationalDevelopment() {
         >
           <Container maxWidth="lg">
             <Typography 
-              variant="overline" 
+              variant="h3" 
               className="text-blue-400 block mb-4"
               sx={{ letterSpacing: '0.1em' }}
             >
@@ -60,11 +61,8 @@ export default function OrganizationalDevelopment() {
             </Typography>
             
             <Box className="max-w-2xl">
-              <Typography variant="h3" className="text-2xl mb-4 text-gray-900">
-                Adapting to Evolve: The Role of Change Management in Modern Organizational Success
-              </Typography>
-              <Typography variant="body1" className="text-sm mb-2 text-gray-900">
-                June 13, 2025
+              <Typography variant="h6" className="text-2xl mb-4 text-gray-900">
+              We help strengthen your organization through structure reviews, culture development, competency frameworks, and strategic planning — all designed to build resilience and readiness for growth.
               </Typography>
             </Box>
           </Container>
@@ -85,208 +83,84 @@ export default function OrganizationalDevelopment() {
                 gap: 4,
               }}
             >
-              {/* Left column for text */}
-              <Box>
-                <Typography variant="body1" className="text-gray-700 mb-8" sx={{ fontSize: { xs: '0.9rem', sm: '1rem' } }}>
-                  In an era defined by rapid technological advancements and shifting market dynamics, organizations must continuously adapt to maintain relevance and achieve long-term success. Change management has become a vital strategic tool that enables businesses to navigate transitions effectively, whether they involve restructuring, digital transformation, or cultural shifts. By implementing structured change processes and fostering a culture of adaptability, organizations can minimize resistance, improve employee engagement, and align their operations with evolving goals. As such, mastering the principles and practices of change management is essential for any organization seeking not only to survive but to thrive in a competitive and constantly changing environment.
-                </Typography>
 
-                {/* About Survey Card */}
-                <Box className="bg-white shadow-sm rounded-lg border border-gray-200 p-6 mb-9 mt-9">
-                  <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <Box>
-                      <Typography variant="h4" className="text-xl font-bold">
-                        About this Organizational Development
-                      </Typography>
-                    </Box>
-                    <Button className="min-w-0 p-2 text-purple-600 hover:bg-purple-50 rounded-full" sx={{ minWidth: 'unset' }}>
-                      <span className="text-2xl">+</span>
-                    </Button>
+              {/* Left column for new content */}
+              <Box className="space-y-8">
+                {/* How we can help you */}
+                <Box className="bg-white shadow-md rounded-xl p-6 border-l-4 border-blue-400">
+                  <Typography variant="h4" className="font-bold mb-2 text-blue-700">How we can help you</Typography>
+                  <Typography variant="body1" className="text-gray-700">
+                    We partner with organizations to drive sustainable growth and transformation through tailored organizational development solutions. Our team helps you navigate change, build leadership capability, and foster a culture of continuous improvement.
+                  </Typography>
+                </Box>
+
+                {/* Our Services */}
+                <Box className="bg-blue-50 shadow rounded-xl p-6">
+                  <Typography variant="h4" className="font-bold mb-2 text-blue-700">Our Services</Typography>
+                  <Typography variant="body1" className="mb-2">We offer a comprehensive suite of services, including:</Typography>
+                  <List>
+                    {["Change Management", "Leadership Development", "Talent and Performance Management", "Strategic Planning", "Culture and Engagement Initiatives"].map((service, i) => (
+                      <ListItem key={i}>
+                        <ListItemIcon>
+                          <CheckCircleIcon sx={{ color: '#3b82f6' }} /> {/* Tailwind blue-500 */}
+                        </ListItemIcon>
+                        <ListItemText primary={service} />
+                      </ListItem>
+                    ))}
+                  </List>
+                </Box>
+
+                {/* Common Challenges */}
+                <Box className="bg-white shadow rounded-xl p-6 border-l-4 border-blue-400">
+                  <Typography variant="h4" className="font-bold mb-2 text-blue-700">Common Challenges Our Clients Face</Typography>
+                  <List>
+                    {["Adapting to rapid market and technology changes", "Managing resistance to organizational change", "Aligning leadership and teams with new strategies", "Building a culture of engagement and accountability", "Developing future-ready leaders"].map((challenge, i) => (
+                      <ListItem key={i}>
+                        <ListItemIcon>
+                          <ArrowForwardIosIcon color="primary" fontSize="small" />
+                        </ListItemIcon>
+                        <ListItemText primary={challenge} />
+                      </ListItem>
+                    ))}
+                  </List>
+                </Box>
+
+                {/* Our Process */}
+                <Box className="bg-blue-50 shadow rounded-xl p-6">
+                  <Typography variant="h4" className="font-bold mb-2 text-blue-700">Our Process</Typography>
+                  <Box className="flex flex-col md:flex-row gap-4">
+                    {[
+                      "Assess organizational needs and goals",
+                      "Co-create a tailored development plan",
+                      "Implement solutions with ongoing support",
+                      "Measure impact and refine strategies"
+                    ].map((step, i) => (
+                      <Box key={i} className="flex items-center mb-2 md:mb-0">
+                        <Box className="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold mr-2">{i+1}</Box>
+                        <Typography>{step}</Typography>
+                      </Box>
+                    ))}
                   </Box>
                 </Box>
 
-                <Typography variant="body1" className="text-gray-700 mb-8" sx={{ fontSize: { xs: '0.9rem', sm: '1rem' } }}>
-                  Effective change management includes controlling people&apos;s attitudes, actions, and expectations in addition to putting new systems or procedures into place. By setting clear objectives, offering assistance, and encouraging a sense of belonging during the transition process, leaders can help their teams navigate through times of uncertainty. Employees are more inclined to accept new directions and positively impact the outcome when they get the rationale behind organizational changes and feel engaged in the process.              
-                </Typography>
-               <Box className="mt-6 mb-8">
-            <Button
-              variant="contained"
-              className="bg-blue-300 hover:bg-blue-300 rounded-full px-8 py-3 normal-case"
-              endIcon={<span>→</span>}
-              sx={{ width: { xs: '100%', sm: 'auto' } }}
-            >
-              Participate now
-            </Button>
-          </Box>
-              
-                <Typography variant="h2" className="text-2xl font-bold my-8 mb-10">
-                  Top reasons to participate in the 2025 Benefits Trends Survey:
-                </Typography>
-
-                <Box className="mt-6 mb-6" sx={{ display: 'grid', gap: 4 }}>
-  {/* Each item */}
-  {[
-    {
-      icon: '/images/icons/1.svg',
-      title: 'Enhances Organizational Performance',
-      description: 'Receive a best-in-class personalized scorecard to benchmark your organization&apos;s benefits strategies against your peers.',
-      bgColor: 'bg-teal-50',
-    },
-    {
-      icon: '/images/icons/2.svg',
-      title: 'Facilitates Change Management',
-      description: 'Gain insights into the business issues shaping benefits strategies, such as aligning with company objectives and market trends.',
-      bgColor: 'bg-blue-50',
-    },
-    {
-      icon: '/images/icons/3.svg',
-      title: 'Promotes Continuous Improvement',
-      description: 'Assess how well your current benefits strategy meets employee needs and addresses challenges like flexible work and talent competition.',
-      bgColor: 'bg-purple-50',
-    },
-    {
-      icon: '/images/icons/4.svg',
-      title: 'Strengthens Leadership and Employee Engagement',
-      description: 'Identify the most pressing challenges in managing benefits costs and risks, including rising expenses and regulatory changes and how to manage them.',
-      bgColor: 'bg-teal-50',
-    },
-    {
-      icon: '/images/icons/5.svg',
-      title: 'Aligns Organizational Goals with Employee Goals',
-      description: 'Discover which benefits are most effective in attracting and retaining talent by understanding what employees value most.',
-      bgColor: 'bg-gray-50',
-    },
-    {
-      icon: '/images/icons/6.svg',
-      title: 'Improves Decision-Making and Problem-Solving',
-      description: 'Understand how to get more value and better outcomes from your existing benefit spend.',
-      bgColor: 'bg-blue-50',
-    },
-  ].map((item, idx) => (
-    <Box key={idx} className={`flex gap-6 items-start`}>
-      <Box className={`w-24 h-24 ${item.bgColor} p-4 rounded-lg flex-shrink-0`} sx={{ minWidth: '64px', minHeight: '64px' }}>
-        <Image
-          src={item.icon}
-          alt={`${item.title} icon`}
-          width={64}
-          height={64}
-          unoptimized
-        />
-      </Box>
-      <Box sx={{ flex: 1 }}>
-        <Typography variant="h6" className="font-bold mb-2">
-          {item.title}
-        </Typography>
-        <Typography variant="body1" className="text-gray-600">
-          {item.description}
-        </Typography>
-      </Box>
-    </Box>
-  ))}
-</Box>
-
-
-                <Typography variant="h3" className="text-2xl font-bold mt-40 mb-6">
-                  Driving Growth from Within: The Impact of Organizational Development on Business Success
-                </Typography>
-                <List>
-                  <ListItem>
-                    <ListItemIcon>
-                      <span className="text-blue-300">•</span>
-                    </ListItemIcon>
-                    <ListItemText primary="Improves Efficiency and Productivity" />
-                  </ListItem>
-                  <ListItem>
-                    <ListItemIcon>
-                      <span className="text-blue-300">•</span>
-                    </ListItemIcon>
-                    <ListItemText primary="Supports Effective Change Management" />
-                  </ListItem>
-                  <ListItem>
-                    <ListItemIcon>
-                      <span className="text-blue-300">•</span>
-                    </ListItemIcon>
-                    <ListItemText primary="Fosters a Positive Organizational Culture" />
-                  </ListItem>
-                </List>
-
-                {/* Survey Scorecard Sample */}
-                <Box className="my-8">
-                  <Image
-                    src="/images/OD2.png"
-                    alt="Sample of a Benefits Trends Survey scorecard"
-                    width={800}
-                    height={400}
-                    className="rounded-lg shadow-lg"
-                    unoptimized
-                  />
-                  
+                {/* Our Impact */}
+                <Box className="bg-gradient-to-r from-blue-100 to-blue-300 rounded-xl p-6 shadow">
+                  <Typography variant="h4" className="font-bold mb-2 text-blue-700">Our Impact</Typography>
+                  <Typography variant="body1" className="text-gray-800">
+                    Our clients experience measurable improvements in employee engagement, leadership effectiveness, and organizational agility. We are committed to delivering results that drive long-term business success.
+                  </Typography>
                 </Box>
-                
-                <hr />
 
-              <Box className="bg-white shadow-sm rounded-lg border border-gray-200 p-6 mb-8">
-  <Box
-    sx={{
-      display: 'flex',
-      justifyContent: 'space-between',
-      alignItems: 'flex-start',
-      flexDirection: { xs: 'column', md: 'row' },
-      gap: 2,
-      flexWrap: 'wrap',
-    }}
-  >
-    <Box sx={{ flex: 1, minWidth: '250px' }}>
-      <Typography
-        variant="h5"
-        className="text-xl font-bold text-blue-300 mb-2"
-      >
-        Available languages
-      </Typography>
-
-      <List
-        sx={{
-          p: 0,
-          display: 'grid',
-          gridTemplateColumns: {
-            xs: 'repeat(1, 1fr)',
-            sm: 'repeat(2, 1fr)',
-            md: 'repeat(3, 1fr)',
-          },
-          gap: 1.5,
-        }}
-      >
-        {[
-          'Arabic',
-          'Bahasa',
-          'Chinese (Simplified | Traditional)',
-          'Dutch',
-          'English (UK | US)',
-          'French (Canada | France)',
-          'German',
-          'Italian',
-          'Japanese',
-          'Korean',
-          'Lithuania',
-          'Polish',
-          'Portuguese (Brazil | Portugal)',
-          'Spanish (South America | Spain)',
-          'Thai',
-          'Turkish',
-          'Vietnamese',
-        ].map((lang, idx) => (
-          <ListItem key={idx} sx={{ p: 0 }}>
-            <ListItemIcon sx={{ minWidth: 'auto', pr: 1 }}>
-              <span className="text-black">•</span>
-            </ListItemIcon>
-            <ListItemText primary={lang} />
-          </ListItem>
-        ))}
-      </List>
-    </Box>
-  </Box>
-</Box>
-
+                {/* Call to Action */}
+                <Box className="flex justify-center mt-6">
+                  <Button
+                    variant="contained"
+                    className="bg-gradient-to-r from-blue-500 to-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg"
+                    size="large"
+                  >
+                    Book a Consultation
+                  </Button>
+                </Box>
               </Box>
 
               {/* Right column for Global Research and Contact */}
@@ -323,9 +197,9 @@ export default function OrganizationalDevelopment() {
                     {[
                       {
                         src: '/images/contact-avatar.jpg',
-                        alt: 'Royston Tan',
-                        name: 'Jhon Doe',
-                        title: 'Head of Health and Benefits, Asia Pacific',
+                        alt: 'Sandy Togonon',
+                        name: 'Sandy Togonon',
+                        title: 'Managing Director of Alliance Atlantic',
                         email: true,
                         phone: false,
                         emailLabel: 'Email',
@@ -361,7 +235,7 @@ export default function OrganizationalDevelopment() {
             </Box>
 
             {/* Capabilities Section */}
-           <Box className="py-16 px-4 sm:px-8 lg:px-12 w-full bg-gray-50">
+           {/* <Box className="py-16 px-4 sm:px-8 lg:px-12 w-full bg-gray-50">
   <Typography variant="h2" className="text-3xl font-bold mb-12 text-center">
     Capabilities related to Organizational Development
   </Typography>
@@ -401,12 +275,12 @@ export default function OrganizationalDevelopment() {
     ].map((item, i) => (
       <Box key={i} className="relative w-full">
         {/* Step Number Circle */}
-        <Box className="absolute -left-[42px] top-2 w-8 h-8 rounded-full bg-blue-500 text-white flex items-center justify-center font-bold text-sm">
+        {/* <Box className="absolute -left-[42px] top-2 w-8 h-8 rounded-full bg-blue-500 text-white flex items-center justify-center font-bold text-sm">
           {i + 1}
-        </Box>
+        </Box> */} 
 
         {/* Content Box */}
-        <Box className="bg-white w-full p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+        {/* <Box className="bg-white w-full p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
           <Typography variant="h6" className="text-xl font-semibold mb-2">
             {item.title}
           </Typography>
@@ -417,7 +291,7 @@ export default function OrganizationalDevelopment() {
       </Box>
     ))}
   </Box>
-</Box>
+</Box> */}
 
 
           </Container>

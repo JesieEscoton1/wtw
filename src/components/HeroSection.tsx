@@ -7,14 +7,14 @@ import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
-type Section = 'People';
+type Section = 'Core Values' | 'Our Vision';
 
 const HeroSection = () => {
   const [activeSection, setActiveSection] = useState<Section | null>(null);
 
   const getBackgroundImage = (section: Section | null) => {
     switch (section) {
-      case 'People':
+      case 'Core Values':
         return '/images/people1.jpg';
       // case 'Risk':
       //   return '/images/risk1.png';
@@ -41,6 +41,18 @@ const HeroSection = () => {
   const handleSectionHover = (section: Section | null) => {
     setActiveSection(section);
   };
+
+  // Default and Core Values content
+  const defaultTitle = 'Empowering People, Transforming Workforces';
+  const defaultSubtitle = 'Unlock your organization’s potential with expert HR consulting and talent solutions';
+  const coreValuesTitle = 'SERVICE BEYOND BOUNDARIES';
+  const coreValuesLines = [
+    'Beyond profit...',
+    'Beyond ourselves...',
+    'Beyond the usual...',
+    'Beyond what we can...'
+  ];
+  const visionParagraph = `To be the Partner of Choice in the development of people strategies, programs and competencies that will help: Create long-term, distinctive capabilities for the business to compete and grow; promote a culture of respect for the dignity of the individual and appreciation for the unique value s/he brings to the organization; and to be the integrating channel of a global network of HR and Management consultants, subscribing to world class standards of professionalism, expertise and services and bound by a common value for people.`;
 
   return (
     <Box className="relative w-full">
@@ -80,21 +92,45 @@ const HeroSection = () => {
               }}
             />
             <Box className="hero-homepage__title-block bg-white p-6 md:p-12 shadow-xl w-[90%] md:max-w-xl transform transition-all duration-300 hover:shadow-2xl absolute z-10 top-[10%] left-1/2 -translate-x-1/2 md:top-[8.5%] md:left-[4%] md:translate-x-0">
-              <h1 className="heading-1 m-0 mb-2 md:mb-3 text-gray-900 font-serif leading-tight text-2xl md:text-5xl" style={{ textWrap: 'balance', fontWeight: 'bold' }}>
-                Empowering People, Transforming Workforces
-              </h1>
-              <span className="heading-3 p-0 mt-2 md:mt-3 mb-2 text-black font-serif font-bold text-lg md:text-2xl">Unlock your organization’s potential with expert HR consulting and talent solutions</span><br/>
-               <span className="arrow-link arrow-link--inbody p-0 heading-6 m-0 mt-2 md:mt-3 inline-block"> 
-                <button
-                  onClick={() => window.location.href = '/overview'}
-                  aria-label="Link, Click to visit our Transforming Tomorrows page"
-                  className="normal-case p-0 justify-start text-base font-bold hover:text-blue-900 transition-colors duration-300 bg-transparent border-none cursor-pointer text-[18px] md:text-[23px]"
-                  style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', fontWeight: 'bold', color: '#00aaff' }}
-                >
-                  Get Started
-                  <FontAwesomeIcon icon={faArrowRight} className="ml-2 md:ml-[10px] mt-[3px] text-[18px] md:text-[22px]" />
-                </button>
-              </span>
+              {activeSection === 'Core Values' ? (
+                <>
+                  <h1 className="heading-1 m-0 mb-2 md:mb-3 text-gray-900 font-serif leading-tight text-2xl md:text-5xl" style={{ textWrap: 'balance', fontWeight: 'bold' }}>
+                    {coreValuesTitle}
+                  </h1>
+                  <span className="heading-3 p-0 mt-2 md:mt-3 mb-2 text-black font-serif font-bold text-lg md:text-2xl">
+                    {coreValuesLines.map((line, idx) => (
+                      <span key={idx} style={{ display: 'block' }}>{line}</span>
+                    ))}
+                  </span>
+                </>
+              ) : activeSection === 'Our Vision' ? (
+                <>
+                  <h1 className="heading-1 m-0 mb-2 md:mb-3 text-gray-900 font-serif leading-tight text-xl md:text-3xl" style={{ textWrap: 'balance', fontWeight: 'bold' }}>
+                    Our Vision
+                  </h1>
+                  <span className="heading-3 p-0 mt-2 md:mt-3 mb-2 text-black font-serif font-bold text-base md:text-xl block">
+                    {visionParagraph}
+                  </span>
+                </>
+              ) : (
+                <>
+                  <h1 className="heading-1 m-0 mb-2 md:mb-3 text-gray-900 font-serif leading-tight text-2xl md:text-5xl" style={{ textWrap: 'balance', fontWeight: 'bold' }}>
+                    {defaultTitle}
+                  </h1>
+                  <span className="heading-3 p-0 mt-2 md:mt-3 mb-2 text-black font-serif font-bold text-lg md:text-2xl">{defaultSubtitle}</span><br/>
+                  <span className="arrow-link arrow-link--inbody p-0 heading-6 m-0 mt-2 md:mt-3 inline-block"> 
+                    <button
+                      onClick={() => window.location.href = '/overview'}
+                      aria-label="Link, Click to visit our Transforming Tomorrows page"
+                      className="normal-case p-0 justify-start text-base font-bold hover:text-blue-900 transition-colors duration-300 bg-transparent border-none cursor-pointer text-[18px] md:text-[23px]"
+                      style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', fontWeight: 'bold', color: '#00aaff' }}
+                    >
+                      Get Started
+                      <FontAwesomeIcon icon={faArrowRight} className="ml-2 md:ml-[10px] mt-[3px] text-[18px] md:text-[22px]" />
+                    </button>
+                  </span>
+                </>
+              )}
             </Box>
           </Box>
 
@@ -104,7 +140,7 @@ const HeroSection = () => {
                 Discover More
               </Typography> 
               <Box className="accordion space-y-0 pt-2 md:pt-4" id="homepage-nav-accordion">
-                {(['People'] as Section[]).map((section) => (
+                {(['Core Values', 'Our Vision'] as Section[]).map((section) => (
                   <Box 
                     key={section}
                     className="homepage-nav-item"
