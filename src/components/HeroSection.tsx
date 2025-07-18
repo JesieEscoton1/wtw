@@ -86,7 +86,7 @@ const HeroSection = () => {
               <span className="heading-3 p-0 mt-2 md:mt-3 mb-2 text-black font-serif font-bold text-lg md:text-2xl">Unlock your organization’s potential with expert HR consulting and talent solutions</span><br/>
                <span className="arrow-link arrow-link--inbody p-0 heading-6 m-0 mt-2 md:mt-3 inline-block"> 
                 <button
-                  onClick={() => window.location.href = '/transforming-tomorrows'}
+                  onClick={() => window.location.href = '/overview'}
                   aria-label="Link, Click to visit our Transforming Tomorrows page"
                   className="normal-case p-0 justify-start text-base font-bold hover:text-blue-900 transition-colors duration-300 bg-transparent border-none cursor-pointer text-[18px] md:text-[23px]"
                   style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', fontWeight: 'bold', color: '#00aaff' }}

@@ -5,6 +5,16 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Image from 'next/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import GroupsIcon from '@mui/icons-material/Groups';
+import TrendingUpIcon from '@mui/icons-material/TrendingUp';
+import StarIcon from '@mui/icons-material/Star';
+import DevicesIcon from '@mui/icons-material/Devices';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
+import HubIcon from '@mui/icons-material/Hub';
+import TuneIcon from '@mui/icons-material/Tune';
+import BarChartIcon from '@mui/icons-material/BarChart';
+import AutoGraphIcon from '@mui/icons-material/AutoGraph';
 
 export default function OverviewPage() {
 
@@ -43,7 +53,7 @@ export default function OverviewPage() {
           <Box className="flex-1 relative w-full h-56 md:h-72 lg:h-96 flex items-center justify-center mt-6 md:mt-0">
             <Box className="relative w-full h-full z-10">
               <Image
-                src="/images/overview-manage.png"
+                src="/images/overview.png"
                 alt="Hero Overview"
                 layout="fill"
                 objectFit="cover"
@@ -56,212 +66,141 @@ export default function OverviewPage() {
       </Box>
 
       {/* Main Content */}
-      <Box className="container mx-auto max-w-7xl py-6 md:py-10 px-4 md:px-0 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16">
-        {/* Left/Main Text */}
-        <Box className="md:col-span-2 space-y-6 md:space-y-8">
-          <Box>
-            <Typography variant="h5" className="font-bold mb-0 text-gray-900 !text-xl md:!text-2xl" sx={{ fontWeight: 'bold'}}>
-              How do you move from complexity to clarity?
+      <Box className="w-full bg-[#e3f4fb] py-10 px-4 md:px-0">
+        <Box className="container mx-auto max-w-7xl py-6 px-4 md:px-0">
+          <Box className="mb-10 bg-white rounded-xl shadow p-6 md:p-10 text-center">
+            <Typography variant="h5" className="font-bold mb-4 text-gray-900 !text-xl md:!text-2xl" sx={{ fontWeight: 'bold' }}>
+              Empowering People. Elevating Performance.
             </Typography>
-            <Typography variant="h6" className="font-bold mb-0 text-gray-900 !text-lg md:!text-xl" sx={{ fontWeight: 'bold', mt:1}}>
-              From the unknown to the untapped?
+            <Typography variant="body1" className="mb-3 text-gray-800 !text-base md:!text-lg" sx={{ mt: 1 }}>
+            At Alliance Atlantic, we believe people are the foundation of every successful organization,
+            and our mission is to help you unlock their full potential. Through a collaborative and
+            impact-driven approach, we deliver tailored solutions in performance management, job 
+            evaluation, HR technology, and talent strategy.By putting people at the center of every
+            solution, we help build future-ready teams and cultures rooted in purpose and progress.
+            When your people thrive, your business grows.
             </Typography>
-            <Typography variant="body1" className="mb-2 text-gray-800 !text-base md:!text-lg" sx={{ mt:1}}>
-             At Alliance Atlantic, we deliver solutions driven by data and insights across people helping organizations build resilience, inspire their people,
-             and enhance overall performance.
-            </Typography>
-            <Typography variant="body1" className="mb-2 text-gray-800 !text-base md:!text-lg" sx={{ mt:1}}>
-             We work in true partnership with our clients, bringing together diverse expertise and a steadfast commitment to their success. Through open collaboration and critical
-             thinking, we challenge assumptions to uncover the most effective paths forward.
-            </Typography>
-            <Typography variant="body1" className="mb-2 text-gray-800 !text-base md:!text-lg" sx={{ mt:1}}>
-             Our global experience, combined with local understanding, allows us to deliver tailored solutions that address your unique needs with precision.
-            </Typography>
-            <Typography variant="body1" className="mb-2 text-gray-800 !text-base md:!text-lg" sx={{ mt:1}}>
-             Together, we broaden perspectives, sharpen strategies, and transform your most complex issues into clear, actionable opportunities paving the way
-             for sustainable, long-term growth.
+            <Typography variant="body1" className="text-gray-800 !text-base md:!text-lg">
+            
             </Typography>
           </Box>
+        </Box>
 
-          {/* Featured Video Section */}
-          {/* <Box className="w-full">  
-            <Typography variant="subtitle1" className="font-bold mt-4 text-gray-900 !text-xl md:!text-2xl" sx={{ marginTop: '0px', fontWeight: 'bold', marginBottom: '15px'}}>
-              This is perspective that moves you.
+        <Box className="container mx-auto max-w-7xl py-0 px-0 md:px-0">
+          <Box className="bg-[#d0eafd] rounded-2xl shadow-lg p-8 md:p-12 flex flex-col items-center text-center">
+            <Typography variant="h4" className="font-bold mb-6 text-gray-900 !text-2xl md:!text-4xl" sx={{ fontWeight: 'bold' }}>
+              Explore Our Expertise
             </Typography>
-            <Box className="relative w-full h-0 pb-[56.25%] bg-black rounded-lg overflow-hidden cursor-pointer">
-              {!isPlaying && (
-                <Box
-                className="absolute inset-0 mt-4"
-                onClick={handlePlayClick}
-              >
-                <Image
-                  src="https://cf-images.us-east-1.prod.boltdns.net/v1/static/5728959027001/071a239c-7816-48a0-ac31-f833778ca178/c3231194-1c84-4063-8a19-ce86885f6b2a/1280x720/match/image.jpg"
-                  alt="Video Thumbnail"
-                  layout="fill"
-                  objectFit="cover"
-                  className="transition-transform duration-300 group-hover:scale-105"
-                />
+            <Box className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full mt-4">
+              <Box className="bg-white border-2 border-[#00aaff] rounded-xl p-6 shadow flex flex-col items-center">
+                <GroupsIcon className="text-[#00aaff] mb-2" style={{ fontSize: 40 }} />
+                <Typography variant="h6" className="font-bold mb-2 text-[#00aaff]">Transformative Leadership</Typography>
+                <Typography variant="body2" className="text-gray-700">Cultivate leaders who inspire, innovate, and drive change.</Typography>
+              </Box>
+              <Box className="bg-white border-2 border-[#00aaff] rounded-xl p-6 shadow flex flex-col items-center">
+                <TrendingUpIcon className="text-[#00aaff] mb-2" style={{ fontSize: 40 }} />
+                <Typography variant="h6" className="font-bold mb-2 text-[#00aaff]">Strategic HR Solutions</Typography>
+                <Typography variant="body2" className="text-gray-700">Align people strategies with business goals for measurable impact.</Typography>
+              </Box>
+              <Box className="bg-white border-2 border-[#00aaff] rounded-xl p-6 shadow flex flex-col items-center">
+                <StarIcon className="text-[#00aaff] mb-2" style={{ fontSize: 40 }} />
+                <Typography variant="h6" className="font-bold mb-2 text-[#00aaff]">Total Rewards</Typography>
+                <Typography variant="body2" className="text-gray-700">Design reward systems that attract and retain top talent.</Typography>
+              </Box>
+              <Box className="bg-white border-2 border-[#00aaff] rounded-xl p-6 shadow flex flex-col items-center">
+                <DevicesIcon className="text-[#00aaff] mb-2" style={{ fontSize: 40 }} />
+                <Typography variant="h6" className="font-bold mb-2 text-[#00aaff]">HR Technology</Typography>
+                <Typography variant="body2" className="text-gray-700">Leverage modern tools to streamline HR processes.</Typography>
+              </Box>
+              <Box className="bg-white border-2 border-[#00aaff] rounded-xl p-6 shadow flex flex-col items-center">
+                <CheckCircleIcon className="text-[#00aaff] mb-2" style={{ fontSize: 40 }} />
+                <Typography variant="h6" className="font-bold mb-2 text-[#00aaff]">Proven Results</Typography>
+                <Typography variant="body2" className="text-gray-700">See how our solutions have transformed organizations.</Typography>
+              </Box>
+            </Box>
+          </Box>
+        </Box>
 
-                <Box className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent p-4 md:p-6 flex flex-col justify-between">
-                  <Box className="flex justify-between items-start">
-                    <Box className="flex flex-col">
-                      <Typography variant="h4" component="h3" className="text-white font-serif !text-xl md:!text-2xl lg:!text-3xl">
-                        Perspective that moves you
-                      </Typography>
-                      <Typography variant="body2" className="text-white opacity-90 !text-sm md:!text-base">
-                        We celebrate perspective. Because it allows you to embrace diverse ideas and experiences to build something better.
-                      </Typography>
-                    </Box>
-                    <IconButton aria-label="share" size="large" className="text-white opacity-80 hover:opacity-100 transition-opacity">
-                      <ShareIcon sx={{ color: 'white' }}/>
-                    </IconButton>
+        {/* Why Choose Alliance Atlantic Section */}
+        <Box className="container mx-auto max-w-7xl py-16 px-4 md:px-0">
+          <Box className="bg-white rounded-2xl shadow-lg p-8 md:p-12 flex flex-col items-center text-left">
+            <Typography variant="h4" className="font-bold mb-8 text-gray-900 !text-2xl md:!text-4xl">
+              Why Choose Alliance Atlantic?
+            </Typography>
+            <Box className="relative w-full" sx={{ mt: 2 }}>
+              {/* Vertical line */}
+              <Box className="absolute left-8 top-0 bottom-0 w-1" style={{ background: 'linear-gradient(to bottom, #e04a9b 0%, #00aaff 100%)', borderRadius: 8, zIndex: 0 }} />
+              <Box className="flex flex-col gap-10 pl-16 relative z-10">
+                {/* Step 1 */}
+                <Box className="flex flex-row items-start gap-4 mb-2 max-w-3xl">
+                  <WorkspacePremiumIcon className="mt-1" style={{ color: '#e04a9b', fontSize: 32, flexShrink: 0 }} />
+                  <Box>
+                    <Typography variant="h6" className="font-bold mb-1" style={{ color: '#e04a9b' }}>Decades of Expertise</Typography>
+                    <Typography variant="body2" className="text-gray-700">
+                      Our team has decades of global expertise developing people strategies and a rich
+                      legacy in HR consulting. We have established ourselves as reliable consultants in
+                      the HR industry by assisting businesses of all sizes with transitions, expansions,
+                      and performance issues.</Typography>
                   </Box>
-
-                  <Box className="flex justify-start items-end">
-                    <Box className="w-14 h-14 md:w-18 md:h-18 rounded-full bg-[#00aaff] flex items-center justify-center opacity-90 group-hover:opacity-100 transition-opacity duration-300">
-                      <PlayArrowIcon style={{ fontSize: '40px', color: 'white' }} className="md:!text-[60px]" />
-                    </Box>
+                </Box>
+                {/* Step 2 */}
+                <Box className="flex flex-row items-start gap-4 mb-2 max-w-3xl">
+                  <HubIcon className="mt-1" style={{ color: '#00aaff', fontSize: 32, flexShrink: 0 }} />
+                  <Box>
+                    <Typography variant="h6" className="font-bold mb-1" style={{ color: '#00aaff' }}>Holistic People Strategy</Typography>
+                    <Typography variant="body2" className="text-gray-700">
+                      We consider your entire people ecosystem, integrating leadership, culture, talent development,
+                      and organizational design into a single, coherent plan. Our objective is to assist you in coordinating
+                      all of your employees with your corporate objectives.</Typography>
+                  </Box>
+                </Box>
+                {/* Step 3 */}
+                <Box className="flex flex-row items-start gap-4 mb-2 max-w-3xl">
+                  <TuneIcon className="mt-1" style={{ color: '#a259e6', fontSize: 32, flexShrink: 0 }} />
+                  <Box>
+                    <Typography variant="h6" className="font-bold mb-1" style={{ color: '#a259e6' }}>Tailored for You</Typography>
+                    <Typography variant="body2" className="text-gray-700">
+                      Our solutions and our organizations are not the same.We work directly with your teams
+                      to create programs that are highly relevant and impactful, reflecting your own culture,
+                      structure, and strategic objectives.</Typography>
+                  </Box>
+                </Box>
+                {/* Step 4 */}
+                <Box className="flex flex-row items-start gap-4 mb-2 max-w-3xl">
+                  <BarChartIcon className="mt-1" style={{ color: '#ffd600', fontSize: 32, flexShrink: 0 }} />
+                  <Box>
+                    <Typography variant="h6" className="font-bold mb-1" style={{ color: '#ffd600' }}>Measurable Results</Typography>
+                    <Typography variant="body2" className="text-gray-700">
+                    Our work produces results rather than just suggestions. To make sure you get genuine,
+                    observable return on your investment, we monitor progress, assess efficacy, and continuously
+                    enhance using data and analytics.</Typography>
+                  </Box>
+                </Box>
+                {/* Step 5 */}
+                <Box className="flex flex-row items-start gap-4 mb-2 max-w-3xl">
+                  <AutoGraphIcon className="mt-1" style={{ color: '#00c49a', fontSize: 32, flexShrink: 0 }} />
+                  <Box>
+                    <Typography variant="h6" className="font-bold mb-1" style={{ color: '#00c49a' }}>Future-Ready Tools</Typography>
+                    <Typography variant="body2" className="text-gray-700">
+                    We provide you with cutting-edge frameworks, tools, and technologies that help you
+                    stay ahead of change and maintain an agile people strategy. With innovative concepts
+                    and digital HR technologies, we prepare your team for the future.</Typography>
                   </Box>
                 </Box>
               </Box>
-              )}
-              {isPlaying && (
-                <video
-                  ref={videoRef}
-                  controls
-                  autoPlay
-                  className="absolute inset-0 w-full h-full object-cover"
-                  onEnded={() => setIsPlaying(false)}
-                >
-                  <source src="/videos/WTW-Perspective.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              )}
             </Box>
-            <Box className="p-2 md:p-4">
-                <Typography variant="caption" className="block mt-2 text-gray-700 !text-sm md:!text-base" sx={{ fontWeight: 'bold'}}>
-                    Perspective that moves you
-                </Typography>
-                <Typography variant="caption" className="block mt-2 text-gray-700 !text-xs md:!text-sm">
-                    we celebrate perspective. Because it allows you to embrace diverse ideas and experiences to build something better.
-                </Typography>
+            {/* Our Team Highlight remains unchanged */}
+            <Box className="mt-10 bg-[#00aaff] rounded-xl p-6 shadow flex flex-col items-center w-full">
+              <Typography variant="overline" className="text-white font-bold tracking-widest !text-xs md:!text-sm mb-1">Team</Typography>
+              <Typography variant="h6" className="font-bold mb-2 text-white">Our Team</Typography>
+              <Typography variant="body2" className="text-white">
+                Seasoned HR consultants dedicated to building stronger organizations through strategy, systems, and leadership.
+              </Typography>
             </Box>
-          </Box> */}
-
-          {/* Purpose and Values */}
-          {/* <Divider
-            sx={{
-              my: -2,
-              borderColor: '#e5e1ea',
-              borderBottomWidth: 3,
-              opacity: 1,
-              width: '100%',
-            }}
-          /> */}
-          
-          <Box className="mt-8 md:mt-12">
-            <Typography variant="h5" className="font-bold mb-4 text-gray-900 !text-xl md:!text-2xl" sx={{ fontWeight: 'bold'}}>
-              Our purpose and values
-            </Typography>
-            <Typography variant="body1" className="mb-4 text-gray-800 !text-base md:!text-lg" sx={{ marginTop: '10px' }}>
-              At Alliance Atlantic, our purpose defines who we are and why we exist:
-            </Typography>
-            <Typography variant="body1" className="mb-4 text-gray-800 !text-base md:!text-lg" sx={{ marginTop: '10px'}}>
-             Our values are not simply words they are principles that guide every decision, every relationship, and
-             every outcome. Grounded in a strong client focus, collaboration, integrity, respect, and a relentless 
-             pursuit of excellence, these values are the foundation of our enduring legacy.
-            </Typography>
-            <Box className="space-y-4">
-              <Box>
-                <Typography variant="subtitle1" className="font-bold text-gray-900 !text-lg md:!text-2xl" sx={{ fontWeight: 'bold', marginTop: '20px'}}>Client focus</Typography>
-                <Typography variant="body2" className="text-gray-800 !text-base md:!text-lg">Our clients&apos; success is our highest priority. In every engagement, we act in their best interests listening carefully, understanding their unique needs, honoring their perspectives, and consistently striving to exceed expectations.</Typography>
-              </Box> 
-              <Box>
-                <Typography variant="subtitle1" className="font-bold text-gray-900 !text-lg md:!text-2xl" sx={{ fontWeight: 'bold', marginTop: '20px'}}>Teamwork</Typography>
-                <Typography variant="body2" className="text-gray-800 !text-base md:!text-lg">When you partner with one of us, you benefit from the strength of all of us. We collaborate across disciplines, geographies, and functions to deliver innovative solutions and world-class advice. By supporting one another, we multiply our collective expertise and create greater value for our clients.</Typography>
-              </Box>
-              <Box>
-                <Typography variant="subtitle1" className="font-bold text-gray-900 !text-lg md:!text-2xl" sx={{ fontWeight: 'bold', marginTop: '20px'}}>Integrity</Typography>
-                <Typography variant="body2" className="text-gray-800 !text-base md:!text-lg">Trust is the cornerstone of our relationships. We earn that trust daily through professionalism, transparency, accountability, and a steadfast commitment to doing what is right. We hold ourselves accountable to our clients, shareholders, regulators, and each other for both our actions and our results.</Typography>
-              </Box>
-              <Box>
-                <Typography variant="subtitle1" className="font-bold text-gray-900 !text-lg md:!text-2xl" sx={{ fontWeight: 'bold', marginTop: '20px'}}>Respect</Typography>
-                <Typography variant="body2" className="text-gray-800 !text-base md:!text-lg">We embrace diversity of thought, background, and experience. Through open dialogue and mutual understanding, we foster an inclusive culture built on fairness, honesty, and genuine care for one another. We manage all our relationships with colleagues, clients, and communities with dignity and responsibility.</Typography>
-              </Box>
-              <Box>
-                <Typography variant="subtitle1" className="font-bold text-gray-900 !text-lg md:!text-2xl" sx={{ fontWeight: 'bold', marginTop: '20px'}}>Excellence</Typography>
-                <Typography variant="body2" className="text-gray-800 !text-base md:!text-lg">We are committed to leadership and continuous improvement. This means investing in the personal and professional growth of our people, ensuring they have the tools, resources, and opportunities to advance their expertise. In every aspect of our business, we maintain an uncompromising focus on innovation, quality, and risk management to consistently deliver superior outcomes.</Typography>
-              </Box>
-            </Box>
-          </Box>
-        </Box>
-
-        {/* Right Column: Quote and Secondary Video */}
-        <Box className="space-y-6 md:space-y-8">
-          {/* Quote Box */}
-          {/* <Box
-            component="blockquote"
-            className="quote sr-reveal relative bg-white rounded-lg p-4 md:p-8 my-4 md:my-6 border-l-5"
-            sx={{
-              borderLeftColor: 'lightblue',
-              borderRightColor: 'lightblue',
-              boxShadow: '0 5px 0 0 lightblue, 0 8px 24px 0 rgba(44, 62, 80, 0.08)',
-              overflow: 'visible',
-            }}
-          >
-            <span
-              className="heading-4 quote__icon absolute -left-4 md:-left-8 top-2 text-4xl md:text-5xl"
-              style={{
-                marginTop: 10,
-                marginBottom: 0,
-                marginLeft: 30,
-                letterSpacing: '-0.4px',
-                color: '#212529',
-                lineHeight: 1,
-                fontFamily: 'serif',
-              }}
-            >
-                &nbsp; &quot;
-            </span>
-            <Typography variant="h5" component="p" className="heading-4 mb-4 !text-lg md:!text-xl" sx={{ fontStyle: 'italic', color: '#212529', marginTop: '30px' }}>
-              Our name and brand reflect the clarity and actionable solutions we bring to today&apos;s challenges.
-            </Typography>
-            <Box component="cite" className="font-mono-small font-semibold not-italic block text-gray-700 mt-4 !text-sm md:!text-base">
-              Carl Hess
-              <br />
-              <span className="font-bold">CEO</span>
-            </Box>
-            <span className="quote__block" />
-          </Box> */}
-
-          {/* Secondary Video */}
-          <Box className="w-full" sx={{ marginTop: { xs: '100%', md: '0%' } }}>
-            <Box className="relative w-full h-0 pt-[56.25%] bg-black rounded-lg overflow-hidden">
-                <Image
-                  src="/images/complexity.png"
-                  alt="What will your tomorrow look like?"
-                  layout="fill"
-                  objectFit="cover"
-                />
-            </Box>
-            <Typography variant="caption" className="block mt-2 text-gray-700 !text-sm md:!text-base" sx={{ fontWeight: 'bold', marginTop: '10px'}}>
-            What will your tomorrow look like?
-            </Typography>
-            <Typography variant="caption" className="block mt-2 text-gray-700 !text-xs md:!text-sm" sx={{ marginTop: '5px'}}>
-            For almost two centuries, Alliance Atlantic has helped forward-thinking leaders transform their organizations solving people challenges and empowering growth through strategic HR consulting.
-            </Typography>
-            <Divider
-                sx={{
-                my: 2,
-                borderColor: '#e5e1ea',
-                borderBottomWidth: 3,
-                opacity: 1,
-                width: '100%',
-                }}
-            />
           </Box>
         </Box>
       </Box>
+
 
       <Footer />
     </Box>
