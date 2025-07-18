@@ -85,7 +85,7 @@ export default function JobEvaluation() {
               <Typography variant="h6" className="font-bold mb-4 text-gray-900 text-lg md:text-xl" sx={{ fontWeight: 'bold'}}>
                 Our Job Evaluation Process
               </Typography>
-              <Box className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-0">
+              <Box className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-0" sx={{ mt: 2}}>
                 {[
                   { label: 'Job Analysis', icon: '/images/icons/1.svg' },
                   { label: 'Role Benchmarking', icon: '/images/icons/2.svg' },
@@ -99,8 +99,14 @@ export default function JobEvaluation() {
                       <Image src={step.icon} alt={step.label} width={36} height={36} />
                     </Box>
                     <Typography variant="caption" align="center" sx={{ fontWeight: 600, color: '#0077b6', fontSize: '1rem' }}>{step.label}</Typography>
+                    {/* Connector: horizontal for desktop, vertical for mobile */}
                     {idx < arr.length - 1 && (
-                      <Box className="hidden md:block w-12 h-1 bg-[#00aaff] mt-2 mb-2" />
+                      <>
+                        {/* Desktop: horizontal bar */}
+                        <Box className="hidden md:block w-12 h-1 bg-[#00aaff] mt-2 mb-2" />
+                        {/* Mobile: vertical bar */}
+                        <Box className="block md:hidden w-1 h-8 bg-[#00aaff] my-2" />
+                      </>
                     )}
                   </Box>
                 ))}
@@ -112,7 +118,7 @@ export default function JobEvaluation() {
               <Typography variant="h6" className="font-bold mb-4 text-gray-900 text-lg md:text-xl" sx={{ fontWeight: 'bold'}}>
                 What We Offer
               </Typography>
-              <Box className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <Box className="grid grid-cols-1 sm:grid-cols-2 gap-6" sx={{ mt: 2}}>
                 {[
                   {
                     title: 'Job Evaluation Framework Design',

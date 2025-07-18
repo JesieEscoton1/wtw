@@ -122,21 +122,21 @@ export default function OverviewPage() {
         </Box>
 
         {/* Why Choose Alliance Atlantic Section */}
-        <Box className="container mx-auto max-w-7xl py-16 px-4 md:px-0">
-          <Box className="bg-white rounded-2xl shadow-lg p-8 md:p-12 flex flex-col items-center text-left">
-            <Typography variant="h4" className="font-bold mb-8 text-gray-900 !text-2xl md:!text-4xl">
+        <Box className="container mx-auto max-w-7xl py-10 md:py-16 px-2 md:px-4">
+          <Box className="bg-white rounded-2xl shadow-lg p-4 md:p-12 flex flex-col items-center text-left">
+            <Typography variant="h4" className="font-bold mb-6 md:mb-8 text-gray-900 !text-xl md:!text-2xl lg:!text-4xl">
               Why Choose Alliance Atlantic?
             </Typography>
             <Box className="relative w-full" sx={{ mt: 2 }}>
-              {/* Vertical line */}
-              <Box className="absolute left-8 top-0 bottom-0 w-1" style={{ background: 'linear-gradient(to bottom, #e04a9b 0%, #00aaff 100%)', borderRadius: 8, zIndex: 0 }} />
-              <Box className="flex flex-col gap-10 pl-16 relative z-10">
+              {/* Vertical line: left-4 on mobile, left-8 on md+ */}
+              <Box className="absolute left-4 md:left-8 top-0 bottom-0 w-1" style={{ background: 'linear-gradient(to bottom, #e04a9b 0%, #00aaff 100%)', borderRadius: 8, zIndex: 0 }} />
+              <Box className="flex flex-col gap-6 md:gap-10 pl-6 md:pl-16 relative z-10">
                 {/* Step 1 */}
-                <Box className="flex flex-row items-start gap-4 mb-2 max-w-3xl">
-                  <WorkspacePremiumIcon className="mt-1" style={{ color: '#e04a9b', fontSize: 32, flexShrink: 0 }} />
+                <Box className="flex flex-row items-start gap-3 md:gap-4 mb-4 md:mb-2 max-w-full md:max-w-3xl">
+                  <WorkspacePremiumIcon className="mt-1" style={{ color: '#e04a9b', fontSize: 24, flexShrink: 0 }} />
                   <Box>
-                    <Typography variant="h6" className="font-bold mb-1" style={{ color: '#e04a9b' }}>Decades of Expertise</Typography>
-                    <Typography variant="body2" className="text-gray-700">
+                    <Typography variant="h6" className="font-bold mb-1 !text-base md:!text-lg" style={{ color: '#e04a9b' }}>Decades of Expertise</Typography>
+                    <Typography variant="body2" className="text-gray-700 !text-sm md:!text-base">
                       Our team has decades of global expertise developing people strategies and a rich
                       legacy in HR consulting. We have established ourselves as reliable consultants in
                       the HR industry by assisting businesses of all sizes with transitions, expansions,
@@ -144,44 +144,44 @@ export default function OverviewPage() {
                   </Box>
                 </Box>
                 {/* Step 2 */}
-                <Box className="flex flex-row items-start gap-4 mb-2 max-w-3xl">
-                  <HubIcon className="mt-1" style={{ color: '#00aaff', fontSize: 32, flexShrink: 0 }} />
+                <Box className="flex flex-row items-start gap-3 md:gap-4 mb-4 md:mb-2 max-w-full md:max-w-3xl">
+                  <HubIcon className="mt-1" style={{ color: '#00aaff', fontSize: 24, flexShrink: 0 }} />
                   <Box>
-                    <Typography variant="h6" className="font-bold mb-1" style={{ color: '#00aaff' }}>Holistic People Strategy</Typography>
-                    <Typography variant="body2" className="text-gray-700">
+                    <Typography variant="h6" className="font-bold mb-1 !text-base md:!text-lg" style={{ color: '#00aaff' }}>Holistic People Strategy</Typography>
+                    <Typography variant="body2" className="text-gray-700 !text-sm md:!text-base">
                       We consider your entire people ecosystem, integrating leadership, culture, talent development,
                       and organizational design into a single, coherent plan. Our objective is to assist you in coordinating
                       all of your employees with your corporate objectives.</Typography>
                   </Box>
                 </Box>
                 {/* Step 3 */}
-                <Box className="flex flex-row items-start gap-4 mb-2 max-w-3xl">
-                  <TuneIcon className="mt-1" style={{ color: '#a259e6', fontSize: 32, flexShrink: 0 }} />
+                <Box className="flex flex-row items-start gap-3 md:gap-4 mb-4 md:mb-2 max-w-full md:max-w-3xl">
+                  <TuneIcon className="mt-1" style={{ color: '#a259e6', fontSize: 24, flexShrink: 0 }} />
                   <Box>
-                    <Typography variant="h6" className="font-bold mb-1" style={{ color: '#a259e6' }}>Tailored for You</Typography>
-                    <Typography variant="body2" className="text-gray-700">
+                    <Typography variant="h6" className="font-bold mb-1 !text-base md:!text-lg" style={{ color: '#a259e6' }}>Tailored for You</Typography>
+                    <Typography variant="body2" className="text-gray-700 !text-sm md:!text-base">
                       Our solutions and our organizations are not the same.We work directly with your teams
                       to create programs that are highly relevant and impactful, reflecting your own culture,
                       structure, and strategic objectives.</Typography>
                   </Box>
                 </Box>
                 {/* Step 4 */}
-                <Box className="flex flex-row items-start gap-4 mb-2 max-w-3xl">
-                  <BarChartIcon className="mt-1" style={{ color: '#ffd600', fontSize: 32, flexShrink: 0 }} />
+                <Box className="flex flex-row items-start gap-3 md:gap-4 mb-4 md:mb-2 max-w-full md:max-w-3xl">
+                  <BarChartIcon className="mt-1" style={{ color: '#ffd600', fontSize: 24, flexShrink: 0 }} />
                   <Box>
-                    <Typography variant="h6" className="font-bold mb-1" style={{ color: '#ffd600' }}>Measurable Results</Typography>
-                    <Typography variant="body2" className="text-gray-700">
+                    <Typography variant="h6" className="font-bold mb-1 !text-base md:!text-lg" style={{ color: '#ffd600' }}>Measurable Results</Typography>
+                    <Typography variant="body2" className="text-gray-700 !text-sm md:!text-base">
                     Our work produces results rather than just suggestions. To make sure you get genuine,
                     observable return on your investment, we monitor progress, assess efficacy, and continuously
                     enhance using data and analytics.</Typography>
                   </Box>
                 </Box>
                 {/* Step 5 */}
-                <Box className="flex flex-row items-start gap-4 mb-2 max-w-3xl">
-                  <AutoGraphIcon className="mt-1" style={{ color: '#00c49a', fontSize: 32, flexShrink: 0 }} />
+                <Box className="flex flex-row items-start gap-3 md:gap-4 mb-4 md:mb-2 max-w-full md:max-w-3xl">
+                  <AutoGraphIcon className="mt-1" style={{ color: '#00c49a', fontSize: 24, flexShrink: 0 }} />
                   <Box>
-                    <Typography variant="h6" className="font-bold mb-1" style={{ color: '#00c49a' }}>Future-Ready Tools</Typography>
-                    <Typography variant="body2" className="text-gray-700">
+                    <Typography variant="h6" className="font-bold mb-1 !text-base md:!text-lg" style={{ color: '#00c49a' }}>Future-Ready Tools</Typography>
+                    <Typography variant="body2" className="text-gray-700 !text-sm md:!text-base">
                     We provide you with cutting-edge frameworks, tools, and technologies that help you
                     stay ahead of change and maintain an agile people strategy. With innovative concepts
                     and digital HR technologies, we prepare your team for the future.</Typography>
@@ -190,10 +190,10 @@ export default function OverviewPage() {
               </Box>
             </Box>
             {/* Our Team Highlight remains unchanged */}
-            <Box className="mt-10 bg-[#00aaff] rounded-xl p-6 shadow flex flex-col items-center w-full">
+            <Box className="mt-8 md:mt-10 bg-[#00aaff] rounded-xl p-4 md:p-6 shadow flex flex-col items-center w-full">
               <Typography variant="overline" className="text-white font-bold tracking-widest !text-xs md:!text-sm mb-1">Team</Typography>
-              <Typography variant="h6" className="font-bold mb-2 text-white">Our Team</Typography>
-              <Typography variant="body2" className="text-white">
+              <Typography variant="h6" className="font-bold mb-2 text-white !text-base md:!text-lg">Our Team</Typography>
+              <Typography variant="body2" className="text-white !text-sm md:!text-base">
                 Seasoned HR consultants dedicated to building stronger organizations through strategy, systems, and leadership.
               </Typography>
             </Box>

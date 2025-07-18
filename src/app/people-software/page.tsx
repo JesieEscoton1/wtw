@@ -125,7 +125,7 @@ export default function PeopleSoftware() {
           <Typography variant="h6" className="font-bold mb-4 text-gray-900 text-lg md:text-xl" sx={{ fontWeight: 'bold'}}>
             How Our Process Works
           </Typography>
-          <Box className="flex flex-col md:flex-row gap-6 items-center justify-between">
+          <Box className="flex flex-col md:flex-row gap-6 items-center justify-between" sx={{ mt: 2}}>
             {[
               { step: '1', label: 'Discovery', color: '#00aaff', desc: 'We assess your current HR tech and needs.' },
               { step: '2', label: 'Strategy', color: '#E04A9B', desc: 'We design a tailored digital HR roadmap.' },
@@ -165,8 +165,14 @@ export default function PeopleSoftware() {
            Performance Challenges
           </Typography>
           <Box
-            className="flex md:grid md:grid-cols-3 gap-4 overflow-x-auto pb-2 mt-4"
             sx={{
+              display: { xs: 'flex', md: 'grid' },
+              flexDirection: { xs: 'column', md: 'unset' },
+              gridTemplateColumns: { md: 'repeat(3, 1fr)' },
+              gap: 2,
+              overflowX: 'unset',
+              pb: 2,
+              mt: 4,
               '&::-webkit-scrollbar': { display: 'none' },
               msOverflowStyle: 'none',
               scrollbarWidth: 'none',
@@ -217,7 +223,8 @@ export default function PeopleSoftware() {
               }
             ].map((item, idx) => (
               <Paper key={item.title} elevation={1} sx={{
-                minWidth: 260,
+                width: { xs: '100%', md: 'auto' },
+                minWidth: { xs: 'unset', md: 260 },
                 p: 3,
                 borderRadius: 3,
                 background: '#f7fafd',
@@ -226,7 +233,8 @@ export default function PeopleSoftware() {
                 flexDirection: 'column',
                 alignItems: 'center',
                 gap: 1,
-                flex: '0 0 auto',
+                flex: { xs: 'unset', md: '0 0 auto' },
+                mb: { xs: 2, md: 0 },
               }}>
                 <Box sx={{ mb: 1 }}>{item.icon}</Box>
                 <Typography variant="subtitle1" sx={{ fontWeight: 700, color: '#00aaff', fontSize: '1.05rem', mb: 0.5, textAlign: 'center' }}>
