@@ -296,6 +296,16 @@ export default function TransformingTomorrows() {
               </Typography>
             </Box>
           </Paper> */}
+
+          {/* Atlantic Alliance Featured Service Box */}
+          <Box className="bg-white border-l-4 border-[#00aaff] shadow-md rounded-lg p-6 flex flex-col items-start">
+            <Typography variant="h6" className="font-bold text-[#00aaff] mb-2" sx={{ fontWeight: 'bold' }}>
+              Featured: Future-Ready HR Solutions
+            </Typography>
+            <Typography variant="body1" className="text-gray-800 mb-3" sx={{ fontSize: '16px' }}>
+              Our Future-Ready HR Solutions help organizations adapt to rapid change, foster innovation, and build a resilient workforce. We combine deep industry expertise with cutting-edge technology to deliver results that matter.
+            </Typography>
+          </Box>
         </Box>
         
       </Box>
