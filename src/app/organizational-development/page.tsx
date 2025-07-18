@@ -4,7 +4,6 @@ import './styles.css';
 import { Box, Typography, Container, List, ListItem, ListItemIcon, ListItemText, Avatar, Button } from '@mui/material';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import Image from 'next/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
@@ -103,7 +102,7 @@ export default function OrganizationalDevelopment() {
                     {["Change Management", "Leadership Development", "Talent and Performance Management", "Strategic Planning", "Culture and Engagement Initiatives"].map((service, i) => (
                       <ListItem key={i}>
                         <ListItemIcon>
-                          <CheckCircleIcon color="primary" />
+                          <CheckCircleIcon sx={{ color: '#3b82f6' }} /> {/* Tailwind blue-500 */}
                         </ListItemIcon>
                         <ListItemText primary={service} />
                       </ListItem>

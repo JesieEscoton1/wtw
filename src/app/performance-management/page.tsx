@@ -120,7 +120,7 @@ export default function PerformanceManagement() {
                   title: 'Performance Metrics & Dashboards',
                   desc: 'Design and deploy tools to monitor performance, engagement, and development.'
                 }
-              ].map((item, idx) => (
+              ].map((item) => (
                 <Stack key={item.title} direction="row" alignItems="flex-start" spacing={2} component="li">
                   <Box sx={{ mt: '4px', color: '#00aaff' }}>
                     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

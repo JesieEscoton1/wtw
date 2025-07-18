@@ -1,12 +1,10 @@
 "use client";
 
-import { Box, Typography, Button, Link, Divider } from '@mui/material';
+import { Box, Typography, Button } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Image from 'next/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 export default function TotalRewards() {
   return (

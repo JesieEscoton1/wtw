@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Typography, Button, Paper, Stack } from '@mui/material';
+import { Box, Typography, Button, Paper } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Image from 'next/image';
 import Header from '@/components/Header';
@@ -76,7 +76,7 @@ export default function JobEvaluation() {
                 At Alliance Atlantic, we assist companies in making the value and compensation of jobs more transparent, consistent, and equitable. We guarantee that your structure promotes both internal equality and external competitiveness with our strategic job evaluation services, providing a solid basis for HR operations like performance reviews, career advancement, and remuneration.
               </Typography>
               <Typography variant="body1" className="mb-2 text-gray-800" sx={{ fontSize: '18px', mt:1}}>
-                Whether you're creating a new structure or improving an old one, we offer the resources, frameworks, and know-how to make job value quantifiable, transparent, and consistent with corporate goals.
+                Whether you&apos;re creating a new structure or improving an old one, we offer the resources, frameworks, and know-how to make job value quantifiable, transparent, and consistent with corporate goals.
               </Typography>
             </Paper>
 
@@ -197,7 +197,7 @@ export default function JobEvaluation() {
                 Why Job Evaluation Matters
               </Typography>
               <Typography variant="body2" sx={{ mb: 2, color: '#E04A9B', opacity: 0.97 }}>
-                "Transparent job evaluation is the foundation of fair pay, employee trust, and organizational growth. When roles are clearly defined and valued, everyone wins."
+                &quot;Transparent job evaluation is the foundation of fair pay, employee trust, and organizational growth. When roles are clearly defined and valued, everyone wins.&quot;
               </Typography>
               <Typography variant="subtitle2" sx={{ color: '#E04A9B', fontWeight: 600 }}>
                 — Alliance Atlantic Insights

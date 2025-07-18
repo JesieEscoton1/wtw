@@ -1,10 +1,8 @@
 'use client';
 
-import { AppBar, Toolbar, IconButton, Typography, Box, Button, Drawer, List, ListItem } from '@mui/material';
+import { AppBar, Toolbar, Typography, Box, Button, Drawer, List } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import SearchIcon from '@mui/icons-material/Search';
 import CloseIcon from '@mui/icons-material/Close';
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import Image from 'next/image';
 import { useState } from 'react';
 import Link from 'next/link';

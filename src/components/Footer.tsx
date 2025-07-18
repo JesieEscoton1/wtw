@@ -42,13 +42,13 @@ const Footer = () => {
             </Box> */}
             <Link href="/" className="cursor-pointer">
               <Image
-                src="/images/alliance.svg"
+                src="/images/alliance-bg.png"
                 alt="Alliance Logo"
                 width={240}
                 height={168}
                 priority
                 style={{ objectFit: 'contain' }}
-                className="md:w-[240px] md:h-[168px] ml-20 mb-5"
+                className="md:w-[240px] md:h-[168px] mb-5 mt-[-40px]"
               />
             </Link>
           </Box>
