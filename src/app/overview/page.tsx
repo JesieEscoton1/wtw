@@ -83,6 +83,10 @@ export default function OverviewPage() {
             <Typography variant="body1" className="text-gray-800 !text-base md:!text-lg">
             
             </Typography>
+            <Typography variant="body1" className="mb-2 text-gray-800" sx={{ fontSize: '18px', mt:1 }}>
+             We don&apos;t just solve problems we work side by side with you to anticipate change, align with
+             your ambitions, and build tailored solutions that drive sustainable growth.
+            </Typography>
           </Box>
         </Box>
 

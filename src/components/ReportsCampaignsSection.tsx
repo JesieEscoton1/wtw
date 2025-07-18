@@ -124,6 +124,33 @@ const ReportsCampaignsSection = () => {
   return (
     <Box className="py-8 md:py-16 px-4 md:px-8 bg-white">
       <Box className="container mx-auto max-w-12xl">
+        <Box
+          sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            mb: { xs: 4, md: 6 },
+          }}
+        >
+          <Box
+            sx={{
+              backgroundColor: 'rgba(0,0,0,0.5)',
+              px: 4,
+              py: 2,
+              borderRadius: 2,
+              display: 'inline-block',
+              width: '100%',
+            }}
+          >
+            <Typography
+              variant="h4"
+              component="h2"
+              align="center"
+              sx={{ fontWeight: 'bold', color: 'white', fontSize: { xs: '2rem', md: '2.5rem' } }}
+            >
+              Consulting Services
+            </Typography>
+          </Box>
+        </Box>
         <Grid>
           <GridItem>
             <ContentItem {...contentItems[0]} width={600} height={400} mobileHeight={350} mobileWidth={630} />

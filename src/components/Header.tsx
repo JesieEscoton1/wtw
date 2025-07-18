@@ -60,7 +60,7 @@ const Header = () => {
         </Box>
 
         {/* Right section: Search */}
-        <Box className="flex items-center border-l border-l-[1px] border-gray-300 pl-4 md:pl-10 pr-2 md:pr-4 h-[80px] md:h-[105px] -mt-3 -mb-3">
+        {/* <Box className="flex items-center border-l border-l-[1px] border-gray-300 pl-4 md:pl-10 pr-2 md:pr-4 h-[80px] md:h-[105px] -mt-3 -mb-3">
           <Typography variant="body1" component="div" sx={{ mr: 1 }} className="text-gray-700 text-sm md:text-base">
             Search
           </Typography>
@@ -73,7 +73,7 @@ const Header = () => {
           >
             <SearchIcon />
           </IconButton>
-        </Box>
+        </Box> */}
       </Toolbar>
 
       <Drawer
@@ -169,7 +169,7 @@ const Header = () => {
               </Typography>
               <ChevronRightIcon className="text-gray-700 opacity-0 group-hover:opacity-100 group-hover:text-[#00aaff] transition-opacity duration-200 mr-4" sx={{ fontSize: '2.5rem', mt: '2.5px', ml: '-3px' }} />
             </ListItem> */}
-            <ListItem 
+            {/* <ListItem 
               // onClick={(event) => {
               //   toggleDrawer(false)(event);
               //   window.location.href = '/news';
@@ -190,8 +190,8 @@ const Header = () => {
                 News
               </Typography>
               <ChevronRightIcon className="text-gray-700 opacity-0 group-hover:opacity-100 group-hover:text-[#00aaff] transition-opacity duration-200 mr-4" sx={{ fontSize: '2.5rem', mt: '2.5px', ml: '-3px' }} />
-            </ListItem>
-            <ListItem 
+            </ListItem> */}
+            {/* <ListItem 
               // onClick={(event) => {
               //   toggleDrawer(false)(event);
               //   window.location.href = '/careers';
@@ -212,7 +212,7 @@ const Header = () => {
                 Careers
               </Typography>
               <ChevronRightIcon className="text-gray-700 opacity-0 group-hover:opacity-100 group-hover:text-[#00aaff] transition-opacity duration-200 mr-4" sx={{ fontSize: '2.5rem', mt: '2.5px', ml: '-3px' }} />
-            </ListItem>
+            </ListItem> */}
           </List>
         </Box>
       </Drawer>
