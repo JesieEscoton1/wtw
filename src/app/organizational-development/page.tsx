@@ -4,6 +4,7 @@ import './styles.css';
 import { Box, Typography, Container, List, ListItem, ListItemIcon, ListItemText, Avatar, Button } from '@mui/material';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
@@ -65,6 +66,15 @@ export default function OrganizationalDevelopment() {
               We help strengthen your organization through structure reviews, culture development, competency frameworks, and strategic planning — all designed to build resilience and readiness for growth.
               </Typography>
             </Box>
+            <Button
+              variant="contained"
+              className="bg-[#E04A9B] hover:bg-pink-600 normal-case font-bold rounded-full px-6 md:px-8 py-2 md:py-3 text-base md:text-lg shadow-none"
+              style={{ background: '#00aaff', borderRadius: '9999px', fontWeight: 700, marginTop: 20, color: 'white' }}
+              endIcon={<ArrowForwardIcon />}
+              onClick={() => window.location.href = '/contact-us'}
+            >
+              Contact Us
+            </Button>
           </Container>
         </Box>
 
@@ -143,6 +153,11 @@ export default function OrganizationalDevelopment() {
                   </Box>
                 </Box>
 
+               
+              </Box>
+
+              {/* Right column for Global Research and Contact */}
+              <Box>
                 {/* Our Impact */}
                 <Box className="bg-gradient-to-r from-blue-100 to-blue-300 rounded-xl p-6 shadow">
                   <Typography variant="h4" className="font-bold mb-2 text-blue-700">Our Impact</Typography>
@@ -152,7 +167,7 @@ export default function OrganizationalDevelopment() {
                 </Box>
 
                 {/* Call to Action */}
-                <Box className="flex justify-center mt-6">
+                {/* <Box className="flex justify-center mt-6">
                   <Button
                     variant="contained"
                     className="bg-gradient-to-r from-blue-500 to-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg"
@@ -160,33 +175,7 @@ export default function OrganizationalDevelopment() {
                   >
                     Book a Consultation
                   </Button>
-                </Box>
-              </Box>
-
-              {/* Right column for Global Research and Contact */}
-              <Box>
-                {/* Global Research Card */}
-                <Box className="bg-white rounded-lg border-l-4 border-blue-300 border-t border-r border-b p-6 mb-12">
-                  <Typography variant="overline" className="text-gray-600 block mb-4">
-                    GLOBAL RESEARCH
-                  </Typography>
-                  <Typography variant="h3" className="text-3xl font-bold mb-4">
-                    2025 Benefits Trends Survey
-                  </Typography>
-                  <Typography variant="body1" className="mb-6">
-                    Track trends around employers&apos; benefit plans and understand how you can improve benefits outcomes
-                    Track trends around employers&apos; benefit plans and understand how you can improve benefits outcomes
-                  </Typography>
-                  <Button
-                   
-                    endIcon={<span className="ml-2">→</span>}
-                    fullWidth
-                    sx={{ maxWidth: { xs: '100%', sm: 'auto' } }}
-                  >
-                    Participate now
-                  </Button>
-                </Box>
-
+                </Box> */}
                 {/* Contact Section */}
                 <Box>
                   <Typography variant="h3" className="text-xl font-bold mb-6 ">
