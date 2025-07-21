@@ -45,6 +45,7 @@ export default function OverviewPage() {
               className="bg-[#E04A9B] hover:bg-pink-600 normal-case font-bold rounded-full px-6 md:px-8 py-2 md:py-3 text-base md:text-lg shadow-none"
               style={{ background: '#00aaff', borderRadius: '9999px', fontWeight: 700, marginTop: 20, color: 'white' }}
               endIcon={<ArrowForwardIcon />}
+              onClick={() => window.location.href = '/contact-us'}
             >
               Contact Us
             </Button>

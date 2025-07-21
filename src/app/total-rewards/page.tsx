@@ -16,7 +16,7 @@ export default function TotalRewards() {
         <Box className="container mx-auto max-w-7xl flex flex-col md:flex-row items-center gap-8 min-h-[440px]">
           {/* Left: Text */}
           <Box className="flex-1 text-white space-y-6 md:pr-8">
-            <Typography variant="overline" className="text-blue-500 tracking-widest font-bold !text-base" style={{ letterSpacing: '0.15em', fontWeight: 'bold'}}>
+            <Typography variant="overline" className="tracking-widest font-bold !text-base" style={{ letterSpacing: '0.15em', fontWeight: 'bold'}}>
               Total Rewards
             </Typography>
             <Typography
@@ -39,8 +39,9 @@ export default function TotalRewards() {
             <Button
               variant="contained"
               className="bg-[#E04A9B] hover:bg-pink-600 normal-case font-bold rounded-full px-8 py-3 text-lg shadow-none"
-              style={{ background: '#4E71FF', borderRadius: '9999px', fontWeight: 700, marginTop: 20, color: 'white', fontSize: '18px' }}
+              style={{ background: '#00aaff', borderRadius: '9999px', fontWeight: 700, marginTop: 20, color: 'white', fontSize: '18px' }}
               endIcon={<ArrowForwardIcon />}
+              onClick={() => window.location.href = '/contact-us'}
             >
               Contact Us
             </Button>
