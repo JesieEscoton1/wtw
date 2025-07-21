@@ -10,47 +10,22 @@ const Footer = () => {
     <Box component="footer" className="site-footer  bg-[lightblue] text-white py-8 sm:py-6 px-4 md:px-8 relative">
       <Box className="container mx-auto max-w-7xl">
         {/* Top Section: Logo and Links */}
-        <Box className="flex flex-col md:flex-row flex-wrap -mx-4 justify-between">
+        <Box className="flex flex-col md:flex-row flex-wrap -mx-4 justify-evenly">
           {/* Logo and Social Icons Column */}
-          <Box className="w-full md:w-3/12 lg:w-2/12 px-4 mb-8 md:mb-0 flex flex-col items-center md:items-start">
-            {/* Social Media Links */}
-            {/* <Box className="site-footer__social-container flex space-x-4 mt-4 md:mt-70">
-              <IconButton 
-                rel="noopener noreferrer"
-                color="inherit" 
-                aria-label="Facebook" 
-                className="p-0 text-white opacity-75 hover:opacity-100 transition-opacity hover:scale-110 transform duration-300"
-              >
-                <FacebookIcon className="text-[20px] md:text-[24px]" />
-              </IconButton>
-              <IconButton 
-                rel="noopener noreferrer" 
-                color="inherit" 
-                aria-label="LinkedIn" 
-                className="p-0 text-white opacity-75 hover:opacity-100 transition-opacity hover:scale-110 transform duration-300"
-              >
-                <LinkedInIcon className="text-[20px] md:text-[24px]" />
-              </IconButton>
-              <IconButton 
-                rel="noopener noreferrer" 
-                color="inherit" 
-                aria-label="Instagram" 
-                className="p-0 text-white opacity-75 hover:opacity-100 transition-opacity hover:scale-110 transform duration-300"
-              >
-                <InstagramIcon className="text-[20px] md:text-[24px]" />
-              </IconButton>
-            </Box> */}
-            <Link href="/" className="cursor-pointer">
-              <Image
-                src="/images/alliance-bg.png"
-                alt="Alliance Logo"
-                width={240}
-                height={168}
-                priority
-                style={{ objectFit: 'contain' }}
-                className="md:w-[240px] md:h-[168px] mb-5 mt-[-40px]"
-              />
-            </Link>
+          <Box className="w-full md:w-3/12 lg:w-2/12 px-4 mb-8 md:mb-0 flex flex-col items-center justify-center">
+            <div className="flex justify-center items-center w-full">
+              <Link href="/" className="cursor-pointer">
+                <Image
+                  src="/images/alliance-bg.png"
+                  alt="Alliance Logo"
+                  width={320}
+                  height={224}
+                  priority
+                  style={{ objectFit: 'contain', maxWidth: 'fit-content' }}
+                  className="md:w-[320px] md:h-[224px] mb-5 mt-[-40px]"
+                />
+              </Link>
+            </div>
           </Box>
 
           {/* Primary and Secondary Links Container */}
@@ -106,9 +81,9 @@ const Footer = () => {
             </Box>
             {/* Book a Meeting Column */}
             <Box className="w-full md:w-1/3 mb-6 md:mb-0 flex flex-col items-center justify-center">
-              <Typography variant="h6" className="font-bold mb-3 !text-black text-center" sx={{ fontWeight: 'bold', color: 'black', textAlign: 'center' }}>
+              {/* <Typography variant="h6" className="font-bold mb-3 !text-black text-center" sx={{ fontWeight: 'bold', color: 'black', textAlign: 'center' }}>
                 Book a Meeting
-              </Typography>
+              </Typography> */}
               <a
                 href="https://calendly.com/your-client-link" // TODO: Replace with actual Calendly link
                 target="_blank"

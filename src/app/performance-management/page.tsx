@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Typography, Button, Paper, Stack } from '@mui/material';
+import { Box, Typography, Button, Paper, Stack, Avatar } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Image from 'next/image';
 import Header from '@/components/Header';
@@ -42,6 +42,7 @@ export default function PerformanceManagement() {
               className="bg-[#E04A9B] hover:bg-pink-600 normal-case font-bold rounded-full px-6 md:px-8 py-2 md:py-3 text-base md:text-lg shadow-none"
               style={{ background: '#00aaff', borderRadius: '9999px', fontWeight: 700, marginTop: 20, color: 'white' }}
               endIcon={<ArrowForwardIcon />}
+              onClick={() => window.location.href = '/contact-us'}
             >
               Contact Us
             </Button>
@@ -181,7 +182,7 @@ export default function PerformanceManagement() {
             </Box>
           </Paper>
 
-          <Box className="relative w-full h-[300px] my-8">
+          <Box className="relative w-full h-[250px] my-6">
               <Image
                 src="/images/transform-tomorrows.png"
                 alt="Transform Tomorrows"
@@ -191,12 +192,49 @@ export default function PerformanceManagement() {
               />
           </Box>
 
-          {/* Alliance Atlantic HR Consulting Description */}
-          <Paper elevation={0} sx={{ background: '#e3f4fb', py: 2, px: 2, borderRadius: 2, mt: -2, mb: 2 }}>
-            <Typography variant="subtitle1" align="center" sx={{ color: '#0077b6', fontWeight: 600, fontSize: '0.85rem' }}>
-              Transform your tomorrow with Alliance Atlantic empowering your people to achieve lasting success.
+          <Box>
+            <Typography variant="h4" className="text-xl font-bold mb-6 ">
+              Contact
             </Typography>
-          </Paper>
+            <Box className="space-y-8 mt-4">
+              {/* Contact Person Sample */}
+              {[
+                {
+                  src: '/images/contact-avatar.jpg',
+                  alt: 'Sandy Togonon',
+                  name: 'Sandy Togonon',
+                  title: 'Managing Director of Alliance Atlantic',
+                  email: true,
+                  phone: false,
+                  emailLabel: 'Email',
+                  phoneNumber: '',
+                },
+              
+                
+                
+              ].map((contact, i) => (
+                <Box key={i} className="flex gap-6 flex-col sm:flex-row items-start sm:items-center">
+                  <Avatar
+                    src={contact.src}
+                    alt={contact.alt}
+                    sx={{ width: 80, height: 80, flexShrink: 0 }}
+                  />
+                  <Box sx={{ marginTop: { xs: '12px', sm: '0' } }}>
+                    <Typography variant="h6" className="font-bold text-black-600 hover:text-black cursor-pointer">
+                      {contact.name}
+                    </Typography>
+                    <Typography variant="body2" className="text-gray-600 mb-3">
+                      {contact.title}
+                    </Typography>
+                    <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap' }}>
+                      
+                      
+                    </Box>
+                  </Box>
+                </Box>
+              ))}
+            </Box>
+          </Box>
 
         </Box>
         
