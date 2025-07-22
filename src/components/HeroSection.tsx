@@ -7,7 +7,7 @@ import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
-type Section = 'About Us' | 'Core Values' | 'Our Vision';
+type Section = 'Core Values' | 'Our Vision';
 
 const HeroSection = () => {
   const [activeSection, setActiveSection] = useState<Section | null>(null);
@@ -45,8 +45,6 @@ const HeroSection = () => {
   // Default and Core Values content
   const defaultTitle = 'Empowering People, Transforming Workforces';
   const defaultSubtitle = 'Unlock your organization’s potential with expert HR consulting and talent solutions';
-  const aboutUsTitle = 'About Alliance Atlantic';
-  const aboutUsParagraph = `Grow stronger with people strategies and solutions built for change.\nAt Alliance Atlantic, we’ve spent over 25 years helping organizations thrive through people-first strategies, performance systems, and leadership development. Our seasoned consultants bring deep expertise across organizational design, total rewards, HR capability, and job evaluation — always tailored to your structure, culture, and goals. Guided by people-first strategies, driven by data, and committed to results, we’re more than consultants — we’re your partner of choice in building resilient, future-ready organizations.`;
   const coreValuesTitle = 'SERVICE BEYOND BOUNDARIES';
   const coreValuesLines = [
     'Beyond profit...',
@@ -94,18 +92,7 @@ const HeroSection = () => {
               }}
             />
             <Box className="hero-homepage__title-block bg-white p-6 md:p-12 shadow-xl w-[90%] md:max-w-xl transform transition-all duration-300 hover:shadow-2xl absolute z-10 top-[10%] left-1/2 -translate-x-1/2 md:top-[8.5%] md:left-[4%] md:translate-x-0">
-              {activeSection === 'About Us' ? (
-                <>
-                  <h1 className="heading-1 m-0 mb-2 md:mb-3 text-gray-900 font-serif leading-tight text-xl md:text-3xl" style={{ textWrap: 'balance', fontWeight: 'bold' }}>
-                    {aboutUsTitle}
-                  </h1>
-                  <span className="heading-3 p-0 mt-2 md:mt-3 mb-2 text-black font-serif font-bold text-base md:text-xl block">
-                    {aboutUsParagraph.split('\n').map((line, idx) => (
-                      <span key={idx} style={{ display: 'block', fontWeight: 'normal' }}>{line}</span>
-                    ))}
-                  </span>
-                </>
-              ) : activeSection === 'Core Values' ? (
+              {activeSection === 'Core Values' ? (
                 <>
                   <h1 className="heading-1 m-0 mb-2 md:mb-3 text-gray-900 font-serif leading-tight text-2xl md:text-5xl" style={{ textWrap: 'balance', fontWeight: 'bold' }}>
                     {coreValuesTitle}
@@ -153,7 +140,7 @@ const HeroSection = () => {
                 Discover More
               </Typography> 
               <Box className="accordion space-y-0 pt-2 md:pt-4" id="homepage-nav-accordion">
-                {(['About Us', 'Core Values', 'Our Vision'] as Section[]).map((section) => (
+                {(['Core Values', 'Our Vision'] as Section[]).map((section) => (
                   <Box 
                     key={section}
                     className="homepage-nav-item"
