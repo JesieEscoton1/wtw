@@ -72,7 +72,7 @@ function ContactUsForm() {
       } else {
         enqueueSnackbar('Failed to send message. Please try again later.', { variant: 'error' });
       }
-    } catch (err) {
+    } catch {
       enqueueSnackbar('An error occurred. Please try again later.', { variant: 'error' });
     }
   };

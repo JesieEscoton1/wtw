@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Typography, Button, Paper, Stack, Avatar, Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
+import { Box, Typography, Button, Paper, Avatar, Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Image from 'next/image';
 import Header from '@/components/Header';
@@ -16,8 +16,8 @@ import GavelIcon from '@mui/icons-material/Gavel';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 
 // Custom styled Accordion for enhanced design
-const StyledAccordion = styled(Accordion)(({ theme }) => ({
-  marginBottom: theme.spacing(1),
+const StyledAccordion = styled(Accordion)(() => ({
+  marginBottom: 8, // theme.spacing(1) replaced with 8px
   borderRadius: 12,
   boxShadow: '0 2px 12px 0 rgba(0,170,255,0.06)',
   border: '1.5px solid #e3f4fb',
@@ -29,7 +29,7 @@ const StyledAccordion = styled(Accordion)(({ theme }) => ({
   },
 }));
 
-const StyledAccordionSummary = styled(AccordionSummary)(({ theme }) => ({
+const StyledAccordionSummary = styled(AccordionSummary)(() => ({
   fontWeight: 700,
   fontSize: '1.1rem',
   color: '#00aaff',
@@ -49,7 +49,7 @@ const StyledAccordionSummary = styled(AccordionSummary)(({ theme }) => ({
   },
 }));
 
-const StyledAccordionDetails = styled(AccordionDetails)(({ theme }) => ({
+const StyledAccordionDetails = styled(AccordionDetails)(() => ({
   background: '#fff',
   color: '#444',
   borderRadius: 8,
@@ -66,6 +66,37 @@ const StyledAccordionDetails = styled(AccordionDetails)(({ theme }) => ({
 }));
 
 export default function PeopleSoftware() {
+  // Move useState for expanded to top-level
+  const [expanded, setExpanded] = React.useState<string | false>(false);
+
+  // Accordion items
+  const items = [
+    {
+      title: 'Global Compensation Insights',
+      icon: <PublicIcon sx={{ color: '#00aaff', mr: 1, fontSize: 28 }} />,
+      content: 'Access real-time global pay data to make informed, competitive compensation decisions. Our platform provides accurate salary, bonus, and equity benchmarks from trusted HR and payroll sources—helping you build fair and effective pay packages.'
+    },
+    {
+      title: 'Compensation Benchmarking',
+      icon: <EqualizerIcon sx={{ color: '#E04A9B', mr: 1, fontSize: 28 }} />,
+      content: 'Easily compare your team’s pay to market rates with AI-powered benchmarking. Connect your HRIS, use our rich data or import third-party surveys, and instantly see how employee compensation stacks up—so you can adjust and stay competitive with confidence.'
+    },
+    {
+      title: 'Smart Raise & Bonus Management',
+      icon: <AssessmentIcon sx={{ color: '#ffd600', mr: 1, fontSize: 28 }} />,
+      content: 'Simplify how you plan and execute raises and bonuses with guided, data-backed workflows. Set budgets, manage approvals, and communicate changes effortlessly—all in one place.'
+    },
+    {
+      title: 'Strategic Pay Planning',
+      icon: <GavelIcon sx={{ color: '#7c3aed', mr: 1, fontSize: 28 }} />,
+      content: 'Build clear, competitive salary ranges across roles and locations with a scalable, transparent framework. Define and apply your pay philosophy consistently—balancing equity, geography, and remote policies—while spotting and correcting pay gaps proactively.'
+    },
+    {
+      title: 'Pay Equity Insights',
+      icon: <PersonOutlineIcon sx={{ color: '#00b894', mr: 1, fontSize: 28 }} />,
+      content: 'Identify and address pay gaps across roles and demographics with built-in equity tools. Access detailed DEI metrics and track progress over time—ensuring fairness and objectivity in every compensation decision.'
+    },
+  ];
 
   return (
     <Box className="w-full min-h-screen bg-white">
@@ -135,55 +166,25 @@ export default function PeopleSoftware() {
             What is OpenComp?
           </Typography>
           {/* Expandable List using MUI Accordion */}
-          {(() => {
-            const [expanded, setExpanded] = React.useState<string | false>(false);
-            const items = [
-              {
-                title: 'Global Compensation Insights',
-                icon: <PublicIcon sx={{ color: '#00aaff', mr: 1, fontSize: 28 }} />,
-                content: 'Access real-time global pay data to make informed, competitive compensation decisions. Our platform provides accurate salary, bonus, and equity benchmarks from trusted HR and payroll sources—helping you build fair and effective pay packages.'
-              },
-              {
-                title: 'Compensation Benchmarking',
-                icon: <EqualizerIcon sx={{ color: '#E04A9B', mr: 1, fontSize: 28 }} />,
-                content: 'Easily compare your team’s pay to market rates with AI-powered benchmarking. Connect your HRIS, use our rich data or import third-party surveys, and instantly see how employee compensation stacks up—so you can adjust and stay competitive with confidence.'
-              },
-              {
-                title: 'Smart Raise & Bonus Management',
-                icon: <AssessmentIcon sx={{ color: '#ffd600', mr: 1, fontSize: 28 }} />,
-                content: 'Simplify how you plan and execute raises and bonuses with guided, data-backed workflows. Set budgets, manage approvals, and communicate changes effortlessly—all in one place.'
-              },
-              {
-                title: 'Strategic Pay Planning',
-                icon: <GavelIcon sx={{ color: '#7c3aed', mr: 1, fontSize: 28 }} />,
-                content: 'Build clear, competitive salary ranges across roles and locations with a scalable, transparent framework. Define and apply your pay philosophy consistently—balancing equity, geography, and remote policies—while spotting and correcting pay gaps proactively.'
-              },
-              {
-                title: 'Pay Equity Insights',
-                icon: <PersonOutlineIcon sx={{ color: '#00b894', mr: 1, fontSize: 28 }} />,
-                content: 'Identify and address pay gaps across roles and demographics with built-in equity tools. Access detailed DEI metrics and track progress over time—ensuring fairness and objectivity in every compensation decision.'
-              },
-            ];
-            return items.map((item, idx) => (
-              <StyledAccordion
-                key={item.title}
-                expanded={expanded === item.title}
-                onChange={(_e, isExp) => setExpanded(isExp ? item.title : false)}
-              >
-                <StyledAccordionSummary expandIcon={<ArrowForwardIcon sx={{ color: expanded === item.title ? '#E04A9B' : '#00aaff' }} />}>
-                  <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                    {item.icon}
-                    <span>{`${idx + 1}. ${item.title}`}</span>
-                  </Box>
-                </StyledAccordionSummary>
-                <Collapse in={expanded === item.title} timeout={400}>
-                  <StyledAccordionDetails>
-                    {item.content}
-                  </StyledAccordionDetails>
-                </Collapse>
-              </StyledAccordion>
-            ));
-          })()}
+          {items.map((item, idx) => (
+            <StyledAccordion
+              key={item.title}
+              expanded={expanded === item.title}
+              onChange={(_e, isExp) => setExpanded(isExp ? item.title : false)}
+            >
+              <StyledAccordionSummary expandIcon={<ArrowForwardIcon sx={{ color: expanded === item.title ? '#E04A9B' : '#00aaff' }} />}>
+                <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                  {item.icon}
+                  <span>{`${idx + 1}. ${item.title}`}</span>
+                </Box>
+              </StyledAccordionSummary>
+              <Collapse in={expanded === item.title} timeout={400}>
+                <StyledAccordionDetails>
+                  {item.content}
+                </StyledAccordionDetails>
+              </Collapse>
+            </StyledAccordion>
+          ))}
         </Box>
         
         
