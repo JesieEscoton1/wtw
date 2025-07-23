@@ -15,6 +15,12 @@ import HubIcon from '@mui/icons-material/Hub';
 import TuneIcon from '@mui/icons-material/Tune';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import AutoGraphIcon from '@mui/icons-material/AutoGraph';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
+// Add custom Swiper pagination styles
+import './swiper-pagination-custom.css';
 
 export default function OverviewPage() {
 
@@ -121,80 +127,122 @@ export default function OverviewPage() {
 
         {/* Why Choose Alliance Atlantic Section */}
         <Box className="container mx-auto max-w-7xl py-10 md:py-16 px-2 md:px-4">
-          <Box className="bg-white rounded-2xl shadow-lg p-4 md:p-12 flex flex-col items-center text-left">
-            <Typography variant="h4" className="font-bold mb-6 md:mb-8 text-gray-900 !text-xl md:!text-2xl lg:!text-4xl">
-              Why Choose Alliance Atlantic?
-            </Typography>
-            <Box className="relative w-full" sx={{ mt: 2 }}>
-              {/* Vertical line: left-4 on mobile, left-8 on md+ */}
-              <Box className="absolute left-4 md:left-8 top-0 bottom-0 w-1" style={{ background: 'linear-gradient(to bottom, #e04a9b 0%, #00aaff 100%)', borderRadius: 8, zIndex: 0 }} />
-              <Box className="flex flex-col gap-6 md:gap-10 pl-6 md:pl-16 relative z-10">
-                {/* Step 1 */}
-                <Box className="flex flex-row items-start gap-3 md:gap-4 mb-4 md:mb-2 max-w-full md:max-w-3xl">
-                  <WorkspacePremiumIcon className="mt-1" style={{ color: '#e04a9b', fontSize: 24, flexShrink: 0 }} />
-                  <Box>
-                    <Typography variant="h6" className="font-bold mb-1 !text-base md:!text-lg" style={{ color: '#e04a9b' }}>Decades of Expertise</Typography>
-                    <Typography variant="body2" className="text-gray-700 !text-sm md:!text-base">
-                      Our team has decades of global expertise developing people strategies and a rich
-                      legacy in HR consulting. We have established ourselves as reliable consultants in
-                      the HR industry by assisting businesses of all sizes with transitions, expansions,
-                      and performance issues.</Typography>
+          <Box className="bg-white rounded-2xl shadow-lg p-4 md:p-12 flex flex-col md:flex-row items-start md:items-stretch gap-8">
+            {/* Left: Steps/Text */}
+            <Box className="flex-1 flex flex-col items-center text-left">
+              <Typography variant="h4" className="font-bold mb-6 md:mb-8 text-gray-900 !text-xl md:!text-2xl lg:!text-4xl">
+                Why Choose Alliance Atlantic?
+              </Typography>
+              <Box className="relative w-full" sx={{ mt: 2 }}>
+                {/* Vertical line: left-4 on mobile, left-8 on md+ */}
+                <Box className="absolute left-4 md:left-8 top-0 bottom-0 w-1" style={{ background: 'linear-gradient(to bottom, #e04a9b 0%, #00aaff 100%)', borderRadius: 8, zIndex: 0 }} />
+                <Box className="flex flex-col gap-6 md:gap-10 pl-6 md:pl-16 relative z-10">
+                  {/* Step 1 */}
+                  <Box className="flex flex-row items-start gap-3 md:gap-4 mb-4 md:mb-2 max-w-full md:max-w-3xl">
+                    <WorkspacePremiumIcon className="mt-1" style={{ color: '#e04a9b', fontSize: 24, flexShrink: 0 }} />
+                    <Box>
+                      <Typography variant="h6" className="font-bold mb-1 !text-base md:!text-lg" style={{ color: '#e04a9b' }}>Decades of Expertise</Typography>
+                      <Typography variant="body2" className="text-gray-700 !text-sm md:!text-base">
+                        Our team has decades of global expertise developing people strategies and a rich
+                        legacy in HR consulting. We have established ourselves as reliable consultants in
+                        the HR industry by assisting businesses of all sizes with transitions, expansions,
+                        and performance issues.</Typography>
+                    </Box>
                   </Box>
-                </Box>
-                {/* Step 2 */}
-                <Box className="flex flex-row items-start gap-3 md:gap-4 mb-4 md:mb-2 max-w-full md:max-w-3xl">
-                  <HubIcon className="mt-1" style={{ color: '#00aaff', fontSize: 24, flexShrink: 0 }} />
-                  <Box>
-                    <Typography variant="h6" className="font-bold mb-1 !text-base md:!text-lg" style={{ color: '#00aaff' }}>Holistic People Strategy</Typography>
-                    <Typography variant="body2" className="text-gray-700 !text-sm md:!text-base">
-                      We consider your entire people ecosystem, integrating leadership, culture, talent development,
-                      and organizational design into a single, coherent plan. Our objective is to assist you in coordinating
-                      all of your employees with your corporate objectives.</Typography>
+                  {/* Step 2 */}
+                  <Box className="flex flex-row items-start gap-3 md:gap-4 mb-4 md:mb-2 max-w-full md:max-w-3xl">
+                    <HubIcon className="mt-1" style={{ color: '#00aaff', fontSize: 24, flexShrink: 0 }} />
+                    <Box>
+                      <Typography variant="h6" className="font-bold mb-1 !text-base md:!text-lg" style={{ color: '#00aaff' }}>Holistic People Strategy</Typography>
+                      <Typography variant="body2" className="text-gray-700 !text-sm md:!text-base">
+                        We consider your entire people ecosystem, integrating leadership, culture, talent development,
+                        and organizational design into a single, coherent plan. Our objective is to assist you in coordinating
+                        all of your employees with your corporate objectives.</Typography>
+                    </Box>
                   </Box>
-                </Box>
-                {/* Step 3 */}
-                <Box className="flex flex-row items-start gap-3 md:gap-4 mb-4 md:mb-2 max-w-full md:max-w-3xl">
-                  <TuneIcon className="mt-1" style={{ color: '#a259e6', fontSize: 24, flexShrink: 0 }} />
-                  <Box>
-                    <Typography variant="h6" className="font-bold mb-1 !text-base md:!text-lg" style={{ color: '#a259e6' }}>Tailored for You</Typography>
-                    <Typography variant="body2" className="text-gray-700 !text-sm md:!text-base">
-                      Our solutions and our organizations are not the same.We work directly with your teams
-                      to create programs that are highly relevant and impactful, reflecting your own culture,
-                      structure, and strategic objectives.</Typography>
+                  {/* Step 3 */}
+                  <Box className="flex flex-row items-start gap-3 md:gap-4 mb-4 md:mb-2 max-w-full md:max-w-3xl">
+                    <TuneIcon className="mt-1" style={{ color: '#a259e6', fontSize: 24, flexShrink: 0 }} />
+                    <Box>
+                      <Typography variant="h6" className="font-bold mb-1 !text-base md:!text-lg" style={{ color: '#a259e6' }}>Tailored for You</Typography>
+                      <Typography variant="body2" className="text-gray-700 !text-sm md:!text-base">
+                        Our solutions and our organizations are not the same.We work directly with your teams
+                        to create programs that are highly relevant and impactful, reflecting your own culture,
+                        structure, and strategic objectives.</Typography>
+                    </Box>
                   </Box>
-                </Box>
-                {/* Step 4 */}
-                <Box className="flex flex-row items-start gap-3 md:gap-4 mb-4 md:mb-2 max-w-full md:max-w-3xl">
-                  <BarChartIcon className="mt-1" style={{ color: '#ffd600', fontSize: 24, flexShrink: 0 }} />
-                  <Box>
-                    <Typography variant="h6" className="font-bold mb-1 !text-base md:!text-lg" style={{ color: '#ffd600' }}>Measurable Results</Typography>
-                    <Typography variant="body2" className="text-gray-700 !text-sm md:!text-base">
-                    Our work produces results rather than just suggestions. To make sure you get genuine,
-                    observable return on your investment, we monitor progress, assess efficacy, and continuously
-                    enhance using data and analytics.</Typography>
+                  {/* Step 4 */}
+                  <Box className="flex flex-row items-start gap-3 md:gap-4 mb-4 md:mb-2 max-w-full md:max-w-3xl">
+                    <BarChartIcon className="mt-1" style={{ color: '#ffd600', fontSize: 24, flexShrink: 0 }} />
+                    <Box>
+                      <Typography variant="h6" className="font-bold mb-1 !text-base md:!text-lg" style={{ color: '#ffd600' }}>Measurable Results</Typography>
+                      <Typography variant="body2" className="text-gray-700 !text-sm md:!text-base">
+                      Our work produces results rather than just suggestions. To make sure you get genuine,
+                      observable return on your investment, we monitor progress, assess efficacy, and continuously
+                      enhance using data and analytics.</Typography>
+                    </Box>
                   </Box>
-                </Box>
-                {/* Step 5 */}
-                <Box className="flex flex-row items-start gap-3 md:gap-4 mb-4 md:mb-2 max-w-full md:max-w-3xl">
-                  <AutoGraphIcon className="mt-1" style={{ color: '#00c49a', fontSize: 24, flexShrink: 0 }} />
-                  <Box>
-                    <Typography variant="h6" className="font-bold mb-1 !text-base md:!text-lg" style={{ color: '#00c49a' }}>Future-Ready Tools</Typography>
-                    <Typography variant="body2" className="text-gray-700 !text-sm md:!text-base">
-                    We provide you with cutting-edge frameworks, tools, and technologies that help you
-                    stay ahead of change and maintain an agile people strategy. With innovative concepts
-                    and digital HR technologies, we prepare your team for the future.</Typography>
+                  {/* Step 5 */}
+                  <Box className="flex flex-row items-start gap-3 md:gap-4 mb-4 md:mb-2 max-w-full md:max-w-3xl">
+                    <AutoGraphIcon className="mt-1" style={{ color: '#00c49a', fontSize: 24, flexShrink: 0 }} />
+                    <Box>
+                      <Typography variant="h6" className="font-bold mb-1 !text-base md:!text-lg" style={{ color: '#00c49a' }}>Future-Ready Tools</Typography>
+                      <Typography variant="body2" className="text-gray-700 !text-sm md:!text-base">
+                      We provide you with cutting-edge frameworks, tools, and technologies that help you
+                      stay ahead of change and maintain an agile people strategy. With innovative concepts
+                      and digital HR technologies, we prepare your team for the future.</Typography>
+                    </Box>
+                  </Box>
+                  {/* CTA Button below last step */}
+                  <Box className="mt-8 md:mt-10 w-full flex justify-center">
+                    <Button
+                      variant="contained"
+                      className="bg-[#E04A9B] hover:bg-pink-600 normal-case font-bold rounded-full px-8 md:px-12 py-3 md:py-4 text-base md:text-lg shadow-none"
+                      style={{ background: '#00aaff', borderRadius: '9999px', fontWeight: 700, color: 'white' }}
+                      endIcon={<ArrowForwardIcon />}
+                      onClick={() => window.location.href = '/contact-us'}
+                    >
+                      Speak With Us
+                    </Button>
                   </Box>
                 </Box>
               </Box>
+       
             </Box>
-            {/* Our Team Highlight remains unchanged */}
-            <Box className="mt-8 md:mt-10 bg-[#00aaff] rounded-xl p-4 md:p-6 shadow flex flex-col items-center w-full">
-              <Typography variant="overline" className="text-white font-bold tracking-widest !text-xs md:!text-sm mb-1">Team</Typography>
-              <Typography variant="h6" className="font-bold mb-2 text-white !text-base md:!text-lg">Our Team</Typography>
-              <Typography variant="body2" className="text-white !text-sm md:!text-base">
-                Seasoned HR consultants dedicated to building stronger organizations through strategy, systems, and leadership.
-              </Typography>
+            {/* Right: Carousel Image Design */}
+            <Box className="flex-0 flex flex-col items-center justify-center -mt-4 md:-mt-[25rem] md:justify-center w-full">
+              <Swiper
+                modules={[Autoplay, Pagination]}
+                autoplay={{ delay: 2500, disableOnInteraction: false }}
+                pagination={{ clickable: true }}
+                loop={true}
+                spaceBetween={30}
+                className="w-full max-w-[420px] h-[180px] md:h-[260px] rounded-xl shadow-xl border border-gray-200 bg-white"
+              >
+                <SwiperSlide>
+                  <Box className="w-full h-full relative rounded-xl overflow-hidden">
+                    <Image src="/images/overview.png" alt="Overview" layout="fill" objectFit="cover" className="rounded-xl" />
+                  </Box>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Box className="w-full h-full relative rounded-xl overflow-hidden">
+                    <Image src="/images/overview-manage.png" alt="Overview Manage" layout="fill" objectFit="cover" className="rounded-xl" />
+                  </Box>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Box className="w-full h-full relative rounded-xl overflow-hidden">
+                    <Image src="/images/OD2.png" alt="About Us Overview" layout="fill" objectFit="cover" className="rounded-xl" />
+                  </Box>
+                </SwiperSlide>
+              </Swiper>
+              {/* Context box below carousel */}
+              <Box className="mt-2 w-full max-w-[420px] p-2 md:p-4 text-center">
+                <span className="block text-base md:text-lg font-semibold text-[#00AAFF]">
+                  Empowering your people and business to thrive with expert HR solutions.
+                </span>
+              </Box>
             </Box>
+
           </Box>
         </Box>
       </Box>

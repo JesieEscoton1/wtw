@@ -9,7 +9,7 @@ import Image from 'next/image';
 const Grid = styled('div')(({ theme }) => ({
   display: 'grid',
   gridTemplateColumns: 'repeat(12, 1fr)',
-  gap: theme.spacing(4),
+  gap: theme.spacing(2), // Reduced gap for mobile
   [theme.breakpoints.up('lg')]: {
     gap: theme.spacing(14),
   },
@@ -45,7 +45,7 @@ const ContentItem: React.FC<ContentItemProps> = ({ type, title, imageSrc, imageA
     <a href={linkHref} className="block">
       <Card elevation={0} className="flex flex-col h-full border-none shadow-none">
         <Box
-          className="relative w-full overflow-hidden mb-4 md:mb-0 transition-transform duration-300 hover:scale-95"
+          className="relative w-full overflow-hidden mb-2 md:mb-0 transition-transform duration-300 hover:scale-95" // mb-2 for mobile
           sx={{
             width: { xs: mobileWidth || '100%', md: width },
             height: { xs: mobileHeight || '250px', md: height },
@@ -122,7 +122,7 @@ const ReportsCampaignsSection = () => {
   ];
 
   return (
-    <Box className="py-8 md:py-16 px-4 md:px-8 bg-white">
+    <Box className="py-4 md:py-16 px-4 md:px-8 bg-white mt-4">
       <Box className="container mx-auto max-w-12xl">
         <Box
           sx={{
