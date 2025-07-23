@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Typography, Button } from '@mui/material';
+import { Box, Typography, Button, Avatar } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Image from 'next/image';
 import Header from '@/components/Header';
@@ -16,7 +16,7 @@ export default function TotalRewards() {
         <Box className="container mx-auto max-w-7xl flex flex-col md:flex-row items-center gap-8 min-h-[440px]">
           {/* Left: Text */}
           <Box className="flex-1 text-white space-y-6 md:pr-8">
-            <Typography variant="overline" className="text-blue-500 tracking-widest font-bold !text-base" style={{ letterSpacing: '0.15em', fontWeight: 'bold'}}>
+            <Typography variant="overline" className="tracking-widest font-bold !text-base" style={{ letterSpacing: '0.15em', fontWeight: 'bold'}}>
               Total Rewards
             </Typography>
             <Typography
@@ -39,8 +39,9 @@ export default function TotalRewards() {
             <Button
               variant="contained"
               className="bg-[#E04A9B] hover:bg-pink-600 normal-case font-bold rounded-full px-8 py-3 text-lg shadow-none"
-              style={{ background: '#4E71FF', borderRadius: '9999px', fontWeight: 700, marginTop: 20, color: 'white', fontSize: '18px' }}
+              style={{ background: '#00aaff', borderRadius: '9999px', fontWeight: 700, marginTop: 20, color: 'white', fontSize: '18px' }}
               endIcon={<ArrowForwardIcon />}
+              onClick={() => window.location.href = '/contact-us'}
             >
               Contact Us
             </Button>
@@ -121,11 +122,49 @@ export default function TotalRewards() {
               Our clients experience improved employee engagement, stronger talent retention, and a more compelling employer brand. We deliver measurable results that support your organization’s long-term success.
             </Typography>
           </Box>
-          <button
-            className="bg-gradient-to-r from-blue-500 to-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg text-lg hover:from-blue-600 hover:to-blue-800 transition-colors w-full"
-          >
-            Book a Consultation
-          </button>
+          <Box>
+                  <Typography variant="h3" className="text-xl font-bold mb-6 ">
+                    Contact
+                  </Typography>
+                  <Box className="space-y-8 mt-6">
+                    {/* Contact Person Sample */}
+                    {[
+                      {
+                        src: '/images/contact-avatar.jpg',
+                        alt: 'Sandy Togonon',
+                        name: 'Sandy Togonon',
+                        title: 'Managing Director of Alliance Atlantic',
+                        email: true,
+                        phone: false,
+                        emailLabel: 'Email',
+                        phoneNumber: '',
+                      },
+                    
+                     
+                     
+                    ].map((contact, i) => (
+                      <Box key={i} className="flex gap-6 flex-col sm:flex-row items-start sm:items-center">
+                        <Avatar
+                          src={contact.src}
+                          alt={contact.alt}
+                          sx={{ width: 80, height: 80, flexShrink: 0 }}
+                        />
+                        <Box sx={{ marginTop: { xs: '12px', sm: '0' } }}>
+                          <Typography variant="h6" className="font-bold text-black-600 hover:text-black cursor-pointer">
+                            {contact.name}
+                          </Typography>
+                          <Typography variant="body2" className="text-gray-600 mb-3">
+                            {contact.title}
+                          </Typography>
+                          <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap' }}>
+                            
+                            
+                          </Box>
+                        </Box>
+                      </Box>
+                    ))}
+                  </Box>
+                </Box>
         </Box>
       </Box>
 

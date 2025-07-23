@@ -1,19 +1,21 @@
 "use client";
 
-import { Box, Typography, Button, Paper, Stack, Avatar, TextField } from '@mui/material';
+import { Box, Typography, Button, Paper, Avatar, TextField } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Image from 'next/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { useState } from 'react';
+import { SnackbarProvider, useSnackbar } from 'notistack';
 
-export default function ContactUs() {
+function ContactUsForm() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [emailError, setEmailError] = useState('');
   const [nameError, setNameError] = useState('');
   const [messageError, setMessageError] = useState('');
+  const { enqueueSnackbar } = useSnackbar();
 
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
@@ -26,7 +28,7 @@ export default function ContactUs() {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     let valid = true;
     // Validate name
@@ -52,7 +54,27 @@ export default function ContactUs() {
       setMessageError('');
     }
     if (!valid) return;
-    // Submit logic here
+
+    // Send form data to API
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, message }),
+      });
+
+      const data = await res.json();
+      if (data.success) {
+        setName('');
+        setEmail('');
+        setMessage('');
+        enqueueSnackbar('Your message has been sent!', { variant: 'success' });
+      } else {
+        enqueueSnackbar('Failed to send message. Please try again later.', { variant: 'error' });
+      }
+    } catch {
+      enqueueSnackbar('An error occurred. Please try again later.', { variant: 'error' });
+    }
   };
 
   return (
@@ -235,5 +257,13 @@ export default function ContactUs() {
       </Box>
       <Footer />
     </Box>
+  );
+}
+
+export default function ContactUs() {
+  return (
+    <SnackbarProvider maxSnack={3} autoHideDuration={4000} anchorOrigin={{ vertical: 'top', horizontal: 'center' }}>
+      <ContactUsForm />
+    </SnackbarProvider>
   );
 } 

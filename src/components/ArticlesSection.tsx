@@ -9,7 +9,7 @@ import { styled } from '@mui/material/styles';
 const Grid = styled('div')(({ theme }) => ({
   display: 'grid',
   gridTemplateColumns: 'repeat(12, 1fr)',
-  gap: theme.spacing(4),
+  gap: theme.spacing(2),
   [theme.breakpoints.up('lg')]: {
     gap: theme.spacing(14),
   },
@@ -121,7 +121,7 @@ const ArticlesSection = () => {
   ];
 
   return (
-    <Box className="py-8 md:py-16 px-4 md:px-8 bg-white">
+    <Box className="py-3 md:py-16 px-4 md:px-8 bg-white">
       <Box className="container mx-auto max-w-12xl">
         <Grid>
           <GridItem>

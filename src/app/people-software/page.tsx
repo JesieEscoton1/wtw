@@ -1,12 +1,102 @@
 "use client";
 
-import { Box, Typography, Button, Paper, Stack, Avatar } from '@mui/material';
+import { Box, Typography, Button, Paper, Avatar, Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Image from 'next/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import JobCompensationChart from '@/components/JobCompensationChart'; // Added import for JobCompensationChart
+import { styled } from '@mui/material/styles';
+import Collapse from '@mui/material/Collapse';
+import React from 'react';
+import PublicIcon from '@mui/icons-material/Public';
+import EqualizerIcon from '@mui/icons-material/Equalizer';
+import AssessmentIcon from '@mui/icons-material/Assessment';
+import GavelIcon from '@mui/icons-material/Gavel';
+import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
+
+// Custom styled Accordion for enhanced design
+const StyledAccordion = styled(Accordion)(() => ({
+  marginBottom: 8, // theme.spacing(1) replaced with 8px
+  borderRadius: 12,
+  boxShadow: '0 2px 12px 0 rgba(0,170,255,0.06)',
+  border: '1.5px solid #e3f4fb',
+  '&:before': { display: 'none' },
+  transition: 'box-shadow 0.3s',
+  '&:hover': {
+    boxShadow: '0 4px 20px 0 rgba(0,170,255,0.13)',
+    borderColor: '#00aaff',
+  },
+}));
+
+const StyledAccordionSummary = styled(AccordionSummary)(() => ({
+  fontWeight: 700,
+  fontSize: '1.1rem',
+  color: '#00aaff',
+  background: '#f7fafd',
+  borderRadius: 10,
+  transition: 'background 0.3s, color 0.3s',
+  '&.Mui-expanded': {
+    color: '#E04A9B',
+    background: 'linear-gradient(90deg, #f7fafd 80%, #e3f4fb 100%)',
+    fontWeight: 900,
+  },
+  '& .MuiAccordionSummary-expandIconWrapper': {
+    transition: 'transform 0.3s',
+  },
+  '&.Mui-expanded .MuiAccordionSummary-expandIconWrapper': {
+    transform: 'rotate(90deg)',
+  },
+}));
+
+const StyledAccordionDetails = styled(AccordionDetails)(() => ({
+  background: '#fff',
+  color: '#444',
+  borderRadius: 8,
+  fontSize: '1rem',
+  borderLeft: '4px solid #00aaff',
+  marginLeft: -16,
+  paddingLeft: 20,
+  boxShadow: '0 2px 8px 0 rgba(224,74,155,0.07)',
+  animation: 'fadeInSlide 0.5s',
+  '@keyframes fadeInSlide': {
+    from: { opacity: 0, transform: 'translateY(12px)' },
+    to: { opacity: 1, transform: 'translateY(0)' },
+  },
+}));
 
 export default function PeopleSoftware() {
+  // Move useState for expanded to top-level
+  const [expanded, setExpanded] = React.useState<string | false>(false);
+
+  // Accordion items
+  const items = [
+    {
+      title: 'Global Compensation Insights',
+      icon: <PublicIcon sx={{ color: '#00aaff', mr: 1, fontSize: 28 }} />,
+      content: 'Access real-time global pay data to make informed, competitive compensation decisions. Our platform provides accurate salary, bonus, and equity benchmarks from trusted HR and payroll sources—helping you build fair and effective pay packages.'
+    },
+    {
+      title: 'Compensation Benchmarking',
+      icon: <EqualizerIcon sx={{ color: '#E04A9B', mr: 1, fontSize: 28 }} />,
+      content: 'Easily compare your team’s pay to market rates with AI-powered benchmarking. Connect your HRIS, use our rich data or import third-party surveys, and instantly see how employee compensation stacks up—so you can adjust and stay competitive with confidence.'
+    },
+    {
+      title: 'Smart Raise & Bonus Management',
+      icon: <AssessmentIcon sx={{ color: '#ffd600', mr: 1, fontSize: 28 }} />,
+      content: 'Simplify how you plan and execute raises and bonuses with guided, data-backed workflows. Set budgets, manage approvals, and communicate changes effortlessly—all in one place.'
+    },
+    {
+      title: 'Strategic Pay Planning',
+      icon: <GavelIcon sx={{ color: '#7c3aed', mr: 1, fontSize: 28 }} />,
+      content: 'Build clear, competitive salary ranges across roles and locations with a scalable, transparent framework. Define and apply your pay philosophy consistently—balancing equity, geography, and remote policies—while spotting and correcting pay gaps proactively.'
+    },
+    {
+      title: 'Pay Equity Insights',
+      icon: <PersonOutlineIcon sx={{ color: '#00b894', mr: 1, fontSize: 28 }} />,
+      content: 'Identify and address pay gaps across roles and demographics with built-in equity tools. Access detailed DEI metrics and track progress over time—ensuring fairness and objectivity in every compensation decision.'
+    },
+  ];
 
   return (
     <Box className="w-full min-h-screen bg-white">
@@ -66,64 +156,52 @@ export default function PeopleSoftware() {
 
       {/* Main Content */}
       <Box className="container mx-auto max-w-7xl py-6 md:py-10 px-4 md:px-0 flex flex-col gap-12">
-        {/* Section 1: What We Offer as Timeline/Stepper */}
-        <Box sx={{ background: '#f7fafd', borderRadius: 3, p: { xs: 2, md: 4 }, mb: 2 }}>
-          <Typography variant="h6" className="font-bold mb-6 text-gray-900 text-lg md:text-xl" sx={{ fontWeight: 'bold'}}>
-            What We Offer
+        {/* Chart Section Header */}
+        <Typography variant="h4" sx={{ fontWeight: 700, textAlign: 'center', mb: 3, color: '#222' }}>
+          Empowering Fair and Confident Pay Decisions with Our Compensation Management Solution
+        </Typography>
+        {/* What is OpenComp Section */}
+        <Box className="container mx-auto max-w-4xl px-4 md:px-0 mt-6 mb-8">
+          <Typography variant="h4" sx={{ fontWeight: 700, mb: 2, color: '#222' }}>
+            What is OpenComp?
           </Typography>
-          <Box sx={{ position: 'relative', ml: { xs: 2, md: 4 } }}>
-            {/* Vertical accent line */}
-            <Box sx={{
-              position: 'absolute',
-              left: 12,
-              top: 0,
-              bottom: 0,
-              width: 4,
-              background: 'linear-gradient(to bottom, #E04A9B 0%, #00aaff 100%)',
-              borderRadius: 2,
-              zIndex: 0,
-              display: { xs: 'none', sm: 'block' },
-            }} />
-            <Stack spacing={5}>
-              {[
-                { color: '#E04A9B', title: 'HRIS/HRMS Selection', desc: 'Guidance for platform selection and implementation.' },
-                { color: '#00aaff', title: 'People Analytics', desc: 'Transform data into actionable insights.' },
-                { color: '#7c3aed', title: 'Digital Experience', desc: 'Enhance onboarding and engagement digitally.' },
-                { color: '#ffd600', title: 'Process Automation', desc: 'Automate payroll, leave, and reviews.' },
-                { color: '#00b894', title: 'System Integration', desc: 'Connect HR with finance, ops, and more.' },
-                { color: '#ff5252', title: 'Change Management', desc: 'Training and communication for smooth adoption.' }
-              ].map((item) => (
-                <Box key={item.title} sx={{ display: 'flex', alignItems: 'flex-start', position: 'relative', zIndex: 1 }}>
-                  {/* Dot Icon */}
-                  <Box sx={{
-                    mr: 3,
-                    mt: 0.5,
-                    zIndex: 2,
-                    width: 20,
-                    height: 20,
-                    borderRadius: '50%',
-                    background: item.color,
-                    boxShadow: '0 0 0 4px #fff',
-                    border: '2px solid #fff',
-                  }} />
-                  {/* Content */}
-                  <Box>
-                    <Typography variant="subtitle1" sx={{ fontWeight: 700, color: item.color, fontSize: '1.1rem', mb: 0.5 }}>
-                      {item.title}
-                    </Typography>
-                    <Typography variant="body2" sx={{ color: '#444', fontSize: '1rem' }}>
-                      {item.desc}
-                    </Typography>
-                  </Box>
+          {/* Expandable List using MUI Accordion */}
+          {items.map((item, idx) => (
+            <StyledAccordion
+              key={item.title}
+              expanded={expanded === item.title}
+              onChange={(_e, isExp) => setExpanded(isExp ? item.title : false)}
+            >
+              <StyledAccordionSummary expandIcon={<ArrowForwardIcon sx={{ color: expanded === item.title ? '#E04A9B' : '#00aaff' }} />}>
+                <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                  {item.icon}
+                  <span>{`${idx + 1}. ${item.title}`}</span>
                 </Box>
-              ))}
-            </Stack>
-          </Box>
+              </StyledAccordionSummary>
+              <Collapse in={expanded === item.title} timeout={400}>
+                <StyledAccordionDetails>
+                  {item.content}
+                </StyledAccordionDetails>
+              </Collapse>
+            </StyledAccordion>
+          ))}
         </Box>
-
+        
+        
+        {/* Section 2: Compensation Chart by Experience and Job Position */}
+        
+        
         {/* Section 2: How Our Process Works Timeline */}
         <Box>
-          <Typography variant="h6" className="font-bold mb-4 text-gray-900 text-lg md:text-xl" sx={{ fontWeight: 'bold'}}>
+
+        <Box sx={{ background: '#f7fafd', borderRadius: 3, p: { xs: 2, md: 4 }, mb: 2 }}>
+          <Typography variant="h5" className="font-bold mb-6 text-gray-900 text-lg md:text-xl" sx={{ fontWeight: 'bold', textAlign: 'center'}}>
+            Compensation Chart
+          </Typography>
+          {/* Dropdown for job positions */}
+          <JobCompensationChart />
+        </Box>
+          {/* <Typography variant="h6" className="font-bold mb-4 text-gray-900 text-lg md:text-xl" sx={{ fontWeight: 'bold'}}>
             How Our Process Works
           </Typography>
           <Box className="flex flex-col md:flex-row gap-6 items-center justify-between" sx={{ mt: 2}}>
@@ -148,17 +226,17 @@ export default function PeopleSoftware() {
                 )}
               </Box>
             ))}
-          </Box>
+          </Box> */}
         </Box>
 
         {/* Section 3: Testimonial Box */}
-        <Box>
+        {/* <Box>
           <Paper elevation={2} sx={{ p: 4, borderRadius: 3, background: '#e3f4fb', border: '1px solid #b2e0f7', maxWidth: 600, mx: 'auto' }}>
             <Typography variant="body1" sx={{ fontStyle: 'italic', color: '#0077b6', mb: 0, textAlign: 'center' }}>
               &quot;Alliance Atlantic helped us modernize our HR systems. The process was smooth, and our team is now more engaged and productive than ever.&quot;
             </Typography>
           </Paper>
-        </Box>
+        </Box> */}
 
         {/* Section 4: Common Client Challenges (redesigned) */}
         <Box>
