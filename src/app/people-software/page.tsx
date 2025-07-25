@@ -54,8 +54,8 @@ const StyledAccordionDetails = styled(AccordionDetails)(() => ({
   color: '#444',
   borderRadius: 8,
   fontSize: '1rem',
-  borderLeft: '4px solid #00aaff',
-  marginLeft: -16,
+  // borderLeft: '4px solid #00aaff',
+  marginLeft: 0,
   paddingLeft: 20,
   boxShadow: '0 2px 8px 0 rgba(224,74,155,0.07)',
   animation: 'fadeInSlide 0.5s',
@@ -103,7 +103,7 @@ export default function PeopleSoftware() {
       <Header />
       
       {/* Hero Section */}
-      <Box className="bg-[lightblue] py-4 px-4 md:py-5.5 md:px-0">
+      <Box className="bg-[#00aaff] py-4 px-4 md:py-5.5 md:px-0">
         <Box className="container mx-auto max-w-7xl flex flex-col md:flex-row items-center gap-4 md:gap-8 min-h-[300px] md:min-h-[440px]">
           {/* Left: Text */}
           <Box className="flex-1 text-white space-y-4 md:space-y-6 md:pr-8">
@@ -131,7 +131,7 @@ export default function PeopleSoftware() {
             <Button
               variant="contained"
               className="bg-[#E04A9B] hover:bg-pink-600 normal-case font-bold rounded-full px-6 md:px-8 py-2 md:py-3 text-base md:text-lg shadow-none"
-              style={{ background: '#00aaff', borderRadius: '9999px', fontWeight: 700, marginTop: 20, color: 'white' }}
+              style={{ background: 'white', borderRadius: '9999px', fontWeight: 700, marginTop: 20, color: '#00aaff' }}
               endIcon={<ArrowForwardIcon />}
               onClick={() => window.location.href = '/contact-us'}
             >

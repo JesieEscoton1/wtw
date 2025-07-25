@@ -28,7 +28,7 @@ const Header = () => {
       {/* Main Navigation */}
       <Toolbar className="flex justify-between items-center px-2 md:px-4 py-2 md:py-0">
         {/* Left section: Menu */}
-        <Box className="flex items-center border-r border-r-[1px] border-gray-300 pr-4 md:pr-10 pl-2 md:pl-4 h-[80px] md:h-[105px] -mt-3 -mb-3">
+        {/* <Box className="flex items-center border-r border-r-[1px] border-gray-300 pr-4 md:pr-10 pl-2 md:pl-4 h-[80px] md:h-[105px] -mt-3 -mb-3">
           <Button
             color="inherit"
             className="flex items-center normal-case hover:text-blue-600"
@@ -40,7 +40,7 @@ const Header = () => {
               Menu
             </Typography>
           </Button>
-        </Box>
+        </Box> */}
 
         {/* Center section: Alliance Logo */}
         <Box className="flex-2 flex justify-center items-center">
