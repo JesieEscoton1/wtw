@@ -12,7 +12,7 @@ export default function TotalRewards() {
       <Header />
 
       {/* Hero Section (Reverted to old version) */}
-      <Box className="bg-[lightblue] py-5.5 px-4 md:px-0">
+      <Box className="bg-[#00aaff] py-5.5 px-4 md:px-0">
         <Box className="container mx-auto max-w-7xl flex flex-col md:flex-row items-center gap-8 min-h-[440px]">
           {/* Left: Text */}
           <Box className="flex-1 text-white space-y-6 md:pr-8">
@@ -38,8 +38,8 @@ export default function TotalRewards() {
             </Typography>
             <Button
               variant="contained"
-              className="bg-[#E04A9B] hover:bg-pink-600 normal-case font-bold rounded-full px-8 py-3 text-lg shadow-none"
-              style={{ background: '#00aaff', borderRadius: '9999px', fontWeight: 700, marginTop: 20, color: 'white', fontSize: '18px' }}
+              className="bg-[white] hover:bg-pink-600 normal-case font-bold rounded-full px-8 py-3 text-lg shadow-none"
+              style={{ background: 'white', borderRadius: '9999px', fontWeight: 700, marginTop: 20, color: '#00aaff', fontSize: '18px' }}
               endIcon={<ArrowForwardIcon />}
               onClick={() => window.location.href = '/contact-us'}
             >

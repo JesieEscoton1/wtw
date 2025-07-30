@@ -44,7 +44,7 @@ export default function BuildingHrCapability() {
         <Box
           className="pt-12 pb-24"
           sx={{
-            backgroundColor: '#d6d1d9',
+            backgroundColor: '#00aaff',
             minHeight: { xs: '220px', sm: '250px', md: '300px' },
             display: 'flex',
             alignItems: 'center',
@@ -55,14 +55,16 @@ export default function BuildingHrCapability() {
           <Container maxWidth="lg" className="px-4 md:px-0">
             <Typography
               variant="h3"
-              className="text-blue-400 block mb-4 text-sm md:text-base"
+              className="text-white block mb-4 text-sm md:text-base"
+              fontFamily={'serif'}
+              fontWeight={'800'}
               sx={{ letterSpacing: '0.1em' }}
             >
              Building HR Capability
             </Typography>
            <Typography
                variant="h6"
-               className="text-blue-400 mb-6"
+               className="text-white mb-6"
                sx={{ fontSize: { xs: '1rem', sm: '1.125rem' }, lineHeight: 1.5 }}
              >
                We equip people managers and HR leaders with the skills, systems, and tools needed to engage teams, improve performance, and sustain employee growth.
@@ -70,7 +72,7 @@ export default function BuildingHrCapability() {
              <Button
               variant="contained"
               className="bg-[#E04A9B] hover:bg-pink-600 normal-case font-bold rounded-full px-6 md:px-8 py-2 md:py-3 text-base md:text-lg shadow-none"
-              style={{ background: '#00aaff', borderRadius: '9999px', fontWeight: 700, marginTop: 20, color: 'white' }}
+              style={{ background: 'white', borderRadius: '9999px', fontWeight: 700, marginTop: 20, color: '#00aaff' }}
               endIcon={<ArrowForwardIcon />}
               onClick={() => window.location.href = '/contact-us'}
             >

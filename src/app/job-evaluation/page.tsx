@@ -16,7 +16,7 @@ export default function JobEvaluation() {
       <Box className="bg-[#00aaff] py-4 px-4 md:py-5.5 md:px-0">
         <Box className="container mx-auto max-w-7xl flex flex-col md:flex-row items-center gap-4 md:gap-8 min-h-[300px] md:min-h-[440px]">
           {/* Left: Text */}
-          <Box className="flex-1 text-white space-y-4 md:space-y-6 md:pr-8">
+          <Box className="flex-1 text-white space-y-4 mds:space-y-6 md:pr-8">
             <Typography variant="overline" className="text-white tracking-widest font-bold !text-sm md:!text-base" style={{ letterSpacing: '0.15em', fontWeight: 'bold'}}>
               Job Evaluation
             </Typography>

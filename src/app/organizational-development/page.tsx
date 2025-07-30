@@ -46,7 +46,7 @@ export default function OrganizationalDevelopment() {
         <Box 
           className="pt-12 pb-24"
           sx={{
-            backgroundColor: '#E3E1E6',
+            backgroundColor: '#00aaff',
             minHeight: '200px',
             display: 'flex',
             alignItems: 'center'
@@ -55,21 +55,23 @@ export default function OrganizationalDevelopment() {
           <Container maxWidth="lg">
             <Typography 
               variant="h3" 
-              className="text-blue-400 block mb-4"
+              className="text-white block mb-4"
+              fontFamily={'serif'}
+              fontWeight={'800'}
               sx={{ letterSpacing: '0.1em' }}
             >
              Organizational Development
             </Typography>
             
             <Box className="max-w-2xl">
-              <Typography variant="h6" className="text-2xl mb-4 text-gray-900">
+              <Typography variant="h6" className="text-2xl mb-4 text-white">
               We help strengthen your organization through structure reviews, culture development, competency frameworks, and strategic planning — all designed to build resilience and readiness for growth.
               </Typography>
             </Box>
             <Button
               variant="contained"
               className="bg-[#E04A9B] hover:bg-pink-600 normal-case font-bold rounded-full px-6 md:px-8 py-2 md:py-3 text-base md:text-lg shadow-none"
-              style={{ background: '#00aaff', borderRadius: '9999px', fontWeight: 700, marginTop: 20, color: 'white' }}
+              style={{ background: 'white', borderRadius: '9999px', fontWeight: 700, marginTop: 20, color: '#00aaff' }}
               endIcon={<ArrowForwardIcon />}
               onClick={() => window.location.href = '/contact-us'}
             >

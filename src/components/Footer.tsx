@@ -35,25 +35,26 @@ const Footer = () => {
               <Typography variant="h6" className="font-bold mb-3 !text-black" sx={{ fontWeight: 'bold', color: 'black' }}>
                 Our Services
               </Typography>
-              <ul className="flex flex-col gap-y-2 list-none p-0 m-0">
-                {[
-                  { text: 'About Us', href: '/overview' },
-                  { text: 'Organizational Development', href: '/survey' },
-                  { text: 'Building HR Capability', href: '/report' },
-                  { text: 'Total Reward', href: '/campaign' },
-                  { text: 'Performance Management' },
-                ].map((link, index) => (
-                  <li key={index} className="flex justify-center md:justify-start">
-                    <MuiLink
-                      href={link.href || '#'}
-                      className="text-sm font-semibold !text-black hover:text-blue-700 transition-colors duration-300"
-                      underline="none"
-                    >
-                      {link.text}
-                    </MuiLink>
-                  </li>
-                ))}
-              </ul>
+              <ul className="flex flex-col gap-y-1 list-none p-0 m-0"> {/* Changed gap-y-2 to gap-y-1 */}
+  {[
+    { text: 'About Us', href: '/overview' },
+    { text: 'Organizational Development', href: '/survey' },
+    { text: 'Building HR Capability', href: '/report' },
+    { text: 'Total Rewards', href: '/campaign' },
+    { text: 'Performance Management' },
+  ].map((link, index) => (
+    <li key={index} className="flex justify-center md:justify-start">
+      <MuiLink
+        href={link.href || '#'}
+        className="text-sm font-semibold !text-black hover:text-blue-700 transition-colors duration-300"
+        underline="none"
+      >
+        {link.text}
+      </MuiLink>
+    </li>
+  ))}
+</ul>
+
             </Box>
             {/* Contact Us Column */}
             <Box className="w-full md:w-1/3 mb-6 md:mb-0 flex flex-col items-center md:items-start text-center md:text-left">
@@ -103,7 +104,7 @@ const Footer = () => {
           {/* Copyright */}
           <Box className="w-full md:w-auto px-4 mb-4 md:mb-0 text-center md:text-left">
             <Typography variant="body2" color="Black" className="font-p-xsmall m-0 site-footer__copyright text-xs sm:text-sm opacity-75">
-              Copyright © {new Date().getFullYear()} Alliance Atlantic . All rights reserved.
+              Copyright © {new Date().getFullYear()} Alliance Atlantic Consulting, Inc. . All rights reserved.
             </Typography>
           </Box>
         </Box>
