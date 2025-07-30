@@ -240,46 +240,6 @@ export default function JobEvaluation() {
               </Box>
             </Paper>
 
-            <Paper elevation={3} sx={{ p: 3, borderRadius: 4, background: 'white', boxShadow: 6 }}>
-              <Typography variant="h4" className="text-xl font-bold mb-6" sx={{color: '#0090e3'}}>
-                Contact
-              </Typography>
-              <Box className="space-y-8 mt-4">
-                {/* Contact Person Sample */}
-                {[
-                  {
-                    src: '/images/contact-avatar.jpg',
-                    alt: 'Sandy Togonon',
-                    name: 'Sandy Togonon',
-                    title: 'Managing Director of Alliance Atlantic',
-                    email: true,
-                    phone: false,
-                    emailLabel: 'Email',
-                    phoneNumber: '',
-                  },
-                ].map((contact, i) => (
-                  <Box key={i} className="flex gap-6 flex-col sm:flex-row items-start sm:items-center">
-                    <Avatar
-                      src={contact.src}
-                      alt={contact.alt}
-                      sx={{ width: 80, height: 80, flexShrink: 0 }}
-                    />
-                    <Box sx={{ marginTop: { xs: '12px', sm: '0' } }}>
-                      <Typography variant="h6" className="font-bold text-black-600 hover:text-black cursor-pointer">
-                        {contact.name}
-                      </Typography>
-                      <Typography variant="body2" className="text-gray-600 mb-3">
-                        {contact.title}
-                      </Typography>
-                      <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap' }}>
-                        {/* Add contact details here if needed */}
-                      </Box>
-                    </Box>
-                  </Box>
-                ))}
-              </Box>
-            </Paper>
-
           </Box>
         </Box>
       </Box>
