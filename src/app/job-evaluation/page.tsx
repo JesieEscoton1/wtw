@@ -13,7 +13,7 @@ export default function JobEvaluation() {
       <Header />
       
       {/* Hero Section */}
-      <Box className="bg-[lightblue] py-4 px-4 md:py-5.5 md:px-0">
+      <Box className="bg-[#00aaff] py-4 px-4 md:py-5.5 md:px-0">
         <Box className="container mx-auto max-w-7xl flex flex-col md:flex-row items-center gap-4 md:gap-8 min-h-[300px] md:min-h-[440px]">
           {/* Left: Text */}
           <Box className="flex-1 text-white space-y-4 md:space-y-6 md:pr-8">
@@ -40,7 +40,7 @@ export default function JobEvaluation() {
             <Button
               variant="contained"
               className="bg-[#E04A9B] hover:bg-pink-600 normal-case font-bold rounded-full px-6 md:px-8 py-2 md:py-3 text-base md:text-lg shadow-none"
-              style={{ background: '#00aaff', borderRadius: '9999px', fontWeight: 700, marginTop: 20, color: 'white' }}
+              style={{ background: 'white', borderRadius: '9999px', fontWeight: 700, marginTop: 20, color: '#00aaff' }}
               endIcon={<ArrowForwardIcon />}
               onClick={() => window.location.href = '/contact-us'}
             >
@@ -237,46 +237,6 @@ export default function JobEvaluation() {
                     </Box>
                   ))}
                 </Box>
-              </Box>
-            </Paper>
-
-            <Paper elevation={3} sx={{ p: 3, borderRadius: 4, background: 'white', boxShadow: 6 }}>
-              <Typography variant="h4" className="text-xl font-bold mb-6" sx={{color: '#0090e3'}}>
-                Contact
-              </Typography>
-              <Box className="space-y-8 mt-4">
-                {/* Contact Person Sample */}
-                {[
-                  {
-                    src: '/images/contact-avatar.jpg',
-                    alt: 'Sandy Togonon',
-                    name: 'Sandy Togonon',
-                    title: 'Managing Director of Alliance Atlantic',
-                    email: true,
-                    phone: false,
-                    emailLabel: 'Email',
-                    phoneNumber: '',
-                  },
-                ].map((contact, i) => (
-                  <Box key={i} className="flex gap-6 flex-col sm:flex-row items-start sm:items-center">
-                    <Avatar
-                      src={contact.src}
-                      alt={contact.alt}
-                      sx={{ width: 80, height: 80, flexShrink: 0 }}
-                    />
-                    <Box sx={{ marginTop: { xs: '12px', sm: '0' } }}>
-                      <Typography variant="h6" className="font-bold text-black-600 hover:text-black cursor-pointer">
-                        {contact.name}
-                      </Typography>
-                      <Typography variant="body2" className="text-gray-600 mb-3">
-                        {contact.title}
-                      </Typography>
-                      <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap' }}>
-                        {/* Add contact details here if needed */}
-                      </Box>
-                    </Box>
-                  </Box>
-                ))}
               </Box>
             </Paper>
 
