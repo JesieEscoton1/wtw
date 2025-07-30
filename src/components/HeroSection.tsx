@@ -93,58 +93,59 @@ const HeroSection = () => {
                 transition: 'opacity 1s ease-in-out, transform 1s ease-in-out',
               }}
             />
-            <Box className="hero-homepage__title-block bg-white p-6 md:p-12 shadow-xl w-[90%] md:max-w-xl transform transition-all duration-300 hover:shadow-2xl absolute z-10 top-[10%] left-1/2 -translate-x-1/2 md:top-[8.5%] md:left-[4%] md:translate-x-0">
-            {activeSection === 'About Us' ? (
-                <>
-                  <h1 className="heading-1 m-0 mb-2 md:mb-3 text-gray-900 font-serif leading-tight text-xl md:text-3xl" style={{ textWrap: 'balance', fontWeight: 'bold' }}>
-                    {aboutUsTitle}
-                  </h1>
-                  <span className="heading-3 p-0 mt-2 md:mt-3 mb-2 text-black font-serif font-bold text-base md:text-xl block">
-                    {aboutUsParagraph.split('\n').map((line, idx) => (
-                      <span key={idx} style={{ display: 'block', fontWeight: 'normal' }}>{line}</span>
-                    ))}
-                  </span>
-                </>
-              ) : activeSection === 'Core Values' ? (
-                <>
-                  <h1 className="heading-1 m-0 mb-2 md:mb-3 text-gray-900 font-serif leading-tight text-xl md:text-3xl" style={{ textWrap: 'balance', fontWeight: 'bold' }}>
-                    {coreValuesTitle}
-                  </h1>
-                  <span className="heading-3 p-0 mt-2 md:mt-3 mb-2 text-black font-serif text-base md:text-xl block">
-                    {coreValuesLines.map((line, idx) => (
-                      <span key={idx} style={{ display: 'block' }}>{line}</span>
-                    ))}
-                  </span>
-                </>
-              ) : activeSection === 'Our Vision' ? (
-                <>
-                  <h1 className="heading-1 m-0 mb-2 md:mb-3 text-gray-900 font-serif leading-tight text-xl md:text-3xl" style={{ textWrap: 'balance', fontWeight: 'bold' }}>
-                    Our Vision
-                  </h1>
-                  <span className="heading-3 p-0 mt-2 md:mt-3 mb-2 text-black font-serif text-base md:text-xl block">
-                    {visionParagraph}
-                  </span>
-                </>
-              ) : (
-                <>
-                  <h1 className="heading-1 m-0 mb-2 md:mb-3 text-gray-900 font-serif leading-tight text-2xl md:text-5xl" style={{ textWrap: 'balance', fontWeight: 'bold' }}>
-                    {defaultTitle}
-                  </h1>
-                  <span className="heading-3 p-0 mt-2 md:mt-3 mb-2 text-black font-serif font-bold text-lg md:text-2xl">{defaultSubtitle}</span><br/>
-                  <span className="arrow-link arrow-link--inbody p-0 heading-6 m-0 mt-2 md:mt-3 inline-block"> 
-                    <button
-                      onClick={() => window.location.href = '/overview'}
-                      aria-label="Link, Click to visit our Transforming Tomorrows page"
-                      className="normal-case p-0 justify-start text-base font-bold hover:text-blue-900 transition-colors duration-300 bg-transparent border-none cursor-pointer text-[18px] md:text-[23px]"
-                      style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', fontWeight: 'bold', color: '#00aaff' }}
-                    >
-                      Get Started
-                      <FontAwesomeIcon icon={faArrowRight} className="ml-2 md:ml-[10px] mt-[3px] text-[18px] md:text-[22px]" />
-                    </button>
-                  </span>
-                </>
-              )}
-            </Box>
+            <Box className="hero-homepage__title-block bg-white p-6 md:p-12 shadow-xl w-full max-w-lg transform transition-all duration-300 hover:shadow-2xl absolute z-10 top-[-40%] left-1/2 -translate-x-1/2 md:top-[8.5%] md:left-[4%] md:translate-x-0">
+  {activeSection === 'About Us' ? (
+    <>
+      <h1 className="heading-1 m-0 mb-2 md:mb-3 text-gray-900 font-serif leading-tight text-xl md:text-3xl" style={{ textWrap: 'balance', fontWeight: 'bold' }}>
+        {aboutUsTitle}
+      </h1>
+      <span className="heading-3 p-0 mt-2 md:mt-3 mb-2 text-black font-serif font-bold text-base md:text-xl block">
+        {aboutUsParagraph.split('\n').map((line, idx) => (
+          <span key={idx} style={{ display: 'block', fontWeight: 'normal' }}>{line}</span>
+        ))}
+      </span>
+    </>
+  ) : activeSection === 'Core Values' ? (
+    <>
+      <h1 className="heading-1 m-0 mb-2 md:mb-3 text-gray-900 font-serif leading-tight text-xl md:text-3xl" style={{ textWrap: 'balance', fontWeight: 'bold' }}>
+        {coreValuesTitle}
+      </h1>
+      <span className="heading-3 p-0 mt-2 md:mt-3 mb-2 text-black font-serif text-base md:text-xl block">
+        {coreValuesLines.map((line, idx) => (
+          <span key={idx} style={{ display: 'block' }}>{line}</span>
+        ))}
+      </span>
+    </>
+  ) : activeSection === 'Our Vision' ? (
+    <>
+      <h1 className="heading-1 m-0 mb-2 md:mb-3 text-gray-900 font-serif leading-tight text-xl md:text-3xl" style={{ textWrap: 'balance', fontWeight: 'bold' }}>
+        Our Vision
+      </h1>
+      <span className="heading-3 p-0 mt-2 md:mt-3 mb-2 text-black font-serif text-base md:text-xl block">
+        {visionParagraph}
+      </span>
+    </>
+  ) : (
+    <>
+      <h1 className="heading-1 m-0 mb-2 md:mb-3 text-gray-900 font-serif leading-tight text-2xl md:text-5xl" style={{ textWrap: 'balance', fontWeight: 'bold' }}>
+        {defaultTitle}
+      </h1>
+      <span className="heading-3 p-0 mt-2 md:mt-3 mb-2 text-black font-serif font-bold text-lg md:text-2xl">{defaultSubtitle}</span><br/>
+      <span className="arrow-link arrow-link--inbody p-0 heading-6 m-0 mt-2 md:mt-3 inline-block"> 
+        <button
+          onClick={() => window.location.href = '/overview'}
+          aria-label="Link, Click to visit our Transforming Tomorrows page"
+          className="normal-case p-0 justify-start text-base font-bold hover:text-blue-900 transition-colors duration-300 bg-transparent border-none cursor-pointer text-[18px] md:text-[23px]"
+          style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', fontWeight: 'bold', color: '#00aaff' }}
+        >
+          Get Started
+          <FontAwesomeIcon icon={faArrowRight} className="ml-2 md:ml-[10px] mt-[3px] text-[18px] md:text-[22px]" />
+        </button>
+      </span>
+    </>
+  )}
+</Box>
+
           </Box>
 
           <Box className="w-full md:w-3/12 bg-[lightblue] text-white flex items-center py-4 md:py-0">

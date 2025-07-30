@@ -107,14 +107,14 @@ const ArticlesSection = () => {
     {
       type: '',
       title: 'Job Evaluation',
-      imageSrc: '/images/job-fair.jpg',
+      imageSrc: '/images/job1.png',
       imageAlt: 'Employee Pay Trends',
       linkHref: 'job-evaluation'
     },
     {
       type: '',
       title: 'People Software',
-      imageSrc: '/images/People-Software.png',
+      imageSrc: '/images/ps.png',
       imageAlt: 'Complex World',
       linkHref: 'people-software'
     },

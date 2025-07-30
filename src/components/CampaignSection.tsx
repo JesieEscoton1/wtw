@@ -107,7 +107,7 @@ const ReportsCampaignsSection = () => {
     {
       type: '',
       title: 'Total Rewards',
-      imageSrc: '/images/fil3.jpg',
+      imageSrc: '/images/tr.png',
       imageAlt: 'Cyber Risks in Asia',
       linkHref: '/total-rewards'
     },
