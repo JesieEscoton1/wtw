@@ -15,7 +15,7 @@ const HeroSection = () => {
   const getBackgroundImage = (section: Section | null) => {
     switch (section) {
       case 'Core Values':
-        return '/images/people1.jpg';
+        return '/images/hr-consulting.png';
       default:
         return '/images/hr-consulting.png';
     }
@@ -71,38 +71,75 @@ const HeroSection = () => {
 
               {activeSection === 'About Us' ? (
                 <>
-                  <h1 className="heading-1 m-0 mb-2 md:mb-3 text-gray-900 font-serif leading-tight text-xl md:text-3xl font-bold">
+                  <Typography
+                    variant="h4"
+                    component="h1"
+                    className="mb-2 md:mb-3 font-serif font-bold"
+                    color="text.primary"
+                    sx={{ fontWeight: 'bold' }}
+                  >
                     {aboutUsTitle}
-                  </h1>
-                  <span className="heading-3 p-0 mt-2 md:mt-3 mb-2 text-black font-serif font-bold text-base md:text-xl block">
-                    {aboutUsParagraph.split('\n').map((line, idx) => (
-                      <span key={idx} style={{ display: 'block', fontWeight: 'normal' }}>
-                        {line}
-                      </span>
-                    ))}
-                  </span>
+                  </Typography>
+                  <Typography
+                    variant="body1"
+                    className="mt-2 md:mt-4 mb-2"
+                    color="text.primary"
+                    sx={{ fontWeight: '600', fontSize: { xs: '18px', md: '18px' }, mt: 1 }}
+                  >
+                    {aboutUsParagraph.split('\n')[0]}
+                  </Typography>
+                  <Typography
+                    variant="body1"
+                    className="mb-2"
+                    color="text.secondary"
+                    sx={{ whiteSpace: 'pre-line', fontSize: { xs: '18px', md: '18px' }, mt: .5 }}
+                  >
+                    {aboutUsParagraph.split('\n').slice(1).join('\n')}
+                  </Typography>
                 </>
               ) : activeSection === 'Core Values' ? (
                 <>
-                  <h1 className="heading-1 m-0 mb-2 md:mb-3 text-gray-900 font-serif leading-tight text-xl md:text-3xl font-bold">
+                  <Typography
+                    variant="h4"
+                    component="h1"
+                    className="mb-2 md:mb-3 font-serif font-bold"
+                    color="text.primary"
+                    sx={{ fontWeight: 'bold' }}
+                  >
                     {coreValuesTitle}
-                  </h1>
-                  <span className="heading-3 p-0 mt-2 md:mt-3 mb-2 text-black font-serif text-base md:text-xl block">
+                  </Typography>
+                  <Box className="mt-2 md:mt-3 mb-2">
                     {coreValuesLines.map((line, idx) => (
-                      <span key={idx} style={{ display: 'block' }}>
+                      <Typography
+                        key={idx}
+                        variant="body1"
+                        color="text.secondary"
+                        sx={{ display: 'block', fontSize: { xs: '18px', md: '18px' } }}
+                      >
                         {line}
-                      </span>
+                      </Typography>
                     ))}
-                  </span>
+                  </Box>
                 </>
               ) : activeSection === 'Our Vision' ? (
                 <>
-                  <h1 className="heading-1 m-0 mb-2 md:mb-3 text-gray-900 font-serif leading-tight text-xl md:text-3xl font-bold">
+                  <Typography
+                    variant="h4"
+                    component="h1"
+                    className="mb-2 md:mb-3 font-serif font-bold"
+                    color="text.primary"
+                    sx={{ fontWeight: 'bold' }}
+                  >
                     Our Vision
-                  </h1>
-                  <span className="heading-3 p-0 mt-2 md:mt-3 mb-2 text-black font-serif text-base md:text-xl block">
+                  </Typography>
+                  <Typography
+                    variant="body1"
+                    className="mt-2 md:mt-3 mb-2"
+                    color="text.secondary"
+                    sx={{ whiteSpace: 'pre-line', fontSize: { xs: '18px', md: '18px' }, mt: 1 }}
+                  >
                     {visionParagraph}
-                  </span>
+                  </Typography>
                 </>
               ) : (
                 <>
@@ -140,7 +177,7 @@ const HeroSection = () => {
           </Box>
 
           {/* Right Section (Accordion) */}
-          <Box className="w-full md:w-3/12 bg-[lightblue] text-white flex items-center py-4 md:py-0">
+          <Box className="w-full md:w-3/12 bg-[#00aaff] text-white flex items-center py-4 md:py-0">
             <Box className="w-full py-2 md:py-8 px-3 md:px-8 flex flex-col justify-center">
               <Typography
                 variant="h5"
@@ -168,7 +205,7 @@ const HeroSection = () => {
                         textTransform: 'none',
                         color: 'white',
                         '&:hover': {
-                          backgroundColor: '#00aaff',
+                          backgroundColor: '#0088cc',
                         },
                         transition: 'background-color 300ms ease-in-out',
                       }}

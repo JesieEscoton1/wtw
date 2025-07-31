@@ -36,24 +36,24 @@ const Footer = () => {
                 Our Services
               </Typography>
               <ul className="flex flex-col gap-y-1 list-none p-0 m-0"> {/* Changed gap-y-2 to gap-y-1 */}
-  {[
-    { text: 'About Us', href: '/overview' },
-    { text: 'Organizational Development', href: '/survey' },
-    { text: 'Building HR Capability', href: '/report' },
-    { text: 'Total Rewards', href: '/campaign' },
-    { text: 'Performance Management' },
-  ].map((link, index) => (
-    <li key={index} className="flex justify-center md:justify-start">
-      <MuiLink
-        href={link.href || '#'}
-        className="text-sm font-semibold !text-black hover:text-blue-700 transition-colors duration-300"
-        underline="none"
-      >
-        {link.text}
-      </MuiLink>
-    </li>
-  ))}
-</ul>
+                {[
+                  { text: 'About Us', href: '/overview' },
+                  { text: 'Organizational Development', href: '/survey' },
+                  { text: 'Building HR Capability', href: '/report' },
+                  { text: 'Total Rewards', href: '/campaign' },
+                  { text: 'Performance Management' },
+                ].map((link, index) => (
+                  <li key={index} className="flex justify-center md:justify-start">
+                    <MuiLink
+                      href={link.href || '#'}
+                      className="text-sm font-semibold !text-black hover:text-blue-700 transition-colors duration-300"
+                      underline="none"
+                    >
+                      {link.text}
+                    </MuiLink>
+                  </li>
+                ))}
+              </ul>
 
             </Box>
             {/* Contact Us Column */}
@@ -64,13 +64,13 @@ const Footer = () => {
               <Typography variant="body2" className="!text-black mb-1" sx={{ color: 'black', fontWeight: 500 }}>
                 <span style={{ fontWeight: 'bold' }}>Email:</span> <a href="mailto:info@allianceatlantic.net" className="underline hover:text-blue-700">info@allianceatlantic.net</a>
               </Typography>
-              <Typography variant="body2" className="!text-black mb-3" sx={{ color: 'black' }}>
+              <Typography variant="body2" className="!text-black mb-3" sx={{ color: 'black', mt: 1 }}>
                 Feel free to let us know how we may be of help.
               </Typography>
-              <Typography variant="body2" className="!text-black mb-1" sx={{ color: 'black', fontWeight: 500 }}>
+              <Typography variant="body2" className="!text-black mb-1" sx={{ color: 'black', fontWeight: 'bold', mt: 1 }}>
                 Alliance Atlantic
               </Typography>
-              <Typography variant="body2" className="!text-black mb-1" sx={{ color: 'black', fontWeight: 500 }}>
+              <Typography variant="body2" className="!text-black mb-1" sx={{ color: 'black', fontWeight: 500, mt: 1 }}>
                 <span style={{ fontWeight: 'bold' }}>Business Hours:</span>
               </Typography>
               <Typography variant="body2" className="!text-black mb-1" sx={{ color: 'black' }}>
@@ -83,7 +83,7 @@ const Footer = () => {
             {/* Book a Meeting Column */}
             <Box className="w-full md:w-1/3 mb-6 md:mb-0 flex flex-col items-center justify-center text-center">
               <a
-                href="https://calendly.com/your-client-link"
+                href="https://calendly.com/allianceatlantic_info/30min-discovery"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block w-full flex justify-center"
