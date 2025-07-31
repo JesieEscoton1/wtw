@@ -47,7 +47,7 @@ const Header = () => {
         <Box className="flex-2 flex justify-center items-center">
           <Link href="/" className="cursor-pointer">
             <Image
-              src="/images/aaci-logo.svg"
+              src="/images/aaci.svg"
               alt="Alliance Logo"
               width={120}
               height={84}
