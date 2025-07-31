@@ -12,26 +12,26 @@ const Footer = () => {
         {/* Top Section: Logo and Links */}
         <Box className="flex flex-col md:flex-row flex-wrap -mx-4 justify-center md:justify-between items-center md:items-start gap-y-0 md:gap-y-0">
           {/* Logo and Social Icons Column */}
-          <Box className="w-full md:w-3/12 lg:w-2/12 px-4 mb-8 md:mb-0 flex flex-col items-center justify-center text-center">
-            <div className="flex justify-center items-center w-full">
-              <Link href="/" className="cursor-pointer">
-                <Image
-                  src="/images/atlantic-bg.png"
-                  alt="Alliance Logo"
-                  width={320}
-                  height={224}
-                  priority
-                  style={{ objectFit: 'contain', maxWidth: 'fit-content' }}
-                  className="md:w-[320px] md:h-[224px] mb-5 mt-[-40px] mx-auto"
-                />
-              </Link>
-            </div>
-          </Box>
+            <Box className="w-full md:w-3/12 lg:w-2/12 px-4 mb-8 md:mb-0 flex flex-col items-center justify-center text-center">
+              <div className="flex justify-right items-center w-full">
+                <Link href="/" className="cursor-pointer">
+                  <Image
+                    src="/images/atlantic-bg.png"
+                    alt="Alliance Logo"
+                    width={320}
+                    height={224}
+                    priority
+                    style={{ objectFit: 'contain', maxWidth: 'fit-content' }}
+                    className="md:w-[320px] md:h-[224px] mb-5 mt-[-40px] mx-auto"
+                  />
+                </Link>
+              </div>
+            </Box>
 
           {/* Primary and Secondary Links Container */}
           <Box className="w-full md:w-8/12 lg:w-9/12 px-4 flex flex-col md:flex-row items-center md:items-start gap-y-8 md:gap-y-0 md:gap-x-8 text-center md:text-left">
             {/* Our Services Column */}
-            <Box className="w-full md:w-1/3 mb-6 md:mb-0 flex flex-col items-center md:items-start text-center md:text-left">
+            <Box className="w-full md:w-1/3 mb-6 md:mb-0 flex flex-col items-center md:items-start text-center md:text-left ml-4">
               <Typography variant="h6" className="font-bold mb-3 !text-black" sx={{ fontWeight: 'bold', color: 'black' }}>
                 Our Services
               </Typography>

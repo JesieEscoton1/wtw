@@ -51,7 +51,7 @@ export default function TotalRewards() {
             {/* Main Image */}
             <Box className="relative w-full h-2 md:h-96 z-10">
               <Image
-                src="/images/TR1.png"
+                src="/images/totalr.png"
                 alt="Hero Overview"
                 layout="fill"
                 objectFit="cover"
