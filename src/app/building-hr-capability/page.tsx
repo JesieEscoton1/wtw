@@ -1,7 +1,7 @@
 'use client';
 
 import './styles.css';
-import { Box, Typography, Container, Avatar, Button } from '@mui/material';
+import { Box, Typography, Container, Button } from '@mui/material';
 import Header from '@/components/Header';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Footer from '@/components/Footer';

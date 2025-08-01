@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Typography, Button, Paper, Stack, Avatar } from '@mui/material';
+import { Box, Typography, Button, Paper, Stack } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Image from 'next/image';
 import Header from '@/components/Header';
