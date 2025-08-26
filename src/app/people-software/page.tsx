@@ -1,106 +1,28 @@
 "use client";
 
-import { Box, Typography, Button, Paper, Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
+import { Box, Typography, Button } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Image from 'next/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import JobCompensationChart from '@/components/JobCompensationChart'; // Added import for JobCompensationChart
-import { styled } from '@mui/material/styles';
-import Collapse from '@mui/material/Collapse';
 import React from 'react';
-import PublicIcon from '@mui/icons-material/Public';
-import EqualizerIcon from '@mui/icons-material/Equalizer';
-import AssessmentIcon from '@mui/icons-material/Assessment';
-import GavelIcon from '@mui/icons-material/Gavel';
-import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
-
-// Custom styled Accordion for enhanced design
-const StyledAccordion = styled(Accordion)(() => ({
-  marginBottom: 8, // theme.spacing(1) replaced with 8px
-  borderRadius: 12,
-  boxShadow: '0 2px 12px 0 rgba(0,170,255,0.06)',
-  border: '1.5px solid #e3f4fb',
-  '&:before': { display: 'none' },
-  transition: 'box-shadow 0.3s',
-  '&:hover': {
-    boxShadow: '0 4px 20px 0 rgba(0,170,255,0.13)',
-    borderColor: '#00aaff',
-  },
-}));
-
-const StyledAccordionSummary = styled(AccordionSummary)(() => ({
-  fontWeight: 700,
-  fontSize: '1.1rem',
-  color: '#00aaff',
-  background: '#f7fafd',
-  borderRadius: 10,
-  transition: 'background 0.3s, color 0.3s',
-  '&.Mui-expanded': {
-    color: '#E04A9B',
-    background: 'linear-gradient(90deg, #f7fafd 80%, #e3f4fb 100%)',
-    fontWeight: 900,
-  },
-  '& .MuiAccordionSummary-expandIconWrapper': {
-    transition: 'transform 0.3s',
-  },
-  '&.Mui-expanded .MuiAccordionSummary-expandIconWrapper': {
-    transform: 'rotate(90deg)',
-  },
-}));
-
-const StyledAccordionDetails = styled(AccordionDetails)(() => ({
-  background: '#fff',
-  color: '#444',
-  borderRadius: 8,
-  fontSize: '1rem',
-  // borderLeft: '4px solid #00aaff',
-  marginLeft: 0,
-  paddingLeft: 20,
-  boxShadow: '0 2px 8px 0 rgba(224,74,155,0.07)',
-  animation: 'fadeInSlide 0.5s',
-  '@keyframes fadeInSlide': {
-    from: { opacity: 0, transform: 'translateY(12px)' },
-    to: { opacity: 1, transform: 'translateY(0)' },
-  },
-}));
 
 export default function PeopleSoftware() {
-  // Move useState for expanded to top-level
-  const [expanded, setExpanded] = React.useState<string | false>(false);
-
-  // Accordion items
-  const items = [
-    {
-      title: 'Global Compensation Insights',
-      icon: <PublicIcon sx={{ color: '#00aaff', mr: 1, fontSize: 28 }} />,
-      content: 'Access real-time global pay data to make informed, competitive compensation decisions. Our platform provides accurate salary, bonus, and equity benchmarks from trusted HR and payroll sources—helping you build fair and effective pay packages.'
-    },
-    {
-      title: 'Compensation Benchmarking',
-      icon: <EqualizerIcon sx={{ color: '#E04A9B', mr: 1, fontSize: 28 }} />,
-      content: 'Easily compare your team’s pay to market rates with AI-powered benchmarking. Connect your HRIS, use our rich data or import third-party surveys, and instantly see how employee compensation stacks up—so you can adjust and stay competitive with confidence.'
-    },
-    {
-      title: 'Smart Raise & Bonus Management',
-      icon: <AssessmentIcon sx={{ color: '#ffd600', mr: 1, fontSize: 28 }} />,
-      content: 'Simplify how you plan and execute raises and bonuses with guided, data-backed workflows. Set budgets, manage approvals, and communicate changes effortlessly—all in one place.'
-    },
-    {
-      title: 'Strategic Pay Planning',
-      icon: <GavelIcon sx={{ color: '#7c3aed', mr: 1, fontSize: 28 }} />,
-      content: 'Build clear, competitive salary ranges across roles and locations with a scalable, transparent framework. Define and apply your pay philosophy consistently—balancing equity, geography, and remote policies—while spotting and correcting pay gaps proactively.'
-    },
-    {
-      title: 'Pay Equity Insights',
-      icon: <PersonOutlineIcon sx={{ color: '#00b894', mr: 1, fontSize: 28 }} />,
-      content: 'Identify and address pay gaps across roles and demographics with built-in equity tools. Access detailed DEI metrics and track progress over time—ensuring fairness and objectivity in every compensation decision.'
-    },
-  ];
 
   return (
     <Box className="w-full min-h-screen bg-white">
-      <Header />
+      <Box 
+        sx={{ 
+          position: 'sticky', 
+          top: 0, 
+          zIndex: 1000, 
+          backgroundColor: 'white', 
+          borderBottom: '1px solid #e5e7eb' 
+        }}
+      >
+        <Header />
+      </Box>
       
       {/* Hero Section */}
       <Box className="bg-[#00aaff] py-4 px-4 md:py-5.5 md:px-0">
@@ -161,11 +83,10 @@ export default function PeopleSoftware() {
           Empowering Fair and Confident Pay Decisions with Our Compensation Management Solution
         </Typography>
         {/* What is OpenComp Section */}
-        <Box className="container mx-auto max-w-4xl px-4 md:px-0 mt-6 mb-8">
+        {/* <Box className="container mx-auto max-w-4xl px-4 md:px-0 mt-6 mb-8">
           <Typography variant="h4" sx={{ fontWeight: 700, mb: 2, color: '#222' }}>
             What is OpenComp?
           </Typography>
-          {/* Expandable List using MUI Accordion */}
           {items.map((item, idx) => (
             <StyledAccordion
               key={item.title}
@@ -185,6 +106,155 @@ export default function PeopleSoftware() {
               </Collapse>
             </StyledAccordion>
           ))}
+        </Box> */}
+
+        <Box sx={{ mt: 2 }}>
+          <Box sx={{ 
+            display: 'grid', 
+            gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, 
+            gap: 12,
+            alignItems: 'start'
+          }}>
+            {/* Left Column */}
+            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+              {/* What We Do Section */}
+              <Box>
+                <Typography variant="h4" sx={{ 
+                  fontWeight: 700, 
+                  color: '#00aaff', 
+                  mb: 3,
+                  fontSize: { xs: '1.75rem', md: '2rem' }
+                }}>
+                  What We Do
+                </Typography>
+                <Typography variant="body1" sx={{ 
+                  color: '#444', 
+                  fontSize: '1.1rem', 
+                  lineHeight: 1.6,
+                  mb: 4
+                }}>
+                  OpenComp crowd-sources data directly from customers’ salary and equity systems and integrates it into user-friendly decision tools that span the entire comp workflow, giving employers everything they need to plan and communicate their pay. The result is pay that is strategic, objective, unbiased, and well understood by employees.
+                </Typography>
+              </Box>
+
+              {/* Our Solutions Section */}
+              <Box sx={{ 
+                background: '#e3f4fb', 
+                borderRadius: 3, 
+                p: 4,
+                border: '1px solid #00aaff'
+              }}>
+                <Typography variant="h5" sx={{ 
+                  fontWeight: 700, 
+                  color: '#00aaff', 
+                  mb: 1,
+                  textTransform: 'uppercase',
+                  fontSize: '1.25rem'
+                }}>
+                  Our Solutions
+                </Typography>
+                <Typography variant="body2" sx={{ 
+                  color: '#666', 
+                  mb: 3,
+                  fontSize: '0.95rem'
+                }}>
+                  (accessible through one simple software subscription)
+                </Typography>
+                
+                {/* Solution Grid */}
+                <Box sx={{ 
+                  display: 'grid', 
+                  gridTemplateColumns: 'repeat(2, 1fr)', 
+                  gap: 2
+                }}>
+                  {[
+                    'Comp Market Data',
+                    'Visual Offer Letters',
+                    'Benchmarking',
+                    'Total Rewards Statements',
+                    'Pay Ranges',
+                    'Intelligent Offers',
+                    'Headcount Planning',
+                    'Comp Consulting'
+                  ].map((solution) => (
+                    <Box key={solution} sx={{
+                      background: 'white',
+                      p: 2,
+                      borderRadius: 2,
+                      textAlign: 'center',
+                      border: '1px solid #00aaff',
+                      transition: 'all 0.2s',
+                      '&:hover': {
+                        borderColor: '#00aaff',
+                        boxShadow: '0 2px 8px rgba(0,170,255,0.2)',
+                        background: '#f0f9ff'
+                      }
+                    }}>
+                      <Typography variant="body2" sx={{ 
+                        fontWeight: 600, 
+                        color: '#00aaff',
+                        fontSize: '0.9rem'
+                      }}>
+                        {solution}
+                      </Typography>
+                    </Box>
+                  ))}
+                </Box>
+              </Box>
+            </Box>
+
+            {/* Right Column */}
+            <Box>
+              <Typography variant="h4" sx={{ 
+                fontWeight: 700, 
+                color: '#00aaff', 
+                mb: 4,
+                fontSize: { xs: '1.75rem', md: '2rem' },
+                textTransform: 'uppercase'
+              }}>
+                Why We’re Better
+              </Typography>
+              
+              {/* Benefits List */}
+              <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
+                {[
+                  'Founded by long-time People Ops and Compensation experts',
+                  'Actionable data integrated with state-of-the-art decision tools make it easy to plan and communicate pay',
+                  'One simple subscription gives you access to solutions for your entire comp workflow',
+                  'Intuitive software and helpful support combine for best-in-class customer experience',
+                  'Comp consulting practice helps you plan strategic pay programs'
+                ].map((benefit, index) => (
+                  <Box key={index} sx={{ display: 'flex', alignItems: 'flex-start', gap: 2 }}>
+                    <Box sx={{
+                      width: 20,
+                      height: 20,
+                      borderRadius: '50%',
+                      background: '#00aaff',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      flexShrink: 0,
+                      mt: 0.5
+                    }}>
+                      <Box component="span" sx={{
+                        width: 8,
+                        height: 8,
+                        background: 'white',
+                        borderRadius: '50%'
+                      }} />
+                    </Box>
+                    <Typography variant="body1" sx={{ 
+                      color: '#444', 
+                      fontSize: '1rem',
+                      lineHeight: 1.5
+                    }}>
+                      {benefit}
+                    </Typography>
+                  </Box>
+                ))}
+              </Box>
+            </Box>
+          </Box>
         </Box>
         
         
@@ -192,10 +262,10 @@ export default function PeopleSoftware() {
         
         
         {/* Section 2: How Our Process Works Timeline */}
-        <Box>
+        <Box sx={{ mt: 2 }}>
 
         <Box sx={{ background: '#f7fafd', borderRadius: 3, p: { xs: 2, md: 4 }, mb: 2 }}>
-          <Typography variant="h5" className="font-bold mb-6 text-gray-900 text-lg md:text-xl" sx={{ fontWeight: 'bold', textAlign: 'center'}}>
+          <Typography variant="h5" className="font-bold mb-6 text-gray-900 text-lg md:text-xl" sx={{ fontWeight: 'bold', textAlign: 'center', mb: 2}}>
             Compensation Chart
           </Typography>
           {/* Dropdown for job positions */}
@@ -229,17 +299,8 @@ export default function PeopleSoftware() {
           </Box> */}
         </Box>
 
-        {/* Section 3: Testimonial Box */}
-        {/* <Box>
-          <Paper elevation={2} sx={{ p: 4, borderRadius: 3, background: '#e3f4fb', border: '1px solid #b2e0f7', maxWidth: 600, mx: 'auto' }}>
-            <Typography variant="body1" sx={{ fontStyle: 'italic', color: '#0077b6', mb: 0, textAlign: 'center' }}>
-              &quot;Alliance Atlantic helped us modernize our HR systems. The process was smooth, and our team is now more engaged and productive than ever.&quot;
-            </Typography>
-          </Paper>
-        </Box> */}
-
         {/* Section 4: Common Client Challenges (redesigned) */}
-        <Box>
+        {/* <Box>
           <Typography variant="h6" className="font-bold mb-4 text-gray-900 text-lg md:text-xl" sx={{ fontWeight: 'bold'}}>
            Performance Challenges
           </Typography>
@@ -284,7 +345,7 @@ export default function PeopleSoftware() {
                   <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="#e3ffe3"/><path d="M9.5 13.5L11.5 15.5L15 11" stroke="#00b894" strokeWidth="2" strokeLinecap="round"/></svg>
                 ),
                 title: 'Low Platform Adoption',
-                desc: 'Employees and managers don’t use existing HR tools.'
+                desc: 'Employees and managers don\'t use existing HR tools.'
               },
               {
                 icon: (
@@ -298,7 +359,7 @@ export default function PeopleSoftware() {
                   <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="#ffe3f4"/><path d="M6 12h12" stroke="#E04A9B" strokeWidth="2" strokeLinecap="round"/></svg>
                 ),
                 title: 'Misaligned Software',
-                desc: 'HR tech doesn’t support business strategy or growth.'
+                desc: 'HR tech doesn\'t support business strategy or growth.'
               }
             ].map((item) => (
               <Paper key={item.title} elevation={1} sx={{
@@ -325,8 +386,176 @@ export default function PeopleSoftware() {
               </Paper>
             ))}
           </Box>
-        </Box>
+        </Box> */}
+
+        {/* New Section: What We Do & Why We're Better */}
        
+       
+      </Box>
+
+      {/* OpenComp Section */}
+      <Box sx={{ background: '#f7fafd', py: 8, mt: 4 }}>
+        <Box className="container mx-auto max-w-7xl px-4 md:px-0">
+          <Typography variant="h4" sx={{ 
+            fontWeight: 700, 
+            textAlign: 'center', 
+            mb: 6, 
+            color: '#00aaff',
+            fontSize: { xs: '1.75rem', md: '2.25rem' }
+          }}>
+            OpenComp Partnership
+          </Typography>
+          
+          <Box sx={{ 
+            display: 'grid', 
+            gridTemplateColumns: { xs: '1fr', md: '2fr 1fr' }, 
+            gap: 6,
+            alignItems: 'start'
+          }}>
+            {/* Left Column: What You Get With OpenComp */}
+            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+              <Typography variant="h5" sx={{ 
+                fontWeight: 700, 
+                color: '#00aaff', 
+                mb: 3,
+                fontSize: { xs: '1.5rem', md: '1.75rem' }
+              }}>
+                What You Get With OpenComp
+              </Typography>
+              
+              <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+                {[
+                  'Current market data',
+                  'Base salary, bonus, total cash, percentage ownership, and equity value',
+                  'Executive and non-exec roles',
+                  'Unlimited instant queries and reports filtered by the segments you care about most',
+                  'Segments include: level, role (including founder vs. non-founder), location, funding stage, headcount, capital raised, revenue, #employees, and industry',
+                  'Downloadable reports',
+                  'Effortless implementation - no survey submissions!'
+                ].map((item, index) => (
+                  <Box key={index} sx={{ display: 'flex', alignItems: 'flex-start', gap: 2 }}>
+                    <Box sx={{
+                      width: 8,
+                      height: 8,
+                      borderRadius: '50%',
+                      background: '#00aaff',
+                      flexShrink: 0,
+                      mt: 1
+                    }} />
+                    <Typography variant="body1" sx={{ 
+                      color: '#444', 
+                      fontSize: '1rem',
+                      lineHeight: 1.5
+                    }}>
+                      {item}
+                    </Typography>
+                  </Box>
+                ))}
+              </Box>
+
+              {/* Call to Action Box */}
+              <Box sx={{ 
+                background: '#e3f4fb', 
+                borderRadius: 3, 
+                p: 4,
+                border: '2px solid #00aaff',
+                mt: 2
+              }}>
+                <Typography variant="h6" sx={{ 
+                  fontWeight: 700, 
+                  color: '#00aaff', 
+                  mb: 2,
+                  textAlign: 'center',
+                  fontSize: '1.25rem'
+                }}>
+                  Provide Data Now For Unlimited Free Access*
+                </Typography>
+                <Typography variant="body2" sx={{ 
+                  color: '#444', 
+                  mb: 2,
+                  fontSize: '0.95rem',
+                  lineHeight: 1.5
+                }}>
+                  No time consuming survey submissions required. Just provide your data in raw form, and we’ll do the rest.
+                </Typography>
+                <Typography variant="body2" sx={{ 
+                  color: '#444', 
+                  mb: 2,
+                  fontSize: '0.95rem',
+                  lineHeight: 1.5
+                }}>
+                  Ready to join? Contact{' '}
+                  <Box component="span" sx={{ 
+                    color: '#00aaff', 
+                    fontWeight: 600,
+                    textDecoration: 'underline',
+                    cursor: 'pointer'
+                  }}>
+                    betterbenchmark@opencomp.com
+                  </Box>
+                </Typography>
+                <Typography variant="caption" sx={{ 
+                  color: '#666', 
+                  fontSize: '0.8rem',
+                  fontStyle: 'italic',
+                  display: 'block',
+                  textAlign: 'center'
+                }}>
+                  *18 months free unlimited access for first 500 companies who join with up to 200 employees. Always free for companies with up to 50 employees.
+                </Typography>
+              </Box>
+            </Box>
+
+            {/* Right Column: About OpenComp */}
+            <Box>
+              <Typography variant="h5" sx={{ 
+                fontWeight: 700, 
+                color: '#00aaff', 
+                mb: 4,
+                fontSize: { xs: '1.5rem', md: '1.75rem' }
+              }}>
+                ABOUT OPENCOMP
+              </Typography>
+              
+              <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
+                {[
+                  'Started by Founding VP, HR of Salesforce.com & Principal of Connery Consulting',
+                  'Data team lead by 30-year comp practitioner',
+                  'Actionable data with best-in-class software make it easy to plan and communicate cash and equity comp',
+                  'Consulting practice for those who need expert advice'
+                ].map((item, index) => (
+                  <Box key={index} sx={{ display: 'flex', alignItems: 'flex-start', gap: 2 }}>
+                    <Box sx={{
+                      width: 24,
+                      height: 24,
+                      borderRadius: '50%',
+                      background: '#00aaff',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      flexShrink: 0,
+                      mt: 0.5
+                    }}>
+                      <Box component="span" sx={{
+                        width: 12,
+                        height: 12,
+                        background: 'white',
+                        borderRadius: '50%'
+                      }} />
+                    </Box>
+                    <Typography variant="body1" sx={{ 
+                      color: '#444', 
+                      fontSize: '1rem',
+                      lineHeight: 1.5
+                    }}>
+                      {item}
+                    </Typography>
+                  </Box>
+                ))}
+              </Box>
+            </Box>
+          </Box>
+        </Box>
       </Box>
 
       <Footer />

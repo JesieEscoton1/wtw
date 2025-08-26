@@ -38,10 +38,10 @@ const Footer = () => {
               <ul className="flex flex-col gap-y-1 list-none p-0 m-0"> {/* Changed gap-y-2 to gap-y-1 */}
                 {[
                   { text: 'About Us', href: '/overview' },
-                  { text: 'Organizational Development', href: '/survey' },
-                  { text: 'Building HR Capability', href: '/report' },
-                  { text: 'Total Rewards', href: '/campaign' },
-                  { text: 'Performance Management' },
+                  { text: 'Organizational Development', href: '/organizational-development' },
+                  { text: 'Building HR Capability', href: '/building-hr-capability' },
+                  { text: 'Total Rewards', href: '/total-rewards' },
+                  { text: 'Performance Management', href: '/performance-management' },
                 ].map((link, index) => (
                   <li key={index} className="flex justify-center md:justify-start">
                     <MuiLink
@@ -62,7 +62,7 @@ const Footer = () => {
                 Contact Us
               </Typography>
               <Typography variant="body2" className="!text-black mb-1" sx={{ color: 'black', fontWeight: 500 }}>
-                <span style={{ fontWeight: 'bold' }}>Email:</span> <a href="mailto:info@allianceatlantic.net" className="underline hover:text-blue-700">info@allianceatlantic.net</a>
+                <span style={{ fontWeight: 'bold' }}>Email:</span> <a href="mailto:info@allianceatlantic.net" className="underline hover:text-blue-700">info@allianceatlantic.com</a>
               </Typography>
               <Typography variant="body2" className="!text-black mb-3" sx={{ color: 'black', mt: 1 }}>
                 Feel free to let us know how we may be of help.
@@ -104,7 +104,7 @@ const Footer = () => {
           {/* Copyright */}
           <Box className="w-full md:w-auto px-4 mb-4 md:mb-0 text-center md:text-left">
             <Typography variant="body2" color="Black" className="font-p-xsmall m-0 site-footer__copyright text-xs sm:text-sm opacity-75">
-              Copyright © {new Date().getFullYear()} Alliance Atlantic Consulting, Inc. . All rights reserved.
+              Copyright © {new Date().getFullYear()} Alliance Atlantic Consulting, Inc. All rights reserved.
             </Typography>
           </Box>
         </Box>

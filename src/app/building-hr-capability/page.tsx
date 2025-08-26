@@ -20,7 +20,7 @@ export default function BuildingHrCapability() {
             left: 0,
             right: 0,
             bottom: 0,
-            backgroundImage: 'url(/images/HR1.png)',
+            backgroundImage: 'url(/images/build-capability.jpg)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
