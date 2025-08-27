@@ -47,7 +47,7 @@ export default function TotalRewards() {
             </Button>
           </Box>
           {/* Right: Image with magenta accent bar */}
-          <Box className="flex-1 relative w-full h-72 md:h-96 flex items-center justify-center">
+          <Box className="hidden md:flex flex-1 relative w-full h-72 md:h-96 items-center justify-center">
             {/* Main Image */}
             <Box className="relative w-full h-2 md:h-96 z-10">
               <Image

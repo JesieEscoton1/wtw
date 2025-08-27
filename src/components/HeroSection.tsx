@@ -41,10 +41,10 @@ const HeroSection = () => {
 
   return (
     <Box className="relative w-full">
-      <header className="relative w-full h-[400px] md:h-[600px] overflow-hidden">
+      <header className="relative w-full h-[600px] md:h-[600px] overflow-hidden">
         <Box className="relative z-20 h-full flex flex-col md:flex-row items-stretch justify-between">
           {/* Left Section */}
-          <Box className="relative w-full md:w-9/12 h-full">
+          <Box className="relative w-full md:w-9/12 h-full md:h-full flex-shrink-0" style={{ minHeight: '300px' }}>
             <Image
               src={getBackgroundImage(activeSection)}
               alt="Background"
@@ -61,7 +61,7 @@ const HeroSection = () => {
           <Box
             className={`hero-homepage__title-block bg-white shadow-xl absolute z-10 transition-all duration-500 ease-in-out
               ${activeSection ? 'p-4 md:p-8' : 'p-6 md:p-12'}
-              ${activeSection ? 'top-[-5%] md:top-[5%]' : 'top-[-10%] md:top-[8.5%]'}
+              ${activeSection ? 'top-[5%] md:top-[5%]' : 'top-[5%] md:top-[8.5%]'}
               ${activeSection ? 'left-1/2 -translate-x-1/2 md:left-[2%] md:translate-x-0' : 'left-1/2 -translate-x-1/2 md:left-[4%] md:translate-x-0'}
               ${activeSection ? 'w-[95%] sm:w-[85%] md:w-[75%] lg:w-[60%]' : 'w-[90%] sm:w-[80%] md:w-[65%] lg:w-[50%]'}
               xl:max-w-3xl
@@ -177,8 +177,8 @@ const HeroSection = () => {
           </Box>
 
           {/* Right Section (Accordion) */}
-          <Box className="w-full md:w-3/12 bg-[#00aaff] text-white flex items-center py-4 md:py-0">
-            <Box className="w-full py-2 md:py-8 px-3 md:px-8 flex flex-col justify-center">
+          <Box className="w-full md:w-3/12 bg-[#00aaff] text-white flex items-center py-4 md:py-0 flex-shrink-0 min-h-[200px] md:min-h-0">
+            <Box className="w-full py-4 md:py-8 px-4 md:px-8 flex flex-col justify-center">
               <Typography
                 variant="h5"
                 component="div"

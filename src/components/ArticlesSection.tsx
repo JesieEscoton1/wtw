@@ -38,16 +38,18 @@ interface ArticleItemProps {
   imageMarginTop?: number | string;
   mobileHeight?: number | string;
   mobileWidth?: number | string;
+  objectPosition?: string;
+  isImage?: boolean;
 }
 
-const ArticleItem: React.FC<ArticleItemProps> = ({ type, title, imageSrc, imageAlt, linkHref, width, height, imageMarginTop,  mobileHeight, mobileWidth, }) => {
+const ArticleItem: React.FC<ArticleItemProps> = ({ type, title, imageSrc, imageAlt, linkHref, width, height, imageMarginTop,  mobileHeight, mobileWidth, objectPosition, isImage }) => {
   return (
     <a href={linkHref} className="block">
       <Card elevation={0} className="flex flex-col h-full border-none shadow-none">
         <Box
           className="relative w-full overflow-hidden mb-0 transition-transform duration-300 hover:scale-95"
           sx={{
-            width: { xs: mobileWidth || '100%', md: width },
+            width: { xs: '100%', md: width },
             height: { xs: mobileHeight || '250px', md: height },
             marginTop: { xs: 0, md: imageMarginTop }
           }}
@@ -57,6 +59,8 @@ const ArticleItem: React.FC<ArticleItemProps> = ({ type, title, imageSrc, imageA
             alt={imageAlt}
             layout="fill"
             objectFit="cover"
+            objectPosition={objectPosition || 'center'}
+            className="object-cover object-center"
           />
         </Box>
         <CardContent className="flex flex-col justify-between flex-grow p-0 last:pb-0">
@@ -109,14 +113,16 @@ const ArticlesSection = () => {
       title: 'Job Evaluation',
       imageSrc: '/images/job1.png',
       imageAlt: 'Employee Pay Trends',
-      linkHref: 'job-evaluation'
+      linkHref: 'job-evaluation',
+      isImage: true,
     },
     {
       type: '',
       title: 'People Software',
       imageSrc: '/images/ps.png',
       imageAlt: 'Complex World',
-      linkHref: 'people-software'
+      linkHref: 'people-software',
+      objectPosition: 'left center'
     },
   ];
 

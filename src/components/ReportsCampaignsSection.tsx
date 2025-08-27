@@ -47,7 +47,7 @@ const ContentItem: React.FC<ContentItemProps> = ({ type, title, imageSrc, imageA
         <Box
           className="relative w-full overflow-hidden mb-2 md:mb-0 transition-transform duration-300 hover:scale-95" // mb-2 for mobile
           sx={{
-            width: { xs: mobileWidth || '100%', md: width },
+            width: { xs: '100%', md: width },
             height: { xs: mobileHeight || '250px', md: height },
             marginTop: { xs: 0, md: imageMarginTop }
           }}
@@ -57,7 +57,8 @@ const ContentItem: React.FC<ContentItemProps> = ({ type, title, imageSrc, imageA
             alt={imageAlt}
             layout="fill"
             objectFit="cover"
-            className="object-cover"
+            objectPosition="center"
+            className="object-cover object-center"
           />
         </Box>
         <CardContent className="flex flex-col justify-between flex-grow p-0 last:pb-0">

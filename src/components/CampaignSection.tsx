@@ -38,16 +38,17 @@ interface ContentItemProps {
     mobileHeight?: number | string;
     mobileWidth?: number | string;
     imageMarginTop?: number | string;
+    objectPosition?: string;
 }
 
-const ContentItem: React.FC<ContentItemProps> = ({ type, title, imageSrc, imageAlt, linkHref, width, height, mobileHeight, mobileWidth, imageMarginTop }) => {
+const ContentItem: React.FC<ContentItemProps> = ({ type, title, imageSrc, imageAlt, linkHref, width, height, mobileHeight, mobileWidth, imageMarginTop, objectPosition }) => {
   return (
     <a href={linkHref} className="block">
       <Card elevation={0} className="flex flex-col h-full border-none shadow-none">
         <Box
           className="relative w-full overflow-hidden mb-0 transition-transform duration-300 hover:scale-95"
           sx={{
-            width: { xs: mobileWidth || '100%', md: width },
+            width: { xs: '100%', md: width },
             height: { xs: mobileHeight || '250px', md: height },
             marginTop: { xs: 0, md: imageMarginTop }
           }}
@@ -57,6 +58,8 @@ const ContentItem: React.FC<ContentItemProps> = ({ type, title, imageSrc, imageA
             alt={imageAlt}
             layout="fill"
             objectFit="cover"
+            objectPosition={objectPosition || 'center'}
+            className="object-cover object-center"
           />
         </Box>
         <CardContent className="flex flex-col justify-between flex-grow p-4 md:p-0 last:pb-0">
@@ -109,7 +112,8 @@ const ReportsCampaignsSection = () => {
       title: 'Total Rewards',
       imageSrc: '/images/tr.png',
       imageAlt: 'Cyber Risks in Asia',
-      linkHref: '/total-rewards'
+      linkHref: '/total-rewards',
+      objectPosition: 'left center'
     },
     {
       type: '',
