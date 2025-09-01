@@ -41,7 +41,7 @@ interface ContentItemProps {
     objectPosition?: string;
 }
 
-const ContentItem: React.FC<ContentItemProps> = ({ type, title, imageSrc, imageAlt, linkHref, width, height, mobileHeight, mobileWidth, imageMarginTop, objectPosition }) => {
+const ContentItem: React.FC<ContentItemProps> = ({ type, title, imageSrc, imageAlt, linkHref, width, height, mobileHeight, imageMarginTop, objectPosition }) => {
   return (
     <a href={linkHref} className="block">
       <Card elevation={0} className="flex flex-col h-full border-none shadow-none">

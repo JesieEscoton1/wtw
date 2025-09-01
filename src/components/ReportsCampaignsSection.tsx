@@ -40,7 +40,7 @@ interface ContentItemProps {
     mobileWidth?: number | string;
 }
 
-const ContentItem: React.FC<ContentItemProps> = ({ type, title, imageSrc, imageAlt, linkHref, width, height, imageMarginTop, mobileHeight, mobileWidth }) => {
+const ContentItem: React.FC<ContentItemProps> = ({ type, title, imageSrc, imageAlt, linkHref, width, height, imageMarginTop, mobileHeight }) => {
   return (
     <a href={linkHref} className="block">
       <Card elevation={0} className="flex flex-col h-full border-none shadow-none">

@@ -42,7 +42,7 @@ interface ArticleItemProps {
   isImage?: boolean;
 }
 
-const ArticleItem: React.FC<ArticleItemProps> = ({ type, title, imageSrc, imageAlt, linkHref, width, height, imageMarginTop,  mobileHeight, mobileWidth, objectPosition, isImage }) => {
+const ArticleItem: React.FC<ArticleItemProps> = ({ type, title, imageSrc, imageAlt, linkHref, width, height, imageMarginTop,  mobileHeight, objectPosition }) => {
   return (
     <a href={linkHref} className="block">
       <Card elevation={0} className="flex flex-col h-full border-none shadow-none">
